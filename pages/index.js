@@ -4,6 +4,9 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Logo from '../components/logo'
+import Navi from '../components/nav'
+import SnsLink from '../components/snslink'
 
 export default function Home({ allPostsData }) {
   return (
@@ -11,33 +14,19 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>自己紹介</p>
-        <p>
-          Next.jsの練習用のサイトです。Next.jsのチュートリアルサイトは
-          <a href="https://nextjs.org/learn">こちら</a>。
-        </p>
+      <section id="p-mainvisual">
+        <Logo></Logo>
+        <Navi></Navi>
+        <SnsLink></SnsLink>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>ブログ</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <section id="p-about"></section>
+      <section id="p-work"></section>
+      <section id="p-information"></section>
+      <section id="p-link"></section>
+      <section id="p-contact"></section>    
     </Layout>
   )
 }
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {

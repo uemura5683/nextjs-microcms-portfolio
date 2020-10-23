@@ -1,0 +1,114 @@
+/*********************************
+* base.css
+*********************************/
+
+/**
+ * font-size
+ */
+html {
+  font-size: 52.1%;
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.4rem;
+}
+h1 {
+  font-size: 5.6rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+p {
+  font-size: 1.4rem;
+}
+span {
+  font-size: 1.2rem;
+}
+
+/**
+ * font-family
+ */
+html, body {
+  font-family: 'NotoSansCJKjp-Regular', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+/**
+ * element
+ */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  color: black;
+  margin: 0;
+}
+/**
+ * a tag
+ */
+a, a:hover, a:focus {
+  color: #555555;
+  outline: 0;
+}
+/**
+ * form
+ */ 
+input, input:focus, input:active, input:visited, input:hover,
+select, select:focus, select:active, select:visited, select:hover,
+textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover,
+button, button:focus, button:active, button:visited, button:hover {
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+input, input:focus, input:active, input:visited, input:hover,
+textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
+  height: 43px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+input, input:focus, input:active, input:visited, input:hover,
+select, select:focus, select:active, select:visited, select:hover,
+textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover,
+button, button:focus, button:active, button:visited, button:hover,
+.btn, .btn:focus, .btn:active, .btn:visited, .btn:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/**
+ * ol ul li
+ */
+ol, ul {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ol, ul, li {
+  list-style-type: none;
+}
+
+/**
+ * img
+ */
+img {
+  max-width: 100%;
+}
+
+/*
+* container
+**/
+.container {
+  width: 100%;
+}
