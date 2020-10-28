@@ -1,17 +1,12 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import Logo from '../components/logo'
 import Navi from '../components/nav'
 import SnsLink from '../components/snslink'
-// import dynamic from 'next/dynamic'
-// import { Suspense } from 'react'
-// import { Canvas } from 'react-three-fiber'
-// import { OrbitControls, StandardEffects } from 'drei'
-
+import Skill from '../components/skill'
 
 export default function Home({ allPostsData }) {
   return (
@@ -65,6 +60,7 @@ export default function Home({ allPostsData }) {
       </section>
       <section id="p-skill">
         <h2 class="c-title">SKILL</h2>
+        <Skill lhtml></Skill>
       </section>
       <section id="p-work">
         <h2 class="c-title">WORK</h2>

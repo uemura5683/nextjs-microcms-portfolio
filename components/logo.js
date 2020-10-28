@@ -1,4 +1,4 @@
-export default function Logo({ children, home }) {
+export default function Logo() {
   return (
     <img src="/images/logo.png" alt="uemu-portfolio" />
   )
