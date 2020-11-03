@@ -7,6 +7,9 @@ import Logo from '../components/logo'
 import Navi from '../components/nav'
 import SnsLink from '../components/snslink'
 import Skill from '../components/skill'
+import Card from '../components/card'
+import LinkArea from '../components/linkarea'
+import Contact from '../components/contact'
 
 export default function Home({ allPostsData }) {
   return (
@@ -64,15 +67,19 @@ export default function Home({ allPostsData }) {
       </section>
       <section id="p-work">
         <h2 class="c-title">WORK</h2>
+        <Card work></Card>
       </section>
       <section id="p-information">
         <h2 class="c-title">INFORMATION</h2>
+        <Card></Card>
       </section>
       <section id="p-link">
         <h2 class="c-title">LINK</h2>
+        <LinkArea></LinkArea>
       </section>
       <section id="p-contact">
         <h2 class="c-title">CONTACT</h2>
+        <Contact></Contact>
       </section>    
     </Layout>
   )
