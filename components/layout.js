@@ -9,7 +9,7 @@ export const siteTitle = 'うえむーのnext.js練習用のサイト'
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+    <div class="wrapper">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,17 +25,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        {home ? (
-          <>
-          </>
-        ) : (
-          <>
-            <Logo></Logo>
-          </>
-        ) }
-        <SnsLink></SnsLink>
-      </header>
       <main>{children}</main>
       <footer>
         <SnsLink></SnsLink>

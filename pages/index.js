@@ -6,6 +6,7 @@ import Date from '../components/date'
 import Logo from '../components/logo'
 import Navi from '../components/nav'
 import SnsLink from '../components/snslink'
+import MainBnr from '../components/mainbnr'
 import Skill from '../components/skill'
 import Card from '../components/card'
 import LinkArea from '../components/linkarea'
@@ -18,9 +19,15 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section id="p-mainvisual">
+        <div class="p-menu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <SnsLink></SnsLink>
         <Logo></Logo>
         <Navi></Navi>
-        <SnsLink></SnsLink>
+        <MainBnr></MainBnr>        
         <div>
           click here
         </div>
