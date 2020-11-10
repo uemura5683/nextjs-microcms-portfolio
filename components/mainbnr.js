@@ -1,4 +1,4 @@
-export default function Mainbnr({ }) {
+export default function Mainbnr() {
   return (
       <div class="MainBnr">
           <>

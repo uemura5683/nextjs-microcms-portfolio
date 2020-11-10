@@ -1,4 +1,4 @@
-export default function Navigation({ children, home }) {
+export default function Navigation() {
   return (
     <nav>
       <ul>

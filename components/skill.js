@@ -1,4 +1,4 @@
-export default function Skill({ lhtml }) {
+export default function Skill() {
   return (
       <ul class="skill__list">
           <li class="skill__zoom css">

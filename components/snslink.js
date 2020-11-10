@@ -1,4 +1,4 @@
-export default function SnsLink({ children, home }) {
+export default function SnsLink() {
   return (
       <ul class="c-snslink">
         <li class="c-snslnk__list"><a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a></li>

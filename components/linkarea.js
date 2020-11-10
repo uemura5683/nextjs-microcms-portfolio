@@ -1,4 +1,4 @@
-export default function Skill({ lhtml }) {
+export default function Skill() {
   return (
       <ul class="link__list">
           <li>

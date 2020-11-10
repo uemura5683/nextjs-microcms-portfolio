@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navi from '../components/nav'
-import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
+import SnsLink from '../components/snslink'
 
 const name = 'うえむー'
 export const siteTitle = 'うえむーのnext.js練習用のサイト'
