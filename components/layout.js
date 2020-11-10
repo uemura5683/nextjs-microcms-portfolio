@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navi from '../components/nav'
-import Logo from '../components/logo'
 import SnsLink from '../components/snslink'
+import Logo from '../components/logo'
 
 const name = 'うえむー'
 export const siteTitle = 'うえむーのnext.js練習用のサイト'
 
 export default function Layout({ children, home }) {
   return (
-    <div class="wrapper">
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,6 +25,17 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <header>
+        {home ? (
+          <>
+          </>
+        ) : (
+          <>
+            <Logo></Logo>
+          </>
+        ) }
+        <SnsLink></SnsLink>
+      </header>
       <main>{children}</main>
       <footer>
         <SnsLink></SnsLink>

@@ -1,0 +1,9 @@
+.c-title {
+  font-size: 2.4em;
+  display: none;
+}
+@media (min-width: 991px) {
+    .c-title {
+        font-size: 7.2em;
+    }
+}
