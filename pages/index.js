@@ -69,7 +69,7 @@ export default function Home({ allPostsData }) {
         </article>
       </section>
       <section id="p-skill" class="u-gray">
-        <h2 class="c-title">SKILL</h2>
+        <h2 class="c-title white">SKILL</h2>
         <Skill lhtml></Skill>
       </section>
       <section id="p-work">
@@ -77,7 +77,7 @@ export default function Home({ allPostsData }) {
         <Card work></Card>
       </section>
       <section id="p-information" class="u-gray">
-        <h2 class="c-title">INFORMATION</h2>
+        <h2 class="c-title white">INFORMATION</h2>
         <Card></Card>
       </section>
       <section id="p-link">
@@ -85,7 +85,7 @@ export default function Home({ allPostsData }) {
         <LinkArea></LinkArea>
       </section>
       <section id="p-contact" class="u-gray">
-        <h2 class="c-title">CONTACT</h2>
+        <h2 class="c-title white">CONTACT</h2>
         <Contact></Contact>
       </section>    
     </Layout>

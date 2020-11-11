@@ -1,0 +1,13 @@
+.card ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+}
+.card ul li{
+    width: 48%;
+    text-align: center;
+    margin: 0 1%;
+}
+.card ul li img {
+    width: 100%;
+}

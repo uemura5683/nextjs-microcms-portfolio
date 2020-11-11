@@ -1,0 +1,24 @@
+.link__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.link__list li {
+    width: calc(100% / 2);
+}
+.link__list li a {
+    display: block;
+}
+.link__list li span {
+    font-size: 3.6em;
+    line-height: 4.8em;
+    vertical-align: middle;
+    margin: 0 0 0 5%;
+}
+.link__list li img {
+    vertical-align: middle;
+}
+@media (min-width: 991px) {
+    .link__list li {
+        width: calc(100% / 3);
+    }
+}

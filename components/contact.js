@@ -54,7 +54,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          <button type="submit">メールアドレスを送信</button>
+          <button class="btn-white" type="submit">メールアドレスを送信</button>
         </form>
       </div>
     </div>

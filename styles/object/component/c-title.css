@@ -1,9 +1,16 @@
 .c-title {
   font-size: 2.4em;
-  display: none;
+  border-bottom: 1px solid black;
+  margin: 0 0 25px;
+}
+.c-title.white {
+  color: white;
+  border-bottom: 1px solid white;
 }
 @media (min-width: 991px) {
     .c-title {
-        font-size: 7.2em;
+        font-size: 4.8em;
+        width: 690px;
+        margin: 0 0 50px;
     }
 }
