@@ -1,0 +1,33 @@
+.skill__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill__list li {
+    width: 50%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    margin: 0 0 50px;
+}
+.skill__list li img {
+    width: 30%;
+}
+.skill__list li .gage {
+    width: 50%;
+    margin: 0 10%;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: black;
+}
+.skill__list li .gage:after {
+    content: '';
+    height: 18px;
+    width: 80%;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+}
