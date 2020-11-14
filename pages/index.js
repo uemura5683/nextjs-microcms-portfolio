@@ -17,18 +17,13 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <link href="/style/main.css" rel="stylesheet" />
       </Head>
       <section id="p-mainvisual">
-        <div class="p-menu__btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <SnsLink></SnsLink>
         <Logo></Logo>
         <Navi></Navi>
         <MainBnr></MainBnr>        
-        <div>
+        <div class="p-mainvisual__click">
           click here
         </div>
       </section>

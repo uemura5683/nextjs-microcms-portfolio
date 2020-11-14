@@ -1,0 +1,20 @@
+#p-mainvisual {
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+#p-mainvisual nav {
+    position: absolute;
+}
+#p-mainvisual img[alt*='uemu-portfolio'] {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+#p-mainvisual .MainBnr a {
+    display: block;
+}
+#p-mainvisual .MainBnr img {
+    width: 100%;
+}

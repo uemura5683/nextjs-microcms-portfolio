@@ -1,13 +1,18 @@
 .card ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1%;
+    margin: 0 -2%;
 }
 .card ul li{
-    width: 48%;
+    width: 46%;
     text-align: center;
-    margin: 0 1%;
+    margin: 0 2%;
 }
 .card ul li img {
     width: 100%;
+}
+.card ul li span {
+    margin: 10px 0 0;
+    display: block;
+    text-align: left;
 }

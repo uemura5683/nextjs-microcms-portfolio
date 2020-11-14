@@ -35,6 +35,11 @@ export default function Layout({ children, home }) {
           </>
         ) }
         <SnsLink></SnsLink>
+        <div class="p-menu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </header>
       <main>{children}</main>
       <footer>
