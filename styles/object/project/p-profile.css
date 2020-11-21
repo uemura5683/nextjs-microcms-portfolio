@@ -1,0 +1,76 @@
+/**
+* about content
+**/
+#p-about {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/**
+* about content background
+**/
+.p-about__profile__bg {
+    overflow: hidden;
+}
+.p-about__profile__bg:after {
+    content: '';
+    position: absolute;
+    background-color: #EEEEEE;
+    top: -14%;
+    left: -20%;
+    width: 70%;
+    height: 120%;
+    opacity: .7;
+    z-index: -1;
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+}
+
+/**
+* about content right
+**/
+.p-about__profile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.p-about__profile .p-about__profile--ttl {
+    width: 20%;
+    height: auto;
+    font-size: 1.4em;
+}
+.p-about__profile .p-about__profile--list {
+    width: 80%;
+    font-size: 1.4em;
+}
+.p-about__profile .p-about__profile--list li {
+    margin: 0 0 10px;
+}
+.p-about__profile .p-about__profile--list span {
+    font-size: 1.0em;
+    margin: 0 15px 0 0;
+}
+
+/**
+* about content left
+**/
+.p-about__profile:nth-of-type( 2 ) {
+    text-align: center;
+}
+.p-about__profile:nth-of-type( 2 ) figure {
+    margin: 0 auto;
+}
+.p-about__profile:nth-of-type( 2 ) figure img {
+    width: 200px;
+    border-radius: 50%;
+}
+.p-about__profile:nth-of-type( 2 ) .about__profile__lesson {
+    width: 100%;
+    font-size: 1.4em;
+}
+.p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail {
+    width: 100%;
+    font-size: 1.4em;
+}

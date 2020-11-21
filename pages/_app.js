@@ -1,7 +1,6 @@
 import styles from '../styles/foundation/reset.css'
 import basestyles from '../styles/foundation/base.css'
 import headstyles from '../styles/layout/l-header.css'
-import drawerstyles from '../styles/layout/l-drawer.css'
 import footstyles from '../styles/layout/l-footer.css'
 import btnstyles from '../styles/object/component/c-button.css'
 import formstyles from '../styles/object/component/c-form.css'

@@ -35,21 +35,19 @@ export default function Layout({ children, home }) {
           </>
         ) }
         <SnsLink></SnsLink>
-        <div class="p-menu__btn">
+        <div class="header--menu__btn">
           <span></span>
           <span></span>
           <span></span>
+        </div>
+        <div class="header--menu__content">
+          <Navi></Navi>
         </div>
       </header>
       <main>{children}</main>
       <footer>
         <SnsLink></SnsLink>
       </footer>
-      <div class="l-drawer">
-      <Logo></Logo>
-      <Navi></Navi>
-      <SnsLink></SnsLink>      
-      </div>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">

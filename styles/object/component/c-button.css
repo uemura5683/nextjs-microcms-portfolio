@@ -11,6 +11,18 @@
     font-size: 1.6em;
     display: block;
 }
+
+.c-snslink {
+    display: flex;
+    flex-wrap: wrap;
+}
+.c-snslink .c-snslnk__list {
+    margin: 0 10px;
+}
+.c-snslink .c-snslnk__list {
+    width: 45px;
+}
+
 @media (min-width: 991px) {
     .btn-white,
     .btn-white:hover,

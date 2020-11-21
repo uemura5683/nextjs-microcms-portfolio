@@ -24,6 +24,7 @@ export default function Home({ allPostsData }) {
         <Navi></Navi>
         <MainBnr></MainBnr>        
         <div class="p-mainvisual__click">
+          <span></span>
           click here
         </div>
       </section>
@@ -39,11 +40,11 @@ export default function Home({ allPostsData }) {
             <li><span>リンク</span>Twitter / GitHub / Nu-Blog</li>
           </ul>
           <p class="p-about__profile--description">
-            こんにちは、うえむーと呼ばれています。<br></br>
-            都内でフロントエンドエンジニアとして活動しています。<br></br>
-            休日はもくもく会・LT大会に積極的に参加して他のエンジニアさんと交流を積極的に深めたりしてます。<br></br>
-            エンジニアとしていろんな言語・ビジネススキルを身につけ日々精進し、仲間が困ったことがあったら、助けたい・力になりたいと思っています。<br></br>
-            不安を感じていたらいつでもご相談ください。<br></br>
+            こんにちは、うえむーです。<br></br><br></br>
+            都内でフロントエンドエンジニアとして活動しています。<br></br><br></br>
+            休日はもくもく会・LT大会に積極的に参加して他のエンジニアさんと交流を積極的に深めたりしてます。<br></br><br></br>
+            エンジニアとしていろんな言語・ビジネススキルを身につけ日々精進し、<br></br>仲間が困ったことがあったら、助けたい・力になりたいと思っています。<br></br><br></br>
+            悩み事などがあったらいつでもご相談ください。<br></br><br></br>
             一生懸命夢に向かって頑張ってる人に積極的にサポートします。
           </p>
         </article>
@@ -62,6 +63,7 @@ export default function Home({ allPostsData }) {
             エンジニアの発展に貢献する為にも一緒に走りましょう！
           </div>
         </article>
+        <div class="p-about__profile__bg"></div>
       </section>
       <section id="p-skill" class="u-gray">
         <h2 class="c-title white">SKILL</h2>
