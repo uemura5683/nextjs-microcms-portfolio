@@ -7,7 +7,6 @@
     flex-wrap: wrap;
     overflow: hidden;
 }
-
 /**
 * about content background
 **/
@@ -19,22 +18,22 @@
     position: absolute;
     background-color: #EEEEEE;
     top: -14%;
-    left: -20%;
-    width: 70%;
+    left: -50%;
+    width: 100%;
     height: 120%;
     opacity: .7;
     z-index: -1;
     -webkit-transform: rotate(8deg);
             transform: rotate(8deg);
 }
-
 /**
 * about content right
 **/
 .p-about__profile {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
+    margin: 0 0 20px;
 }
 .p-about__profile .p-about__profile--ttl {
     width: 20%;
@@ -52,12 +51,15 @@
     font-size: 1.0em;
     margin: 0 15px 0 0;
 }
-
+.p-about__profile--description {
+    margin: 20px 0 0;
+}
 /**
 * about content left
 **/
 .p-about__profile:nth-of-type( 2 ) {
     text-align: center;
+    margin: 0;
 }
 .p-about__profile:nth-of-type( 2 ) figure {
     margin: 0 auto;
@@ -69,8 +71,36 @@
 .p-about__profile:nth-of-type( 2 ) .about__profile__lesson {
     width: 100%;
     font-size: 1.4em;
+    line-height: 1.6;
+    margin: 20px 0 0;
 }
 .p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail {
-    width: 100%;
+    width: 80%;
+    text-align: left;
+    margin: 20px auto 0;
+}
+.p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail p {
     font-size: 1.4em;
+}
+@media (min-width: 991px) {
+    /**
+    * about content right
+    **/
+    .p-about__profile {
+        width: 50%;
+        margin: 0;
+    }
+    .p-about__profile--description {
+        margin: 20px 0 0;
+        width: 80%;
+    }
+    /**
+    * about content left
+    **/
+    .p-about__profile:nth-of-type( 2 ) .about__profile__lesson {
+        margin: 50px 0 0;
+    }
+    .p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail {
+        margin: 50px auto 0;
+    }
 }

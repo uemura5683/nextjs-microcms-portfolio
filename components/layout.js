@@ -46,7 +46,16 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       <footer>
+        <div class="foorter__logo">
+          <Logo></Logo>
+        </div>
         <SnsLink></SnsLink>
+        <div class="footer--link__privacy">
+          <a href="">privacty policy</a>
+        </div>
+        <div class="footer__copyrights">
+        (c) 2020 Uemu-Portfolio
+        </div>
       </footer>
       {!home && (
         <div className={styles.backToHome}>

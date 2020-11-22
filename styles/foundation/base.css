@@ -30,15 +30,16 @@ h3 {
 }
 p {
   font-size: 1.4em;
+  line-height: 1.6;
 }
 span {
   font-size: 1.2em;
+  line-height: 1.4;
 }
 
 /**
  * font-family
  */
-
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -73,6 +74,13 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
 a, a:hover, a:focus {
   color: #555555;
   outline: 0;
+
+}
+a {
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  text-decoration: none;
 }
 /**
  * form
@@ -117,6 +125,7 @@ ol, ul {
 
 ol, ul, li {
   list-style-type: none;
+  line-height: 1.6;
 }
 
 /**

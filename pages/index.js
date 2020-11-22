@@ -56,11 +56,13 @@ export default function Home({ allPostsData }) {
             毎日学習・仕事をしないと<br></br>気持ち悪いという気持ちで取り組む
           </div>
           <div class="about__profile__lessondetail">
+            <p>
             エンジニアは技術が発展する世界。<br></br>
             毎日学習しないといけないのですが中々辛いでしょう。<br></br>
             ですが、「毎日学習・仕事をしないと気持ち悪い」という気持ちで取り組むと、学習から習慣へ変わっていき。<br></br>
             辛さがあっという間に消えてしまいます。<br></br>
             エンジニアの発展に貢献する為にも一緒に走りましょう！
+            </p>
           </div>
         </article>
         <div class="p-about__profile__bg"></div>

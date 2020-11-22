@@ -1,4 +1,12 @@
 input,textarea {
   border: 1px solid white;
   width: 100%;
+  padding: 5px 10px;
+  font-size: 1.4em;
+}
+textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
+  height: 200px;
+}
+label {
+  font-size: 1.4em;
 }

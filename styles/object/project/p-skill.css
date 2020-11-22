@@ -1,3 +1,6 @@
+/**
+* skill content
+**/
 .skill__list {
     display: flex;
     flex-wrap: wrap;
@@ -34,12 +37,15 @@
     border-radius: 10px;
 }
 @media (min-width: 991px) {
+    /**
+    * skill content
+    **/
     .skill__list {
         margin: 0 ;
     }
     .skill__list li {
         margin: 0 0 50px;
-        width: 50%;
+        width: calc( 100% / 3 );
     }
     .skill__list li img {
         width: 30%;

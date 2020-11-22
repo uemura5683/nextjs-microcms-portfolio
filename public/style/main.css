@@ -5,10 +5,19 @@
     padding: 0;
     width: 100%;
     position: relative;
+    height: 100vh;
 }
 /**
 * banner
 **/
+#p-mainvisual .MainBnr {
+    height: 100vh;
+    position: relative;
+}
+#p-mainvisual .MainBnr ul {
+    height: 100vh;
+    position: absolute;
+}
 #p-mainvisual .MainBnr a {
     display: block;
 }
@@ -32,20 +41,21 @@
     position: absolute;
     top: 50%;
     right: 15%;
-    transform: translateY(-50%);
+    transform: translateY( -50% );
     z-index: 1;
 }
 #p-mainvisual nav ul li {
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     text-align: center;
 }
 #p-mainvisual nav ul li:last-child {
     margin: 0;
 }
 #p-mainvisual nav ul li a {
-    font-size: 2.4em;
+    font-size: 1.4em;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }
 /**
 * logo
@@ -53,9 +63,10 @@
 #p-mainvisual img[alt*='uemu-portfolio'] {
     position: absolute;
     top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    left: 30%;
+    transform: translate( -50% );
     z-index: 1;
+    height: 15px;
 }
 /**
 * click here
@@ -64,7 +75,7 @@
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate( -50% );
     z-index: 1;
     color: white;
     font-size: 1.6em;
@@ -77,9 +88,49 @@
     border-left: 1px solid white;
     width: 25px;
     height: 25px;
-    transform: rotate(-135deg);
+    transform: rotate( -135deg );
     top: 0;
-    left: calc(50% - 15px);
+    left: calc( 50% - 10px );
     display: block;
     margin: 0 0 20px;
+}
+@media (min-width: 991px) {
+    /**
+    * content
+    **/
+    #p-mainvisual {
+        height: auto;
+    }
+    /**
+    * banner
+    **/
+    #p-mainvisual .MainBnr,
+    #p-mainvisual .MainBnr ul {
+        height: auto;
+        position: static;
+    }
+    /**
+    * nav
+    **/
+    #p-mainvisual nav ul li {
+        margin: 0 0 30px;
+    }
+    #p-mainvisual nav ul li a {
+        font-size: 2.4em;
+    }
+    /**
+    * logo
+    **/
+    #p-mainvisual img[alt*='uemu-portfolio'] {
+        height: auto;
+        left: 25%;
+    }
+    /**
+    * click here
+    **/
+    #p-mainvisual .p-mainvisual__click span {
+        width: 25px;
+        height: 25px;
+        left: calc(50% - 15px);
+    }
 }

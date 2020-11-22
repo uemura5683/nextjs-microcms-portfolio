@@ -52,21 +52,20 @@ header .header--menu__content ul li a {
 **/
 header .c-snslink {
     position: absolute;
-    top: 40px;
-    right: 7%;
+    top: 22px;
+    right: calc( 3% + 30px );
     transform: translateY(-50%);
     z-index: 10;
 }
-
 
 /**
 * memu btn
 **/
 header .header--menu__btn {
     position: absolute;
-    top: 40px;
+    top: 25px;
     right: 3%;
-    width: 32px;
+    width: 25px;
     height: 25px;
     border: none;
     -webkit-transform: translateY(-50%);
@@ -90,15 +89,40 @@ header .header--menu__btn span:nth-of-type( 1 ) {
     top: 0px;
 }
 header .header--menu__btn span:nth-of-type( 2 ) {
-    top: 12px;
+    top: 10px;
 }
 header .header--menu__btn span:nth-of-type( 3 ) {
-    top: 24px;
+    top: 20px;
 }
 
 @media (min-width: 991px) {
     header {
         height: 80px;
         width: 100%;
+    }
+    /**
+    * memu btn
+    **/
+    header .header--menu__btn {
+        top: 40px;
+        right: 3%;
+        width: 32px;
+        height: 25px;
+    }
+    header .header--menu__btn span:nth-of-type( 1 ) {
+        top: 0px;
+    }
+    header .header--menu__btn span:nth-of-type( 2 ) {
+        top: 12px;
+    }
+    header .header--menu__btn span:nth-of-type( 3 ) {
+        top: 24px;
+    }
+    /**
+    * header snslink
+    **/
+    header .c-snslink {
+        top: 40px;
+        right: 7%;
     }
 }

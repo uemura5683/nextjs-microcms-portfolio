@@ -1,3 +1,12 @@
+/**
+* btn area
+**/
+.c-btn-area {
+    margin: 20px 0 0;
+}
+/**
+* btn 
+**/
 .btn-white,
 .btn-white:hover,
 .btn-white:focus {
@@ -11,24 +20,43 @@
     font-size: 1.6em;
     display: block;
 }
-
+/**
+* snslink
+**/
 .c-snslink {
     display: flex;
     flex-wrap: wrap;
 }
 .c-snslink .c-snslnk__list {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 .c-snslink .c-snslnk__list {
-    width: 45px;
+    width: 30px;
 }
-
 @media (min-width: 991px) {
+    /**
+    * btn area
+    **/
+    .c-btn-area {
+        margin: 50px 0 0;
+    }
+    /**
+    * btn 
+    **/
     .btn-white,
     .btn-white:hover,
     .btn-white:focus {
         width: 380px;
-        font-size: 2.4em;
+        font-size: 1.6em;
         padding: 23px 0;
+    }
+    /**
+    * snslink
+    **/
+    .c-snslink .c-snslnk__list {
+        margin: 0 10px;
+    }
+    .c-snslink .c-snslnk__list {
+        width: 45px;
     }
 }

@@ -10,6 +10,7 @@ import cardstyles from '../styles/object/project/p-card.css'
 import linkstyles from '../styles/object/project/p-link.css'
 import profilestyles from '../styles/object/project/p-profile.css'
 import skillstyles from '../styles/object/project/p-skill.css'
+import contactstyles from '../styles/object/project/p-contact.css'
 import utilitystyles from '../styles/object/utility/u-utility.css'
 
 export default function App({ Component, pageProps }) {

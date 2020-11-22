@@ -1,0 +1,40 @@
+/**
+* contact
+**/
+.c-contact-form__inner {
+    width: 100%;
+    margin: 0 auto;
+}
+.c-contact-form__inner .c-contact-form__txt {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+.c-contact-form__inner .c-contact-form__txt a {
+    color: white;
+    text-decoration: underline;
+}
+.c-contact-form__inner .c-contact-form__txt a:hover,
+.c-contact-form__inner .c-contact-form__txt a:focus {
+    text-decoration: none;
+}
+.c-contact-form__inner .c-contact-form__content {
+    margin: 0 0 20px;
+}
+.c-contact-form__inner label {
+    color: white;
+    display: block;
+    margin: 0 0 5px;
+}
+@media (min-width: 991px) {
+    .c-contact-form__inner {
+        width: 60%;
+    }
+    .c-contact-form__inner .c-contact-form__txt {
+        margin: 50px 0;
+    }
+    .c-contact-form__inner label {
+        margin: 0 0 10px;
+    }
+}
