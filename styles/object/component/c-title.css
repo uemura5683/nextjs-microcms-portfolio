@@ -11,6 +11,9 @@
   border-bottom: 1px solid white;
 }
 @media (min-width: 991px) {
+    /**
+    * title
+    **/
     .c-title {
         font-size: 3.6em;
         width: 100%;

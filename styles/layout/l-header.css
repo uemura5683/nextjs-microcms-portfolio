@@ -22,7 +22,6 @@ header.active:after {
     display: block;
     opacity: .7;
 }
-
 header .header--menu__content {
     z-index: -1;
     opacity: 0;
@@ -32,7 +31,6 @@ header .header--menu__content {
     left: 50%;
     z-index: 1;
     -webkit-transform: translateX(-50%) translateY(-50%);
-       -moz-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
     max-height: 73vh;
     overflow: scroll;
@@ -52,8 +50,9 @@ header .header--menu__content ul li a {
 **/
 header .c-snslink {
     position: absolute;
-    top: 22px;
-    right: calc( 3% + 30px );
+    top: 24px;
+    right: calc( 3% + 35px );
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 10;
 }
@@ -69,7 +68,6 @@ header .header--menu__btn {
     height: 25px;
     border: none;
     -webkit-transform: translateY(-50%);
-       -moz-transform: translateY(-50%);
             transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
@@ -82,7 +80,6 @@ header .header--menu__btn span {
     background-color: white;
     transition: 0.3s all ease;
     -webkit-transition: 0.3s all ease;
-       -moz-transition: 0.3s all ease;
         -ms-transition: 0.3s all ease;
 }
 header .header--menu__btn span:nth-of-type( 1 ) {
@@ -96,10 +93,14 @@ header .header--menu__btn span:nth-of-type( 3 ) {
 }
 
 @media (min-width: 991px) {
+    /**
+    * header content
+    **/ 
     header {
         height: 80px;
         width: 100%;
     }
+
     /**
     * memu btn
     **/
@@ -118,6 +119,7 @@ header .header--menu__btn span:nth-of-type( 3 ) {
     header .header--menu__btn span:nth-of-type( 3 ) {
         top: 24px;
     }
+    
     /**
     * header snslink
     **/
