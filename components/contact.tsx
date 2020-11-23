@@ -1,12 +1,12 @@
 export default function Contact() {
   return (
-    <div class="c-contact-form__inner">
-      <p class="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
+    <div className="c-contact-form__inner">
+      <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
       <form
         action="https://api.staticforms.xyz/submit"
         method="post"
         onSubmit="">
-        <div class="c-contact-form__content">
+        <div className="c-contact-form__content">
           <label>あなたの名前</label>
             <input
               type="text"
@@ -16,7 +16,7 @@ export default function Contact() {
               required
             />
         </div>
-        <div class="c-contact-form__content">
+        <div className="c-contact-form__content">
           <label>メールアドレス</label>
             <input
               type="email"
@@ -26,7 +26,7 @@ export default function Contact() {
               required
             />
         </div>
-        <div class="c-contact-form__content">
+        <div className="c-contact-form__content">
           <label>メッセージ</label>
           <div>
             <textarea
@@ -37,8 +37,8 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div class="c-btn-area">
-          <button class="btn-white" type="submit">メールアドレスを送信</button>
+        <div className="c-btn-area">
+          <button className="btn-white" type="submit">メールアドレスを送信</button>
         </div>
       </form>
     </div>

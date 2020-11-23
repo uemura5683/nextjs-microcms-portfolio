@@ -35,30 +35,30 @@ export default function Layout({ children, home }) {
           </>
         ) }
         <SnsLink></SnsLink>
-        <div class="header--menu__btn">
+        <div className="header--menu__btn">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="header--menu__content">
+        <div className="header--menu__content">
           <Navi></Navi>
         </div>
       </header>
       <main>{children}</main>
       <footer>
-        <div class="foorter__logo">
+        <div className="foorter__logo">
           <Logo></Logo>
         </div>
         <SnsLink></SnsLink>
-        <div class="footer--link__privacy">
-          <a href="">privacty policy</a>
+        <div className="footer--link__privacy">
+          <a href="/privacy">privacty policy</a>
         </div>
-        <div class="footer__copyrights">
+        <div className="footer__copyrights">
         (c) 2020 Uemu-Portfolio
         </div>
       </footer>
       {!home && (
-        <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

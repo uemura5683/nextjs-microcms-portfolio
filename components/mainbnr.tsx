@@ -1,8 +1,8 @@
 export default function Mainbnr() {
   return (
-      <div class="MainBnr">
+      <div className="MainBnr">
           <>
-          <ul class="work__list">
+          <ul className="work__list">
             <li>
               <a href="">
                 <img src="/images/bnr/banner.png"></img>

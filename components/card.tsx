@@ -1,9 +1,9 @@
 export default function Sard({ work }) {
   return (
-      <div class="card">
-        {work ? (
+      <div className="card">
+        { work ? (
           <>
-          <ul class="work__list">
+          <ul className="work__list">
             <li>
               <a href="">
                 <img src="/images/noimage.png"></img>
@@ -18,7 +18,7 @@ export default function Sard({ work }) {
           </>
           ) : (
           <>
-          <ul class="info__list">
+          <ul className="info__list">
             <li>
                 <img src="/images/noimage.png"></img>
                 <span>テキストテキスト</span>
