@@ -51,19 +51,12 @@ export default function Layout({ children, home }) {
         </div>
         <SnsLink></SnsLink>
         <div className="footer--link__privacy">
-          <a href="/privacy">privacty policy</a>
+          <Link href="/about">About</Link>
         </div>
         <div className="footer__copyrights">
         (c) 2020 Uemu-Portfolio
         </div>
       </footer>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
     </div>
   )
 }

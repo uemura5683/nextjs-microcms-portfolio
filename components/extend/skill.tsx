@@ -1,5 +1,7 @@
 export default function Skill() {
   return (
+    <section id="p-skill" className="u-gray">
+      <h2 className="c-title white">SKILL</h2>
       <ul className="skill__list">
           <li className="skill__zoom html">
             <img src="/images/skill/skill_html.png"></img>
@@ -66,5 +68,6 @@ export default function Skill() {
             <div className="gage"></div>
           </li>
       </ul>
+    </section>
   )
 }

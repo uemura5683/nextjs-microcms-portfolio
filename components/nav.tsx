@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function Navigation() {
   return (
     <nav>
       <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skill">SKILL</a></li>
-        <li><a href="#work">WORK</a></li>
-        <li><a href="#infomation">INFORMATION</a></li>
-        <li><a href="#link">LINK</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><Link href="#about">ABOUT</Link></li>
+        <li><Link href="#skill">SKILL</Link></li>
+        <li><Link href="#work">WORK</Link></li>
+        <li><Link href="#infomation">INFORMATION</Link></li>
+        <li><Link href="#link">LINK</Link></li>
+        <li><Link href="#contact">CONTACT</Link></li>
       </ul>
     </nav>
   )

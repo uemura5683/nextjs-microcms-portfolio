@@ -1,5 +1,7 @@
-export default function Skill() {
+export default function LinkArea() {
   return (
+    <section id="p-link">
+      <h2 className="c-title">LINK</h2>    
       <ul className="link__list">
           <li>
             <a href="https://nu-blogsite.net/" target="_blank">
@@ -38,5 +40,6 @@ export default function Skill() {
             </a>
           </li>
       </ul>
+    </section>
   )
 }

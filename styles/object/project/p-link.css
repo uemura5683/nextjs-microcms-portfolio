@@ -30,9 +30,10 @@
 @media (min-width: 991px) {
     .link__list li {
         width: calc(100% / 3);
+        margin: 20px 0;
     }
     .link__list li img {
-        width: 100px;
+        width: 50px;
     }
     .link__list li span {
         width: calc(100% - 5% - 100px);

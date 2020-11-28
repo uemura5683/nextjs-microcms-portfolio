@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="c-contact-form__inner">
-      <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
+      <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<br></br><a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
       <form
         action="https://api.staticforms.xyz/submit"
         method="post"
