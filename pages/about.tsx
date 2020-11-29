@@ -10,7 +10,10 @@ export default function About() {
     <Layout about>
       <Head>
         <title>{siteTitle}</title>
+        <link href="/style/about.css" rel="stylesheet" />
       </Head>
+      <div className="p-about">
+      </div>
     </Layout>
   )
 }
