@@ -10,8 +10,6 @@ import Layout, { siteTitle } from '../components/layout'
 import MainVisual from '../components/extend/mainvisual'
 import Profile from '../components/extend/profile'
 import Skill from '../components/extend/skill'
-import Work from '../components/extend/work'
-import Information from '../components/extend/information'
 import LinkArea from '../components/extend/linkarea'
 import ContactForm from '../components/extend/contactform'
 
@@ -22,7 +20,7 @@ import Link from 'next/link'
 /**
  * export
  */
-function Home( {blog} ) {
+function Home( {info, work} ) {
   return (
     <Layout home>
       <Head>
@@ -36,10 +34,13 @@ function Home( {blog} ) {
         <h2 className="c-title">WORK</h2>
         <div className="card">
           <ul>
-          {blog.map(blog => (
-              <li key={blog.id}>
-                <Link href={`work/${blog.id}`}>
-                  <a>{blog.title}</a>
+          {work.map(work => (
+              <li key={work.id}>
+                <Link href={`work/${work.id}`}>
+                <img src={work.image.url}></img>
+                </Link>
+                <Link href={`work/${work.id}`}>
+                  <span>{work.title}</span>
                 </Link>
               </li>
           ))}
@@ -50,10 +51,13 @@ function Home( {blog} ) {
         <h2 className="c-title white">INFORMATION</h2>
         <div className="card">
           <ul>
-          {blog.map(blog => (
-              <li key={blog.id}>
-                <Link href={`infromation/${blog.id}`}>
-                  <a>{blog.title}</a>
+          {info.map(info => (
+              <li key={info.id}>
+                <Link href={`information/${info.id}`}>
+                <img src={info.image.url}></img>
+                </Link>
+                <Link href={`information/${info.id}`}>
+                  <span className="white">{info.title}</span>
                 </Link>
               </li>
           ))}
@@ -69,14 +73,20 @@ function Home( {blog} ) {
 
 export async function getStaticProps() {
   const key = {
-    headers: {'X-API-KEY': 'a9ca1ec4-edff-43d8-ace7-e5f0c68b5b50'},
+    headers: {'X-API-KEY': '778ce6aa-1e13-4d06-af56-096c0f6b01d4'},
   };
-  const data = await fetch('https://uemura5683.microcms.io/api/v1/business', key)
+  const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
+    .then((res: { json: () => any }) => res.json())
+    .catch(() => null);
+
+  const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())
     .catch(() => null);
+
   return {
     props: {
-      blog: data.contents,
+      info: infos.contents,
+      work: works.contents,
     },
   };
 }

@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
-import nav from '../components/nav'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 

@@ -19,6 +19,9 @@
     display: block;
     text-align: left;
 }
+.card ul li span.white {
+    color: white;
+}
 @media (min-width: 991px) {
     .card ul li{
         margin: 0 1%;

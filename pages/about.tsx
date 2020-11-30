@@ -1,13 +1,13 @@
-import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import aboutStyles from '../styles/about.css'
-import { getSortedPostsData } from '../lib/posts'
+import Head from 'next/head'
 import Link from 'next/link'
-import Date from '../components/date'
 
+/**
+ * export
+ */
 export default function About() {
   return (
-    <Layout about>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/about.css" rel="stylesheet" />
