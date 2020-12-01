@@ -30,7 +30,7 @@ function Home( {info, work} ) {
       <MainVisual></MainVisual>
       <Profile></Profile>
       <Skill></Skill>
-      <section id="p-work">
+      <section id="p-work" className="has-animation">
         <h2 className="c-title">WORK</h2>
         <div className="card">
           <ul>
@@ -47,7 +47,7 @@ function Home( {info, work} ) {
           </ul>
         </div>
       </section>
-      <section id="p-information" className="u-gray">
+      <section id="p-information" className="u-gray has-animation">
         <h2 className="c-title white">INFORMATION</h2>
         <div className="card">
           <ul>

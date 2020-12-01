@@ -1,6 +1,6 @@
 export default function Skill() {
   return (
-    <section id="p-skill" className="u-gray">
+    <section id="p-skill" className="u-gray has-animation">
       <h2 className="c-title white">SKILL</h2>
       <ul className="skill__list">
           <li className="skill__zoom html">

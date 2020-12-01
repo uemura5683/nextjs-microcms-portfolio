@@ -13,6 +13,7 @@ export default function About() {
         <link href="/style/about.css" rel="stylesheet" />
       </Head>
       <div className="p-about">
+        
       </div>
     </Layout>
   )

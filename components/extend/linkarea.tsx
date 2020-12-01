@@ -1,6 +1,6 @@
 export default function LinkArea() {
   return (
-    <section id="p-link">
+    <section id="p-link" className="has-animation">
       <h2 className="c-title">LINK</h2>    
       <ul className="link__list">
           <li>

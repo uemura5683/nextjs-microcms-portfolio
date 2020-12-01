@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <section id="p-about">
+    <section id="p-about" className="has-animation">
       <h2 className="c-title">About</h2>
       <article className="p-about__profile">
         <h3 className="p-about__profile--ttl">PROFILE</h3>
