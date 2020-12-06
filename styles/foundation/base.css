@@ -126,7 +126,7 @@ img {
 }
 
 /**
-*
+* section
 **/
 section {
   padding: 25px 5%;
@@ -134,5 +134,17 @@ section {
 @media (min-width: 991px) {
   section {
     padding: 50px 5%;
+  }
+}
+
+/**
+* container
+**/ 
+.container {
+  padding: 50px 5%;
+}
+@media (min-width: 991px) {
+  .container {
+    padding: 120px 5%;
   }
 }

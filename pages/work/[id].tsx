@@ -3,16 +3,19 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function BlogId({}) {
+export default function BlogId( {works} ) {
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
-      <div className="detail__inner">
-        <h1>{works.title}</h1>
-        <p>{works.publishedAt}</p>
+      <div className="p-detail__inner">
+        <div className="c-title white">{works.title}</div>
+        <div className="p-detail__top">
+          <p>{works.publishedAt}</p>
+          <img src={works.image.url}></img>
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: `${works.body}`,

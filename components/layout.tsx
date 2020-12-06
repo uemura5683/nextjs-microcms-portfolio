@@ -26,47 +26,59 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       </Head>
-      <header>
+        <header>
+          {home ? (
+            <>
+            </>
+          ) : (
+            <>
+              <Link href="/">
+                <a>
+                  <Logo></Logo>
+                </a>
+              </Link>
+            </>
+          ) }
+          <SnsLink></SnsLink>
+          <div className="header--menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="header--menu__content">
+            <Navi></Navi>
+          </div>
+        </header>
         {home ? (
-          <>
-          </>
-        ) : (
-          <>
-            <Logo></Logo>
-          </>
-        ) }
-        <SnsLink></SnsLink>
-        <div className="header--menu__btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div className="header--menu__content">
-          <Navi></Navi>
-        </div>
-      </header>
-      {home ? (
-          <>
-            <main>{children}</main>
-          </>
-        ) : (
-          <>
-            <main className="bgimage">{children}</main>
-          </>
-        ) }
-      <footer>
-        <div className="foorter__logo">
-          <Logo></Logo>
-        </div>
-        <SnsLink></SnsLink>
-        <div className="footer--link__privacy">
-          <Link href="/about">About</Link>
-        </div>
-        <div className="footer__copyrights">
-        (c) 2020 Uemu-Portfolio
-        </div>
-      </footer>
-      <script src="/js/jquery.waypoints.min.js"></script>
+            <>
+              <main>{children}</main>
+            </>
+          ) : (
+            <>
+              <main>
+                <div className="container">
+                  {children}
+                  <div className="bgimage"></div>
+                </div>
+              </main>
+            </>
+          ) }
+        <footer>
+          <div className="foorter__logo">
+            <Link href="/">
+              <Logo></Logo>
+            </Link>
+          </div>
+          <SnsLink></SnsLink>
+          <div className="footer--link__privacy">
+            <Link href="/about">About</Link>
+          </div>
+          <div className="footer__copyrights">
+          (c) 2020 Uemu-Portfolio
+          </div>
+        </footer>
+        <script src="/js/jquery.waypoints.min.js"></script>
+        <script src="/js/common.js"></script>
     </div>
   )
 }

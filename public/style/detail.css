@@ -1,0 +1,27 @@
+/*********************************
+* detail.css
+*********************************/
+
+/**
+* inner
+*/
+.p-detail__inner p,
+.p-detail__inner div {
+    color: white;
+}
+.p-detail__inner .p-detail__top {
+    margin: 0 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.p-detail__inner .p-detail__top > * {
+    width: 50%;
+}
+@media (min-width: 991px) {
+    .p-detail__inner .p-detail__top {
+        margin: 0 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }    
+}

@@ -22,6 +22,7 @@ body {
 
 main {
   display: block;
+  position: relative;
 }
 
 p, table, blockquote, address, pre, iframe, form, figure, dl {
