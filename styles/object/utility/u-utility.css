@@ -2,3 +2,7 @@
     background-color: #000000;
     opacity: .7;
 }
+
+.bgimage {
+    background-image: url('/images/bnr/banner.png');
+} 

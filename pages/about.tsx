@@ -7,13 +7,12 @@ import Link from 'next/link'
  */
 export default function About() {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/about.css" rel="stylesheet" />
       </Head>
       <div className="p-about">
-        
       </div>
     </Layout>
   )

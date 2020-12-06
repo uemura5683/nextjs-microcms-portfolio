@@ -45,7 +45,15 @@ export default function Layout({ children, home }) {
           <Navi></Navi>
         </div>
       </header>
-      <main>{children}</main>
+      {home ? (
+          <>
+            <main>{children}</main>
+          </>
+        ) : (
+          <>
+            <main className="bgimage">{children}</main>
+          </>
+        ) }
       <footer>
         <div className="foorter__logo">
           <Logo></Logo>
