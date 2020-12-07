@@ -10,29 +10,10 @@
 /**
 * banner
 **/
-#p-mainvisual .MainBnr {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+#p-mainvisual .WrapCanvas .Canvas{
+    width: 100% !important;
 }
-#p-mainvisual .MainBnr ul {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate( -50%, -50% );
-            transform: translate( -50%, -50% );
-    height: 100%;
-    width: 195.777778vh;
-    min-width: 100%;
-    min-height: 56.25vw;
-}
-#p-mainvisual .MainBnr a {
-    display: block;
-}
-#p-mainvisual .MainBnr img {
-    width: 100%;
-}
-#p-mainvisual .MainBnr:after {
+#p-mainvisual .WrapCanvas:after {
     content: '';
     background-color: black;
     top: 0;

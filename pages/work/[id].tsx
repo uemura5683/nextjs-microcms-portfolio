@@ -2,10 +2,11 @@ import Layout, { siteTitle }  from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
+import Link from 'next/link'
 
-export default function BlogId( {works} ) {
+export default function BlogId( { works, worklist } ) {
   return (
-    <Layout>
+    <Layout detail>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
@@ -17,10 +18,28 @@ export default function BlogId( {works} ) {
           <img src={works.image.url}></img>
         </div>
         <div
+          className="p-detail__bottom"
           dangerouslySetInnerHTML={{
             __html: `${works.body}`,
           }}
         />
+        <div id="p-work">
+          <h3 className="c-title white">work</h3>
+          <div className="card">
+            <ul>
+            {worklist.map(worklist => (
+                <li key={worklist.id}>
+                  <Link href={`/information/${worklist.id}`}>
+                  <img src={worklist.image.url}></img>
+                  </Link>
+                  <Link href={`/information/${worklist.id}`}>
+                    <span>{worklist.title}</span>
+                  </Link>
+                </li>
+            ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </Layout>
   );
@@ -49,9 +68,15 @@ export const getStaticProps = async context => {
   )
     .then(res => res.json())
     .catch(() => null);
+
+  const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
+  .then(res => res.json())
+  .catch(() => null);
+
   return {
     props: {
       works: data,
+      worklist: works.contents,
     },
   };
 };

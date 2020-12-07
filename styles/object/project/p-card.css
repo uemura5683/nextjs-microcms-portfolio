@@ -24,6 +24,9 @@
     color: white;
 }
 @media (min-width: 991px) {
+    .card ul {
+        margin: 0 -1%;
+    }
     .card ul li{
         margin: 0 1%;
         width: calc( ( 100% / 3 ) - 2% );

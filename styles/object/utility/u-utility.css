@@ -2,6 +2,15 @@
     background-color: #000000;
     opacity: .7;
 }
+.u-txtleft{
+    text-align: left;
+}
+.u-txtcenter{
+    text-align: center;
+}
+.u-txtright{
+    text-align: right;
+}
 .bgimage {
     background-image: url(/images/bnr/banner.png);
     position: absolute;

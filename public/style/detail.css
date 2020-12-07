@@ -18,10 +18,16 @@
 .p-detail__inner .p-detail__top > * {
     width: 50%;
 }
+.p-detail__inner .p-detail__bottom {
+    margin: 0 0 25px;
+}
 @media (min-width: 991px) {
     .p-detail__inner .p-detail__top {
         margin: 0 0 50px;
         display: flex;
         flex-wrap: wrap;
-    }    
+    }
+    .p-detail__inner .p-detail__bottom {
+        margin: 0 0 50px;
+    } 
 }

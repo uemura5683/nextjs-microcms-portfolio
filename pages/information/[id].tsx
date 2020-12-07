@@ -4,7 +4,7 @@ import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 
-export default function BlogId({ works, worklist }) {
+export default function BlogId({ infos, infolist }) {
   return (
     <Layout>
       <Head>
@@ -12,27 +12,28 @@ export default function BlogId({ works, worklist }) {
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
       <div className="p-detail__inner">
-        <div className="c-title white">{works.title}</div>
+        <div className="c-title white">{infos.title}</div>
         <div className="p-detail__top">
-          <p>{works.publishedAt}</p>
-          <img src={works.image.url}></img>
+          <p>{infos.publishedAt}</p>
+          <img src={infos.image.url}></img>
         </div>
         <div
+          className="p-detail__bottom"
           dangerouslySetInnerHTML={{
-            __html: `${works.body}`,
+            __html: `${infos.body}`,
           }}
         />
         <div id="p-information">
-          <h2 className="c-title white">INFORMATION</h2>
+          <h3 className="c-title white">information</h3>
           <div className="card">
             <ul>
-            {worklist.map(worklist => (
-                <li key={worklist.id}>
-                  <Link href={`work/${worklist.id}`}>
-                  <img src={worklist.image.url}></img>
+            {infolist.map(infolist => (
+                <li key={infolist.id}>
+                  <Link href={`/information/${infolist.id}`}>
+                  <img src={infolist.image.url}></img>
                   </Link>
-                  <Link href={`work/${worklist.id}`}>
-                    <span>{worklist.title}</span>
+                  <Link href={`/information/${infolist.id}`}>
+                    <span>{infolist.title}</span>
                   </Link>
                 </li>
             ))}
@@ -74,8 +75,8 @@ export const getStaticProps = async context => {
 
   return {
     props: {
-      works: data,
-      worklist: infos.contents,
+      infos: data,
+      infolist: infos.contents,
     },
   };
 };
