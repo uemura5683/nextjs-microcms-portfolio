@@ -10,7 +10,8 @@ export default function Contact() {
           <label>あなたの名前</label>
             <input
               type="text"
-              placeholder="お名前"
+              placeholder="名前を入力してください"
+              id="form_name"
               name="name"
               onChange=""
               required
@@ -20,18 +21,31 @@ export default function Contact() {
           <label>メールアドレス</label>
             <input
               type="email"
-              placeholder="メールアドレス"
-              name="email"
+              placeholder="メールアドレスを入力してください"
+              id="form_email"
+              name="mail_address"
               onChange=""
               required
             />
         </div>
         <div className="c-contact-form__content">
-          <label>メッセージ</label>
+          <label>お問い合わせ内容</label>
+            <input
+              type="text"
+              placeholder="タイトルを入力してください"
+              id="form_title"
+              name="title"
+              onChange=""
+              required
+            />
+        </div>
+        <div className="c-contact-form__content">
+          <label>お問い合わせ詳細</label>
           <div>
             <textarea
-              placeholder="Your Message"
-              name="message"
+              placeholder="本文を入力してください"
+              type="text"
+              name="body"
               onChange=""
               required
             />
