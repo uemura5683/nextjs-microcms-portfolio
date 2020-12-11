@@ -76,7 +76,6 @@ const Contacts = () => {
           <div>
             <textarea
               placeholder="本文を入力してください"
-              type="text"
               name="body"
               onChange={e => setBody(e.target.value)}
               required

@@ -17,7 +17,6 @@ import ContactForm from '../components/extend/contactform'
 import fetch from 'node-fetch'
 import Link from 'next/link'
 
-
 /**
  * export
  */

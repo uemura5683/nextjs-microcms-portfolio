@@ -78,7 +78,7 @@ const Canvas: React.FC = () => {
 
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 1000; i++) {
       const material = new MeshPhongMaterial({
         color: 0xffffff,
         flatShading: true

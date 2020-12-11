@@ -3,7 +3,6 @@
  */
 import Logo from '../logo'
 import Navi from '../nav'
-import MainBnr from '../mainbnr'
 
 // SSRあるとwindowが使えない等あるため
 import dynamic from 'next/dynamic'
