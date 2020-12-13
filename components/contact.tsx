@@ -15,16 +15,17 @@ const Contacts = () => {
     const data = {
       email: email,
       name: name,
+      title: title,
       body: body
     };
 
     axios({
       method: "post",
-      url: "https://your.microcms.io/api/v1/contacts",
+      url: "https://uemura5683.microcms.io/api/v1/contacts",
       data: data,
       headers: {
         "Content-Type": "application/json",
-        "X-WRITE-API-KEY": process.env.x_api_key
+        "X-WRITE-API-KEY": "e4f670a9-c5f8-4b37-b85c-420c00c33675"
       }
     })
       .then(() => {
@@ -43,8 +44,9 @@ const Contacts = () => {
             <input
               type="text"
               placeholder="名前を入力してください"
-              id="form_name"
+              id="name"
               name="name"
+              value={name}
               onChange={e => setEmail(e.target.value)}
               required
             />
@@ -54,8 +56,9 @@ const Contacts = () => {
             <input
               type="email"
               placeholder="メールアドレスを入力してください"
-              id="form_email"
-              name="mail_address"
+              id="email"
+              name="email"
+              value={email}
               onChange={e => setName(e.target.value)}
               required
             />
@@ -65,8 +68,9 @@ const Contacts = () => {
             <input
               type="text"
               placeholder="タイトルを入力してください"
-              id="form_title"
+              id="title"
               name="title"
+              value={title}
               onChange={e => setTitle(e.target.value)}
               required
             />
@@ -75,15 +79,17 @@ const Contacts = () => {
           <label>お問い合わせ詳細</label>
           <div>
             <textarea
+              type="text"
               placeholder="本文を入力してください"
               name="body"
+              value={body}
               onChange={e => setBody(e.target.value)}
               required
             />
           </div>
         </div>
         <div className="c-btn-area">
-          <button className="btn-white" type="submit">メールアドレスを送信</button>
+          <button className="btn-white" type="submit" onClick={handleSubmit}>メールアドレスを送信</button>
         </div>
       </form>
     </div>

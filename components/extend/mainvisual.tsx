@@ -22,8 +22,10 @@ export default function ContactForm() {
       <Navi></Navi>
       <ThreeNoSSR></ThreeNoSSR>
       <div className="p-mainvisual__click">
-        <span></span>
-        click here
+        <a href="#p-about">
+          <span></span>
+          click here
+        </a>
       </div>
     </section>
   )

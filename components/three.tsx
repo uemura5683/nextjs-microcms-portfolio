@@ -17,27 +17,28 @@ import {
   AdditiveBlending,
   PointsMaterial,
   DoubleSide,
-  Mesh
+  Mesh,
+  SrcAlphaSaturateFactor
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 
-import useGetWindowSize from '../components/hooks/useGetWindowSize'
-
 type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
+  m_box: THREE.Object3D
 }
 
 const Canvas: React.FC = () => {
-  const { width, height } = useGetWindowSize()
 
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
     if (!canvas) {
       return
     }
+    if( canvas ) {
 
+    }
     // init scene
     const scene = new Scene()
 
@@ -47,7 +48,7 @@ const Canvas: React.FC = () => {
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
     renderer.setClearColor('#000000')
-    renderer.setSize(width, height)
+    renderer.setSize(1920, 1003)
 
     // init object
     const object = new Object3D()
@@ -63,7 +64,7 @@ const Canvas: React.FC = () => {
     const e_box = new Mesh(e_Geometry, e_materials);
     object.add(e_box);
   
-    const m_Geometry = new SphereGeometry( 34, 64, 64 );
+    const m_Geometry = new SphereGeometry( 15, 64, 64 );
     const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/moon/img/moon.jpg');
     const m_materials = new MeshStandardMaterial( { color: 0xffffff, map:m_texture } );
     const m_box = new Mesh( m_Geometry, m_materials );
@@ -78,7 +79,7 @@ const Canvas: React.FC = () => {
 
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 2000; i++) {
       const material = new MeshPhongMaterial({
         color: 0xffffff,
         flatShading: true
@@ -92,7 +93,7 @@ const Canvas: React.FC = () => {
     }
 
     const directionalLight = new DirectionalLight( 0xffffff, 1 );
-    directionalLight.position.set( 1000, 1300, 80 );
+    directionalLight.position.set( 205, 1300, 80 );
     scene.add( directionalLight );
   
     const ambient = new AmbientLight( 0x222222 );
@@ -103,27 +104,27 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const effectGlitch = new GlitchPass(64)
-    // true => exstreme
-    effectGlitch.goWild = false
-    effectGlitch.renderToScreen = true
-    composer.addPass(effectGlitch)
-
-    animate({ object, composer })
+    animate({ object, composer, m_box })
   }
 
 
   // for animation
-  const animate = ({ object, composer }: ParamsAnimate) => {
-    window.requestAnimationFrame(() => animate({ object, composer }))
-    object.rotation.x += 0.01
-    object.rotation.z += 0.01
+  const animate = ({ object, composer, m_box }: ParamsAnimate) => {
+    window.requestAnimationFrame(() => animate({ object, composer, m_box }))
+
+    const m_radian = ( .5 * Math.PI ) / 1000;  
+    m_box.position.x = 300 * Math.sin( m_radian );
+    m_box.position.y = 50;
+    m_box.position.z = 300 * Math.cos( m_radian );
+
+    object.rotation.y += 0.01
     composer.render()
   }
 
   return (
     <div className="WrapCanvas">
       <canvas className="Canvas" ref={onCanvasLoaded} />
+      <div className="lazyload"></div>
     </div>
   )
 }
