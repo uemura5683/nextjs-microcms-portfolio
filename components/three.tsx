@@ -23,6 +23,7 @@ import {
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
+import useGetWindowSize from '../components/hooks/useGetWindowSize'
 
 type ParamsAnimate = {
   object: THREE.Object3D
@@ -31,8 +32,10 @@ type ParamsAnimate = {
 }
 
 const Canvas: React.FC = () => {
+  const { width, height } = useGetWindowSize()
 
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
+
     if (!canvas) {
       return
     }
@@ -48,7 +51,7 @@ const Canvas: React.FC = () => {
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
     renderer.setClearColor('#000000')
-    renderer.setSize(1920, 1003)
+    renderer.setSize(width, height)
 
     // init object
     const object = new Object3D()
@@ -105,6 +108,7 @@ const Canvas: React.FC = () => {
     composer.addPass(renderPass)
 
     animate({ object, composer, m_box })
+
   }
 
 

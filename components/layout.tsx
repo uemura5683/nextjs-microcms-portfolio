@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Navi from '../components/nav'
 import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
+import DrawerMenu from '../components/extend/drawermenu'
 
 const name = 'うえむー'
 export const siteTitle = 'うえむーのnext.js練習用のサイト'
@@ -40,14 +40,7 @@ export default function Layout({ children, home }) {
             </>
           ) }
           <SnsLink></SnsLink>
-          <div className="header--menu__btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="header--menu__content">
-            <Navi></Navi>
-          </div>
+          <DrawerMenu></DrawerMenu>
         </header>
         {home ? (
             <>

@@ -73,9 +73,12 @@
     left: 50%;
     transform: translate( -50% );
     z-index: 1;
-    color: white;
     font-size: 1.6em;
     cursor: pointer;
+}
+#p-mainvisual .p-mainvisual__click a {
+    color: white;
+    text-decoration: none;
 }
 #p-mainvisual .p-mainvisual__click span {
     position: relative;

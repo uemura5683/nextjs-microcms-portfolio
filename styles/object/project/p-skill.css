@@ -265,3 +265,49 @@
         height: 18px;
     }
 }
+
+/**
+* modal
+**/
+.ReactModal__Overlay {
+    z-index: 20;
+}
+.ReactModal__Content {
+    padding: 40px !important;
+    width: 70%;
+    height: 80%;
+    top: 50% !important;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) translateY(-50%);    
+            transform: translateX(-50%) translateY(-50%);
+}
+.ReactModal__Content h2 {
+    font-size: 2.4rem;
+    border-bottom: 1px solid black;
+    padding: 0 0 5px;
+    margin: 0 0 20px;
+}
+.ReactModal__Content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 30px;
+    font-size: 1.6rem;
+}
+.ReactModal__Content .skill__zoom_modal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ReactModal__Content .skill__zoom_modal img {
+    width: 45%;
+    border: 1px solid lightgray;
+    margin-right: 5%;
+}
+.ReactModal__Content .skill__zoom_modal_description {
+    width: 50%;
+}
+
+@media (min-width: 991px) {
+}
