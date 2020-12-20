@@ -1,22 +1,23 @@
 
 import React from 'react';
-import Navi from '../../components/nav'
+import NaviOther from '../../components/nav_other'
 
 const DrawerMenu = () => {
 
-  const [open, setOpen] = React.useState(true)
+  const [close, setOpen] = React.useState(true)
   // open という名前の state 変数を宣言、初期値 true をセット
-  const toggle = () => setOpen(!open)
+  const toggle = () => setOpen(!close)
 
   return (
     <>  
-      <button onClick={toggle} className={open ? 'header--menu__btn isOpen' : 'header--menu__btn isClose'}>
+      <button onClick={toggle} className={close ? 'header--menu__btn isClose' : 'header--menu__btn isOpen'}>
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div className={open ? 'header--menu__content isOpen' : 'header--menu__content isClose'}>
-        <Navi></Navi>
+      <div className={close ? 'header--menu__content isClose' : 'header--menu__content isOpen'}>
+        <NaviOther></NaviOther>
+        <button onClick={toggle} className={close ? 'overlay isClose' : 'overlay isOpen'}></button>
       </div>
     </>
   )

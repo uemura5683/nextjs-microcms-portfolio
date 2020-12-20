@@ -69,9 +69,20 @@ header .header--menu__content nav ul li a {
     text-decoration: none;
 }
 header .header--menu__content.isOpen {
+    pointer-events: auto;
     opacity: 1;
+}
+header .header--menu__content.isOpen nav {
+    z-index: 100;
+}
+header .header--menu__content.isOpen .overlay {
     background: black;
     opacity: .8;
+    pointer-events: auto;
+    height: 100%;
+    width: 100%;
+    border: none;
+    z-index: 10;
 }
 
 /**
