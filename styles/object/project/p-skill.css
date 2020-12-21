@@ -39,7 +39,7 @@
     height: 15px;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: black;
+    background-color: #737373;
 }
 .skill__list li .gage:after {
     content: '';

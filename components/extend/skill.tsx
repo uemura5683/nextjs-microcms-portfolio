@@ -17,7 +17,7 @@ import Mgulp from '../skill/gulp'
 
 export default function Skill() {
   return (
-    <section id="p-skill" className="u-gray has-animation">
+    <section id="p-skill" className="u-gray has-animation" data-set-color="dark">
       <h2 className="c-title white">SKILL</h2>
       <ul className="skill__list">
           <Mhtml></Mhtml>

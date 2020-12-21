@@ -75,14 +75,24 @@ header .header--menu__content.isOpen {
 header .header--menu__content.isOpen nav {
     z-index: 100;
 }
+header .header--menu__content .overlay {
+    background: transparent;
+    opacity: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border: none;
+    pointer-events: none;
+    -webkit-transition: opacity .5s ease-out;
+            transition: opacity .5s ease-out;
+}
 header .header--menu__content.isOpen .overlay {
     background: black;
     opacity: .8;
     pointer-events: auto;
-    height: 100%;
-    width: 100%;
-    border: none;
     z-index: 10;
+    -webkit-transition: opacity .5s ease-out;
+            transition: opacity .5s ease-out;
 }
 
 /**
@@ -93,7 +103,7 @@ header .c-snslink {
     top: 24px;
     right: calc( 5% + 35px );
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 10;
 }
 
@@ -108,7 +118,7 @@ header .header--menu__btn {
     height: 25px;
     border: none;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+            transform: translateY(-50%); 
     cursor: pointer;
     z-index: 10;
     background: transparent;

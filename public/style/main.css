@@ -37,8 +37,9 @@
     position: absolute;
     top: 50%;
     right: 15%;
-    transform: translateY( -50% );
     z-index: 1;
+    -webkit-transform: translateY( -50% );
+            transform: translateY( -50% );
 }
 #p-mainvisual nav ul li {
     margin: 0 0 15px;
@@ -60,7 +61,8 @@
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate( -50% );
+    -webkit-transform: translate( -50% );
+            transform: translate( -50% );
     z-index: 1;
     height: 15px;
 }
@@ -71,7 +73,8 @@
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translate( -50% );
+    -webkit-transform: translate( -50% );
+            transform: translate( -50% );
     z-index: 1;
     font-size: 1.6em;
     cursor: pointer;
@@ -79,6 +82,7 @@
 #p-mainvisual .p-mainvisual__click a {
     color: white;
     text-decoration: none;
+    display: block;
 }
 #p-mainvisual .p-mainvisual__click span {
     position: relative;
