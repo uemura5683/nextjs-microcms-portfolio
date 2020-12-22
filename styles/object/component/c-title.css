@@ -11,6 +11,11 @@
   color: white;
   border-bottom: 1px solid white;
 }
+.has-animation.slide-animation .c-title {
+  -webkit-animation: border-animation .7s ease forwards;
+          animation: border-animation .7s ease forwards;
+}
+
 @media (min-width: 991px) {
     /**
     * title

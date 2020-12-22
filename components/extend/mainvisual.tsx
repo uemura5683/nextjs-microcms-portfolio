@@ -7,20 +7,18 @@ import Navi from '../nav'
 // SSRあるとwindowが使えない等あるため
 import dynamic from 'next/dynamic'
 
-const ThreeNoSSR = dynamic(
-  () => import('../three'),
-  { ssr: false }
-)
 
 /**
  * export
  */
-export default function ContactForm() {
+export default function Threejs() {
   return (
     <section id="p-mainvisual">
       <Logo></Logo>
       <Navi></Navi>
-      <ThreeNoSSR></ThreeNoSSR>
+      <figure>
+        <img src="/images/bnr/banner.png"></img>
+      </figure>
       <div className="p-mainvisual__click">
         <a href="#p-about">
           <span></span>
