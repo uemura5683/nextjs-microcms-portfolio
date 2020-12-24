@@ -29,10 +29,10 @@ export default function BlogId( { works, worklist } ) {
             <ul>
             {worklist.map(worklist => (
                 <li key={worklist.id}>
-                  <Link href={`/information/${worklist.id}`}>
-                  <img src={worklist.image.url}></img>
+                  <Link href={`/work/${worklist.id}`}>
+                    <img src={worklist.image.url}></img>
                   </Link>
-                  <Link href={`/information/${worklist.id}`}>
+                  <Link href={`/work/${worklist.id}`}>
                     <span>{worklist.title}</span>
                   </Link>
                 </li>

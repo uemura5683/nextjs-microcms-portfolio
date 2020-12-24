@@ -278,7 +278,7 @@
     height: 80%;
     top: 50% !important;
     left: 50% !important;
-    -webkit-transform: translateX(-50%) translateY(-50%);    
+    -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
 }
 .ReactModal__Content h2 {
