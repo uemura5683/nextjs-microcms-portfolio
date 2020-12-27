@@ -82,6 +82,17 @@
 .p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail p {
     font-size: 1.4em;
 }
+
+.has-animation.slide-animation.animation-second .p-about__profile {
+    -webkit-animation: profile-animation 1s ease forwards;
+            animation: profile-animation 1s ease forwards;
+}
+.has-animation.slide-animation.animation-second .p-about__profile:nth-of-type( 2 ) {
+    -webkit-animation: profile-animation2 1s ease forwards;
+            animation: profile-animation2 1s ease forwards;
+}
+
+
 @media (min-width: 991px) {
     /**
     * about content right
@@ -104,3 +115,55 @@
         margin: 50px auto 0;
     }
 }
+
+@-webkit-keyframes profile-animation {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY( 200px ) translateX( -200px );
+              transform: translateY( 200px ) translateX( -200px );
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY( 0 ) translateX( 0 );
+              transform: translateY( 0 ) translateX( 0 );
+    }
+  }
+  
+  @keyframes profile-animation {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY( 200px ) translateX( -200px );
+              transform: translateY( 200px ) translateX( -200px );
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY( 0 ) translateX( 0 );
+              transform: translateY( 0 ) translateX( 0 );
+    }
+  }
+
+  @-webkit-keyframes profile-animation2 {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY( 200px ) translateX( 200px );
+              transform: translateY( 200px ) translateX( 200px );
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY( 0 ) translateX( 0 );
+              transform: translateY( 0 ) translateX( 0 );
+    }
+  }
+  
+  @keyframes profile-animation2 {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY( 200px ) translateX( 200px );
+              transform: translateY( 200px ) translateX( 200px );
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY( 0 ) translateX( 0 );
+              transform: translateY( 0 ) translateX( 0 );
+    }
+  }
