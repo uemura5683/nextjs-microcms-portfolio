@@ -71,6 +71,7 @@ export default function Layout({ children, home }) {
           </div>
         </footer>
         <script src="/js/jquery.waypoints.min.js"></script>
+        <script src="/js/shuffle-text.js"></script>
         <script src="/js/common.js"></script>
     </div>
   )

@@ -30,10 +30,10 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_vue.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">40% エキスパート</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">40% ノービス</p>
+              <p className="skill_experience">1年以上</p>
               <p className="skill_detail">
-                vueは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                vueはEvan You氏が開発したJavascriptのフレームワークである。デザイナーが「親しみやすい」作りとなっており、UI/UXを高める機能(アニメーション)が容易に導入できます。<br></br><br></br>実装したサイト<br></br><a href="http://nu-blogsite.net/">Nu-blog</a>
               </p>
               <p className="skill_site"></p>
             </div>

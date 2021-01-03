@@ -30,7 +30,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_scss.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">60% エキスパート</p>
+              <p className="skill_level">60% ミドル</p>
               <p className="skill_experience">１年以上</p>
               <p className="skill_detail">
                 scssは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
