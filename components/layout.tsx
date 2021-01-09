@@ -32,11 +32,9 @@ export default function Layout({ children, home }) {
             </>
           ) : (
             <>
-              <Link href="/">
-                <a>
+              <a href="/">
                   <Logo></Logo>
-                </a>
-              </Link>
+              </a>
             </>
           ) }
           <SnsLink></SnsLink>
@@ -58,9 +56,9 @@ export default function Layout({ children, home }) {
           ) }
         <footer>
           <div className="foorter__logo">
-            <Link href="/">
+            <a href="/">
               <Logo></Logo>
-            </Link>
+            </a>
           </div>
           <SnsLink></SnsLink>
           <div className="footer--link__privacy">
