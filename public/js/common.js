@@ -1,17 +1,32 @@
 // smooth scroll
 $(function(){
-    $('#p-mainvisual a[href^="#"]').click(function(){
-        var speed = 500;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.get( 0 ).offsetTop;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-    });
-});
+  $('#p-mainvisual a[href^="#"]').click(function(){
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.get( 0 ).offsetTop;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+  });
 
-// slide-animation
-$( window ).on( 'load', function() {
+  let preferscolorscheme = function( target ) {
+    if( target.attr('data-set-color') == 'light' ) {
+      $('header')
+        .addClass('light')
+        .removeClass('dark');
+    } else if( target.attr('data-set-color') == 'dark' ) {
+      $('header')
+        .addClass('dark')
+        .removeClass('light');
+    } else {
+      $('header')
+        .addClass('dark')
+        .removeClass('light');
+    }
+  }
+
+  // slide-animation
+  $( window ).on( 'scroll resize load', function() {
     $( '.has-animation' ).waypoint( function( direction ) {
         var activePoint = $( this.element );
         //scroll down
@@ -21,35 +36,43 @@ $( window ).on( 'load', function() {
         activePoint.removeClass( 'slide-animation' );
         }
     },{ offset : '90%' } );
-});
+
+    $( '.has-animation' ).waypoint( function( direction ) {
+      var activePoint = $( this.element );
+      //scroll down
+      if ( direction === 'down' ) {
+        preferscolorscheme(activePoint);
+      } else {
+        preferscolorscheme(activePoint);
+      }
+  },{ offset : '0%' } );
 
 
-$(function(){
-window.addEventListener('load', init);
-function init() {
-  var effectList = [];
-  var elementList = document.querySelectorAll('.card span');
+  });
 
-  for (var i = 0; i < elementList.length; i++) {
+  window.addEventListener('load', init);
+  function init() {
+    var effectList = [];
+    var elementList = document.querySelectorAll('.card li');
 
-    var element = elementList[i];
-    element.dataset.index = i;
+    for (var i = 0; i < elementList.length; i++) {
 
-    // インスタンスを取得する
-    effectList[i] = new ShuffleText(element);
+      var element = elementList[i];
+      text = element.childNodes[1];
 
-    // マウスオーバー時に再生する
-    element.addEventListener('mouseenter', function () {
-      effectList[+this.dataset.index].start();
-    });
+      text.dataset.index = i;
 
-    // マウスアウト時に再生する
-    element.addEventListener('mouseleave', function () {
-      effectList[+this.dataset.index].start();
-    });
+      // インスタンスを取得する
+      effectList[i] = new ShuffleText(text);
 
-    // 初回を再生する
-    effectList[i].start();
+      // マウスオーバー時に再生する
+      element.addEventListener('mouseenter', function () {
+        dates = this.childNodes[1];
+        effectList[dates.dataset.index].start();
+      });
+
+      // 初回を再生する
+      effectList[i].start();
+    }
   }
-}
 });

@@ -16,9 +16,9 @@ const SkillContent = () => {
       setIsOpen(false);
   }
   return (    
-      <li className="skill__zoom mt">
+      <li className="skill__zoom figma">
         <button onClick={openModal}>
-          <img src="/images/skill/skill_mt.png"></img>
+          <img src="/images/skill/skill_figma.png"></img>
           <div className="gage"></div>
         </button>
         <Modal
@@ -27,15 +27,17 @@ const SkillContent = () => {
           onRequestClose={closeModal}
           contentLabel="Example Modal"
         >
-          <h2 ref={_subtitle => (subtitle = _subtitle)}>Movable Type</h2>
+          <h2 ref={_subtitle => (subtitle = _subtitle)}>Figma</h2>
           <button onClick={closeModal}>close</button>          
           <div className="skill__zoom_modal">
-            <img src="/images/skill/skill_mt.png"></img>
+            <img src="/images/skill/skill_figma.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
+              <p className="skill_level">55% ミドル</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
-                mtは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                figmaは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
+                PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
+                <br></br>実装したサイト<br></br><a href="https://takarabako.tokyo/">タカラバコ</a>
               </p>
               <p className="skill_site"></p>
             </div>

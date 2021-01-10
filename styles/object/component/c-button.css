@@ -29,9 +29,12 @@
 }
 .c-snslink .c-snslnk__list {
     margin: 0 5px;
-}
-.c-snslink .c-snslnk__list {
     width: 23px;
+    background-color: white;
+    border-radius: 100%;
+}
+.c-snslink .c-snslnk__list a {
+    display: block;
 }
 @media (min-width: 991px) {
     /**

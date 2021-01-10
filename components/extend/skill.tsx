@@ -14,6 +14,8 @@ import Mnuxt from '../skill/nuxt'
 import Mnext from '../skill/next'
 import Mnode from '../skill/node'
 import Mgulp from '../skill/gulp'
+import Mbase from '../skill/base'
+import Mfigma from '../skill/figma'
 
 export default function Skill() {
   return (
@@ -36,6 +38,8 @@ export default function Skill() {
           <Mnext></Mnext>
           <Mnode></Mnode>
           <Mgulp></Mgulp>
+          <Mbase></Mbase>
+          <Mfigma></Mfigma>
       </ul>
     </section>
   )

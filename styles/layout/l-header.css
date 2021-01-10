@@ -159,6 +159,13 @@ header .header--menu__btn.isOpen span:nth-of-type( 3 )  {
         -ms-transform: rotate(-45deg);
 }
 
+
+header.light .header--menu__btn span {
+    background-color: #737373;
+    -webkit-transition: 0.2s all ease;
+        -ms-transition: 0.2s all ease;
+}
+
 @media (min-width: 991px) {
     /**
     * header content
