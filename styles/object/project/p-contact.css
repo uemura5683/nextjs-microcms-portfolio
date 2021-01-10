@@ -27,7 +27,59 @@
     display: block;
     margin: 0 0 5px;
 }
+/**
+* modal confirm
+**/
+.ReactModal__Content .c-contact-form__confirm {
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.ReactModal__Content .c-contact-form__confirm .c-contact-form__confirm_txt {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 1.0rem;
+}
+.ReactModal__Content .c-contact-form__confirm table {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    margin: 40px 0 20px;
+}
+.ReactModal__Content .c-contact-form__confirm table tr {
+
+}
+.ReactModal__Content .c-contact-form__confirm table th,
+.ReactModal__Content .c-contact-form__confirm table td {
+    padding: 10px;
+}
+.ReactModal__Content .c-contact-form__confirm table th {
+    border: 1px solid lightgray;
+    border-left-width: 0;
+    border-top-width: 0;
+    width: 30%;
+}
+.ReactModal__Content .c-contact-form__confirm table td {
+    border: 1px solid lightgray;
+    border-left-width: 0;
+    border-top-width: 0;
+    width: 70%;
+}
+.ReactModal__Content .c-contact-form__confirm button {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+}
+
 @media (min-width: 991px) {
+    /**
+    * contact
+    **/
     .c-contact-form__inner {
         width: 60%;
     }
@@ -36,5 +88,11 @@
     }
     .c-contact-form__inner label {
         margin: 0 0 10px;
+    }
+    /**
+    * modal confirm
+    **/
+    .ReactModal__Content .c-contact-form__confirm {
+        width: 50%;
     }
 }

@@ -31,9 +31,9 @@ $(function(){
         var activePoint = $( this.element );
         //scroll down
         if ( direction === 'down' ) {
-        activePoint.addClass( 'slide-animation' );
+          activePoint.addClass( 'slide-animation' );
         } else {
-        activePoint.removeClass( 'slide-animation' );
+          activePoint.removeClass( 'slide-animation' );
         }
     },{ offset : '90%' } );
 
@@ -45,9 +45,7 @@ $(function(){
       } else {
         preferscolorscheme(activePoint);
       }
-  },{ offset : '0%' } );
-
-
+    },{ offset : '0%' } );
   });
 
   window.addEventListener('load', init);
