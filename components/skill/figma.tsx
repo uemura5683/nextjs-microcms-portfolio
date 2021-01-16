@@ -32,8 +32,8 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_figma.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">55% ミドル</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">60% ミドル</p>
+              <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
                 figmaは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
                 PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>

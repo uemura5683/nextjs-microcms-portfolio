@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Modal from 'react-modal'
 
-Modal.setAppElement("#p-contact");
 
 const Contacts = () => {
 
@@ -13,49 +11,8 @@ const Contacts = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
-  function openModal() {
-
-  let ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' ),
-      alert_txt       = document.getElementsByClassName( 'alert-warning' ),
-      alert_txt_inner = document.getElementsByClassName( 'alert_inner_txt' ),
-      conf_name       = document.getElementsByClassName( 'confirm-name' ),
-      conf_mail       = document.getElementsByClassName( 'confirm-mail' ),
-      conf_ttl        = document.getElementsByClassName( 'confirm-title' ),
-      conf_body       = document.getElementsByClassName( 'confirm-body' );
-      
-      // エラーチェック
-      console.log(alert_txt);
-      if( alert_txt != undefined ) {
-        alert_txt[0].remove();
-      }
-      let alert_html = "<div ClassName='alert alert-warning'>"
-      if( name == "" ) {
-        alert_html += "<p ClassName='alert'>名前を入力してください。</p>";
-      }
-      if( email == "" ) {
-        alert_html += "<p ClassName='alert_inner_txt'>メールアドレスを入力してください</p>";
-      }
-      if( title == "" ) {
-        alert_html += "<p ClassName='alert_inner_txt'>タイトルを入力してください</p>";
-      }
-      if( body == "" ) {
-        alert_html += "<p ClassName='alert_inner_txt'>本文を入力してください</p>";
-      }
-      alert_html += "</div>";
-
-      ContactConfirm[0]
-        .insertAdjacentHTML(
-          'afterbegin', alert_html
-        );
-
-      // エラーがない場合はモーダルを表示する
-      if( alert_txt_inner.length == 0 ) {
-        setIsOpen(true);
-      }
-  }
   function afterOpenModal() {        
   }
   function closeModal(){
@@ -64,27 +21,78 @@ const Contacts = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const data = {
-      email: email,
-      name: name,
-      title: title,
-      body: body
-    };
-    axios({
-      method: "post",
-      url: "https://uemura5683.microcms.io/api/v1/contact",
-      data: data,
-      headers: {
-        "Content-Type": "application/json",
-        "X-WRITE-API-KEY": "e4f670a9-c5f8-4b37-b85c-420c00c33675"
-      }
-    })
-    .then(() => {
-      // router.push("/success");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    let ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' ),
+        alert_txt       = document.getElementsByClassName( 'alert-warning' ),
+        alert_txt_inner = document.getElementsByClassName( 'alert_inner_txt' ),
+        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' );
+
+    // エラーチェック
+    if( alert_txt[0] != undefined ) {
+      alert_txt[0].remove();
+    }
+
+    let alert_html = "<div class='alert alert-warning'>"
+    if( name == "" ) {
+      alert_html += "<p class='alert_inner_txt'>名前を入力してください。</p>";
+    }
+    if( email == "" ) {
+      alert_html += "<p class='alert_inner_txt'>メールアドレスを入力してください</p>";
+    }
+    if( title == "" ) {
+      alert_html += "<p class='alert_inner_txt'>タイトルを入力してください</p>";
+    }
+    if( body == "" ) {
+      alert_html += "<p class='alert_inner_txt'>本文を入力してください</p>";
+    }
+    alert_html += "</div>";
+
+    ContactConfirm[0]
+      .insertAdjacentHTML(
+        'afterbegin', alert_html
+      );
+
+    // エラーがない場合はモーダルを表示する
+    if( alert_txt_inner.length == 0 ) {
+      FormSubmit();
+    }
+
+    function FormSubmit() {
+      const data = {
+        email: email,
+        name: name,
+        title: title,
+        body: body
+      };
+      axios({
+        method: "post",
+        url: "https://uemura5683.microcms.io/api/v1/contact",
+        data: data,
+        headers: {
+          "Content-Type": "application/json",
+          "X-WRITE-API-KEY": "e4f670a9-c5f8-4b37-b85c-420c00c33675"
+        }
+      })
+      .then(() => {
+        let alert_html = "<div class='alert alert-warning'>"
+        alert_html += "<p class='alert_inner_txt'>ありがとうございました。お問い合わせ完了しました。</p>";
+        alert_html += "</div>";
+
+        ContactConfirm[0]
+        .insertAdjacentHTML(
+          'afterbegin', alert_html
+        );
+
+        // router.push("/success");
+        let countup = function() {
+          alert_txt[0].remove();
+        }
+        setTimeout(countup, 3000);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
+
   };
   return (
     <div className="c-contact-form__inner">
@@ -139,34 +147,8 @@ const Contacts = () => {
             />
           </div>
         </div>
-
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          contentLabel="Example Modal"
-        >
-          <button onClick={closeModal}>close</button>          
-          <div className="skill__zoom_modal">
-            <div className="c-contact-form__confirm">
-              <div className="c-contact-form__confirm_txt">内容をご確認の上、よろしければ「送信する」ボタンをクリックしてください。</div>
-              <table className="table">
-                <tbody>
-                  <tr><th>お名前</th><td className="confirm-name"></td></tr> 
-                  <tr><th>メールアドレス</th><td className="confirm-mail"></td></tr>
-                  <tr><th>お問い合わせ内容</th><td className="confirm-title"></td></tr>
-                  <tr><th>お問い合わせ詳細</th><td className="confirm-body"></td></tr>
-                  </tbody>
-                </table>
-              <button className="btn-white" type="submit" onClick={handleSubmit}>メールアドレスを送信</button>
-            </div>
-          </div>          
-        </Modal>
-
         <div className="c-btn-area">
-          <button className="btn-white" onClick={openModal}>
-            メールアドレスを送信
-          </button>
+          <button className="btn-white" type="submit" onClick={handleSubmit}>メールアドレスを送信</button>
         </div>
       </form>
     </div>

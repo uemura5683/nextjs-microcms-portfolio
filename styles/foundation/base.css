@@ -233,3 +233,15 @@ body:after {
   60% { opacity: 1; }
   100% { opacity: 0; z-index: -1; }
 }
+
+.alert-warning {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+@media (min-width: 991px) {
+  .alert-warning {
+    margin: 0 0 50px;    
+  }
+}
