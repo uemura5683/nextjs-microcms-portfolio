@@ -24,32 +24,35 @@ const Contacts = () => {
     let ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' ),
         alert_txt       = document.getElementsByClassName( 'alert-warning' ),
         alert_txt_inner = document.getElementsByClassName( 'alert_inner_txt' ),
-        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' );
+        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' ),
+        getbody         = document.body
 
     // エラーチェック
     if( alert_txt[0] != undefined ) {
       alert_txt[0].remove();
     }
+    if( name == "" || email == "" || title == "" || body == "" ) {
+      let alert_html = "<div class='alert alert-warning'>"
+      if( name == "" ) {
+        alert_html += "<p class='alert_inner_txt'>名前を入力してください。</p>";
+      }
+      if( email == "" ) {
+        alert_html += "<p class='alert_inner_txt'>メールアドレスを入力してください</p>";
+      }
+      if( title == "" ) {
+        alert_html += "<p class='alert_inner_txt'>タイトルを入力してください</p>";
+      }
+      if( body == "" ) {
+        alert_html += "<p class='alert_inner_txt'>本文を入力してください</p>";
+      }
+      alert_html += "</div>";
 
-    let alert_html = "<div class='alert alert-warning'>"
-    if( name == "" ) {
-      alert_html += "<p class='alert_inner_txt'>名前を入力してください。</p>";
-    }
-    if( email == "" ) {
-      alert_html += "<p class='alert_inner_txt'>メールアドレスを入力してください</p>";
-    }
-    if( title == "" ) {
-      alert_html += "<p class='alert_inner_txt'>タイトルを入力してください</p>";
-    }
-    if( body == "" ) {
-      alert_html += "<p class='alert_inner_txt'>本文を入力してください</p>";
-    }
-    alert_html += "</div>";
-
-    ContactConfirm[0]
+      ContactConfirm[0]
       .insertAdjacentHTML(
         'afterbegin', alert_html
       );
+
+    }
 
     // エラーがない場合はモーダルを表示する
     if( alert_txt_inner.length == 0 ) {
@@ -73,16 +76,15 @@ const Contacts = () => {
         }
       })
       .then(() => {
-        let alert_html = "<div class='alert alert-warning'>"
-        alert_html += "<p class='alert_inner_txt'>ありがとうございました。お問い合わせ完了しました。</p>";
-        alert_html += "</div>";
 
-        ContactConfirm[0]
+        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>ありがとうございました。お問い合わせ完了しました。</p></div>";
+
+        getbody
         .insertAdjacentHTML(
           'afterbegin', alert_html
         );
 
-        // router.push("/success");
+        // router.push("/success");git 
         let countup = function() {
           alert_txt[0].remove();
         }
