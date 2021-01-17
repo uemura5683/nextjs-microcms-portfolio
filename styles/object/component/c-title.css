@@ -36,19 +36,10 @@
 
 /* card-product-animation */
 @-webkit-keyframes border-animation {
-  0% {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  0% { width: 0; }
+  to { width: 100%; }
 }
-
 @keyframes border-animation {
-  0% {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  0% { width: 0; }
+  to { width: 100%; }
 }

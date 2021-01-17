@@ -84,12 +84,12 @@
 }
 
 .has-animation.slide-animation.animation-second .p-about__profile {
-    -webkit-animation: profile-animation 1s ease forwards;
-            animation: profile-animation 1s ease forwards;
+    -webkit-animation: profile-animation .5s ease forwards;
+            animation: profile-animation .5s ease forwards;
 }
 .has-animation.slide-animation.animation-second .p-about__profile:nth-of-type( 2 ) {
-    -webkit-animation: profile-animation2 1s ease forwards;
-            animation: profile-animation2 1s ease forwards;
+    -webkit-animation: profile-animation2 .5s ease forwards;
+            animation: profile-animation2 .5s ease forwards;
 }
 
 

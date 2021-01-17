@@ -163,17 +163,12 @@ body:after {
   top: 0;
   left: 0;
   -webkit-animation: fadeout .5s linear 0s infinite;
-      -ms-animation: fadeout .5s linear 0s infinite;
           animation: fadeout .5s linear 0s infinite;
   -webkit-animation-fill-mode: forwards;
-      -ms-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
-      -ms-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
-
-
 .has-animation {
   opacity: 0;
   -webkit-transition: opacity .5s ease;
@@ -227,12 +222,13 @@ body:after {
             transform: translateY( 0 );
   }
 }
-
-@keyframes fadeout {
-  0% { opacity: 1; }
-  60% { opacity: 1; }
-  100% { opacity: 0; z-index: -1; }
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; } 60% { opacity: 1; } 100% { opacity: 0; z-index: -1; }
 }
+@keyframes fadeout {
+  0% { opacity: 1; } 60% { opacity: 1; } 100% { opacity: 0; z-index: -1; }
+}
+
 
 .alert-warning {
   background-color: white;
@@ -245,3 +241,4 @@ body:after {
     margin: 0 0 50px;    
   }
 }
+

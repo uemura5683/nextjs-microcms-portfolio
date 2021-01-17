@@ -32,8 +32,6 @@ $(function(){
         //scroll down
         if ( direction === 'down' ) {
           activePoint.addClass( 'slide-animation' );
-        } else {
-          activePoint.removeClass( 'slide-animation' );
         }
     },{ offset : '90%' } );
 

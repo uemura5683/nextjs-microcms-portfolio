@@ -59,7 +59,7 @@ header .header--menu__content nav {
     -webkit-transform: translateX(-50%) translateY(-50%);
 }
 header .header--menu__content nav ul li {
-    margin: 0 0 30px;
+    margin: 0 0 10px;
     text-align: center;    
 }
 header .header--menu__content nav ul li a {
@@ -180,6 +180,12 @@ header.light .header--menu__btn span {
     header img[alt="uemu-portfolio"] {
         height: 23px;
         top: 40px;    
+    }
+    /**
+    * header menu
+    **/
+    header .header--menu__content nav ul li {
+        margin: 0 0 30px;
     }
     /**
     * memu btn
