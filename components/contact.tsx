@@ -77,7 +77,7 @@ const Contacts = () => {
       })
       .then(() => {
 
-        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>ありがとうございました。お問い合わせ完了しました。</p></div>";
+        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>ありがとうございました。お問い合わせ完了しました。<br>5秒後にリロードします。</p></div>";
 
         getbody
         .insertAdjacentHTML(
@@ -86,9 +86,9 @@ const Contacts = () => {
 
         // router.push("/success");git 
         let countup = function() {
-          alert_txt[0].remove();
+          location.reload();
         }
-        setTimeout(countup, 3000);
+        setTimeout(countup, 5000);
       })
       .catch(err => {
         console.log(err);
