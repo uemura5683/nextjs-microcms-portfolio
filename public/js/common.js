@@ -10,7 +10,6 @@ $(function(){
   });
 
   let preferscolorscheme = function( target ) {
-    console.log(target.attr('data-set-color'));
     if( target.attr('data-set-color') == 'light' ) {
       $('header')
         .addClass('light')

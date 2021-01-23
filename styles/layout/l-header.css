@@ -10,6 +10,9 @@ header {
     overflow: hidden;
     height: 40px;
     width: 100%;
+    background-color: transparent;
+    -webkit-transition: background .3s ease-out;
+            transition: background .3s ease-out;
 }
 header.active {
     height: 100vh;
@@ -27,6 +30,8 @@ header.active:after {
 **/
 header.light {
     background-color: white;
+    -webkit-transition: background .3s ease-out;
+            transition: background .3s ease-out;
 }
 header img[alt="uemu-portfolio"] {
     position: absolute;
@@ -36,12 +41,17 @@ header img[alt="uemu-portfolio"] {
             transform: translateY(-50%);
     z-index: 10;
     height: 15px;
+    -webkit-mix-blend-mode: exclusion;
+            mix-blend-mode: exclusion;
+    -webkit-transition: mix-blend-mode .3s ease-out;
+            transition: mix-blend-mode .3s ease-out;
 }
 
 header.light img[alt="uemu-portfolio"] {
     -webkit-mix-blend-mode: exclusion;
-        -ms-mix-blend-mode: exclusion;
-            mix-blend-mode: exclusion;    
+            mix-blend-mode: exclusion;
+    -webkit-transition: mix-blend-mode .3s ease-out;
+            transition: mix-blend-mode .3s ease-out;
 }
 /**
 * header menu
@@ -64,8 +74,8 @@ header .header--menu__content nav {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
 }
 header .header--menu__content nav ul li {
     margin: 0 0 10px;
