@@ -15,15 +15,11 @@ import {
   Vector3,
   Points,
   AdditiveBlending,
-  PointsMaterial,
   DoubleSide,
-  Mesh,
-  SrcAlphaSaturateFactor
+  Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
-import useGetWindowSize from '../components/hooks/useGetWindowSize'
 
 type ParamsAnimate = {
   object: THREE.Object3D
@@ -32,7 +28,6 @@ type ParamsAnimate = {
 }
 
 const Canvas: React.FC = () => {
-  const { width, height } = useGetWindowSize()
 
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
 
@@ -51,7 +46,7 @@ const Canvas: React.FC = () => {
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
     renderer.setClearColor('#000000')
-    renderer.setSize(width, height)
+    renderer.setSize(2000, 1000)
 
     // init object
     const object = new Object3D()

@@ -200,3 +200,7 @@ template {
 [hidden] {
   display: none;
 }
+
+canvas {
+  width: 100%;
+}

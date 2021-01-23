@@ -17,7 +17,7 @@ export default function Threejs() {
       <Logo></Logo>
       <Navi></Navi>
       <figure>
-        <img src="/images/bnr/banner.png"></img>
+        <iframe src="https://uemu-engineer.com/three.html"></iframe>
       </figure>
       <div className="p-mainvisual__click">
         <a href="#p-about">

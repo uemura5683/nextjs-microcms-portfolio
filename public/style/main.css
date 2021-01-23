@@ -10,8 +10,10 @@
 /**
 * banner
 **/
-#p-mainvisual figure img {
+#p-mainvisual figure img,
+#p-mainvisual figure iframe {
     width: 100%;
+    height: 85vh;
 }
 #p-mainvisual figure:after {
     content: '';
