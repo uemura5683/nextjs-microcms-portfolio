@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic'
  */
 export default function Threejs() {
   return (
-    <section id="p-mainvisual">
+    <section id="p-mainvisual" data-set-color="dark">
       <Logo></Logo>
       <Navi></Navi>
       <figure>

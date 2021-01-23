@@ -29,6 +29,7 @@ export default function Layout({ children, home }) {
         <header>
           {home ? (
             <>
+                  <Logo></Logo>
             </>
           ) : (
             <>
@@ -38,7 +39,7 @@ export default function Layout({ children, home }) {
           <SnsLink></SnsLink>
           <DrawerMenu></DrawerMenu>
         </header>
-        {home ? (
+          {home ? (
             <>
               <main>{children}</main>
             </>

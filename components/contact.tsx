@@ -140,7 +140,6 @@ const Contacts = () => {
           <label>お問い合わせ詳細</label>
           <div>
             <textarea
-              type="text"
               placeholder="本文を入力してください"
               name="body"
               value={body}

@@ -10,6 +10,7 @@ $(function(){
   });
 
   let preferscolorscheme = function( target ) {
+    console.log(target.attr('data-set-color'));
     if( target.attr('data-set-color') == 'light' ) {
       $('header')
         .addClass('light')
@@ -35,7 +36,7 @@ $(function(){
         }
     },{ offset : '90%' } );
 
-    $( '.has-animation' ).waypoint( function( direction ) {
+    $( 'section[id*="p-"]' ).waypoint( function( direction ) {
       var activePoint = $( this.element );
       //scroll down
       if ( direction === 'down' ) {

@@ -4,42 +4,45 @@ import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 
-export default function BlogId({ infos, infolist }) {
+export default function BlogId( { infos, infolist } ) {
   return (
-    <Layout>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
-      <div className="p-detail__inner">
-        <div className="c-title white">{infos.title}</div>
-        <div className="p-detail__top">
-          <p>{infos.publishedAt}</p>
-          <img src={infos.image.url}></img>
-        </div>
-        <div
-          className="p-detail__bottom"
-          dangerouslySetInnerHTML={{
-            __html: `${infos.body}`,
-          }}
-        />
-        <div id="p-information">
-          <h3 className="c-title white">information</h3>
-          <div className="card">
-            <ul>
-            {infolist.map(infolist => (
-                <li key={infolist.id}>
-                  <Link href={`/information/${infolist.id}`}>
-                  <img src={infolist.image.url}></img>
-                  </Link>
-                  <Link href={`/information/${infolist.id}`}>
-                    <span>{infolist.title}</span>
-                  </Link>
-                </li>
-            ))}
-            </ul>
+      <div className="container">
+        <div className="p-detail__inner">
+          <div className="c-title white">{infos.title}</div>
+          <div className="p-detail__top">
+            <p>{infos.publishedAt}</p>
+            <img src={infos.image.url}></img>
+          </div>
+          <div
+            className="p-detail__bottom"
+            dangerouslySetInnerHTML={{
+              __html: `${infos.body}`,
+            }}
+          />
+          <div id="p-information">
+            <h3 className="c-title white">information</h3>
+            <div className="card">
+              <ul>
+              {infolist.map(infolist => (
+                  <li key={infolist.id}>
+                    <Link href={`/information/${infolist.id}`}>
+                    <img src={infolist.image.url}></img>
+                    </Link>
+                    <Link href={`/information/${infolist.id}`}>
+                      <span>{infolist.title}</span>
+                    </Link>
+                  </li>
+              ))}
+              </ul>
+            </div>
           </div>
         </div>
+        <div className="bgimage"></div>
       </div>
     </Layout>
   );
