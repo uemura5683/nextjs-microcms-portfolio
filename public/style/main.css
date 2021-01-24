@@ -113,6 +113,24 @@
     display: block;
     margin: 0 0 20px;
 }
+@media (max-width: 767px) {
+    #p-mainvisual figure {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #p-mainvisual figure img, 
+    #p-mainvisual figure iframe {
+        width: 200%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+}
 @media (min-width: 991px) {
     /**
     * content
