@@ -14,14 +14,14 @@
 }
 .card ul li img {
     width: 100%;
-    -webkit-transition: opacity ease-in-out .5s;
-            transition: opacity ease-in-out .5s;
+    -webkit-transition: opacity ease-in-out .3s;
+            transition: opacity ease-in-out .3s;
 }
 .card ul li:hover img,
 .card ul li:focus img {
     opacity: .7;
-    -webkit-transition: opacity ease-in-out .5s;
-            transition: opacity ease-in-out .5s;
+    -webkit-transition: opacity ease-in-out .3s;
+            transition: opacity ease-in-out .3s;
 }
 .card ul li span {
     margin: 10px 0 0;

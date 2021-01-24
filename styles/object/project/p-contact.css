@@ -36,7 +36,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
 }
 .ReactModal__Content .c-contact-form__confirm .c-contact-form__confirm_txt {
     margin: 0 0 10px;
@@ -93,13 +94,13 @@
     background-color: white;
     opacity: .7;
     position: fixed;
-    transition: all 1s ease;
 }
 .c-contact__complete p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
     background-color: white;
     padding: 5%;
     border: 1px solid black;

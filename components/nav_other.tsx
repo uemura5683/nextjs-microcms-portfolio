@@ -1,8 +1,10 @@
+import Link from 'next/link'
+
 export default function NavigationOther() {
   return (
     <nav>
       <ul>
-        <li><a href="/#p-about">ABOUT</a></li>
+        <li><Link href="/about">ABOUT</Link></li>
         <li><a href="/#p-skill">SKILL</a></li>
         <li><a href="/#p-work">WORK</a></li>
         <li><a href="/#p-information">INFORMATION</a></li>

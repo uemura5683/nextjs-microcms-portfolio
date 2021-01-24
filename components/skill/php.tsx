@@ -10,7 +10,7 @@ const SkillContent = () => {
       setIsOpen(true);
   }
   function afterOpenModal() {        
-      subtitle.style.color = '#000000';
+      subtitle.style.color = '#333333';
   }
   function closeModal(){
       setIsOpen(false);
