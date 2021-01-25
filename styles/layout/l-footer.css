@@ -18,7 +18,7 @@ footer {
     -webkit-mix-blend-mode: exclusion;
         -ms-mix-blend-mode: exclusion;
             mix-blend-mode: exclusion;
-    height: 12px;
+    height: 27px;
 }
 /**
 * footer snslink
@@ -51,7 +51,7 @@ footer .c-snslink {
         padding: 0 0 50px;
     }
     .foorter__logo img {
-        height: 23px;
+        height: 45px;
     }
     /**
     * footer privacy policy

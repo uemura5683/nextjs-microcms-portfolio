@@ -40,7 +40,7 @@ header img[alt="uemu-portfolio"] {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     z-index: 10;
-    height: 15px;
+    height: 27px;
     -webkit-mix-blend-mode: exclusion;
             mix-blend-mode: exclusion;
     -webkit-transition: mix-blend-mode .3s ease-out;
@@ -195,7 +195,7 @@ header.light .header--menu__btn span {
     * header logo
     **/
     header img[alt="uemu-portfolio"] {
-        height: 23px;
+        height: 45px;
         top: 40px;    
     }
     /**
