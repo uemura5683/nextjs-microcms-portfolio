@@ -202,5 +202,6 @@ template {
 }
 
 canvas {
-  width: 100%;
+  width: 100% !important;
+  height: 50% !important;
 }

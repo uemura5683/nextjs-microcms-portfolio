@@ -122,7 +122,7 @@
     }
     #p-mainvisual figure img, 
     #p-mainvisual figure iframe {
-        width: 300%;
+        width: 400%;
         height: 100vh;
         position: absolute;
         top: 0;
