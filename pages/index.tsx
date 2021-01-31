@@ -37,7 +37,9 @@ function Home( {info, work} ) {
           {work.map(work => (
               <li key={work.id}>
                 <Link href={`work/${work.id}`}>
-                <img src={work.image.url}></img>
+                <figure>
+                  <img src={work.image.url}></img>
+                </figure>
                 </Link>
                 <Link href={`work/${work.id}`}>
                   <span>{work.title}</span>
@@ -54,7 +56,9 @@ function Home( {info, work} ) {
           {info.map(info => (
               <li key={info.id}>
                 <Link href={`information/${info.id}`}>
-                <img src={info.image.url}></img>
+                <figure>
+                  <img src={info.image.url}></img>
+                </figure>
                 </Link>
                 <Link href={`information/${info.id}`}>
                   <span className="white">{info.title}</span>

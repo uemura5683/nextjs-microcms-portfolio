@@ -10,9 +10,12 @@
 /**
 * banner
 **/
+#p-mainvisual figure {
+    overflow: hidden;
+}
 #p-mainvisual figure img,
 #p-mainvisual figure iframe {
-    width: 100%;
+    width: 104%;
     height: 100vh;
 }
 #p-mainvisual figure:after {

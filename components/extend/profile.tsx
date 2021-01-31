@@ -25,11 +25,12 @@ export default function Profile() {
           <img src="/images/profile.jpg" />
         </figure>
         <div className="about__profile__lesson">
-          目指せ、なんでもできるエンジニアへ
+          
         </div>
         <div className="about__profile__lessondetail">
           <p>
           2021年に公開した個人のポートフォリオサイト「NU-stack(ヌースタック)」<br></br>
+
           </p>
         </div>
       </article>

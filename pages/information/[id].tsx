@@ -31,7 +31,9 @@ export default function BlogId( { infos, infolist } ) {
               {infolist.map(infolist => (
                   <li key={infolist.id}>
                     <Link href={`/information/${infolist.id}`}>
-                    <img src={infolist.image.url}></img>
+                    <figure>
+                      <img src={infolist.image.url}></img>
+                    </figure>
                     </Link>
                     <Link href={`/information/${infolist.id}`}>
                       <span>{infolist.title}</span>

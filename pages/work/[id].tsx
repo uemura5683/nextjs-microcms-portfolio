@@ -31,7 +31,9 @@ export default function BlogId( { works, worklist } ) {
               {worklist.map(worklist => (
                   <li key={worklist.id}>
                     <Link href={`/work/${worklist.id}`}>
-                      <img src={worklist.image.url}></img>
+                      <figure>
+                        <img src={worklist.image.url}></img>
+                      </figure>
                     </Link>
                     <Link href={`/work/${worklist.id}`}>
                       <span>{worklist.title}</span>

@@ -1,7 +1,7 @@
 // smooth scroll
 $(function(){
   $('#p-mainvisual a[href^="#"]').click(function(){
-      var speed = 500;
+      var speed = 300;
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
       var position = target.get( 0 ).offsetTop;
@@ -64,7 +64,10 @@ $(function(){
       // マウスオーバー時に再生する
       element.addEventListener('mouseenter', function () {
         dates = this.childNodes[1];
-        effectList[dates.dataset.index].start();
+        if( !dates.classList.contains('open') ) {
+          dates.classList.add('open');
+          effectList[dates.dataset.index].start();
+        }
       });
 
       // 初回を再生する

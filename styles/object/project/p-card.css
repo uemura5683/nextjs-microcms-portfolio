@@ -12,24 +12,35 @@
     margin: 0 2%;
     cursor: pointer;
 }
+.card ul li figure{
+    overflow: hidden;
+}
 .card ul li img {
     width: 100%;
-    -webkit-transition: opacity ease-in-out .3s;
-            transition: opacity ease-in-out .3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity ease .3s, transform ease .3s;
+            transition: opacity ease .3s, transform ease .3s;
 }
 .card ul li:hover img,
 .card ul li:focus img {
-    opacity: .7;
-    -webkit-transition: opacity ease-in-out .3s;
-            transition: opacity ease-in-out .3s;
+    opacity: .3;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: opacity ease .3s, transform ease .3s;
+            transition: opacity ease .3s, transform ease .3s;
 }
 .card ul li span {
     margin: 10px 0 0;
     display: block;
+    opacity: 0;
     text-align: left;
 }
 .card ul li span.white {
     color: white;
+}
+.card ul li span.open {
+    opacity: 1;
 }
 @media (min-width: 991px) {
     .card ul {

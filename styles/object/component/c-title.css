@@ -5,6 +5,7 @@
   font-size: 2.4em;
   margin: 0 0 25px;
   padding: 0 0 5px;
+  overflow: hidden;
 }
 .c-title.white {
   color: white;
@@ -18,9 +19,9 @@
   border-bottom: 1px solid white;
 }
 .has-animation.slide-animation .c-title:after {
-  -webkit-animation: border-animation .7s ease-in-out forwards;
-          animation: border-animation .7s ease-in-out forwards;
-  width: 0%;
+  -webkit-animation: border-animation .5s ease forwards;
+          animation: border-animation .5s ease forwards;
+  transform: translateX(-100%);
 }
 
 @media (min-width: 991px) {
@@ -36,10 +37,10 @@
 
 /* card-product-animation */
 @-webkit-keyframes border-animation {
-  0% { width: 0; }
-  to { width: 100%; }
+  0% { transform: translateX(-100%); }
+  to { transform: translateX(0%); }
 }
 @keyframes border-animation {
-  0% { width: 0; }
-  to { width: 100%; }
+  0% { transform: translateX(-100%); }
+  to { transform: translateX(0%); }
 }
