@@ -22,6 +22,10 @@
     -webkit-align-items: center;
     align-items: center;
 }
+.skill__list li button:hover,
+.skill__list li button:focus {
+    box-shadow: 0 0 0 0 transparent;
+}
 .skill__list li img {
     width: 80%;
     margin: 0 auto 20px;

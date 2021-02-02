@@ -144,6 +144,10 @@ header .header--menu__btn {
     -webkit-transition: 0.3s all ease-in-out;
             transition: 0.3s all ease-in-out;
 }
+header .header--menu__btn:hover,
+header .header--menu__btn:focus {
+    box-shadow: 0 0 0 0 transparent;
+}
 header .header--menu__btn span {
     display: block;
     position: absolute;
