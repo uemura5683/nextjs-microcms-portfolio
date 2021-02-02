@@ -105,6 +105,19 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
+    const effectGlitch = new GlitchPass(64)
+    effectGlitch.renderToScreen = true
+    composer.addPass(effectGlitch)
+
+
+    var controls = new function () {
+      this.goWild = false;
+      this.updateEffect = function () {
+          effectGlitch.goWild = controls.goWild;
+      };
+    };
+
+
     animate({ object, composer, m_box })
 
   }
