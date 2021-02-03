@@ -1,21 +1,25 @@
 import Layout, { siteTitle }  from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
+import Head from 'next/head'
 import Link from 'next/link'
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
-export default function BlogId( { works, worklist } ) {
+export default function BlogId( { works, works_data, worklist } ) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
+  
       <div className="container">
         <div className="p-detail__inner">
           <div className="c-title white">{works.title}</div>
           <div className="p-detail__top">
-            <p>{works.publishedAt}</p>
+            <p>{works_data}</p>
             <img src={works.image.url}></img>
           </div>
           <div
@@ -73,6 +77,8 @@ export const getStaticProps = async context => {
   )
     .then(res => res.json())
     .catch(() => null);
+  
+  const datePlastic = data.publishedAt;
 
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
   .then(res => res.json())
@@ -81,6 +87,7 @@ export const getStaticProps = async context => {
   return {
     props: {
       works: data,
+      works_data: datePlastic,
       worklist: works.contents,
     },
   };

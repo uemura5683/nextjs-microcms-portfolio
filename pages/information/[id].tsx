@@ -1,8 +1,11 @@
 import Layout, { siteTitle }  from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
+import Head from 'next/head'
 import Link from 'next/link'
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
 export default function BlogId( { infos, infolist } ) {
   return (
