@@ -17,9 +17,35 @@ import ContactForm from '../components/extend/contactform'
 import fetch from 'node-fetch'
 import Link from 'next/link'
 
+import ShuffleText from "shuffle-text";
+
+
 /**
  * export
  */
+const shuffleinit = () => {
+  
+    console.log(this);
+
+
+  
+    // インスタンスを取得する
+    // effectList[i] = new ShuffleText(aaaaaa);
+  
+    // マウスオーバー時に再生する
+    // Element.addEventListener('mouseenter', function () {
+    //   const txtdates = this.childNodes[1];
+    //   if( !txtdates.classList.contains('open') ) {
+    //     txtdates.classList.add('open');
+    //     effectList[txtdates.dataset.index].start();
+    //   }
+    // });
+  
+    // 初回を再生する
+    // effectList[i].start();
+
+}
+
 function Home( {info, work} ) {
   return (
     <Layout home>
@@ -35,7 +61,7 @@ function Home( {info, work} ) {
         <div className="card">
           <ul>
           {work.map(work => (
-              <li key={work.id}>
+              <li key={work.id} onMouseEnter={shuffleinit}>
                 <Link href={`work/${work.id}`}>
                 <figure>
                   <img src={work.image.url}></img>
@@ -54,7 +80,7 @@ function Home( {info, work} ) {
         <div className="card">
           <ul>
           {info.map(info => (
-              <li key={info.id}>
+              <li key={info.id} onMouseEnter={shuffleinit}>
                 <Link href={`information/${info.id}`}>
                 <figure>
                   <img src={info.image.url}></img>

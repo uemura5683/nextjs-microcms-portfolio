@@ -46,7 +46,7 @@ $(function(){
     },{ offset : '0%' } );
   });
 
-
+/*
     var effectList = [];
     var elementList = document.querySelectorAll('.card li');
 
@@ -72,5 +72,5 @@ $(function(){
       // 初回を再生する
       effectList[i].start();
     }
-
+*/
 });
