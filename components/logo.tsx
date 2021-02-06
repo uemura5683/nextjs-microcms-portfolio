@@ -1,9 +1,11 @@
+import Link from 'next/link'
+
 export default function Logo() {
   return (
-    <a href="/">
+    <Link href="/">
     <span>
       <img src="/images/logo.png" alt="uemu-portfolio" />
     </span>
-    </a>
+    </Link>
   )
 }

@@ -37,7 +37,7 @@ const SkillContent = () => {
               <p className="skill_detail">
                 wpは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
                 PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
-                <br></br>実装したサイト<br></br><a href="https://takarabako.tokyo/">タカラバコ</a>
+                <br></br>成果物<br></br><a href="https://takarabako.tokyo/">タカラバコ</a>
               </p>
               <p className="skill_site"></p>
             </div>

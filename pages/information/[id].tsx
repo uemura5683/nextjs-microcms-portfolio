@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 
-export default function BlogId( { infos, infolist } ) {
+export default function BlogId( { infos, info_data, infolist } ) {
   return (
     <Layout home>
       <Head>
@@ -18,7 +18,7 @@ export default function BlogId( { infos, infolist } ) {
         <div className="p-detail__inner">
           <div className="c-title white">{infos.title}</div>
           <div className="p-detail__top">
-            <p>{infos.publishedAt}</p>
+            <p>{info_data}</p>
             <img src={infos.image.url}></img>
           </div>
           <div
@@ -77,6 +77,10 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null);
 
+    const publishatformat = dayjs(data.publishedAt).format()
+    , jstDate         = dayjs(publishatformat)
+    , datePlastic     = jstDate.year() + '/' + jstDate.month() + '/' + jstDate.date(); 
+
   const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())
     .catch(() => null);
@@ -84,6 +88,7 @@ export const getStaticProps = async context => {
   return {
     props: {
       infos: data,
+      info_data: datePlastic,
       infolist: infos.contents,
     },
   };

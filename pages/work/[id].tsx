@@ -78,12 +78,13 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null);
   
-  const datePlastic = data.publishedAt;
+  const publishatformat = dayjs(data.publishedAt).format()
+      , jstDate         = dayjs(publishatformat)
+      , datePlastic     = jstDate.year() + '/' + jstDate.month() + '/' + jstDate.date(); 
 
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
   .then(res => res.json())
   .catch(() => null);
-
   return {
     props: {
       works: data,
