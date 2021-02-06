@@ -20,33 +20,22 @@ import Link from 'next/link'
 import ShuffleText from "shuffle-text";
 
 
-/**
- * export
- */
-const shuffleinit = () => {
-  
-    console.log(this);
-
-
-  
-    // インスタンスを取得する
-    // effectList[i] = new ShuffleText(aaaaaa);
-  
-    // マウスオーバー時に再生する
-    // Element.addEventListener('mouseenter', function () {
-    //   const txtdates = this.childNodes[1];
-    //   if( !txtdates.classList.contains('open') ) {
-    //     txtdates.classList.add('open');
-    //     effectList[txtdates.dataset.index].start();
-    //   }
-    // });
-  
-    // 初回を再生する
-    // effectList[i].start();
-
-}
-
 function Home( {info, work} ) {
+
+
+  const shuffleinit = (e) => {
+
+    const shuffleText = new ShuffleText(e);
+    console.log(shuffleText);
+    shuffleText.start();
+    // if( !dates.classList.contains('open') ) {
+    //   dates.classList.add('open');
+    //   effectList[dates.dataset.index].start();
+    // }
+  
+  }
+
+
   return (
     <Layout home>
       <Head>

@@ -46,7 +46,7 @@ $(function(){
     },{ offset : '0%' } );
   });
 
-/*
+
     var effectList = [];
     var elementList = document.querySelectorAll('.card li');
 
@@ -55,16 +55,19 @@ $(function(){
       var element = elementList[i];
       text = element.childNodes[1];
 
+      console.log(text);
+
       text.dataset.index = i;
 
       // インスタンスを取得する
-      effectList[i] = new ShuffleText(text);
+      effectList[i] = new ShuffleText(text);      
 
       // マウスオーバー時に再生する
       element.addEventListener('mouseenter', function () {
         dates = this.childNodes[1];
         if( !dates.classList.contains('open') ) {
           dates.classList.add('open');
+
           effectList[dates.dataset.index].start();
         }
       });
@@ -72,5 +75,5 @@ $(function(){
       // 初回を再生する
       effectList[i].start();
     }
-*/
+
 });

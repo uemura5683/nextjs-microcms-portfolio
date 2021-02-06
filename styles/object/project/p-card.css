@@ -33,7 +33,7 @@
 .card ul li span {
     margin: 10px 0 0;
     display: block;
-    opacity: 0;
+    /*opacity: 0;*/
     text-align: left;
 }
 .card ul li span.white {
