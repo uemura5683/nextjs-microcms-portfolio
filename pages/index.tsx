@@ -1,7 +1,7 @@
 /**
  * common
  */
-import React from 'react'
+import React, {useRef} from 'react'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 
@@ -23,16 +23,18 @@ import ShuffleText from "shuffle-text";
 function Home( {info, work} ) {
 
 
-  const shuffleinit = (e) => {
+  const elmwork = useRef(null);
+  const elminfo = useRef(null);
 
-    const shuffleText = new ShuffleText(e);
-    console.log(shuffleText);
-    shuffleText.start();
-    // if( !dates.classList.contains('open') ) {
-    //   dates.classList.add('open');
-    //   effectList[dates.dataset.index].start();
-    // }
-  
+  const shuffleinitwork = (e) => {   
+    console.log(elmwork);
+    const shuffleTextwork = new ShuffleText(elmwork.current);
+    shuffleTextwork.start();
+  }
+  const shuffleinitinfo = (e) => {   
+    console.log(elminfo);
+    const shuffleTextinfo = new ShuffleText(elminfo.current);
+    shuffleTextinfo.start();
   }
 
 
@@ -50,14 +52,14 @@ function Home( {info, work} ) {
         <div className="card">
           <ul>
           {work.map(work => (
-              <li key={work.id} onMouseEnter={shuffleinit}>
+              <li key={work.id} onMouseEnter={shuffleinitwork} onMouseLeave={shuffleinitwork}>
                 <Link href={`work/${work.id}`}>
                 <figure>
                   <img src={work.image.url}></img>
                 </figure>
                 </Link>
                 <Link href={`work/${work.id}`}>
-                  <span>{work.title}</span>
+                  <span ref={elmwork}>{work.title}</span>
                 </Link>
               </li>
           ))}
@@ -69,14 +71,14 @@ function Home( {info, work} ) {
         <div className="card">
           <ul>
           {info.map(info => (
-              <li key={info.id} onMouseEnter={shuffleinit}>
+              <li key={info.id} onMouseEnter={shuffleinitinfo} onMouseLeave={shuffleinitinfo} >
                 <Link href={`information/${info.id}`}>
                 <figure>
                   <img src={info.image.url}></img>
                 </figure>
                 </Link>
                 <Link href={`information/${info.id}`}>
-                  <span className="white">{info.title}</span>
+                  <span className="white" ref={elminfo}>{info.title}</span>
                 </Link>
               </li>
           ))}

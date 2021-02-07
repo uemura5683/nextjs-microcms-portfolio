@@ -47,33 +47,33 @@ $(function(){
   });
 
 
-    var effectList = [];
-    var elementList = document.querySelectorAll('.card li');
+    // var effectList = [];
+    // var elementList = document.querySelectorAll('.card li');
 
-    for (var i = 0; i < elementList.length; i++) {
+    // for (var i = 0; i < elementList.length; i++) {
 
-      var element = elementList[i];
-      text = element.childNodes[1];
+    //   var element = elementList[i];
+    //   text = element.childNodes[1];
 
-      console.log(text);
+    //   text.dataset.index = i;
 
-      text.dataset.index = i;
+    //   // インスタンスを取得する
+    //   effectList[i] = new ShuffleText(text);
 
-      // インスタンスを取得する
-      effectList[i] = new ShuffleText(text);      
+    //   //console.log(text);
+    //   console.log(effectList[i]);
 
-      // マウスオーバー時に再生する
-      element.addEventListener('mouseenter', function () {
-        dates = this.childNodes[1];
-        if( !dates.classList.contains('open') ) {
-          dates.classList.add('open');
+    //   // マウスオーバー時に再生する
+    //   element.addEventListener('mouseenter', function () {
+    //     dates = this.childNodes[1];
+    //     if( !dates.classList.contains('open') ) {
+    //       dates.classList.add('open');
+    //       effectList[dates.dataset.index].start();
+    //     }
+    //   });
 
-          effectList[dates.dataset.index].start();
-        }
-      });
-
-      // 初回を再生する
-      effectList[i].start();
-    }
+    //   // 初回を再生する
+    //   effectList[i].start();
+    // }
 
 });
