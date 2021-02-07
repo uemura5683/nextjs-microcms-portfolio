@@ -17,18 +17,24 @@ export default function BlogId( { works, works_data, worklist } ) {
   
       <div className="container">
         <div className="p-detail__inner">
-          <div className="c-title white">{works.title}</div>
-          <div className="p-detail__top">
-            <p>{works_data}</p>
-            <img src={works.image.url}></img>
+          <div className="p-detail__inner__main">
+            <div className="p-detail__top">
+              <div className="p-detail__ttl">
+                <div className="c-title white">{works.title}</div>
+                <p>{works_data}</p>
+              </div>
+              <figure>
+                <img src={works.image.url}></img>
+              </figure>
+            </div>
+            <div
+              className="p-detail__bottom"
+              dangerouslySetInnerHTML={{
+                __html: `${works.body}`,
+              }}
+            />
           </div>
-          <div
-            className="p-detail__bottom"
-            dangerouslySetInnerHTML={{
-              __html: `${works.body}`,
-            }}
-          />
-          <div id="p-work">
+          <div className="p-detail__inner__sub" id="p-work">
             <h3 className="c-title white">work</h3>
             <div className="card">
               <ul>
