@@ -22,19 +22,23 @@ import ShuffleText from "shuffle-text";
 
 function Home( {info, work} ) {
 
-
+  
   const elmwork = useRef(null);
   const elminfo = useRef(null);
 
   const shuffleinitwork = (e) => {   
+    /*
     console.log(elmwork);
     const shuffleTextwork = new ShuffleText(elmwork.current);
     shuffleTextwork.start();
+    */
   }
   const shuffleinitinfo = (e) => {   
+    /*
     console.log(elminfo);
     const shuffleTextinfo = new ShuffleText(elminfo.current);
     shuffleTextinfo.start();
+    */
   }
 
 
