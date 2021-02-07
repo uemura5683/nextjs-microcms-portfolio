@@ -255,7 +255,7 @@
 }
 @keyframes gagego {
     0% { width: 0%; }  
-    100% { width: 30%; }
+    100% { width: 20%; }
 }
 @keyframes gagegulp {
     0% { width: 0%; }  
@@ -263,11 +263,11 @@
 }
 @keyframes gagebase {
     0% { width: 0%; }  
-    100% { width: 70%; }
+    100% { width: 75%; }
 }
 @keyframes gagefigma {
     0% { width: 0%; }  
-    100% { width: 40%; }
+    100% { width: 50%; }
 }
 
 @media (min-width: 991px) {

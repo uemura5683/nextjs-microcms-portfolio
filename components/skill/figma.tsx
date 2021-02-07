@@ -32,12 +32,17 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_figma.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">60% ミドル</p>
+              <p className="skill_level">50% ミドル</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
-                figmaは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
-                PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
-                <br></br>成果物<br></br><a href="https://takarabako.tokyo/">タカラバコ</a>
+                figmaはアカウント登録するだけで利用できる。サーバーレスUX/ULデザインカンプ作成ツールです。<br></br>
+                仕様がXDと少しにており、XDに慣れている方はサクッと使いこなせると思います。<br></br>
+                作成したデザインカンプを仲間に招待するだけで共有することができます。<br></br>
+                <br></br>成果物<br></br><a href="https://takarabako.tokyo/" target="_blank">タカラバコ</a>
+                              <br></br><a href="https://uemu-engineer.com/" target="_blank">NU-stack</a>
+                              <br></br>
+                <br></br><a href="https://www.figma.com/" target="_blank">figma</a>
+                <br></br><a href="https://web-design.school/tutorials/figma/getting-started" target="_blank">チュートリアル</a>
               </p>
               <p className="skill_site"></p>
             </div>

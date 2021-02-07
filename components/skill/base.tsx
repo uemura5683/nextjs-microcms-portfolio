@@ -32,11 +32,16 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_base.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">60% ミドル</p>
+              <p className="skill_level">75% エキスパート</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
-                baseは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
-                PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
+                BASE(ベイス)は会員登録するだけで誰でも簡単にネットショップが作成できるサービスです。<br></br>
+                気に入ったテーマを選択して、カスタマイズするだけでネットが公開できます。<br></br>
+                また、SEO設定・クーポン・メールマガジン・レビューなど機能が充実でありほとんど無償で機能を追加できます。<br></br>
+                もちろん、オリジナルのサイトを作成することが可能です。<br></br>
+                必要な言語はhtml/css/jqueryです。<br></br>
+                オリジナルのサイトを作る場合は、言語スキルを身につけることが必須なので、未経験の方はテーマ選択・カスタマイズのみで十分でしょう。
+                <br></br>
                 <br></br>成果物<br></br><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
               </p>
               <p className="skill_site"></p>
