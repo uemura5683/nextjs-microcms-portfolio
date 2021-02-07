@@ -32,10 +32,13 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_gulp.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">40% ノービス</p>
+              <p className="skill_experience">3年以上</p>
               <p className="skill_detail">
-                gulpは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                gulpはSCSS・Ejs・minify・スプライト化・pug/phpなどのhtml化などのタスクを自動化してくれるJavascriptツールキットです。<br></br>
+                自分はSCSS・Pugの言語で実装する時によく用いります。<br></br>
+                gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。<br></br>
+                <br></br>
               </p>
               <p className="skill_site"></p>
             </div>
