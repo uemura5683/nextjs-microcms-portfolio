@@ -35,8 +35,15 @@ const SkillContent = () => {
               <p className="skill_level">75% マスター</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
-                Javascriptは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
-              </p>
+                JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br></br>
+                Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなどもあり、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br></br>
+                <br></br>成果物<br></br><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                              <br></br><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
+                              <br></br><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
+                              <br></br><a href="https://codepen.io/uemuragame5683/pen/YzWGEKv" target="_blank">Codepen Three.js</a>
+                              <br></br>TOMORROWLAND
+                              <br></br>BAOBAO etc...
+                              </p>
               <p className="skill_site"></p>
             </div>
           </div>          
