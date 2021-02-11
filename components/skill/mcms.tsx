@@ -32,10 +32,14 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_mcms.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">60% ミドル</p>
+              <p className="skill_experience">1年以上</p>
               <p className="skill_detail">
-                Micro CMSは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                Micro CMSは2019年8月にリリースした、初の日本製のヘッドレスCMSです。ほとんどのヘッドレスCMSは英語で記載されているが、Micor CMSは日本語で記載されているため、日本語でチャットサポートが利用できるのが快適です。<br></br>
+                ヘッドレスCMSなのでアカウントを登録するだけで利用でき、管理画面のサーバー管理はは一切不要なのでhtml/css/javascriptの技術があれば誰でも利用できます。<br></br>
+                <br></br>成果物<br></br><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
+                              <br></br><a href="http://uemu-engineer.com/" target="_blank">Nu-stack</a>
+                              <br></br>APC etc...
               </p>
               <p className="skill_site"></p>
             </div>

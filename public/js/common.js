@@ -60,9 +60,6 @@ $(function(){
       // インスタンスを取得する
       effectList[i] = new ShuffleText(text);
 
-      //console.log(text);
-      console.log(effectList[i]);
-
       element.addEventListener('mouseenter', function () {
         ShuffleStart( this );
       });
