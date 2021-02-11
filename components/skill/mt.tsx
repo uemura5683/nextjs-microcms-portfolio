@@ -35,7 +35,8 @@ const SkillContent = () => {
               <p className="skill_level">55% ミドル</p>
               <p className="skill_experience">3年以上</p>
               <p className="skill_detail">
-                Movable Typeは<br></br>
+                Movable Typeは日本の企業シックス・アパート社が開発・提供したCMSであります。このCMSの特徴はWordPressのようにデータベースを参照にしてphpで動的処理してコンテンツを出力しているのではなく、
+                このCMSは記事を登録後にhtmlファイルをそのまま生成されるので、データベースを参照せずにいられるのでアクセス負荷にはとてもつよいのが特徴です。
               </p>
               <p className="skill_site"></p>
             </div>
