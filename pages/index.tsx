@@ -53,13 +53,13 @@ function Home( {info, work} ) {
           <ul>
           {info.map((info) => (
              <li className={info.id} key={info.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
-             <Link href={`work/${info.id}`}>
+             <Link href={`information/${info.id}`}>
              <figure>
                <img src={info.image.url}></img>
              </figure>
              </Link>
-             <Link href={`work/${info.id}`}>
-               <span>{info.title}</span>
+             <Link href={`information/${info.id}`}>
+               <span className="white">{info.title}</span>
              </Link>
            </li>
           ))}
