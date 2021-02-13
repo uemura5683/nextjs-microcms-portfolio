@@ -32,7 +32,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_base.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
+              <p className="skill_level">70% エキスパート</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
                 BASE(ベイス)は会員登録するだけで誰でも簡単にネットショップが作成できるサービスです。<br></br>

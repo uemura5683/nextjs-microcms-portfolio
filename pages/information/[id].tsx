@@ -91,9 +91,13 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null);
 
-    const publishatformat = dayjs(data.publishedAt).format()
+    console.log(data);
+
+    const publishatformat = dayjs(data.UpdateAt).format()
     , jstDate         = dayjs(publishatformat)
     , datePlastic     = jstDate.year() + '/' + jstDate.month() + '/' + jstDate.date(); 
+
+
 
   const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())

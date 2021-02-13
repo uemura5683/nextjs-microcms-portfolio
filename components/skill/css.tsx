@@ -32,7 +32,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_css.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">85% マスター</p>
+              <p className="skill_level">90% マスター</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
                 cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、パソコンスクールで学んだ言語です。<br></br>

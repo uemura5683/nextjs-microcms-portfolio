@@ -32,7 +32,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_figma.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">50% ミドル</p>
+              <p className="skill_level">60% ミドル</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
                 figmaはアカウント登録するだけで利用できる。サーバーレスUX/ULデザインカンプ作成ツールです。<br></br>

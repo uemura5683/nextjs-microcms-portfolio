@@ -92,7 +92,7 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null);
   
-  const publishatformat = dayjs(data.publishedAt).format()
+  const publishatformat = dayjs(data.UpdateAt).format()
       , jstDate         = dayjs(publishatformat)
       , datePlastic     = jstDate.year() + '/' + jstDate.month() + '/' + jstDate.date(); 
 
