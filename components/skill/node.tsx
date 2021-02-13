@@ -32,10 +32,13 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_node.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">50% ミドル</p>
+              <p className="skill_experience">1年以上</p>
               <p className="skill_detail">
-                nodeは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                Node.jsは世界中で使われているサーバーで動くJavascriptであります。<br></br>
+                Node.jsをインストールすることで。Ruby + RailsやPython + DjangoなどでWebアプリケーションを作成したり、<br></br>
+                EjsとかTypescriptでクライアントサイドのプログラムをかくことも出来ます。<br></br>
+                他にも、SCSSをCSS / Pugからhtmlに変換する為にNode.jsを使ったり、テストツールを使う為にNode.jsを使ったりと、Node.jsは様々な用途で使われています。
               </p>
               <p className="skill_site"></p>
             </div>

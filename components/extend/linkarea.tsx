@@ -36,7 +36,7 @@ export default function LinkArea() {
           <li>
             <a href="/" target="_blank">
               <img src="/images/link/nu-portfolio.png"></img>
-              <span>Nu-portfolio</span>
+              <span>NU stack</span>
             </a>
           </li>
       </ul>

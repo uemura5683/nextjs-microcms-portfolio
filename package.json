@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.1.0",
     "next": "9.5.3",
+    "next-images": "^1.7.0",
     "node-fetch": "^2.6.1",
     "npm": "^6.14.11",
     "react": "^17.0.1",

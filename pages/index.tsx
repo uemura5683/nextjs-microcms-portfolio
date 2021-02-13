@@ -36,7 +36,11 @@ function Home( {info, work} ) {
               <li className={work.id} key={work.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
                 <Link href={`work/${work.id}`}>
                 <figure>
-                  <img src={work.image.url}></img>
+                  <img
+                    src={work.image.url}
+                    alt={work.title}
+                    width={605}
+                  />
                 </figure>
                 </Link>
                 <Link href={`work/${work.id}`}>
@@ -55,7 +59,11 @@ function Home( {info, work} ) {
              <li className={info.id} key={info.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
              <Link href={`information/${info.id}`}>
              <figure>
-               <img src={info.image.url}></img>
+               <img
+                src={info.image.url}
+                alt={info.title}
+                width={605}
+              />
              </figure>
              </Link>
              <Link href={`information/${info.id}`}>

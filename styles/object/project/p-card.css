@@ -9,7 +9,7 @@
 .card ul li{
     width: 46%;
     text-align: center;
-    margin: 0 2%;
+    margin: 0 2% 10px;
     cursor: pointer;
 }
 .card ul li figure{
@@ -19,16 +19,16 @@
     width: 100%;
     -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transition: opacity ease .3s, transform ease .3s;
-            transition: opacity ease .3s, transform ease .3s;
+    -webkit-transition: opacity ease .3s, transform ease 1s;
+            transition: opacity ease .3s, transform ease 1s;
 }
 .card ul li:hover img,
 .card ul li:focus img {
     opacity: .3;
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    -webkit-transition: opacity ease .3s, transform ease .3s;
-            transition: opacity ease .3s, transform ease .3s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: opacity ease .3s, transform ease 1s;
+            transition: opacity ease .3s, transform ease 1s;
 }
 .card ul li span {
     margin: 10px 0 0;
@@ -47,7 +47,7 @@
         margin: 0 -1%;
     }
     .card ul li{
-        margin: 0 1%;
+        margin: 0 1% 10px;
         width: calc( ( 100% / 3 ) - 2% );
     }
 }

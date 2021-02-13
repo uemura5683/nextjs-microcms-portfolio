@@ -197,25 +197,33 @@
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
 }
+.slide-animation .skill__list li.react .gage:after {
+    -webkit-animation: gagereact .5s ease-in-out 0s infinite;
+            animation: gagereact .5s ease-in-out 0s infinite;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+}
 @keyframes gagehtml {
     0% { width: 0%; }  
-    100% { width: 85%; }
+    100% { width: 90%; }
 }
 @keyframes gagewp {
     0% { width: 0%; }  
-    100% { width: 60%; }
+    100% { width: 50%; }
 }
 @keyframes gagecss {
     0% { width: 0%; }  
-    100% { width: 85%; }
+    100% { width: 90%; }
 }
 @keyframes gagemt {
     0% { width: 0%; }  
-    100% { width: 55%; }
+    100% { width: 50%; }
 }
 @keyframes gagejs {
     0% { width: 0%; }  
-    100% { width: 75%; }
+    100% { width: 80%; }
 }
 @keyframes gagemcms {
     0% { width: 0%; }  
@@ -223,7 +231,7 @@
 }
 @keyframes gagejq {
     0% { width: 0%; }  
-    100% { width: 75%; }
+    100% { width: 80%; }
 }
 @keyframes gagevue {
     0% { width: 0%; }  
@@ -231,7 +239,7 @@
 }
 @keyframes gagephp {
     0% { width: 0%; }  
-    100% { width: 75%; }
+    100% { width: 80%; }
 }
 @keyframes gagenuxt {
     0% { width: 0%; }  
@@ -239,11 +247,11 @@
 }
 @keyframes gagenscss {
     0% { width: 0%; }  
-    100% { width: 65%; }
+    100% { width: 60%; }
 }
 @keyframes gagenext {
     0% { width: 0%; }  
-    100% { width: 40%; }
+    100% { width: 50%; }
 }
 @keyframes gagepug {
     0% { width: 0%; }  
@@ -263,11 +271,15 @@
 }
 @keyframes gagebase {
     0% { width: 0%; }  
-    100% { width: 75%; }
+    100% { width: 70%; }
 }
 @keyframes gagefigma {
     0% { width: 0%; }  
-    100% { width: 50%; }
+    100% { width: 60%; }
+}
+@keyframes gagereact {
+    0% { width: 0%; }  
+    100% { width: 40%; }
 }
 
 @media (min-width: 991px) {

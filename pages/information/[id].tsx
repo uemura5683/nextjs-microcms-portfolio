@@ -23,7 +23,11 @@ export default function BlogId( { infos, info_data, infolist } ) {
                 <p>{info_data}</p>
               </div>
               <figure>
-                <img src={infos.image.url}></img>
+                <img
+                  src={infos.image.url}
+                  alt={infos.title}
+                  width={605}
+                />
               </figure>
             </div>
             <div
@@ -41,7 +45,11 @@ export default function BlogId( { infos, info_data, infolist } ) {
                   <li key={infolist.id}>
                     <Link href={`/information/${infolist.id}`}>
                     <figure>
-                      <img src={infolist.image.url}></img>
+                      <img 
+                        src={infolist.image.url}
+                        alt={infolist.title}
+                        width={476}
+                      />
                     </figure>
                     </Link>
                     <Link href={`/information/${infolist.id}`}>

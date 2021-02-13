@@ -77,7 +77,7 @@ const Contacts = () => {
       })
       .then(() => {
 
-        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>ありがとうございました。お問い合わせ完了しました。<br>5秒後にリロードします。</p></div>";
+        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
 
         getbody
         .insertAdjacentHTML(

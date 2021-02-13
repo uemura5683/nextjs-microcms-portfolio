@@ -16,9 +16,9 @@ const SkillContent = () => {
       setIsOpen(false);
   }
   return (    
-      <li className="skill__zoom next">
+      <li className="skill__zoom react">
         <button onClick={openModal}>
-          <img src="/images/skill/skill_next.png"></img>
+          <img src="/images/skill/skill_react.png"></img>
           <div className="gage"></div>
         </button>
         <Modal
@@ -27,15 +27,17 @@ const SkillContent = () => {
           onRequestClose={closeModal}
           contentLabel="Example Modal"
         >
-          <h2 ref={_subtitle => (subtitle = _subtitle)}>NEXT.js</h2>
+          <h2 ref={_subtitle => (subtitle = _subtitle)}>React.js</h2>
           <button onClick={closeModal}>close</button>          
           <div className="skill__zoom_modal">
-            <img src="/images/skill/skill_next.png"></img>
+            <img src="/images/skill/skill_react.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">50% ミドル</p>
+              <p className="skill_level">40% ノービス</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
-              NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br></br>
+                React は、Facebookによって開発されているユーザインタフェース構築のためのJavaScriptライブラリです。<br></br>React.jsまたはReactJSの名称でも知られております。<br></br>Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br></br>
+                また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。
+                <br></br>成果物<br></br><a href="https://uemu-engineer.com/">Nu stack</a>
               </p>
               <p className="skill_site"></p>
             </div>

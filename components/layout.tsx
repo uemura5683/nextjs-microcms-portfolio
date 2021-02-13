@@ -5,7 +5,7 @@ import Logo from '../components/logo'
 import DrawerMenu from '../components/extend/drawermenu'
 
 const name = 'うえむー'
-export const siteTitle = 'うえむーのnext.js練習用のサイト'
+export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト'
 
 export default function Layout({ children, home }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="うえむーのNext.js練習用サイトです"
+          content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。"
         />
         <meta
           property="og:image"

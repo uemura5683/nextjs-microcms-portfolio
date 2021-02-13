@@ -24,6 +24,9 @@
 .p-detail__inner .p-detail__bottom {
     margin: 0 0 25px;
 }
+.p-detail__inner .p-detail__bottom a {
+    color: white;
+}
 .p-detail__inner .card li span {
     color: white;
     opacity: 1;
