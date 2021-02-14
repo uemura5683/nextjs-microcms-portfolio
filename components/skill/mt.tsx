@@ -18,7 +18,10 @@ const SkillContent = () => {
   return (    
       <li className="skill__zoom mt">
         <button onClick={openModal}>
-          <img src="/images/skill/skill_mt.png"></img>
+          <img
+            src="/images/skill/skill_mt.png"
+            alt="Movable type logo"
+          />
           <div className="gage"></div>
         </button>
         <Modal
@@ -30,15 +33,19 @@ const SkillContent = () => {
           <h2 ref={_subtitle => (subtitle = _subtitle)}>Movable Type</h2>
           <button onClick={closeModal}>close</button>          
           <div className="skill__zoom_modal">
-            <img src="/images/skill/skill_mt.png"></img>
+            <img
+              src="/images/skill/skill_mt.png"
+              alt="Movable type logo"
+            />
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">55% ミドル</p>
+              <p className="skill_level">50% ミドル</p>
               <p className="skill_experience">3年以上</p>
               <p className="skill_detail">
                 Movable Typeは日本の企業シックス・アパート社が開発・提供したCMSであります。このCMSの特徴はWordPressのようにデータベースを参照にしてphpで動的処理してコンテンツを出力しているのではなく、
                 このCMSは記事を登録後にhtmlファイルをそのまま生成されるので、データベースを参照せずにいられるのでアクセス負荷にはとてもつよいのが特徴です。
-                <br></br>成果物<br></br>Webサイト・アプリと連携する為にRSSを作成
-                              <br></br>HTMLメルマガを作成
+                <br />成果物
+                <br />Webサイト・アプリと連携する為にRSSを作成
+                <br />HTMLメルマガを作成
               </p>
               <p className="skill_site"></p>
             </div>

@@ -62,7 +62,7 @@ export default function Layout({ children, home }) {
             <Link href="/about">About</Link>
           </div>
           <div className="footer__copyrights">
-          (c) 2020 Uemu-Portfolio
+          (c) 2021 Uemu-Portfolio
           </div>
         </footer>
         <script src="/js/jquery.waypoints.min.js"></script>

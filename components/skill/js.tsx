@@ -32,7 +32,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_js.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% マスター</p>
+              <p className="skill_level">80% マスター</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
                 JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br></br>
