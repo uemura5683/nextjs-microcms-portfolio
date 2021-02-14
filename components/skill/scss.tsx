@@ -18,7 +18,10 @@ const SkillContent = () => {
   return (    
       <li className="skill__zoom scss">
         <button onClick={openModal}>
-          <img src="/images/skill/skill_scss.png"></img>
+          <img
+            src="/images/skill/skill_scss.png"
+            alt="SCSS logo"
+          />
           <div className="gage"></div>
         </button>
         <Modal
@@ -30,10 +33,13 @@ const SkillContent = () => {
           <h2 ref={_subtitle => (subtitle = _subtitle)}>SCSS</h2>
           <button onClick={closeModal}>close</button>          
           <div className="skill__zoom_modal">
-            <img src="/images/skill/skill_scss.png"></img>
+            <img
+              src="/images/skill/skill_scss.png"
+              alt="SCSS logo"
+            />
             <div className="skill__zoom_modal_description">
               <p className="skill_level">60% ミドル</p>
-              <p className="skill_experience">１年以上</p>
+              <p className="skill_experience">3年以上</p>
               <p className="skill_detail">
                 scssは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />
               </p>

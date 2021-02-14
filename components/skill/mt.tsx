@@ -46,6 +46,7 @@ const SkillContent = () => {
                 <br />成果物
                 <br />Webサイト・アプリと連携する為にRSSを作成
                 <br />HTMLメルマガを作成
+                <br />LOOKBOOKページを作成 etc...
               </p>
               <p className="skill_site"></p>
             </div>
