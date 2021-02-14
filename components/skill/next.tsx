@@ -32,7 +32,7 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_next.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">50% ミドル</p>
+              <p className="skill_level">40% ノービス</p>
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
               NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br></br>

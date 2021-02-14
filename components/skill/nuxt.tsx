@@ -32,10 +32,10 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_nuxt.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">75% エキスパート</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">50% ミドル</p>
+              <p className="skill_experience">1年以上</p>
               <p className="skill_detail">
-                nuxtは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br></br>
+                Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたアーキテクチャです。<br></br>機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br></br>成果物<br></br><a href="http://nu-blogsite.net/" target="_blank">Nu-Blog</a>
               </p>
               <p className="skill_site"></p>
             </div>

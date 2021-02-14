@@ -32,16 +32,18 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_wp.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">55% ミドル</p>
-              <p className="skill_experience">5年以上</p>
+              <p className="skill_level">60% ミドル</p>
+              <p className="skill_experience">3年以上</p>
               <p className="skill_detail">
-                wpは世界で一番使用率が高いCMSである。初学者や未エンジニアでも適用できます。<br></br>
-                PHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
+                Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br></br>
+                また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br></br>
+                Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br></br>
                 <br></br>成果物<br></br><a href="https://takarabako.tokyo/">タカラバコ</a>
+                              <br></br>実家の自営業(製作中)
               </p>
               <p className="skill_site"></p>
             </div>
-          </div>          
+          </div>
         </Modal>
     </li>
   );

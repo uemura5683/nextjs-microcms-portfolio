@@ -32,10 +32,10 @@ const SkillContent = () => {
           <div className="skill__zoom_modal">
             <img src="/images/skill/skill_vue.png"></img>
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">40% ノービス</p>
+              <p className="skill_level">50% ミドル</p>
               <p className="skill_experience">1年以上</p>
               <p className="skill_detail">
-                vueはEvan You氏が開発したJavascriptのフレームワークである。デザイナーが「親しみやすい」作りとなっており、UI/UXを高める機能(アニメーション)が容易に導入できます。<br></br><br></br>成果物<br></br><a href="http://nu-blogsite.net/">Nu-blog</a>
+                vueはEvan You氏が開発したJavascriptのフレームワークである。デザイナーが「親しみやすい」作りとなっており、UI/UXを高める機能(アニメーション)が容易に導入できます。<br></br><br></br>成果物<br></br><a href="http://nu-blogsite.net/">Nu-blog</a><br></br>アパレルブランドサイトの一部(カウントダウン機能を追加) etc...
               </p>
               <p className="skill_site"></p>
             </div>

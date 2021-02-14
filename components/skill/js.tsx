@@ -41,9 +41,8 @@ const SkillContent = () => {
                               <br></br><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
                               <br></br><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
                               <br></br><a href="https://codepen.io/uemuragame5683/pen/YzWGEKv" target="_blank">Codepen Three.js</a>
-                              <br></br>TOMORROWLAND
-                              <br></br>BAOBAO etc...
-                              </p>
+                              <br></br>アパレルブランドサイト 何件か
+              </p>
               <p className="skill_site"></p>
             </div>
           </div>          
