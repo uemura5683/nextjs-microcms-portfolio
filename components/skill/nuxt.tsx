@@ -43,8 +43,10 @@ const SkillContent = () => {
               <p className="skill_detail">
                 Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたアーキテクチャです。<br />
                 機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br />
+                <br />
                 成果物<br />
-                <a href="https://nu-blogsite.net/" target="_blank">Nu-Blog</a>
+                <a href="https://nu-blogsite.net/" target="_blank">Nu-Blog</a><br />
+                <br />
                 LT資料<br />
                 <a href="https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian" target="_blank">Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>
               </p>

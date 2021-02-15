@@ -43,7 +43,7 @@ const SkillContent = () => {
               <p className="skill_detail">
                 gulpはSCSS・Ejs・minify・スプライト化・pug/phpなどのhtml化などのタスクを自動化してくれるJavascriptツールキットです。<br />
                 自分はSCSS・Pugの言語で実装する時によく用いります。<br />
-                gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。<br />
+                gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。
               </p>
               <p className="skill_site"></p>
             </div>

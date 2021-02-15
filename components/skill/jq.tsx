@@ -44,6 +44,7 @@ const SkillContent = () => {
                 jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />
                 jQueryにはハンバーガーメニュー・アコーディオンなどのアニメーションを簡単に実装できる便利なメソッドが用意されています。<br />
                 アニメーションを実装するにはjQueryを適用することを推奨します、<br />
+                <br />
                 成果物<br />
                 <a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a><br />
                 <a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a><br />

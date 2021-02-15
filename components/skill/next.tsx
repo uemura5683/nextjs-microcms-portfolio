@@ -42,6 +42,7 @@ const SkillContent = () => {
               <p className="skill_experience">1年未満</p>
               <p className="skill_detail">
                 NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。
+                <br />
                 <br />成果物
                 <br /><a href="http://uemu-engineer.com/" target="_blank">Nu stack</a>
               </p>

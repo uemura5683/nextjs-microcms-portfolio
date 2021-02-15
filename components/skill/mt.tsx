@@ -43,10 +43,11 @@ const SkillContent = () => {
               <p className="skill_detail">
                 Movable Typeは日本の企業シックス・アパート社が開発・提供したCMSであります。このCMSの特徴はWordPressのようにデータベースを参照にしてphpで動的処理してコンテンツを出力しているのではなく、
                 このCMSは記事を登録後にhtmlファイルをそのまま生成されるので、データベースを参照せずにいられるのでアクセス負荷にはとてもつよいのが特徴です。
+                <br />
                 <br />成果物
-                <br />Webサイト・アプリと連携する為にRSSを作成
-                <br />HTMLメルマガを作成
-                <br />LOOKBOOKページを作成 etc...
+                <br />Webサイト / アプリと連携する為のRSS作成
+                <br />HTMLメルマガ作成
+                <br />LOOKBOOKページ作成 etc...
               </p>
               <p className="skill_site"></p>
             </div>

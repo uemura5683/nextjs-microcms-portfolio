@@ -49,7 +49,9 @@ const SkillContent = () => {
                 <a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a><br />
                 <a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a><br />
                 <a href="https://codepen.io/uemuragame5683/pen/YzWGEKv" target="_blank">Codepen Three.js</a><br />
-                アパレルブランドサイト 多数
+                アパレルブランドサイト<br />
+                サードパーティツール導入<br />
+                Google Analyticsタグ実装 多数
               </p>
               <p className="skill_site"></p>
             </div>

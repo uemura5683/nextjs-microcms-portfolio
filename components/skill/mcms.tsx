@@ -47,6 +47,7 @@ const SkillContent = () => {
                 <br /><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
                 <br /><a href="http://uemu-engineer.com/" target="_blank">Nu-stack</a>
                 <br />アパレルブランドサイト 多数 etc...
+                <br />
                 <br />LT資料
                 <br /><a href="https://speakerdeck.com/uemura/microcmsnituite-gai-yao-bian-a45850a4-448d-423a-9675-9be6be7c4ba7" target="_blank">micro CMSについて</a>
                 <br /><a href="https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian" target="_blank">Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>

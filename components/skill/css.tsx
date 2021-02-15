@@ -45,9 +45,10 @@ const SkillContent = () => {
                 cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />
                 最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張ってください。<br />
                 <br />
-                <br />成果物<br /><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
-                           <br /><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
-                           <br />アパレルブランドサイト 何件か
+                <br />成果物
+                <br /><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                <br /><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
+                <br />アパレルブランドサイト 多数
               </p>
               <p className="skill_site"></p>
             </div>
