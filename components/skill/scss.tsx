@@ -47,7 +47,6 @@ const SkillContent = () => {
                 成果物<br />
                 <a href="https://codepen.io/uemuragame5683" target="_blank">CODEPEN</a><br />
                 <a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a><br />
-                <br />
                 アパレルブランドサイト 多数
               </p>
               <p className="skill_site"></p>

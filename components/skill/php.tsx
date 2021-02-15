@@ -41,7 +41,11 @@ const SkillContent = () => {
               <p className="skill_level">80% エキスパート</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
-                phpは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />
+                phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />
+                phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br />
+                <br />
+                成果物<br />
+                アパレルブランドサイト 多数
               </p>
               <p className="skill_site"></p>
             </div>
