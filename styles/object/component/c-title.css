@@ -2,7 +2,7 @@
 * title
 **/
 .c-title {
-  font-size: 2.4em;
+  font-size: 2.0em;
   margin: 0 0 25px;
   padding: 0 0 5px;
   overflow: hidden;
@@ -14,6 +14,7 @@
   border-bottom: 1px solid black;
   content: '';
   display: block;
+  margin: 10px 0 0;
 }
 .c-title.white:after {
   border-bottom: 1px solid white;
@@ -29,7 +30,7 @@
     * title
     **/
     .c-title {
-        font-size: 3.6em;
+        font-size: 3.0em;
         width: 100%;
         margin: 0 0 50px;
     }
