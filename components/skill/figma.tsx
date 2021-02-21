@@ -44,11 +44,10 @@ const SkillContent = () => {
                 figmaはアカウント登録するだけで利用できる。サーバーレスUX/ULデザインカンプ作成ツールです。<br/>
                 仕様がXDと少しにており、XDに慣れている方はサクッと使いこなせると思います。<br/>
                 作成したデザインカンプを仲間に招待するだけで共有することができます。<br/>
-                <br/>成果物
-                <br/><a href="https://takarabako.tokyo/" target="_blank">タカラバコ</a>
+                <br/><span>成果物</span><a href="https://takarabako.tokyo/" target="_blank">タカラバコ</a>
                 <br/><a href="https://uemu-engineer.com/" target="_blank">NU-stack</a>
                 <br/>
-                <br/><a href="https://www.figma.com/" target="_blank">figma</a>
+                <br/><span>参考資料</span><a href="https://www.figma.com/" target="_blank">figma</a>
                 <br/><a href="https://web-design.school/tutorials/figma/getting-started" target="_blank">チュートリアル</a>
               </p>
               <p className="skill_site"></p>

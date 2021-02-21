@@ -44,9 +44,7 @@ const SkillContent = () => {
                 cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、パソコンスクールで学んだ言語です。<br />
                 cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />
                 最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張ってください。<br />
-                <br />
-                <br />成果物
-                <br /><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                <br /><span>成果物</span><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
                 <br /><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
                 <br />アパレルブランドサイト 多数
               </p>

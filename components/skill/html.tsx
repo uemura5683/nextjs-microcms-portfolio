@@ -46,8 +46,7 @@ const SkillContent = () => {
                 それに反すると保守性が悪くなったり、レイアウトが任意通りに反映されなくなることがあります。<br />
                 また、W3Cと言ってWeb標準規格を準すること推奨されており、それを準しないと同じWebページでもブラウザによってレイアウトなどが変わってしまうという問題を抱えています。<br />
                 なので、基礎やルールをしっかり把握し、W3Cを準するようにマークアップして行きましょう。<br />
-                <br />成果物
-                <br /><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                <br /><span>成果物</span><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
                 <br /><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
                 <br /><a href="https://nu-blogsite.net/" target="_blank">Nu-Blog</a>
                 <br /><a href="http://uemu-engineer.com/" target="_blank">Nu-stack</a>

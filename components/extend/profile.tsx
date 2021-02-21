@@ -26,7 +26,6 @@ export default function Profile() {
           <img src="/images/profile.jpg" />
         </figure>
         <div className="about__profile__lesson">
-          
         </div>
         <div className="about__profile__lessondetail">
           <p>

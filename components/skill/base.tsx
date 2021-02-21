@@ -47,8 +47,7 @@ const SkillContent = () => {
                 もちろん、オリジナルのサイトを作成することが可能です。<br />
                 必要な言語はhtml/css/jqueryです。<br />
                 オリジナルのサイトを作る場合は、言語スキルを身につけることが必須なので、未経験の方はテーマ選択・カスタマイズのみで十分でしょう。<br />
-                <br/>
-                成果物<br /><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                <br/><span>成果物</span><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
               </p>
               <p className="skill_site"></p>
             </div>

@@ -43,15 +43,13 @@ const SkillContent = () => {
               <p className="skill_detail">
                 JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />
                 Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなどもあり、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br />
-                <br />
-                成果物<br />
-                <a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a><br />
-                <a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a><br />
-                <a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a><br />
-                <a href="https://codepen.io/uemuragame5683/pen/YzWGEKv" target="_blank">Codepen Three.js</a><br />
-                アパレルブランドサイト<br />
-                サードパーティツール導入<br />
-                Google Analyticsタグ実装 多数
+                <br /><span>成果物</span><a href="https://takarabako.theshop.jp/" target="_blank">タカラバコ ECサイト</a>
+                <br /><a href="https://takarabako.tokyo/" target="_blank">タカラバコ CPサイト</a>
+                <br /><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
+                <br /><a href="https://codepen.io/uemuragame5683/pen/YzWGEKv" target="_blank">Codepen Three.js</a>
+                <br />アパレルブランドサイト
+                <br />サードパーティツール導入
+                <br />Google Analyticsタグ実装 多数
               </p>
               <p className="skill_site"></p>
             </div>

@@ -45,9 +45,7 @@ const SkillContent = () => {
                 React.jsまたはReactJSの名称でも知られております。<br />
                 Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br />
                 また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。<br />
-                <br />
-                成果物<br />
-                <a href="https://uemu-engineer.com/">Nu stack</a>
+                <br /><span>成果物</span><a href="https://uemu-engineer.com/">Nu stack</a>
               </p>
               <p className="skill_site"></p>
             </div>

@@ -43,9 +43,8 @@ const SkillContent = () => {
               <p className="skill_detail">
                 phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />
                 phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br />
-                <br />
-                成果物<br />
-                アパレルブランドサイト 多数
+                <br/><span>成果物</span>アパレルブランドサイト 多数
+                <br />大手受託案件 モック作成
               </p>
               <p className="skill_site"></p>
             </div>

@@ -43,11 +43,9 @@ const SkillContent = () => {
               <p className="skill_detail">
                 SCSSはCSSを効率良くスタイル調整する為のRubyで作られたスタイルシート言語であります。PUGと同じくRuby・node.js・gulpをインストールしてコンパイルする必要があります。<br />
                 php・jsのように配列・変数などを用いることができ、(.section-00X)のようなセレクタや(color: whiteなど)よく利用する設定値などにも変数・配列を適用して効率よくスタイルシートを記述するのに適しています。<br />
-                <br />
-                成果物<br />
-                <a href="https://codepen.io/uemuragame5683" target="_blank">CODEPEN</a><br />
-                <a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a><br />
-                アパレルブランドサイト 多数
+                <br /><span>成果物</span><a href="https://codepen.io/uemuragame5683" target="_blank">CODEPEN</a>
+                <br /><a href="https://nu-blogsite.net/" target="_blank">うえむーブログ</a>
+                <br />アパレルブランドサイト 多数
               </p>
               <p className="skill_site"></p>
             </div>
