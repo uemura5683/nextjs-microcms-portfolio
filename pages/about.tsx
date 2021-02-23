@@ -34,8 +34,8 @@ export default function About() {
             もし、何か作業が滞っている場合などがあったらいつでも連絡ください。サポートをします。
             </p>
           </div>
-          <h2 className="c-title white">経歴</h2>
-          <div className="p-about-history">
+          <h2 className="c-title white d-none">経歴</h2>
+          <div className="p-about-history d-none">
             <h3 className="c-title white">大卒して設備工事の会社に入社</h3>
             <div className="p-about__inner">
               <span>2010</span>
@@ -63,6 +63,7 @@ export default function About() {
                 2012年の夏頃にポートフォリオを完成し、転職活動しました。
               </p>
             </div>
+
           </div>
         </div>
         <div className="bgimage"></div>

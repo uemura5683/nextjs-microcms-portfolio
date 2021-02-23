@@ -3,6 +3,8 @@ import Link from 'next/link'
 import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
 import DrawerMenu from '../components/extend/drawermenu'
+import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router";
 
 const name = 'うえむー'
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト'
@@ -26,6 +28,23 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       </Head>
+      <motion.div
+        animate={{
+          x: 0,
+          opacity: 1
+        }}
+        initial={{
+          x: 0,
+          opacity: 0
+        }}
+        exit={{
+          x: 0,
+          opacity: 0
+        }}
+        transition={{
+          duration: 0.5
+        }}
+      >
         <header>
           {home ? (
             <>
@@ -68,6 +87,7 @@ export default function Layout({ children, home }) {
         <script src="/js/jquery.waypoints.min.js"></script>
         <script src="/js/shuffle-text.js"></script>
         <script src="/js/common.js"></script>
+    </motion.div>
     </div>
   )
 }

@@ -109,6 +109,10 @@ button:focus, button:active, button:visited, button:hover,
   
 }
 
+.d-none {
+  display: none;
+}
+
 /**
  * ol ul li
  */
