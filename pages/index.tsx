@@ -17,6 +17,8 @@ import MicroCmsCard from '../components/extend/microcmscard'
 import ShuffleText from "shuffle-text";
 import fetch from 'node-fetch'
 import Link from 'next/link'
+import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router";
 
 function Home( {info, work} ) {
   return (
@@ -25,57 +27,75 @@ function Home( {info, work} ) {
         <title>{siteTitle}</title>
         <link href="/style/main.css" rel="stylesheet" />
       </Head>
-      <MainVisual></MainVisual>
-      <Profile></Profile>
-      <Skill></Skill>
-      <section id="p-work" className="has-animation" data-set-color="light">
-        <h2 className="c-title">WORK</h2>
-        <div className="card">
-          <ul>
-          {work.map(work => (
-              <li className={work.id} key={work.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
-                <Link href={`work/${work.id}`}>
-                <figure>
-                  <img
-                    src={work.image.url}
-                    alt={work.title}
-                    width={605}
-                  />
-                </figure>
-                </Link>
-                <Link href={`work/${work.id}`}>
-                  <span>{work.title}</span>
-                </Link>
-              </li>
-          ))}
-          </ul>
-        </div>
-      </section>
-      <section id="p-information" className="u-gray has-animation" data-set-color="dark">
-        <h2 className="c-title white">INFORMATION</h2>
-        <div className="card">
-          <ul>
-          {info.map((info) => (
-             <li className={info.id} key={info.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
-             <Link href={`information/${info.id}`}>
-             <figure>
-               <img
-                src={info.image.url}
-                alt={info.title}
-                width={605}
-              />
-             </figure>
-             </Link>
-             <Link href={`information/${info.id}`}>
-               <span className="white">{info.title}</span>
-             </Link>
-           </li>
-          ))}
-          </ul>
-        </div>
-      </section>
-      <LinkArea></LinkArea>
-      <ContactForm></ContactForm>
+      <motion.div
+        animate={{
+          x: 0,
+          opacity: 1
+        }}
+        initial={{
+          x: 0,
+          opacity: 0
+        }}
+        exit={{
+          x: 0,
+          opacity: 0
+        }}
+        transition={{
+          duration: 0.5
+        }}
+      >
+        <MainVisual></MainVisual>
+        <Profile></Profile>
+        <Skill></Skill>
+        <section id="p-work" className="has-animation" data-set-color="light">
+          <h2 className="c-title">WORK</h2>
+          <div className="card">
+            <ul>
+            {work.map(work => (
+                <li className={work.id} key={work.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+                  <Link href={`work/${work.id}`}>
+                  <figure>
+                    <img
+                      src={work.image.url}
+                      alt={work.title}
+                      width={605}
+                    />
+                  </figure>
+                  </Link>
+                  <Link href={`work/${work.id}`}>
+                    <span>{work.title}</span>
+                  </Link>
+                </li>
+            ))}
+            </ul>
+          </div>
+        </section>
+        <section id="p-information" className="u-gray has-animation" data-set-color="dark">
+          <h2 className="c-title white">INFORMATION</h2>
+          <div className="card">
+            <ul>
+            {info.map((info) => (
+              <li className={info.id} key={info.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+              <Link href={`information/${info.id}`}>
+              <figure>
+                <img
+                  src={info.image.url}
+                  alt={info.title}
+                  width={605}
+                />
+              </figure>
+              </Link>
+              <Link href={`information/${info.id}`}>
+                <span className="white">{info.title}</span>
+              </Link>
+            </li>
+            ))}
+            </ul>
+          </div>
+        </section>
+        <LinkArea></LinkArea>
+        <ContactForm></ContactForm>
+      </motion.div>
     </Layout>
   )
 

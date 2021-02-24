@@ -6,6 +6,8 @@ import Link from 'next/link'
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
+import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router";
 
 export default function BlogId( { infos, info_data, infolist } ) {
   return (
@@ -14,7 +16,24 @@ export default function BlogId( { infos, info_data, infolist } ) {
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
-      <div className="container">
+      <motion.div
+        animate={{
+          x: 0,
+          opacity: 1
+        }}
+        initial={{
+          x: 0,
+          opacity: 0
+        }}
+        exit={{
+          x: 0,
+          opacity: 0
+        }}
+        transition={{
+          duration: 0.5
+        }}
+      >
+        <div className="container">
         <div className="p-detail__inner">
           <div className="p-detail__inner__main">
             <div className="p-detail__top">
@@ -63,6 +82,7 @@ export default function BlogId( { infos, info_data, infolist } ) {
         </div>
         <div className="bgimage"></div>
       </div>
+      </motion.div>
     </Layout>
   );
 }

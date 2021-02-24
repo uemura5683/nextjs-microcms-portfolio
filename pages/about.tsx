@@ -1,5 +1,7 @@
 import Layout, { siteTitle } from '../components/layout'
 import Head from 'next/head'
+import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router";
 
 /**
  * export
@@ -11,7 +13,24 @@ export default function About() {
         <title>{siteTitle}</title>
         <link href="/style/about.css" rel="stylesheet" />
       </Head>
-      <div className="container">
+      <motion.div
+        animate={{
+          x: 0,
+          opacity: 1
+        }}
+        initial={{
+          x: 0,
+          opacity: 0
+        }}
+        exit={{
+          x: 0,
+          opacity: 0
+        }}
+        transition={{
+          duration: 0.5
+        }}
+      >
+        <div className="container">
         <div className="p-about">
           <h2 className="c-title white">フルスタックエンジニアを目指して</h2>
           <div className="p-about__inner">
@@ -68,6 +87,7 @@ export default function About() {
         </div>
         <div className="bgimage"></div>
       </div>
+      </motion.div>
     </Layout>
   )
 }
