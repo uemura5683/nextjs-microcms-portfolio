@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Modal from 'react-modal'
+import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router";
 
 const Contacts = () => {
 
@@ -52,7 +53,6 @@ const Contacts = () => {
       );
 
     }
-
     // エラーがない場合はモーダルを表示する
     if( alert_txt_inner.length == 0 ) {
       openModal();
@@ -67,6 +67,68 @@ const Contacts = () => {
         setIsOpen(false);
     }
   };
+
+  function Modal(props) {
+    const data = {
+      email: email,
+      name: name,
+      title: title,
+      body: body
+    };
+    if(props.isOpen == true) {      
+      return (
+        <>
+        <motion.div
+        animate={{
+          x: 0,
+          opacity: 1
+        }}
+        initial={{
+          x: 0,
+          opacity: 0
+        }}
+        exit={{
+          x: 0,
+          opacity: 0
+        }}
+        transition={{
+          duration: 0.5
+        }}
+        >
+        <div className="contact__form">
+          <p className="contact__confirm">入力内容が正しければ「送信する」をクリックしてください。</p>
+          <table className="table table-striped">
+            <tbody>
+            <tr>
+              <th>お名前</th>
+              <td>{data.name}</td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>{data.email}</td>
+            </tr>
+            <tr>
+              <th>お問い合わせの内容</th>
+              <td>{data.title}</td>
+            </tr>
+            <tr className="borderline">
+              <th>お問い合わせ詳細</th>
+              <td>{data.body}</td>
+            </tr>
+            </tbody>
+          </table>
+          <div className="c-btn-area">
+            <button className="btn-white form-submit" type="submit" onClick={FormSubmit}>送信する</button>
+          </div>
+          <button onClick={closeModal}>close</button> 
+        </div>  
+        </motion.div>    
+        </>
+      )
+    } else {
+      return null;
+    }
+  }
 
   const FormSubmit = e => {
     let getbody = document.body;
@@ -86,15 +148,40 @@ const Contacts = () => {
       }
     })
     .then(() => {
-
-      let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
-
-      getbody
-      .insertAdjacentHTML(
-        'afterbegin', alert_html
-      );
-
-      // router.push("/success");git 
+      function CompModal() {
+        return (
+          <>
+            <motion.div
+              animate={{
+                x: 0,
+                opacity: 1
+              }}
+              initial={{
+                x: 0,
+                opacity: 0
+              }}
+              exit={{
+                x: 0,
+                opacity: 0
+              }}
+              transition={{
+                duration: 0.5
+            }}>
+              <div className='alert alert-warning'>
+                <div className='alert alert-warning c-contact__complete'>
+                  <p>この度はお問い合わせメールをお送りいただきありがとうございます。<br />
+                  今しばらくお待ちくださいますようよろしくお願い申し上げます。<br />
+                  なお、しばらくたっても返信、返答がない場合は、<br />
+                  お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br />
+                  その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br />
+                  5秒後にリロードします。
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        ) 
+      }
       let countup = function() {
         location.reload();
       }
@@ -104,8 +191,6 @@ const Contacts = () => {
       console.log(err);
     });
   }
-
-
 
   return (
     <div className="c-contact-form__inner">
@@ -162,39 +247,13 @@ const Contacts = () => {
         <div className="c-btn-area">
           <button className="btn-white" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
         </div>
-      </form>
-      <Modal
+        <Modal
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           contentLabel="Example Modal"
-        >
-          <p className="contact__confirm">入力内容が正しければ「送信する」をクリックしてください。</p>
-          <table className="table table-striped">
-            <tbody>
-            <tr>
-              <th>お名前</th>
-              <td>植村 修好</td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th>
-              <td>nobuyoshi5683@gmail.com</td>
-            </tr>
-            <tr>
-              <th>お問い合わせの内容</th>
-              <td>商品詳細（サイズ・在庫等）について</td>
-            </tr>
-            <tr className="borderline">
-              <th>お問い合わせ詳細</th>
-              <td>test</td>
-            </tr>
-            </tbody>
-          </table>
-          <div className="c-btn-area">
-            <button className="btn-white form-submit" type="submit" onClick={FormSubmit}>送信する</button>
-          </div>
-          <button onClick={closeModal}>close</button>          
-      </Modal>
+       />
+      </form>
     </div>
   )
 };
