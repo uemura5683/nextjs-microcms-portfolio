@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-
+import Modal from 'react-modal'
 
 const Contacts = () => {
 
@@ -24,8 +24,7 @@ const Contacts = () => {
     let ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' ),
         alert_txt       = document.getElementsByClassName( 'alert-warning' ),
         alert_txt_inner = document.getElementsByClassName( 'alert_inner_txt' ),
-        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' ),
-        getbody         = document.body
+        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' );
 
     // エラーチェック
     if( alert_txt[0] != undefined ) {
@@ -56,46 +55,58 @@ const Contacts = () => {
 
     // エラーがない場合はモーダルを表示する
     if( alert_txt_inner.length == 0 ) {
-      FormSubmit();
+      openModal();
     }
-
-    function FormSubmit() {
-      const data = {
-        email: email,
-        name: name,
-        title: title,
-        body: body
-      };
-      axios({
-        method: "post",
-        url: "https://uemura5683.microcms.io/api/v1/contact",
-        data: data,
-        headers: {
-          "Content-Type": "application/json",
-          "X-WRITE-API-KEY": "e4f670a9-c5f8-4b37-b85c-420c00c33675"
-        }
-      })
-      .then(() => {
-
-        let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
-
-        getbody
-        .insertAdjacentHTML(
-          'afterbegin', alert_html
-        );
-
-        // router.push("/success");git 
-        let countup = function() {
-          location.reload();
-        }
-        setTimeout(countup, 5000);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    function openModal() {
+      setIsOpen(true);
     }
-
+    function afterOpenModal() {        
+        subtitle.style.color = '#333333';
+    }
+    function closeModal(){
+        setIsOpen(false);
+    }
   };
+
+  const FormSubmit = e => {
+    let getbody = document.body;
+    const datas = {
+      email: email,
+      name: name,
+      title: title,
+      body: body
+    };
+    axios({
+      method: "post",
+      url: "https://uemura5683.microcms.io/api/v1/contact",
+      data: datas,
+      headers: {
+        "Content-Type": "application/json",
+        "X-WRITE-API-KEY": "e4f670a9-c5f8-4b37-b85c-420c00c33675"
+      }
+    })
+    .then(() => {
+
+      let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
+
+      getbody
+      .insertAdjacentHTML(
+        'afterbegin', alert_html
+      );
+
+      // router.push("/success");git 
+      let countup = function() {
+        location.reload();
+      }
+      setTimeout(countup, 5000);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
+
+
   return (
     <div className="c-contact-form__inner">
       <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<br></br><a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
@@ -149,9 +160,41 @@ const Contacts = () => {
           </div>
         </div>
         <div className="c-btn-area">
-          <button className="btn-white" type="submit" onClick={handleSubmit}>メールアドレスを送信</button>
+          <button className="btn-white" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
         </div>
       </form>
+      <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          contentLabel="Example Modal"
+        >
+          <p className="contact__confirm">入力内容が正しければ「送信する」をクリックしてください。</p>
+          <table className="table table-striped">
+            <tbody>
+            <tr>
+              <th>お名前</th>
+              <td>植村 修好</td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>nobuyoshi5683@gmail.com</td>
+            </tr>
+            <tr>
+              <th>お問い合わせの内容</th>
+              <td>商品詳細（サイズ・在庫等）について</td>
+            </tr>
+            <tr className="borderline">
+              <th>お問い合わせ詳細</th>
+              <td>test</td>
+            </tr>
+            </tbody>
+          </table>
+          <div className="c-btn-area">
+            <button className="btn-white form-submit" type="submit" onClick={FormSubmit}>送信する</button>
+          </div>
+          <button onClick={closeModal}>close</button>          
+      </Modal>
     </div>
   )
 };
