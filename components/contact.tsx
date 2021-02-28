@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { AnimatePresence, motion } from "framer-motion";
+import Modal from 'react-modal';
 import { useHistory } from "react-router";
+import ReactDOM from "react-dom";
 
 const Contacts = () => {
 
@@ -61,7 +62,7 @@ const Contacts = () => {
       setIsOpen(true);
     }
     function afterOpenModal() {        
-        subtitle.style.color = '#333333';
+        subtitle.style.color = '#ffffff';
     }
     function closeModal(){
         setIsOpen(false);
@@ -78,23 +79,6 @@ const Contacts = () => {
     if(props.isOpen == true) {      
       return (
         <>
-        <motion.div
-        animate={{
-          x: 0,
-          opacity: 1
-        }}
-        initial={{
-          x: 0,
-          opacity: 0
-        }}
-        exit={{
-          x: 0,
-          opacity: 0
-        }}
-        transition={{
-          duration: 0.5
-        }}
-        >
         <div className="contact__form">
           <p className="contact__confirm">入力内容が正しければ「送信する」をクリックしてください。</p>
           <table className="table table-striped">
@@ -121,13 +105,28 @@ const Contacts = () => {
             <button className="btn-white form-submit" type="submit" onClick={FormSubmit}>送信する</button>
           </div>
           <button onClick={closeModal}>close</button> 
-        </div>  
-        </motion.div>    
+        </div>
+        <div className="contact__form__bg"></div>
         </>
       )
     } else {
       return null;
     }
+  }
+
+  if (typeof document !== 'undefined') {
+    let rootElement = document.getElementById("modalconfirm");
+    ReactDOM.render(
+      <React.StrictMode>
+          <Modal
+              isOpen={modalIsOpen}
+              onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              contentLabel="Example Modal"
+          ></Modal>
+      </React.StrictMode>,
+      rootElement
+    );  
   }
 
   const FormSubmit = e => {
@@ -148,40 +147,12 @@ const Contacts = () => {
       }
     })
     .then(() => {
-      function CompModal() {
-        return (
-          <>
-            <motion.div
-              animate={{
-                x: 0,
-                opacity: 1
-              }}
-              initial={{
-                x: 0,
-                opacity: 0
-              }}
-              exit={{
-                x: 0,
-                opacity: 0
-              }}
-              transition={{
-                duration: 0.5
-            }}>
-              <div className='alert alert-warning'>
-                <div className='alert alert-warning c-contact__complete'>
-                  <p>この度はお問い合わせメールをお送りいただきありがとうございます。<br />
-                  今しばらくお待ちくださいますようよろしくお願い申し上げます。<br />
-                  なお、しばらくたっても返信、返答がない場合は、<br />
-                  お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br />
-                  その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br />
-                  5秒後にリロードします。
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        ) 
-      }
+      setIsOpen(false);
+      let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
+      getbody
+      .insertAdjacentHTML(
+        'afterbegin', alert_html
+      );
       let countup = function() {
         location.reload();
       }
@@ -191,8 +162,9 @@ const Contacts = () => {
       console.log(err);
     });
   }
-
+  
   return (
+    <>
     <div className="c-contact-form__inner">
       <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<br></br><a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
       <form className="c-contact-form__form">
@@ -247,15 +219,13 @@ const Contacts = () => {
         <div className="c-btn-area">
           <button className="btn-white" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
         </div>
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          contentLabel="Example Modal"
-       />
       </form>
     </div>
+    </>
   )
+
+
+  
 };
 
 export default Contacts;

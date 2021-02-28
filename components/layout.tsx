@@ -26,6 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       </Head>
+        <div id="modalconfirm"></div>
         <header>
           {home ? (
             <>

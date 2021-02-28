@@ -27,7 +27,50 @@
     display: block;
     margin: 0 0 5px;
 }
-
+.contact__form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+}
+.contact__form button {
+    position: absolute;
+    top: 25px;
+    width: auto;
+    right: 15px;
+    font-size: 0;
+}
+.contact__form button:before,
+.contact__form button:after {
+    content: '';
+    border: 1px solid lightgray;
+    width: 30px;
+    display: block;
+    position: absolute;
+}
+.contact__form button:before {
+    transform: rotate(45deg);
+    top: 10px;
+    right: 0px;
+}
+.contact__form button:after {
+    transform: rotate(-45deg);    
+    top: 10px;
+    right: 0px;
+}
+.contact__form__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 100;
+    opacity: .7;
+}
 .contact__form .contact__confirm {
     line-height: 1.4em;
     margin: 50px 0 0;
