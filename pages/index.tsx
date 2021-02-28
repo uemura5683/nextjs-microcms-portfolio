@@ -13,7 +13,6 @@ import Profile from '../components/extend/profile'
 import Skill from '../components/extend/skill'
 import LinkArea from '../components/extend/linkarea'
 import ContactForm from '../components/extend/contactform'
-import MicroCmsCard from '../components/extend/microcmscard'
 import ShuffleText from "shuffle-text";
 import fetch from 'node-fetch'
 import Link from 'next/link'

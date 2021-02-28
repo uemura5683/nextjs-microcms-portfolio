@@ -26,7 +26,6 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       </Head>
-        <div id="modalconfirm"></div>
         <header>
           {home ? (
             <>
@@ -66,6 +65,7 @@ export default function Layout({ children, home }) {
           (c) 2021 Uemu-Portfolio
           </div>
         </footer>
+        <div id="modalArea"></div>
         <script src="/js/jquery.waypoints.min.js"></script>
         <script src="/js/shuffle-text.js"></script>
         <script src="/js/common.js"></script>

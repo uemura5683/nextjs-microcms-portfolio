@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Modal from 'react-modal';
 import { useHistory } from "react-router";
 import ReactDOM from "react-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Contacts = () => {
 
+  // 初期設定
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -15,8 +16,6 @@ const Contacts = () => {
 
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
-  function afterOpenModal() {        
-  }
   function closeModal(){
       setIsOpen(false);
   }
@@ -47,12 +46,10 @@ const Contacts = () => {
         alert_html += "<p class='alert_inner_txt'>本文を入力してください</p>";
       }
       alert_html += "</div>";
-
       ContactConfirm[0]
       .insertAdjacentHTML(
         'afterbegin', alert_html
       );
-
     }
     // エラーがない場合はモーダルを表示する
     if( alert_txt_inner.length == 0 ) {
@@ -61,15 +58,12 @@ const Contacts = () => {
     function openModal() {
       setIsOpen(true);
     }
-    function afterOpenModal() {        
-        subtitle.style.color = '#ffffff';
-    }
     function closeModal(){
-        setIsOpen(false);
+      setIsOpen(false);
     }
   };
 
-  function Modal(props) {
+  function ModalConfirm(props) {
     const data = {
       email: email,
       name: name,
@@ -79,8 +73,8 @@ const Contacts = () => {
     if(props.isOpen == true) {      
       return (
         <>
-        <div className="contact__form">
-          <p className="contact__confirm">入力内容が正しければ「送信する」をクリックしてください。</p>
+        <div className="c-contact__conform">
+          <p className="contact__confirm-txt">入力内容が正しければ「送信する」をクリックしてください。</p>
           <table className="table table-striped">
             <tbody>
             <tr>
@@ -106,7 +100,7 @@ const Contacts = () => {
           </div>
           <button onClick={closeModal}>close</button> 
         </div>
-        <div className="contact__form__bg"></div>
+        <div className="contact__form__bg" onClick={closeModal}></div>
         </>
       )
     } else {
@@ -115,15 +109,13 @@ const Contacts = () => {
   }
 
   if (typeof document !== 'undefined') {
-    let rootElement = document.getElementById("modalconfirm");
+    let rootElement = document.getElementById("modalArea");
     ReactDOM.render(
       <React.StrictMode>
-          <Modal
+          <ModalConfirm
               isOpen={modalIsOpen}
-              onAfterOpen={afterOpenModal}
               onRequestClose={closeModal}
-              contentLabel="Example Modal"
-          ></Modal>
+          />
       </React.StrictMode>,
       rootElement
     );  
@@ -166,55 +158,56 @@ const Contacts = () => {
   return (
     <>
     <div className="c-contact-form__inner">
-      <p className="c-contact-form__txt">どんな些細でもいいですので気軽にお問い合わせください！<br></br><a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。</p>
+      <p className="c-contact-form__txt">
+        どんな些細でもいいですので気軽にお問い合わせください！<br/>
+        <a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。
+      </p>
       <form className="c-contact-form__form">
         <div className="c-contact-form__content">
           <label>あなたの名前</label>
-            <input
-              type="text"
-              placeholder="名前を入力してください"
-              id="name"
-              name="name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              required
-            />
+          <input
+            type="text"
+            placeholder="名前を入力してください"
+            id="name"
+            name="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+          />
         </div>
         <div className="c-contact-form__content">
           <label>メールアドレス</label>
-            <input
-              type="email"
-              placeholder="メールアドレスを入力してください"
-              id="email"
-              name="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-            />
+          <input
+            type="email"
+            placeholder="メールアドレスを入力してください"
+            id="email"
+            name="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
         </div>
         <div className="c-contact-form__content">
           <label>お問い合わせ内容</label>
-            <input
-              type="text"
-              placeholder="タイトルを入力してください"
-              id="title"
-              name="title"
-              value={title}
-              onChange={e => setTitle(e.target.value)}
-              required
-            />
+          <input
+            type="text"
+            placeholder="タイトルを入力してください"
+            id="title"
+            name="title"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            required
+          />
         </div>
         <div className="c-contact-form__content">
           <label>お問い合わせ詳細</label>
-          <div>
-            <textarea
-              placeholder="本文を入力してください"
-              name="body"
-              value={body}
-              onChange={e => setBody(e.target.value)}
-              required
-            />
-          </div>
+          <textarea
+            placeholder="本文を入力してください"
+            name="body"
+            value={body}
+            onChange={e => setBody(e.target.value)}
+            required
+          />
         </div>
         <div className="c-btn-area">
           <button className="btn-white" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
@@ -223,9 +216,6 @@ const Contacts = () => {
     </div>
     </>
   )
-
-
-  
 };
 
 export default Contacts;
