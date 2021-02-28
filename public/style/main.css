@@ -17,16 +17,16 @@
 #p-mainvisual figure iframe {
     width: 104%;
     height: 100vh;
+    opacity: .7;
+    background-color: black;
 }
 #p-mainvisual figure:after {
     content: '';
-    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     position: absolute;
-    opacity: .7;
 }
 #p-mainvisual .WrapCanvas:after {
     content: '';
