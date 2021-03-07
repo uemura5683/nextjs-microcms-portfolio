@@ -39,7 +39,7 @@
     background: white;
     padding: 20px;
     width: 90%;
-    height: 80vh;
+    height: auto;
     overflow-y: scroll;
     z-index: 1000;
     border: .5rem solid #EEEEEE !important;

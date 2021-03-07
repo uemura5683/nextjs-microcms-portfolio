@@ -49,7 +49,7 @@ const Canvas: React.FC = () => {
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
     renderer.setClearColor('#000000')
-    renderer.setSize(1920, 962)
+    renderer.setSize(2600, 1300)
 
     // init object
     const object = new Object3D()
