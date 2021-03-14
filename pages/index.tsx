@@ -19,7 +19,7 @@ import Link from 'next/link'
 import { AnimatePresence, motion } from "framer-motion";
 import { useHistory } from "react-router";
 
-function Home( {info, work} ) {
+function Home( {info, work, nublog} ) {
   return (
     <Layout home>
       <Head>
@@ -92,6 +92,29 @@ function Home( {info, work} ) {
             </ul>
           </div>
         </section>
+        <section id="p-nublog" className="has-animation" data-set-color="light">
+          <h2 className="c-title">NU-blog</h2>
+          <div className="card">
+            <ul>
+            {nublog.map((nublog) => (
+              <li className={nublog.id} key={nublog.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+              <Link href={`${nublog.link}`}>
+              <figure>
+                <img
+                  src={nublog.image.url}
+                  alt={nublog.title}
+                  width={605}
+                />
+              </figure>
+              </Link>
+              <Link href={`${nublog.link}`}>
+                  <span>{nublog.title}</span>
+              </Link>
+            </li>
+            ))}
+            </ul>
+          </div>
+        </section>
         <LinkArea></LinkArea>
         <ContactForm></ContactForm>
       </motion.div>
@@ -113,6 +136,9 @@ export async function getStaticProps() {
   const key = {
     headers: {'X-API-KEY': '778ce6aa-1e13-4d06-af56-096c0f6b01d4'},
   };
+  const key_nu = {
+    headers: {'X-API-KEY': 'a9ca1ec4-edff-43d8-ace7-e5f0c68b5b50'},
+  }
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
     .then((res: { json: () => any }) => res.json())
     .catch(() => null);
@@ -121,10 +147,15 @@ export async function getStaticProps() {
     .then(res => res.json())
     .catch(() => null);
 
+  const nublogs = await fetch('https://uemura5683.microcms.io/api/v1/all', key_nu)
+    .then(res => res.json())
+    .catch(() => null);
+
   return {
     props: {
       info: infos.contents,
       work: works.contents,
+      nublog: nublogs.contents,
     },
   };
 }

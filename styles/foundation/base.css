@@ -255,6 +255,7 @@ body:after {
   padding: 10px;
   border-radius: 5px;
   margin: 0 0 20px;
+  border: 1px solid black;
 }
 @media (min-width: 991px) {
   .alert-warning {

@@ -27,6 +27,29 @@
     box-shadow: 0 0 0 0 transparent;
 }
 /**
+* btn black
+**/
+.btn-black {
+    font-size: 1.2em;
+    padding: 10px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.6em;
+    display: block;
+    background-color: black;
+    transition: .3s all ease;
+    color: white;
+}
+.btn-black:hover,
+.btn-black:focus {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: .3s all ease;
+    box-shadow: 0 0 0 0 transparent;
+}
+/**
 * snslink
 **/
 .c-snslink {
@@ -54,7 +77,10 @@
     **/
     .btn-white,
     .btn-white:hover,
-    .btn-white:focus {
+    .btn-white:focus,
+    .btn-black,
+    .btn-black:hover,
+    .btn-black:focus {
         width: 380px;
         font-size: 1.6em;
         padding: 23px 0;

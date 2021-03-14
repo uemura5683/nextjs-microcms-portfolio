@@ -2,10 +2,14 @@
 * form base
 **/
 input,textarea {
-  border: 1px solid white;
   width: 100%;
   padding: 5px 10px;
   font-size: 1.4em;
+}
+input:focus, textarea:focus,
+input:hover, textarea:hover,
+input:visited, textarea:visited {
+  border: 1px solid #999999;  
 }
 textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
   height: 200px;

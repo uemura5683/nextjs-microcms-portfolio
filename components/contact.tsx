@@ -235,7 +235,7 @@ const Contacts = () => {
           />
         </div>
         <div className="c-btn-area">
-          <button className="btn-white" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
+          <button className="btn-black" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
         </div>
       </form>
     </div>

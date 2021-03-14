@@ -30,11 +30,13 @@
 .link__list li img {
     vertical-align: middle;
     width: 25%;
+    background-color: white;
 }
 .link__list li span {
     width: 70%;
     display: inline-block;
     font-size: 1.3em;
+    color: white;
 }
 @media (min-width: 768px) {
     .link__list li {
@@ -43,6 +45,7 @@
     }
     .link__list li img {
         width: 50px;
+        padding: 5px;
     }
     .link__list li span {
         width: calc(100% - 5% - 50px);

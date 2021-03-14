@@ -6,13 +6,11 @@
     margin: 0 auto;
 }
 .c-contact-form__inner .c-contact-form__txt {
-    color: white;
     text-align: center;
     margin: 20px 0;
     line-height: 1.6;
 }
 .c-contact-form__inner .c-contact-form__txt a {
-    color: white;
     text-decoration: underline;
 }
 .c-contact-form__inner .c-contact-form__txt a:hover,
@@ -23,7 +21,6 @@
     margin: 0 0 20px;
 }
 .c-contact-form__inner label {
-    color: white;
     display: block;
     margin: 0 0 5px;
 }
