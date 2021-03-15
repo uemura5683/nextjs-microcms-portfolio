@@ -31,6 +31,8 @@
     vertical-align: middle;
     width: 25%;
     background-color: white;
+    border-radius: 50%;
+    padding: 5px;
 }
 .link__list li span {
     width: 70%;
