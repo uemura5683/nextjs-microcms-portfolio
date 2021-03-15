@@ -12,6 +12,9 @@
     margin: 0 2% 10px;
     cursor: pointer;
 }
+.card ul li:nth-child(n + 10) {
+    display: none;
+}
 .card ul li figure{
     overflow: hidden;
 }
@@ -24,7 +27,7 @@
 }
 .card ul li:hover img,
 .card ul li:focus img {
-    opacity: .3;
+    opacity: .7;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     -webkit-transition: opacity ease .3s, transform ease 1s;
@@ -33,7 +36,6 @@
 .card ul li span {
     margin: 10px 0 0;
     display: block;
-    /*opacity: 0;*/
     text-align: left;
 }
 .card ul li span.white {
@@ -41,6 +43,9 @@
 }
 .card ul li span.open {
     opacity: 1;
+}
+.card ul li a {
+    text-decoration: none;
 }
 @media (min-width: 991px) {
     .card ul {

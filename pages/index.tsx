@@ -98,7 +98,7 @@ function Home( {info, work, nublog} ) {
             <ul>
             {nublog.map((nublog) => (
               <li className={nublog.id} key={nublog.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
-              <Link href={`${nublog.link}`}>
+              <a href={`${nublog.link}`} target="_blank">
               <figure>
                 <img
                   src={nublog.image.url}
@@ -106,10 +106,10 @@ function Home( {info, work, nublog} ) {
                   width={605}
                 />
               </figure>
-              </Link>
-              <Link href={`${nublog.link}`}>
+              </a>
+              <a href={`${nublog.link}`} target="_blank">
                   <span>{nublog.title}</span>
-              </Link>
+              </a>
             </li>
             ))}
             </ul>
@@ -120,7 +120,6 @@ function Home( {info, work, nublog} ) {
       </motion.div>
     </Layout>
   )
-
   function shuffletxt(e) {   
     /*
     console.log(elmwork);
@@ -128,7 +127,6 @@ function Home( {info, work, nublog} ) {
     shuffleTextwork.start();
     */
   }
-
 }
 
 

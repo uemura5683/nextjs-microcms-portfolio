@@ -49,7 +49,7 @@ $(function(){
 
     var effectList = [];
     var elementList = document.querySelectorAll('.card li');
-
+    /*
     for (var i = 0; i < elementList.length; i++) {
 
       var element = elementList[i];
@@ -76,5 +76,6 @@ $(function(){
       dates = target.childNodes[1];
       effectList[dates.dataset.index].start();
     }
+    */
 
 });
