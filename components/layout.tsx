@@ -3,6 +3,7 @@ import Link from 'next/link'
 import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
 import DrawerMenu from '../components/extend/drawermenu'
+import { existsGaId, GA_ID } from '../public/js/gtag'
 
 const name = 'うえむー'
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
@@ -24,6 +25,23 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        {/* Google Analytics */}
+        {existsGaId && (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}', {
+                    page_path: window.location.pathname,
+                  });`,
+                }}
+              />
+            </>
+          )}
       </Head>
         <header>
           {home ? (

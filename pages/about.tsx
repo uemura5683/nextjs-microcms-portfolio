@@ -54,7 +54,7 @@ export default function About() {
             </p>
           </div>
           <h2 className="c-title white">経歴</h2>
-          <div className="p-about-history d-none">
+          <div className="p-about-history">
             <h3 className="c-title white">大卒して設備工事の会社に入社</h3>
             <div className="p-about__inner">
               <span>2010</span>

@@ -1,4 +1,4 @@
-export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+export const GA_ID = 'UA-192637195-1';
 
 // IDが取得できない場合を想定する
 export const existsGaId = GA_ID !== ''
@@ -18,7 +18,7 @@ export const event = ({action, category, label, value = ''}) => {
 
   window.gtag('event', action, {
     event_category: category,
-    event_label: JSON.stringify(label)
-    value,
+    event_label: JSON.stringify(label),
+    value
   })
 }
