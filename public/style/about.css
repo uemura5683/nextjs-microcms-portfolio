@@ -10,3 +10,10 @@
 .p-about .p-about__inner p{
     color : white;
 }
+.p-about .p-about__inner span {
+    color: white;
+    font-size: 1.4em;
+    line-height: 2.6;
+    display: block;
+    margin: 0 0 1.5rem;
+}

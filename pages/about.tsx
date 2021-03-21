@@ -84,7 +84,7 @@ export default function About() {
                 学習したことと、現場では全然違うことがわかり色々と勉強になりました。
               </p>
             </div>
-            <h3 className="c-title white">今のままで満足なのかと思い悩む</h3>
+            <h3 className="c-title white">今のままでいいのか悩む</h3>
             <div className="p-about__inner">
               <span>2017</span>
               <p>
