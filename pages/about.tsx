@@ -53,7 +53,7 @@ export default function About() {
             もし、何か作業が滞っている場合などがあったらいつでも連絡ください。サポートをします。
             </p>
           </div>
-          <h2 className="c-title white d-none">経歴</h2>
+          <h2 className="c-title white">経歴</h2>
           <div className="p-about-history d-none">
             <h3 className="c-title white">大卒して設備工事の会社に入社</h3>
             <div className="p-about__inner">
@@ -79,10 +79,17 @@ export default function About() {
             <div className="p-about__inner">
               <span>2012</span>
               <p>
-                2012年の夏頃にポートフォリオを完成し、転職活動しました。
+                2012年の夏頃にポートフォリオを完成し転職活動を行いました。<br/>
+                未経験であるため、10社以上落とされましたが、10月に内定が決まり、11月に入社しました。<br/>
+                学習したことと、現場では全然違うことがわかり色々と勉強になりました。
               </p>
             </div>
-
+            <h3 className="c-title white">今のままで満足なのかと思い悩む</h3>
+            <div className="p-about__inner">
+              <span>2017</span>
+              <p>
+              </p>
+            </div>
           </div>
         </div>
         <div className="bgimage"></div>
