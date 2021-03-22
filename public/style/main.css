@@ -133,6 +133,7 @@
         position: absolute;
         top: 0;
         left: 50%;
+        margin: 0;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
     }
