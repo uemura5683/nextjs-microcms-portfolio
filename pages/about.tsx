@@ -55,9 +55,8 @@ export default function About() {
           </div>
           <h2 className="c-title white">経歴</h2>
           <div className="p-about-history">
-            <h3 className="c-title white">大卒して設備工事の会社に入社</h3>
+            <h3 className="c-title-thumb white">大卒して設備工事の会社に入社<span>2010</span></h3>
             <div className="p-about__inner">
-              <span>2010</span>
               <p>
                 僕は、前職は全く異なる業界で設備工事の会社に入社してました。<br/>
                 この日は研修する以外が現場に直行し、月曜日〜土曜日に仕事をして<br/>
@@ -65,9 +64,8 @@ export default function About() {
                 職人・上司にほぼ毎日怒られ、この業界に向いていないのでは？と思い前々から得意だったPC関連の仕事をしていこうと思いました。
               </p>
             </div>
-            <h3 className="c-title white">IT・Web業界で仕事をする為、パソコンスクールに通う</h3>
+            <h3 className="c-title-thumb white">IT・Web業界で仕事をする為、パソコンスクールに通う<span>2011-2012</span></h3>
             <div className="p-about__inner">
-              <span>2011-2012</span>
               <p>
                 2011年の4月からKEN SCHOOLというパソコンスクールに通い、休みの日は必ず通っていました。<br/>
                 最初はDTPオペレーターの仕事しようと思ったが、いろんなコースがあるのをしり色々と検討して、Webデザイン・Webプログラミングのコースをとり<br/>
@@ -75,26 +73,23 @@ export default function About() {
                 仕事が忙しくてなかなか通えず、気がついたら1年半もかかりました。<br/>
               </p>
             </div>
-            <h3 className="c-title white">ポートフォリオを作成し、転職活動へ</h3>
+            <h3 className="c-title-thumb white">ポートフォリオを作成し、転職活動へ<span>2012</span></h3>
             <div className="p-about__inner">
-              <span>2012</span>
               <p>
                 2012年の夏頃にポートフォリオを完成し転職活動を行いました。<br/>
                 未経験であるため、10社以上落とされましたが、10月に内定が決まり、11月に入社しました。<br/>
                 学習したことと、現場では全然違うことがわかり色々と勉強になりました。
               </p>
             </div>
-            <h3 className="c-title white">本格的に学習を始める</h3>
+            <h3 className="c-title-thumb white">本格的に学習を始める<span>2018</span></h3>
             <div className="p-about__inner">
-              <span>2018</span>
               <p>
                 この時期は本当にこのままでいいのか、後輩たちに追い越されるのではないのか？もしかしたらクビにされるのではないのか<br/>
                 色々と不安をよぎり積極的にモクモク会などに参加してWordpress・MT・next.jsなどを色々と学習してきました。
               </p>
             </div>
-            <h3 className="c-title white">母の病気で数ヶ月入院</h3>
+            <h3 className="c-title-thumb white">母の病気で数ヶ月入院<span>2020</span></h3>
             <div className="p-about__inner">
-              <span>2020</span>
               <p>
                 2020年5月から母の体調が急激に悪化し、なんども入院したり退院したりしてました。<br />
                 治療・リハビリなどを色々と行ったようですが改善されず12月に手術を行いましたが、<br />
@@ -102,9 +97,8 @@ export default function About() {
                 しかし医師が力を合わせて治療しなんとか命が取り止め少しづつ回復しております。<br />
               </p>
             </div>
-            <h3 className="c-title white">自分の目標</h3>
+            <h3 className="c-title-thumb white">自分の目標<span>2021</span></h3>
             <div className="p-about__inner">
-              <span>2021</span>
               <p>
                 母のこともあり、さらに学習をして技術力を磨き上げて<br />
                 将来は本業・副業をこなし、自分だけでなく家族にも幸せを分け合いたいと思いました。<br />

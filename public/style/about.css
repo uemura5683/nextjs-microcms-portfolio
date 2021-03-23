@@ -1,14 +1,13 @@
 .p-about {
 
 }
-.p-about .c-title {
-
-}
 .p-about .p-about__inner {
-    margin-bottom: 50px;
+    padding: 0 0 2.0rem;
 }
 .p-about .p-about__inner p{
     color : white;
+    overflow: hidden;
+    word-break: break-all;
 }
 .p-about .p-about__inner span {
     color: white;
@@ -16,4 +15,38 @@
     line-height: 2.6;
     display: block;
     margin: 0 0 1.5rem;
+}
+.p-about .c-title-thumb {
+    color: white;
+    padding: 2.5rem 2rem 2.5rem;
+    font-size: 1.6rem;
+    position: relative;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+.p-about .c-title-thumb:first-child {
+    border-top: 1px solid white;
+}
+.p-about .c-title-thumb span {
+    font-size: .6em;
+    margin: 0 0 0 2rem;
+}
+.p-about .p-about-history .p-about__inner {
+    padding-top: 2.0rem;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+@media (max-width: 767px) {
+    .p-about .c-title-thumb span {
+        font-size: .8rem;
+        margin: .5rem 0 0;
+        display: block;
+    }
+    .p-about .p-about-history .p-about__inner {
+        padding: 1rem;
+    }
+    .p-about .c-title-thumb {
+        font-size: 1.0rem;
+        padding: 1rem;
+    }
 }
