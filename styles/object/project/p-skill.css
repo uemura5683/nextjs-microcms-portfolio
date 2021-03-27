@@ -291,7 +291,7 @@
     }
     .skill__list li {
         margin: 0 0 50px;
-        width: calc( 100% / 3 );
+        width: calc( 99.9% / 3 );
     }
     .skill__list li img {
         width: 30%;

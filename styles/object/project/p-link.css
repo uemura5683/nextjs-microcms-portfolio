@@ -42,7 +42,7 @@
 }
 @media (min-width: 768px) {
     .link__list li {
-        width: calc(100% / 3);
+        width: calc(99.9% / 3);
         margin: 20px 0;
     }
     .link__list li img {

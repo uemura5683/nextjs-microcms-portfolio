@@ -33,7 +33,7 @@ export default function BlogId( { infos, info_data, infolist } ) {
           duration: 0.5
         }}
       >
-        <div className="container">
+        <div className="container" data-set-color="dark">
         <div className="p-detail__inner">
           <div className="p-detail__inner__main">
             <div className="p-detail__top">

@@ -8,6 +8,7 @@ export default function NavigationOther() {
         <li><Link href="/#p-skill">SKILL</Link></li>
         <li><Link href="/#p-work">WORK</Link></li>
         <li><Link href="/#p-information">INFORMATION</Link></li>
+        <li><Link href="/#p-nublog">NU-blog</Link></li>
         <li><Link href="/#p-link">LINK</Link></li>
         <li><Link href="/#p-contact">CONTACT</Link></li>
       </ul>

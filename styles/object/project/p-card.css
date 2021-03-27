@@ -12,9 +12,6 @@
     margin: 0 2% 10px;
     cursor: pointer;
 }
-.card ul li:nth-child(n + 10) {
-    display: none;
-}
 .card ul li figure{
     overflow: hidden;
 }
@@ -52,7 +49,10 @@
         margin: 0 -1%;
     }
     .card ul li{
-        margin: 0 1% 10px;
-        width: calc( ( 100% / 3 ) - 2% );
+        margin: 0 1% 20px;
+        width: calc( ( 99.9% / 3 ) - 2% );
+    }
+    .card ul li:nth-child(n + 10) {
+        display: none;
     }
 }
