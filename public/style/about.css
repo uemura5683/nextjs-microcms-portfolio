@@ -1,5 +1,24 @@
-.p-about {
+/*********************************
+* about.css
+*********************************/
 
+/**
+* common
+**/
+header.light {
+    background-color: transparent !important;
+}
+
+/**
+* inner
+*/
+.p-about .c-title {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+.p-about {
+    border: 1px solid white;
+    padding: 2rem;
+    margin: 0;
 }
 .p-about .p-about__inner {
     padding: 0 0 2.0rem;
@@ -37,6 +56,9 @@
     border-bottom: 1px solid white;
 }
 @media (max-width: 767px) {
+    .p-about {
+        margin: 1rem 0 0;
+    }
     .p-about .c-title-thumb span {
         font-size: .8rem;
         margin: .5rem 0 0;

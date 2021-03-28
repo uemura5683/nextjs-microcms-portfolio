@@ -3,11 +3,26 @@
 *********************************/
 
 /**
+* common
+**/
+header.light {
+  background-color: transparent !important;
+}
+
+/**
 * inner
 */
+.p-detail__inner {
+    border: 1px solid white;
+    padding: 2rem;
+    margin: 1rem 0 0;
+}
 .p-detail__inner p,
 .p-detail__inner div {
     color: white;
+}
+.p-detail__inner .c-title {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', sans-serif;
 }
 .p-detail__inner .p-detail__top {
     margin: 0 0 25px;
@@ -35,6 +50,7 @@
     .p-detail__inner {
       display: flex;
       flex-wrap: wrap;
+      margin: 0;
     }
     .p-detail__inner .p-detail__top .p-detail__ttl {
       width: 45%;

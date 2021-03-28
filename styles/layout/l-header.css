@@ -86,6 +86,7 @@ header .header--menu__content nav ul li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'Montserrat';
 }
 header .header--menu__content.isOpen {
     pointer-events: auto;
