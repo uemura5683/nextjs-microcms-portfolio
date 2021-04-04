@@ -31,7 +31,7 @@ footer .c-snslink {
 **/
 .footer--link__privacy {
     margin: 20px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .footer--link__privacy a {
     color: black;
@@ -42,6 +42,7 @@ footer .c-snslink {
 **/
 .footer__copyrights {
     margin: 0 0 20px;
+    font-size: 1rem;
 }
 @media (min-width: 991px) {
     /**
@@ -59,6 +60,7 @@ footer .c-snslink {
     **/
     .footer--link__privacy {
         margin: 50px 0;
+        font-size: 1.2rem;
     }
     /**
     * footer copyrights
