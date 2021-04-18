@@ -1,6 +1,6 @@
 
 import React from 'react';
-import NaviOther from '../../components/nav_other'
+import NaviLink from '../../components/nav_link'
 
 const DrawerMenu = () => {
 
@@ -16,7 +16,7 @@ const DrawerMenu = () => {
         <span></span>
       </button>
       <div className={close ? 'header--menu__content isClose' : 'header--menu__content isOpen'}>
-        <NaviOther></NaviOther>
+        <NaviLink />
         <button onClick={toggle} className={close ? 'overlay isClose' : 'overlay isOpen'}></button>
       </div>
     </>

@@ -8,7 +8,7 @@ import { useHistory } from "react-router";
  */
 export default function About() {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/about.css" rel="stylesheet" />
@@ -30,7 +30,7 @@ export default function About() {
           duration: 0.5
         }}
       >
-        <div className="container">
+
         <div className="p-about">
           <h2 className="c-title white">フルスタックエンジニアを目指して</h2>
           <div className="p-about__inner">
@@ -108,7 +108,6 @@ export default function About() {
           </div>
         </div>
         <div className="bgimage"></div>
-      </div>
       </motion.div>
     </Layout>
   )

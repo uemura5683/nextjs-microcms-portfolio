@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal'
 
-Modal.setAppElement("#p-skill");
-
 const SkillContent = () => {
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);

@@ -1,13 +1,5 @@
 // smooth scroll
 $(function(){
-  $('#p-mainvisual a[href^="#"]').click(function(){
-      var speed = 300;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.get( 0 ).offsetTop;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-      return false;
-  });
 
   let preferscolorscheme = function( target ) {
     if( target.attr('data-set-color') == 'light' ) {

@@ -11,7 +11,7 @@ import { useHistory } from "react-router";
 
 export default function BlogId( { works, works_data, worklist } ) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link href="/style/detail.css" rel="stylesheet" />
@@ -33,7 +33,6 @@ export default function BlogId( { works, works_data, worklist } ) {
           duration: 0.5
         }}
       >
-        <div className="container" data-set-color="dark">
         <div className="p-detail__inner">
           <div className="p-detail__inner__main">
             <div className="p-detail__top">
@@ -81,7 +80,6 @@ export default function BlogId( { works, works_data, worklist } ) {
           </div>
         </div>
         <div className="bgimage"></div>
-        </div>
       </motion.div>
     </Layout>
   );

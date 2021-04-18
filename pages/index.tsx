@@ -121,11 +121,9 @@ function Home( {info, work, nublog} ) {
     </Layout>
   )
   function shuffletxt(e) {   
-    /*
-    console.log(elmwork);
-    const shuffleTextwork = new ShuffleText(elmwork.current);
-    shuffleTextwork.start();
-    */
+    console.log(e);
+    // const shuffleTextwork = new ShuffleText(e.current);
+    // shuffleTextwork.start();
   }
 }
 

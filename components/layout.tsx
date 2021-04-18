@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
-import DrawerMenu from '../components/extend/drawermenu'
+import DrawerMenuTop from '../components/extend/drawermenu_top'
+import DrawerMenuLink from '../components/extend/drawermenu_link'
 import { existsGaId, GA_ID } from '../public/js/gtag'
 
 const name = 'うえむー'
@@ -44,17 +45,18 @@ export default function Layout({ children, home }) {
           )}
       </Head>
         <header>
+          <Logo/>
+          <SnsLink/>
           {home ? (
             <>
-                  <Logo></Logo>
+                  <DrawerMenuTop/>
             </>
           ) : (
             <>
-                  <Logo></Logo>
+                  <DrawerMenuLink/>
             </>
           ) }
-          <SnsLink></SnsLink>
-          <DrawerMenu></DrawerMenu>
+
         </header>
           {home ? (
             <>
@@ -65,7 +67,6 @@ export default function Layout({ children, home }) {
               <main>
                 <div className="container">
                   {children}
-                  <div className="bgimage"></div>
                 </div>
               </main>
             </>
