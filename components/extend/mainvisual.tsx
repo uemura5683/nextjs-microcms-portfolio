@@ -17,7 +17,7 @@ export default function Threejs() {
       <Logo></Logo>
       <Navi></Navi>
       <figure>
-        <iframe src="https://uemu-engineer.com/three.html"></iframe>
+        <iframe src="https://uemu-engineer.com/three.html" onLoad={()=>{iframeload}} />
       </figure>
       <div className="p-mainvisual__click">
         <Link
@@ -34,4 +34,6 @@ export default function Threejs() {
       </div>
     </section>
   )
+  function iframeload() {
+  }
 }

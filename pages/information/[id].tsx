@@ -1,37 +1,25 @@
-import Layout, { siteTitle }  from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilStyles from '../../styles/utils.module.css'
+import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import Layout  from '../../components/layout'
 import timezone from 'dayjs/plugin/timezone';
-import { AnimatePresence, motion } from "framer-motion";
 import { useHistory } from "react-router";
+import { AnimatePresence, motion } from "framer-motion";
+import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function BlogId( { infos, info_data, infolist } ) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{infos.title}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
       <motion.div
-        animate={{
-          x: 0,
-          opacity: 1
-        }}
-        initial={{
-          x: 0,
-          opacity: 0
-        }}
-        exit={{
-          x: 0,
-          opacity: 0
-        }}
-        transition={{
-          duration: 0.5
-        }}
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        exit={{ x: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
           <div className="p-detail__inner__main">
@@ -114,8 +102,6 @@ export const getStaticProps = async context => {
     const publishatformat = dayjs(data.UpdateAt).format()
     , jstDate         = dayjs(publishatformat)
     , datePlastic     = jstDate.year() + '/' + jstDate.month() + '/' + jstDate.date(); 
-
-
 
   const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())

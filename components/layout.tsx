@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import SnsLink from '../components/snslink'
 import Logo from '../components/logo'
+import SnsLink from '../components/snslink'
 import DrawerMenuTop from '../components/extend/drawermenu_top'
 import DrawerMenuLink from '../components/extend/drawermenu_link'
 import { existsGaId, GA_ID } from '../public/js/gtag'
@@ -10,7 +10,11 @@ const name = 'うえむー'
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
 export const ogimageTitle = 'Nu-Stack';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home
+  }: {
+    children: React.ReactNode
+    home?: boolean
+  }) {
   return (
     <div>
       <Head>
@@ -26,7 +30,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        {/* Google Analytics */}
         {existsGaId && (
             <>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
@@ -49,16 +52,16 @@ export default function Layout({ children, home }) {
           <SnsLink/>
           {home ? (
             <>
-                  <DrawerMenuTop/>
+              <DrawerMenuTop/>
             </>
           ) : (
             <>
-                  <DrawerMenuLink/>
+              <DrawerMenuLink/>
             </>
           ) }
 
         </header>
-          {home ? (
+        {home ? (
             <>
               <main>{children}</main>
             </>
@@ -84,9 +87,16 @@ export default function Layout({ children, home }) {
           </div>
         </footer>
         <div id="modalArea"></div>
-        <script src="/js/jquery.waypoints.min.js"></script>
-        <script src="/js/shuffle-text.js"></script>
-        <script src="/js/common.js"></script>
+        {home ? (
+            <>
+            <script src="/js/jquery.waypoints.min.js"></script>
+            <script src="/js/shuffle-text.js"></script>
+            <script src="/js/common.js"></script>
+            </>
+            ) : (
+            <>
+            </>
+        ) }
     </div>
   )
 }

@@ -3,21 +3,18 @@
  */
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import fetch from 'node-fetch'
 import Layout, { siteTitle } from '../components/layout'
+import { useHistory } from "react-router";
+import { AnimatePresence, motion } from "framer-motion";
 
-/**
- *  modules
- **/
 import MainVisual from '../components/extend/mainvisual'
 import Profile from '../components/extend/profile'
 import Skill from '../components/extend/skill'
 import LinkArea from '../components/extend/linkarea'
 import ContactForm from '../components/extend/contactform'
 import ShuffleText from "shuffle-text";
-import fetch from 'node-fetch'
-import Link from 'next/link'
-import { AnimatePresence, motion } from "framer-motion";
-import { useHistory } from "react-router";
 
 function Home( {info, work, nublog} ) {
   return (
@@ -27,21 +24,10 @@ function Home( {info, work, nublog} ) {
         <link href="/style/main.css" rel="stylesheet" />
       </Head>
       <motion.div
-        animate={{
-          x: 0,
-          opacity: 1
-        }}
-        initial={{
-          x: 0,
-          opacity: 0
-        }}
-        exit={{
-          x: 0,
-          opacity: 0
-        }}
-        transition={{
-          duration: 0.5
-        }}
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        exit={{ x: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <MainVisual></MainVisual>
         <Profile></Profile>
@@ -121,12 +107,10 @@ function Home( {info, work, nublog} ) {
     </Layout>
   )
   function shuffletxt(e) {   
-    console.log(e);
     // const shuffleTextwork = new ShuffleText(e.current);
     // shuffleTextwork.start();
   }
 }
-
 
 export async function getStaticProps() {
   const key = {

@@ -1,7 +1,7 @@
-import Layout, { siteTitle } from '../components/layout'
 import Head from 'next/head'
-import { AnimatePresence, motion } from "framer-motion";
+import Layout from '../components/layout'
 import { useHistory } from "react-router";
+import { AnimatePresence, motion } from "framer-motion";
 
 /**
  * export
@@ -10,27 +10,15 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Aboutページ</title>
         <link href="/style/about.css" rel="stylesheet" />
       </Head>
       <motion.div
-        animate={{
-          x: 0,
-          opacity: 1
-        }}
-        initial={{
-          x: 0,
-          opacity: 0
-        }}
-        exit={{
-          x: 0,
-          opacity: 0
-        }}
-        transition={{
-          duration: 0.5
-        }}
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        exit={{ x: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
-
         <div className="p-about">
           <h2 className="c-title white">フルスタックエンジニアを目指して</h2>
           <div className="p-about__inner">

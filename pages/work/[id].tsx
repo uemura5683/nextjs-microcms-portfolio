@@ -1,37 +1,25 @@
-import Layout, { siteTitle }  from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilStyles from '../../styles/utils.module.css'
+import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import Layout  from '../../components/layout'
 import timezone from 'dayjs/plugin/timezone';
-import { AnimatePresence, motion } from "framer-motion";
 import { useHistory } from "react-router";
+import { AnimatePresence, motion } from "framer-motion";
+import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function BlogId( { works, works_data, worklist } ) {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{works.title}</title>
         <link href="/style/detail.css" rel="stylesheet" />
       </Head>
       <motion.div
-        animate={{
-          x: 0,
-          opacity: 1
-        }}
-        initial={{
-          x: 0,
-          opacity: 0
-        }}
-        exit={{
-          x: 0,
-          opacity: 0
-        }}
-        transition={{
-          duration: 0.5
-        }}
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        exit={{ x: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
           <div className="p-detail__inner__main">
