@@ -18,7 +18,7 @@
     position: absolute;
     background-color: #EEEEEE;
     top: -30%;
-    left: -50%;
+    left: -30%;
     width: 100%;
     height: 135%;
     opacity: .7;
@@ -91,8 +91,6 @@
     -webkit-animation: profile-animation2 .5s ease forwards;
             animation: profile-animation2 .5s ease forwards;
 }
-
-
 @media (min-width: 991px) {
     /**
     * about content right
@@ -100,6 +98,10 @@
     .p-about__profile {
         width: 50%;
         margin: 0;
+    }
+    .p-about__profile__bg:after {
+        top: -30%;
+        left: -50%;
     }
     .p-about__profile--description {
         margin: 20px 0 0;

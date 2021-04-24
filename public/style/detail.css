@@ -8,6 +8,9 @@
 header.light {
   background-color: transparent !important;
 }
+header.light  .header--menu__btn span {
+  background-color: white !important;
+}
 
 /**
 * inner

@@ -46,6 +46,7 @@ header img[alt="uemu-portfolio"] {
             mix-blend-mode: exclusion;
     -webkit-transition: mix-blend-mode .3s ease-out;
             transition: mix-blend-mode .3s ease-out;
+    cursor: pointer;
 }
 
 header.light img[alt="uemu-portfolio"] {
