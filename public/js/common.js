@@ -38,36 +38,4 @@ $(function(){
     },{ offset : '0%' } );
   });
 
-
-    var effectList = [];
-    var elementList = document.querySelectorAll('.card li');
-    /*
-    for (var i = 0; i < elementList.length; i++) {
-
-      var element = elementList[i];
-      text = element.childNodes[1];
-
-      text.dataset.index = i;
-
-      // インスタンスを取得する
-      effectList[i] = new ShuffleText(text);
-
-      element.addEventListener('mouseenter', function () {
-        ShuffleStart( this );
-      });
-
-      element.addEventListener('mouseout', function () {
-        ShuffleStart( this );
-      });
-
-      // 初回を再生する
-      effectList[i].start();
-    }
-
-    let ShuffleStart = function ( target ) {
-      dates = target.childNodes[1];
-      effectList[dates.dataset.index].start();
-    }
-    */
-
 });

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../components/logo'
 import SnsLink from '../components/snslink'
@@ -90,7 +91,6 @@ export default function Layout({ children, home
         {home ? (
             <>
             <script src="/js/jquery.waypoints.min.js"></script>
-            <script src="/js/shuffle-text.js"></script>
             <script src="/js/common.js"></script>
             </>
             ) : (

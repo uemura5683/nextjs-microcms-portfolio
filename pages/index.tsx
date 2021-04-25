@@ -14,7 +14,6 @@ import Profile from '../components/extend/profile'
 import Skill from '../components/extend/skill'
 import LinkArea from '../components/extend/linkarea'
 import ContactForm from '../components/extend/contactform'
-import ShuffleText from "shuffle-text";
 
 function Home( {info, work, nublog} ) {
   return (
@@ -37,7 +36,7 @@ function Home( {info, work, nublog} ) {
           <div className="card">
             <ul>
             {work.map(work => (
-                <li className={work.id} key={work.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+                <li className={work.id} key={work.id}>
                   <Link href={`work/${work.id}`}>
                   <figure>
                     <img
@@ -60,7 +59,7 @@ function Home( {info, work, nublog} ) {
           <div className="card">
             <ul>
             {info.map((info) => (
-              <li className={info.id} key={info.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+              <li className={info.id} key={info.id}>
               <Link href={`information/${info.id}`}>
               <figure>
                 <img
@@ -83,7 +82,7 @@ function Home( {info, work, nublog} ) {
           <div className="card">
             <ul>
             {nublog.map((nublog) => (
-              <li className={nublog.id} key={nublog.id} onMouseEnter={shuffletxt} onMouseLeave={shuffletxt}>
+              <li className={nublog.id} key={nublog.id}>
               <a href={`${nublog.link}`} target="_blank">
               <figure>
                 <img
@@ -106,10 +105,6 @@ function Home( {info, work, nublog} ) {
       </motion.div>
     </Layout>
   )
-  function shuffletxt(e) {   
-    // const shuffleTextwork = new ShuffleText(e.current);
-    // shuffleTextwork.start();
-  }
 }
 
 export async function getStaticProps() {
