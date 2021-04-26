@@ -1,7 +1,6 @@
 import React from 'react';
 import fetch from 'node-fetch'
 import Link from 'next/link'
-import ShuffleText from "shuffle-text";
 
 class MicroCMSCard extends React.Component {
   constructor(props) {
