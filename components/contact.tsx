@@ -4,6 +4,7 @@ import axios from "axios";
 import { useHistory } from "react-router";
 import ReactDOM from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Contacts = () => {
 

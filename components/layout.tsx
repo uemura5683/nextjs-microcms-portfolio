@@ -3,13 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../components/logo'
 import SnsLink from '../components/snslink'
-import DrawerMenuTop from '../components/extend/drawermenu_top'
-import DrawerMenuLink from '../components/extend/drawermenu_link'
+import DrawerMenu from '../components/extend/drawermenu'
 import { existsGaId, GA_ID } from '../public/js/gtag'
 
-const name = 'うえむー'
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
-export const ogimageTitle = 'Nu-Stack';
 
 export default function Layout({ children, home
   }: {
@@ -49,15 +46,17 @@ export default function Layout({ children, home
           )}
       </Head>
         <header>
-          <Logo/>
-          <SnsLink/>
           {home ? (
             <>
-              <DrawerMenuTop/>
+              <Logo home/>
+              <SnsLink/>
+              <DrawerMenu home/>
             </>
           ) : (
             <>
-              <DrawerMenuLink/>
+              <Logo/>
+              <SnsLink/>
+              <DrawerMenu/>
             </>
           ) }
 
@@ -77,11 +76,27 @@ export default function Layout({ children, home
           ) }
         <footer>
           <div className="foorter__logo">
-              <Logo></Logo>
+          {home ? (
+              <>
+                <Logo home/>
+              </>
+            ) : (
+              <>
+                <Logo/>
+              </>
+          ) }
           </div>
-          <SnsLink></SnsLink>
+          <SnsLink/>
           <div className="footer--link__privacy">
-            <Link href="/about">About</Link>
+            {home ? (
+              <>
+              <Link href="/about">About</Link>
+              </>
+            ) : (
+              <>
+                <a href="/about">About</a>
+              </>
+            ) }
           </div>
           <div className="footer__copyrights">
           (c) 2021 Uemu-Portfolio
