@@ -17,6 +17,7 @@ import Mgulp from '../skill/gulp'
 import Mbase from '../skill/base'
 import Mfigma from '../skill/figma'
 import Mreact from '../skill/react'
+import Mts    from '../skill/ts'
 
 export default function Skill() {
   return (
@@ -42,6 +43,7 @@ export default function Skill() {
           <Mbase></Mbase>
           <Mfigma></Mfigma>
           <Mreact></Mreact>
+          <Mts></Mts>
       </ul>
     </section>
   )

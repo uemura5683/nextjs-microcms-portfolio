@@ -1,8 +1,8 @@
+import axios from "axios";
+import ReactDOM from "react-dom";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
 import { useHistory } from "react-router";
-import ReactDOM from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, animateScroll as scroll } from "react-scroll";
 
@@ -15,6 +15,7 @@ const Contacts = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
+
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function closeModal(){
@@ -22,16 +23,21 @@ const Contacts = () => {
   }
   const handleSubmit = e => {
     e.preventDefault();
-
-    let ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' ),
-        alert_txt       = document.getElementsByClassName( 'alert-warning' ),
-        alert_txt_inner = document.getElementsByClassName( 'alert_inner_txt' ),
-        conf_cont       = document.getElementsByClassName( 'skill__zoom_modal-block' );
+    
+    const ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' );
+    const AlertTxt        = document.getElementsByClassName( 'alert-warning' );
+    const AlertInner      = document.getElementsByClassName( 'alert_inner_txt' );
+    const ContactCOmplete = document.getElementsByClassName( 'skill__zoom_modal-block' );
+    const ContactElement: Element = document.getElementById( 'p-contact' );
+    const ContactPosition: number = ContactElement.getBoundingClientRect().top;
+    const currentPosition: number = window.pageYOffset;
+    const targetPosition: number = ContactPosition + currentPosition;      
 
     // エラーチェック
-    if( alert_txt[0] != undefined ) {
-      alert_txt[0].remove();
+    if( AlertTxt[0] != undefined ) {
+      AlertTxt[0].remove();
     }
+    // エラーが発生したとき
     if( name == "" || email == "" || title == "" || body == "" ) {
       let alert_html = "<div class='alert alert-warning'>"
       if( name == "" ) {
@@ -51,9 +57,14 @@ const Contacts = () => {
       .insertAdjacentHTML(
         'afterbegin', alert_html
       );
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+
     }
     // エラーがない場合はモーダルを表示する
-    if( alert_txt_inner.length == 0 ) {
+    if( AlertInner.length == 0 ) {
       openModal();
     }
     function openModal() {

@@ -205,6 +205,14 @@
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
 }
+.slide-animation .skill__list li.ts .gage:after {
+    -webkit-animation: gagets .5s ease-in-out 0s infinite;
+            animation: gagets .5s ease-in-out 0s infinite;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+}
 @keyframes gagehtml {
     0% { width: 0%; }  
     100% { width: 90%; }
@@ -280,6 +288,10 @@
 @keyframes gagereact {
     0% { width: 0%; }  
     100% { width: 40%; }
+}
+@keyframes gagets {
+    0% { width: 0%; }  
+    100% { width: 20%; }
 }
 
 @media (min-width: 991px) {
