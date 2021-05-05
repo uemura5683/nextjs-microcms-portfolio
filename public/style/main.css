@@ -40,6 +40,7 @@
     width: 100%;
     height: 100vh;
     position: absolute;
+    background-color: black;
 }
 #p-mainvisual figure:after {
     content: '';
@@ -80,14 +81,14 @@
     left: 0;
     height: 100%;
 }
-7
-@-webkit-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
+
 @keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {background-image: url(/images/logo.png);}
+    100% {background-image: none;}
+}
+@-webkit-keyframes blink{
+    0% {background-image: url(/images/logo.png);}
+    100% {background-image: none;}
 }
 
 /**
