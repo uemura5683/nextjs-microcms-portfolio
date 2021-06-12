@@ -110,7 +110,7 @@ function Home( {info, work, nublog} ) {
 
 export async function getStaticProps() {
   const key = {
-    headers: {'X-API-KEY': '778ce6aa-1e13-4d06-af56-096c0f6b01d4'},
+    headers: {'X-API-KEY': process.env.API_KEY},
   };
   const key_nu = {
     headers: {'X-API-KEY': 'a9ca1ec4-edff-43d8-ace7-e5f0c68b5b50'},
@@ -127,7 +127,7 @@ export async function getStaticProps() {
     .then(res => res.json())
     .catch(() => null);
 
-  return {
+    return {
     props: {
       info: infos.contents,
       work: works.contents,
