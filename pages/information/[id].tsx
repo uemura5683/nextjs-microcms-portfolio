@@ -1,12 +1,8 @@
 import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import utc from 'dayjs/plugin/utc';
 import Layout  from '../../components/layout'
-import timezone from 'dayjs/plugin/timezone';
-import { useHistory } from "react-router";
-import { AnimatePresence, motion } from "framer-motion";
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { motion } from "framer-motion";
 
 export default function BlogId( { infos, info_data, infolist } ) {
   return (
@@ -22,47 +18,62 @@ export default function BlogId( { infos, info_data, infolist } ) {
         transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
-          <div className="p-detail__inner__main">
-            <div className="p-detail__top">
-              <div className="p-detail__ttl">
-                <div className="c-title white">{infos.title}</div>
-                <p>{info_data}</p>
+            { infos ? (
+              <>
+                <div className="p-detail__inner__main">
+                  <div className="p-detail__top">
+                    <div className="p-detail__ttl">
+                      <div className="c-title white">{infos.title}</div>
+                      <p>{info_data}</p>
+                    </div>
+                    <figure>
+                      <img
+                        src={infos.image.url}
+                        alt={infos.title}
+                        width={605}
+                      />
+                    </figure>
+                  </div>
+                  <div
+                    className="p-detail__bottom"
+                    dangerouslySetInnerHTML={{
+                      __html: `${infos.body}`,
+                    }}
+                  />
               </div>
-              <figure>
-                <img
-                  src={infos.image.url}
-                  alt={infos.title}
-                  width={605}
-                />
-              </figure>
-            </div>
-            <div
-              className="p-detail__bottom"
-              dangerouslySetInnerHTML={{
-                __html: `${infos.body}`,
-              }}
-            />
-          </div>
+            </>
+          ) : (
+              <div className="p-detail__inner__main">
+                  <div className="p-detail__top">
+                    <div className="p-detail__ttl">
+                      <div className="c-title white">記事の読み込み失敗しました</div>
+                    </div>
+                  </div>
+              </div>
+          ) }
           <div className="p-detail__inner__sub"  id="p-information">
             <h3 className="c-title white">information</h3>
             <div className="card">
               <ul>
-              {infolist.map(infolist => (
-                  <li key={infolist.id}>
-                    <Link href={`/information/${infolist.id}`}>
-                    <figure>
-                      <img 
-                        src={infolist.image.url}
-                        alt={infolist.title}
-                        width={476}
-                      />
-                    </figure>
-                    </Link>
-                    <Link href={`/information/${infolist.id}`}>
-                      <span>{infolist.title}</span>
-                    </Link>
-                  </li>
-              ))}
+                {infolist ? infolist.map(infolist => (
+                    <li key={infolist.id}>
+                      <Link href={`/information/${infolist.id}`}>
+                      <figure>
+                        <img 
+                          src={infolist.image.url}
+                          alt={infolist.title}
+                          width={476}
+                        />
+                      </figure>
+                      </Link>
+                      <Link href={`/information/${infolist.id}`}>
+                        <span>{infolist.title}</span>
+                      </Link>
+                    </li>
+                  )) : (
+                      <li>記事の読み込み失敗しました</li>
+                  )
+                }
               </ul>
             </div>
           </div>
@@ -107,11 +118,13 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null);
 
+  let infoc = infos ? infos.contents : null;
+
   return {
     props: {
-      infos: data,
-      info_data: datePlastic,
-      infolist: infos.contents,
+      infos: data || null,
+      info_data: datePlastic || null,
+      infolist: infoc || null,
     },
   };
 };

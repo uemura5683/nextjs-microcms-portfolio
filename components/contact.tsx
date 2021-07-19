@@ -2,9 +2,6 @@ import axios from "axios";
 import ReactDOM from "react-dom";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { useHistory } from "react-router";
-import { AnimatePresence, motion } from "framer-motion";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 const Contacts = () => {
 
@@ -15,8 +12,6 @@ const Contacts = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-
-  var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function closeModal(){
       setIsOpen(false);

@@ -1,12 +1,8 @@
 import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import utc from 'dayjs/plugin/utc';
 import Layout  from '../../components/layout'
-import timezone from 'dayjs/plugin/timezone';
-import { useHistory } from "react-router";
-import { AnimatePresence, motion } from "framer-motion";
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { motion } from "framer-motion";
 
 export default function BlogId( { works, works_data, worklist } ) {
   return (
@@ -22,32 +18,44 @@ export default function BlogId( { works, works_data, worklist } ) {
         transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
-          <div className="p-detail__inner__main">
-            <div className="p-detail__top">
-              <div className="p-detail__ttl">
-                <div className="c-title white">{works.title}</div>
-                <p>{works_data}</p>
-              </div>
-              <figure>
-                <img 
-                  alt={works.title}
-                  src={works.image.url}
-                  width={605}
+        { works ? (
+            <>
+              <div className="p-detail__inner__main">
+                <div className="p-detail__top">
+                  <div className="p-detail__ttl">
+                    <div className="c-title white">{works.title}</div>
+                    <p>{works_data}</p>
+                  </div>
+                  <figure>
+                    <img 
+                      alt={works.title}
+                      src={works.image.url}
+                      width={605}
+                    />
+                  </figure>
+                </div>
+                <div
+                  className="p-detail__bottom"
+                  dangerouslySetInnerHTML={{
+                    __html: `${works.body}`,
+                  }}
                 />
-              </figure>
+              </div>
+            </>
+          ) : (
+            <div className="p-detail__inner__main">
+                <div className="p-detail__top">
+                  <div className="p-detail__ttl">
+                    <div className="c-title white">記事の読み込み失敗しました</div>
+                  </div>
+                </div>
             </div>
-            <div
-              className="p-detail__bottom"
-              dangerouslySetInnerHTML={{
-                __html: `${works.body}`,
-              }}
-            />
-          </div>
+          ) }
           <div className="p-detail__inner__sub" id="p-work">
             <h3 className="c-title white">work</h3>
             <div className="card">
               <ul>
-              {worklist.map(worklist => (
+                {worklist ? worklist.map(worklist => (
                   <li key={worklist.id}>
                     <Link href={`/work/${worklist.id}`}>
                       <figure>
@@ -62,7 +70,9 @@ export default function BlogId( { works, works_data, worklist } ) {
                       <span>{worklist.title}</span>
                     </Link>
                   </li>
-              ))}
+                )) : (
+                    <li>記事の読み込み失敗しました</li>
+                )}
               </ul>
             </div>
           </div>
@@ -104,11 +114,14 @@ export const getStaticProps = async context => {
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
   .then(res => res.json())
   .catch(() => null);
+
+  let workc = works ? works.contents : null;
+
   return {
     props: {
-      works: data,
-      works_data: datePlastic,
-      worklist: works.contents,
+      works: data || null,
+      works_data: datePlastic || null,
+      worklist: workc || null,
     },
   };
 };
