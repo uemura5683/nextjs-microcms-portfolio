@@ -91,7 +91,8 @@ export const getStaticPaths = async () => {
   const data = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())
     .catch(() => null);
-  const paths = data.contents.map(content => `/information/${content.id}`);
+  const dataid = data ? data.contents : null,
+        paths  = dataid ? data.contents.map(content => `/information/${content.id}`) : null;
   return {paths, fallback: false};
 };
 
@@ -107,8 +108,6 @@ export const getStaticProps = async context => {
   )
     .then(res => res.json())
     .catch(() => null);
-
-    console.log(data);
 
     const publishatformat = dayjs(data.UpdateAt).format()
     , jstDate         = dayjs(publishatformat)

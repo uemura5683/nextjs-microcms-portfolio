@@ -90,7 +90,8 @@ export const getStaticPaths = async () => {
   const data = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
     .then(res => res.json())
     .catch(() => null);
-  const paths = data.contents.map(content => `/work/${content.id}`);
+  const dataid = data ? data.contents : null,
+        paths  = dataid ? dataid.map(content => `/work/${content.id}`) : null;
   return {paths, fallback: false};
 };
 
