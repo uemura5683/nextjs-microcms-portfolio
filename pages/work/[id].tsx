@@ -101,7 +101,7 @@ export const getStaticProps = async context => {
   const key = {
     headers: {'X-API-KEY': process.env.API_KEY},
   };
-  const data = await fetch(
+  let data = await fetch(
     'https://nu-portfolio.microcms.io/api/v1/work/' + id,
     key,
   )

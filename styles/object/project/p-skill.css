@@ -384,7 +384,7 @@
 .ReactModal__Content .skill__zoom_modal_description span {
     border-bottom: 1px solid lightgray;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
     margin: 0 0 10px;
 }

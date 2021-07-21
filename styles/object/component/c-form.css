@@ -4,7 +4,7 @@
 input,textarea {
   width: 100%;
   padding: 5px 10px;
-  font-size: 1.4em;
+  font-size: 1.0rem;
 }
 input:focus, textarea:focus,
 input:hover, textarea:hover,
@@ -15,5 +15,5 @@ textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
   height: 200px;
 }
 label {
-  font-size: 1.4em;
+  font-size: 1.0rem;
 }

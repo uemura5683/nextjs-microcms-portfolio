@@ -103,14 +103,14 @@
             transform: translateY( -50% );
 }
 #p-mainvisual nav ul li {
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     text-align: center;
 }
 #p-mainvisual nav ul li:last-child {
     margin: 0;
 }
 #p-mainvisual nav ul li a {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -139,7 +139,7 @@
     -webkit-transform: translate( -50% );
             transform: translate( -50% );
     z-index: 1;
-    font-size: 1.6em;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 #p-mainvisual .p-mainvisual__click a {
@@ -210,10 +210,10 @@
     * nav
     **/
     #p-mainvisual nav ul li {
-        margin: 0 0 30px;
+        margin: 0 0 20px;
     }
     #p-mainvisual nav ul li a {
-        font-size: 2.4em;
+        font-size: 2.0rem;
     }
     /**
     * logo

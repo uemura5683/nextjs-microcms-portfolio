@@ -84,7 +84,7 @@ header .header--menu__content nav ul li {
     text-align: center;    
 }
 header .header--menu__content nav ul li a {
-    font-size: 2.4em;
+    font-size: 1.4rem;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -208,7 +208,10 @@ header.light .header--menu__btn span {
     * header menu
     **/
     header .header--menu__content nav ul li {
-        margin: 0 0 30px;
+        margin: 0 0 20px;
+    }
+    header .header--menu__content nav ul li a {
+        font-size: 2.0rem;
     }
     /**
     * memu btn

@@ -8,7 +8,7 @@
 .c-contact-form__inner .c-contact-form__txt {
     text-align: center;
     margin: 20px 0;
-    line-height: 1.6;
+    font-size: 1.0rem;
 }
 .c-contact-form__inner .c-contact-form__txt a {
     text-decoration: underline;
@@ -77,9 +77,9 @@
     opacity: .7;
 }
 .c-contact__conform .contact__confirm-txt {
-    line-height: 1.4em;
+    line-height: 1.4rem;
     margin: 50px 0 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-align: center;
 }
 .c-contact__conform table {
@@ -93,7 +93,7 @@
     border-left: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 .c-contact__conform table tr th {
@@ -110,7 +110,7 @@
     right: 0;
     top: 0;
     width: 100%;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     padding: 10px 0;
     border: 1px solid black;
     background-color: black;
