@@ -23,6 +23,7 @@ header.light  .header--menu__btn span {
 .p-detail__inner p,
 .p-detail__inner div {
     color: white;
+    font-size: 1.0rem;
 }
 .p-detail__inner .c-title {
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', sans-serif;
@@ -54,6 +55,10 @@ header.light  .header--menu__btn span {
       display: flex;
       flex-wrap: wrap;
       margin: 0;
+    }
+    .p-detail__inner p,
+    .p-detail__inner div {
+      font-size: 1.2rem;
     }
     .p-detail__inner .p-detail__top .p-detail__ttl {
       width: 45%;

@@ -53,7 +53,7 @@
 }
 .p-about__profile--description {
     margin: 20px 0 0;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     line-height: 2;
 }
 /**
@@ -82,7 +82,7 @@
     margin: 20px auto 0;
 }
 .p-about__profile:nth-of-type( 2 ) .about__profile__lessondetail p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     line-height: 2;
 }
 

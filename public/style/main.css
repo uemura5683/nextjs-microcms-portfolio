@@ -110,7 +110,7 @@
     margin: 0;
 }
 #p-mainvisual nav ul li a {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -139,7 +139,7 @@
     -webkit-transform: translate( -50% );
             transform: translate( -50% );
     z-index: 1;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     cursor: pointer;
 }
 #p-mainvisual .p-mainvisual__click a {
