@@ -36,7 +36,7 @@ const SkillContent = () => {
               alt="jQuery logo"
             />
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">80% エキスパート</p>
+              <p className="skill_level">70% エキスパート</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
                 jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />

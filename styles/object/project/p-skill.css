@@ -215,7 +215,7 @@
 }
 @keyframes gagehtml {
     0% { width: 0%; }  
-    100% { width: 90%; }
+    100% { width: 80%; }
 }
 @keyframes gagewp {
     0% { width: 0%; }  
@@ -231,7 +231,7 @@
 }
 @keyframes gagejs {
     0% { width: 0%; }  
-    100% { width: 80%; }
+    100% { width: 70%; }
 }
 @keyframes gagemcms {
     0% { width: 0%; }  
@@ -239,7 +239,7 @@
 }
 @keyframes gagejq {
     0% { width: 0%; }  
-    100% { width: 80%; }
+    100% { width: 70%; }
 }
 @keyframes gagevue {
     0% { width: 0%; }  
@@ -247,7 +247,7 @@
 }
 @keyframes gagephp {
     0% { width: 0%; }  
-    100% { width: 80%; }
+    100% { width: 70%; }
 }
 @keyframes gagenuxt {
     0% { width: 0%; }  

@@ -36,7 +36,7 @@ const SkillContent = () => {
               alt="HTML logo"
             />
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">90% マスター</p>
+              <p className="skill_level">80% エキスパート</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
                 htmlは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />

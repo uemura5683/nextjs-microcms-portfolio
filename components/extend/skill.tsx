@@ -12,7 +12,6 @@ import Mmcms from '../skill/mcms'
 import Mwp   from '../skill/wp'
 import Mnuxt from '../skill/nuxt'
 import Mnext from '../skill/next'
-import Mnode from '../skill/node'
 import Mgulp from '../skill/gulp'
 import Mbase from '../skill/base'
 import Mfigma from '../skill/figma'
@@ -38,7 +37,6 @@ export default function Skill() {
           <Mwp></Mwp>
           <Mnuxt></Mnuxt>
           <Mnext></Mnext>
-          <Mnode></Mnode>
           <Mgulp></Mgulp>
           <Mbase></Mbase>
           <Mfigma></Mfigma>

@@ -36,7 +36,7 @@ const SkillContent = () => {
               alt="php　ロゴ"
             />
             <div className="skill__zoom_modal_description">
-              <p className="skill_level">80% エキスパート</p>
+              <p className="skill_level">70% エキスパート</p>
               <p className="skill_experience">5年以上</p>
               <p className="skill_detail">
                 phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />

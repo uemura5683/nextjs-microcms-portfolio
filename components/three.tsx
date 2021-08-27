@@ -60,19 +60,19 @@ const Canvas: React.FC = () => {
 
     // add object
     const e_Geometry = new SphereGeometry( 200, 64, 64 );
-    const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/moon/img/earch.jpg');
+    const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/earch.jpg');
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
     const e_box = new Mesh(e_Geometry, e_materials);
     object.add(e_box);
   
     const m_Geometry = new SphereGeometry( 15, 64, 64 );
-    const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/moon/img/moon.jpg');
+    const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/moon.jpg');
     const m_materials = new MeshStandardMaterial( { color: 0xffffff, map:m_texture } );
     const m_box = new Mesh( m_Geometry, m_materials );
     object.add(m_box);
   
     const c_Geometry = new SphereGeometry( 205, 64, 64 );
-    const c_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/moon/img/crowd.png');
+    const c_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/crowd.png');
     const c_materials = new MeshStandardMaterial( { map:c_texture, transparent: true, side: DoubleSide } );
     const c_box = new Mesh( c_Geometry, c_materials );
     object.add(c_box);
