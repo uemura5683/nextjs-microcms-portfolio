@@ -14,7 +14,6 @@ import LinkArea from '../components/extend/linkarea'
 import ContactForm from '../components/extend/contactform'
 
 function Home( {info, work, blog} ) {
-  
   return (
     <Layout home>
       <Head>
