@@ -6,7 +6,6 @@ import Navi from '../nav'
 import React from "react";
 
 // SSRあるとwindowが使えない等あるため
-import dynamic from 'next/dynamic';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 /**

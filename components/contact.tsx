@@ -1,6 +1,6 @@
 import axios from "axios";
 import ReactDOM from "react-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 const Contacts = () => {
@@ -149,7 +149,7 @@ const Contacts = () => {
     });
   }
 
-  if (typeof document !== 'undefined') {
+  useEffect(() => {
     let rootElement = document.getElementById("modalArea");
     ReactDOM.render(
       <React.StrictMode>
@@ -160,7 +160,7 @@ const Contacts = () => {
       </React.StrictMode>,
       rootElement
     );
-  }
+  });
 
   return (
     <>
