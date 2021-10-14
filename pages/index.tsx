@@ -119,7 +119,7 @@ export async function getStaticProps() {
     headers: {'X-API-KEY': process.env.API_KEY},
   };
   const key_nu = {
-    headers: {'X-API-KEY': 'a9ca1ec4-edff-43d8-ace7-e5f0c68b5b50'},
+    headers: {'X-API-KEY': process.env.NU_API_KEY},
   }
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
     .then((res: { json: () => any }) => res.json())

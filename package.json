@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@babel/helpers": "^7.13.17",
+    "@sendgrid/mail": "^7.4.7",
     "axios": "^0.21.0",
     "date-fns": "^2.16.1",
     "dayjs": "^1.10.4",

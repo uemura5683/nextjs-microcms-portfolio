@@ -2,6 +2,7 @@ import axios from "axios";
 import ReactDOM from "react-dom";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Complete from '../components/complete';
 
 const Contacts = () => {
 
@@ -85,20 +86,16 @@ const Contacts = () => {
           <table className="table table-striped">
             <tbody>
             <tr>
-              <th>お名前</th>
-              <td>{data.name}</td>
+              <th>お名前</th><td>{data.name}</td>
             </tr>
             <tr>
-              <th>メールアドレス</th>
-              <td>{data.email}</td>
+              <th>メールアドレス</th><td>{data.email}</td>
             </tr>
             <tr>
-              <th>お問い合わせの内容</th>
-              <td>{data.title}</td>
+              <th>お問い合わせの内容</th><td>{data.title}</td>
             </tr>
             <tr className="borderline">
-              <th>お問い合わせ詳細</th>
-              <td>{data.body}</td>
+              <th>お問い合わせ詳細</th><td>{data.body}</td>
             </tr>
             </tbody>
           </table>
@@ -115,30 +112,21 @@ const Contacts = () => {
     }
   }
 
-  const FormSubmit = e => {
-    let getbody = document.body;
-    const datas = {
-      email: email,
-      name: name,
-      title: title,
-      body: body
-    };
+  const FormSubmit = async e => {
+    e.preventDefault();
+    const datas = { email: email, name: name, title: title, body: body };
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",
       data: datas,
       headers: {
         "Content-Type": "application/json",
-        "X-WRITE-API-KEY": 'e4f670a9-c5f8-4b37-b85c-420c00c33675'
+        "X-WRITE-API-KEY": process.env.NU_POST_API_KEY
       }
     })
     .then(() => {
       setIsOpen(false);
-      let alert_html = "<div class='alert alert-warning c-contact__complete'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
-      getbody
-      .insertAdjacentHTML(
-        'afterbegin', alert_html
-      );
+      ReactDOM.render(<Complete />, document.body);
       let countup = function() {
         location.reload();
       }
@@ -147,6 +135,20 @@ const Contacts = () => {
     .catch(err => {
       console.log(err);
     });
+
+    await axios( {
+      method: "POST",
+      url:'/api/send',
+      data: datas,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    } ).then(res => {
+        console.log(res);
+    }).catch(err => {
+        console.log(err)
+    })
+
   }
 
   useEffect(() => {
