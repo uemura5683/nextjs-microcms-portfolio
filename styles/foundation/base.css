@@ -259,6 +259,9 @@ body:after {
   margin: 0 0 20px;
   border: 1px solid black;
 }
+.alert-warning:empty {
+  display: none;
+}
 .alert-warning p {
   font-size: 1.0rem;
 }

@@ -24,6 +24,7 @@
     display: block;
     margin: 5px 0;
 }
+
 /**
 * contact confirm
 **/
@@ -79,7 +80,7 @@
 .c-contact__conform .contact__confirm-txt {
     line-height: 1.4rem;
     margin: 50px 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
 }
 .c-contact__conform table {
@@ -88,12 +89,15 @@
     border-right: 1px solid lightgray;
     margin: 20px 0 0;
 }
+.c-contact__conform table tr th {
+    background-color: #efefef; 
+}
 .c-contact__conform table tr th,
 .c-contact__conform table tr td {
     border-left: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 .c-contact__conform table tr th {
@@ -110,7 +114,7 @@
     right: 0;
     top: 0;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1rem;
     padding: 10px 0;
     border: 1px solid black;
     background-color: black;
@@ -183,13 +187,25 @@
     .c-contact__conform {
         width: 50%;
     }
-    .c-contact__conform .c-btn-area button.form-submit {
-        height: 70px;
-    }
     /**
     * contact conplete
     **/
     .c-contact__complete p {
         width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .c-contact__conform {
+        height: 80vh;
+        overflow: scroll;
+    }
+    .c-contact__conform table tr th {
+        font-weight: bold;
+    }
+    .c-contact__conform table tr th,
+    .c-contact__conform table tr td {
+        width: 100%;
+        display: block;
     }
 }

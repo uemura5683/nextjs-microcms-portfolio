@@ -3,64 +3,45 @@ import ReactDOM from "react-dom";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Complete from '../components/complete';
+import ContactError from '../components/contacterror';
 
 const Contacts = () => {
 
   // 初期設定
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+  const router = useRouter()
+      , [email, setEmail] = useState("")
+      , [name, setName]   = useState("")
+      , [title, setTitle] = useState("")
+      , [body, setBody]   = useState("")
+      , [modalIsOpen,setIsOpen] = React.useState(false);
+      function closeModal(){ setIsOpen(false); }
 
-  const [modalIsOpen,setIsOpen] = React.useState(false);
-  function closeModal(){
-      setIsOpen(false);
-  }
+  // お問い合わせ入力の処理
+  // 入力漏れの場合はエラー文言を出力し
+  // 全て入力した場合はお問いあわせ内容確認のモーダルを出力
   const handleSubmit = e => {
     e.preventDefault();
-    
-    const ContactConfirm  = document.getElementsByClassName( 'c-contact-form__form' );
-    const AlertTxt        = document.getElementsByClassName( 'alert-warning' );
-    const AlertInner      = document.getElementsByClassName( 'alert_inner_txt' );
-    const ContactCOmplete = document.getElementsByClassName( 'skill__zoom_modal-block' );
-    const ContactElement: Element = document.getElementById( 'p-contact' );
-    const ContactPosition: number = ContactElement.getBoundingClientRect().top;
-    const currentPosition: number = window.pageYOffset;
-    const targetPosition: number = ContactPosition + currentPosition;      
-
-    // エラーチェック
-    if( AlertTxt[0] != undefined ) {
-      AlertTxt[0].remove();
-    }
-    // エラーが発生したとき
+    const AlertTxt        = document.getElementsByClassName( 'alert-warning' )
+        , AlertInner      = document.getElementsByClassName( 'alert_inner_txt' )
+        , ContactElement: Element = document.getElementById( 'p-contact' )
+        , ContactPosition: number = ContactElement.getBoundingClientRect().top
+        , currentPosition: number = window.pageYOffset
+        , targetPosition: number = ContactPosition + currentPosition;
+        
     if( name == "" || email == "" || title == "" || body == "" ) {
-      let alert_html = "<div class='alert alert-warning'>"
-      if( name == "" ) {
-        alert_html += "<p class='alert_inner_txt'>名前を入力してください。</p>";
-      }
-      if( email == "" ) {
-        alert_html += "<p class='alert_inner_txt'>メールアドレスを入力してください</p>";
-      }
-      if( title == "" ) {
-        alert_html += "<p class='alert_inner_txt'>タイトルを入力してください</p>";
-      }
-      if( body == "" ) {
-        alert_html += "<p class='alert_inner_txt'>本文を入力してください</p>";
-      }
-      alert_html += "</div>";
-      ContactConfirm[0]
-      .insertAdjacentHTML(
-        'afterbegin', alert_html
-      );
+      const error_data = { email: email, name: name, title: title, body: body };
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth',
       });
-
-    }
-    // エラーがない場合はモーダルを表示する
-    if( AlertInner.length == 0 ) {
+      return ReactDOM.render(
+        <ContactError error_data = {error_data} />,
+        AlertTxt[0]
+      );
+    } else{
+      if( AlertInner.length > 0 ) {
+        ReactDOM.unmountComponentAtNode(AlertTxt[0]);
+      }
       openModal();
     }
     function openModal() {
@@ -70,6 +51,19 @@ const Contacts = () => {
       setIsOpen(false);
     }
   };
+
+  // お問いあわせ内容確認のDOM生成
+  useEffect(() => {
+    ReactDOM.render(
+      <React.StrictMode>
+          <ModalConfirm
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+          />
+      </React.StrictMode>,
+      document.getElementById("modalArea")
+    );
+  });
 
   function ModalConfirm(props) {
     const data = {
@@ -81,30 +75,28 @@ const Contacts = () => {
     if(props.isOpen == true) {      
       return (
         <>
-        <div className="c-contact__conform">
-          <p className="contact__confirm-txt">入力内容が正しければ「送信する」をクリックしてください。</p>
-          <table className="table table-striped">
-            <tbody>
-            <tr>
-              <th>お名前</th><td>{data.name}</td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th><td>{data.email}</td>
-            </tr>
-            <tr>
-              <th>お問い合わせの内容</th><td>{data.title}</td>
-            </tr>
-            <tr className="borderline">
-              <th>お問い合わせ詳細</th><td>{data.body}</td>
-            </tr>
-            </tbody>
-          </table>
-          <div className="c-btn-area">
-            <button className="btn-white form-submit" type="submit" onClick={FormSubmit}>送信する</button>
+          <div className="c-contact__conform">
+            <p className="contact__confirm-txt">入力内容が正しければ「送信する」をクリックしてください。</p>
+            <table className="table table-striped">
+              <tbody>
+                <tr><th>お名前</th><td>{data.name}</td></tr>
+                <tr><th>メールアドレス</th><td>{data.email}</td></tr>
+                <tr><th>お問い合わせの内容</th><td>{data.title}</td></tr>
+                <tr className="borderline"><th>お問い合わせ詳細</th><td>{data.body}</td></tr>
+              </tbody>
+            </table>
+            <div className="c-btn-area">
+              <button
+                className="btn-white form-submit"
+                type="submit"
+                onClick={FormSubmit}
+              >
+                送信する
+              </button>
+            </div>
+            <button onClick={closeModal}>close</button> 
           </div>
-          <button onClick={closeModal}>close</button> 
-        </div>
-        <div className="contact__form__bg" onClick={closeModal}></div>
+          <div className="contact__form__bg" onClick={closeModal}></div>
         </>
       )
     } else {
@@ -112,6 +104,7 @@ const Contacts = () => {
     }
   }
 
+  // お問いあわせ内容確認を送信した時のイベント処理
   const FormSubmit = async e => {
     e.preventDefault();
     const datas = { email: email, name: name, title: title, body: body };
@@ -135,7 +128,6 @@ const Contacts = () => {
     .catch(err => {
       console.log(err);
     });
-
     await axios( {
       method: "POST",
       url:'/api/send',
@@ -148,21 +140,7 @@ const Contacts = () => {
     }).catch(err => {
         console.log(err)
     })
-
   }
-
-  useEffect(() => {
-    let rootElement = document.getElementById("modalArea");
-    ReactDOM.render(
-      <React.StrictMode>
-          <ModalConfirm
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-          />
-      </React.StrictMode>,
-      rootElement
-    );
-  });
 
   return (
     <>
@@ -171,6 +149,7 @@ const Contacts = () => {
         どんな些細でもいいですので気軽にお問い合わせください。<br/>
         <a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。
       </p>
+      <div className="alert alert-warning"></div>
       <form className="c-contact-form__form">
         <div className="c-contact-form__content">
           <label>あなたの名前</label>

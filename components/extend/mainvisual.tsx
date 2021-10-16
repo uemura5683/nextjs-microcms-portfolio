@@ -39,9 +39,9 @@ class ThreeComp extends React.Component {
 }
 
 if (process.browser) {
-  const MainTarget =  document.querySelector('.p-mainvisual__iframe');
+  const MainTarget =  document.getElementsByClassName('p-mainvisual__iframe');
   window.onload = () => {
-    MainTarget.classList.add('is_display');
+    MainTarget[0].classList.add('is_display');
   }
 }
 
