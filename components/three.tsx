@@ -1,24 +1,5 @@
 import React from 'react'
-import {
-  WebGLRenderer,
-  Scene, 
-  PerspectiveCamera,
-  Object3D,
-  Fog,
-  DirectionalLight,
-  AmbientLight,
-  SphereGeometry,
-  TextureLoader,
-  MeshStandardMaterial,
-  SphereBufferGeometry,
-  MeshPhongMaterial,
-  Vector3,
-  Points,
-  AdditiveBlending,
-  PointsMaterial,
-  DoubleSide,
-  Mesh,
-  SrcAlphaSaturateFactor
+import { WebGLRenderer, Scene,  PerspectiveCamera, Object3D, Fog, DirectionalLight, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, DoubleSide, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -109,17 +90,13 @@ const Canvas: React.FC = () => {
     effectGlitch.renderToScreen = true
     composer.addPass(effectGlitch)
 
-
-    var controls = new function () {
+    let controls = new function () {
       this.goWild = false;
       this.updateEffect = function () {
           effectGlitch.goWild = controls.goWild;
       };
     };
-
-
     animate({ object, composer, m_box })
-
   }
 
 
@@ -132,14 +109,16 @@ const Canvas: React.FC = () => {
     m_box.position.y = 50;
     m_box.position.z = 300 * Math.cos( m_radian );
 
+    object.rotation.x += 0.01
     object.rotation.y += 0.01
+    object.rotation.z += 0.01
+
     composer.render()
   }
 
   return (
     <div className="WrapCanvas">
       <canvas className="Canvas" ref={onCanvasLoaded} />
-      <div className="lazyload"></div>
     </div>
   )
 }

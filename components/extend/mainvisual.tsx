@@ -11,38 +11,27 @@ import { Link, animateScroll as scroll } from "react-scroll";
 /**
  * export
  */
-class ThreeComp extends React.Component {
-  render() {
-    return (
-      <section id="p-mainvisual" data-set-color="dark">
-        <Logo></Logo>
-        <Navi home></Navi>
-        <figure className="p-mainvisual__iframe">
-          <iframe src="https://uemu-engineer.com/three.html" />
-        </figure>
-        <div className="p-mainvisual__click">
-          <Link
-            activeClass="active"
-            to="p-about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration= {500}
-          > 
-          <span></span>
-          click here
-        </Link> 
-        </div>
-      </section>
-    )
-  }
+export default function Component() {
+  return (
+    <section id="p-mainvisual" data-set-color="dark">
+      <Logo></Logo>
+      <Navi home></Navi>
+      <figure className="p-mainvisual__iframe">
+        <iframe src="https://uemu-engineer.com/three.html" />
+      </figure>
+      <div className="p-mainvisual__click">
+        <Link
+          activeClass="active"
+          to="p-about"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration= {500}
+        > 
+        <span></span>
+        click here
+      </Link> 
+      </div>
+    </section>
+  )
 }
-
-if (process.browser) {
-  const MainTarget =  document.getElementsByClassName('p-mainvisual__iframe');
-  window.onload = () => {
-    MainTarget[0].classList.add('is_display');
-  }
-}
-
-export default ThreeComp;

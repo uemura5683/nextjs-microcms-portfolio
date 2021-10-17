@@ -1,5 +1,6 @@
 import axios from "axios";
 import ReactDOM from "react-dom";
+import ReactDOMServer from "react-dom/server";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Complete from '../components/complete';
@@ -76,23 +77,25 @@ const Contacts = () => {
       return (
         <>
           <div className="c-contact__conform">
-            <p className="contact__confirm-txt">入力内容が正しければ「送信する」をクリックしてください。</p>
-            <table className="table table-striped">
-              <tbody>
-                <tr><th>お名前</th><td>{data.name}</td></tr>
-                <tr><th>メールアドレス</th><td>{data.email}</td></tr>
-                <tr><th>お問い合わせの内容</th><td>{data.title}</td></tr>
-                <tr className="borderline"><th>お問い合わせ詳細</th><td>{data.body}</td></tr>
-              </tbody>
-            </table>
-            <div className="c-btn-area">
-              <button
-                className="btn-white form-submit"
-                type="submit"
-                onClick={FormSubmit}
-              >
-                送信する
-              </button>
+            <div className="c-contact__conform_inner">
+              <p className="contact__confirm-txt">入力内容が正しければ「送信する」をクリックしてください。</p>
+              <table className="table table-striped">
+                <tbody>
+                  <tr><th>お名前</th><td>{data.name}</td></tr>
+                  <tr><th>メールアドレス</th><td>{data.email}</td></tr>
+                  <tr><th>お問い合わせの内容</th><td>{data.title}</td></tr>
+                  <tr className="borderline"><th>お問い合わせ詳細</th><td>{data.body}</td></tr>
+                </tbody>
+              </table>
+              <div className="c-btn-area">
+                <button
+                  className="btn-white form-submit"
+                  type="submit"
+                  onClick={FormSubmit}
+                >
+                  送信する
+                </button>
+              </div>
             </div>
             <button onClick={closeModal}>close</button> 
           </div>
@@ -118,12 +121,13 @@ const Contacts = () => {
       }
     })
     .then(() => {
-      setIsOpen(false);
-      ReactDOM.render(<Complete />, document.body);
-      let countup = function() {
-        location.reload();
-      }
-      setTimeout(countup, 5000);
+      const contact_form = document.getElementsByClassName("c-contact__conform");
+      const contact_form_inner = document.getElementsByClassName("c-contact__conform_inner");
+      const complete_cont = ReactDOMServer.renderToStaticMarkup(<Complete />);
+      contact_form_inner[0].remove();
+      contact_form[0].insertAdjacentHTML(
+        'afterbegin', complete_cont
+      );
     })
     .catch(err => {
       console.log(err);
@@ -141,7 +145,7 @@ const Contacts = () => {
         console.log(err)
     })
   }
-
+  
   return (
     <>
     <div className="c-contact-form__inner">

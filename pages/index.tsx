@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'node-fetch'
 import Layout, { siteTitle } from '../components/layout'
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import MainVisual from '../components/extend/mainvisual'
 import Profile from '../components/extend/profile'
 import Skill from '../components/extend/skill'

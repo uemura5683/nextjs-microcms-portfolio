@@ -15,6 +15,6 @@ const ThreeNoSSR = dynamic(
  */
 export default function Threejs() {
   return (
-        <ThreeNoSSR></ThreeNoSSR>
+    <ThreeNoSSR></ThreeNoSSR>
   )
 }

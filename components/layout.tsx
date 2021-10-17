@@ -59,7 +59,6 @@ export default function Layout({ children, home
               <DrawerMenu/>
             </>
           ) }
-
         </header>
         {home ? (
             <>
