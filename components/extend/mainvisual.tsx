@@ -17,7 +17,7 @@ export default function Component() {
       <Logo></Logo>
       <Navi home></Navi>
       <figure className="p-mainvisual__iframe">
-        <iframe src="https://uemu-engineer.com/three.html" />
+        <iframe src="https://uemu-engineer.com/three" />
       </figure>
       <div className="p-mainvisual__click">
         <Link

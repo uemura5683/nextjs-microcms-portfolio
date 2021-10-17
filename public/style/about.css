@@ -60,7 +60,8 @@ header.light  .header--menu__btn span {
 }
 @media (max-width: 767px) {
     .p-about {
-        margin: 1rem 0 0;
+        margin: .5rem 0 0;
+        padding: .5rem;
     }
     .p-about .c-title-thumb span {
         font-size: .8rem;

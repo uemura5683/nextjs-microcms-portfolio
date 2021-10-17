@@ -381,6 +381,9 @@
 .ReactModal__Content .skill__zoom_modal_description {
     width: 100%;
 }
+.ReactModal__Content .skill__zoom_modal_description p {
+    margin: 0 0 10px;
+}
 .ReactModal__Content .skill__zoom_modal_description span {
     border-bottom: 1px solid lightgray;
     display: block;

@@ -28,10 +28,11 @@ h3 {
   font-size: 3.2rem;
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
+  line-height: 1.6;
 }
 span {
-  font-size: 1.0rem;
+  font-size: 0.8rem;
 }
 
 /**
@@ -263,11 +264,14 @@ body:after {
   display: none;
 }
 .alert-warning p {
-  font-size: 1.0rem;
+  font-size: 0.8rem;
 }
 @media (min-width: 991px) {
   .alert-warning {
     margin: 0 0 50px;    
+  }
+  .alert-warning p {
+    font-size: 1.0rem;
   }
 }
 
