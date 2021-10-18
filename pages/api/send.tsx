@@ -14,10 +14,8 @@ export default function handler(req, res) {
           await sgMail.send(msg);
         } catch (error) {
           console.error(error);
-          console.error('error2');          
           if (error.response) {
             console.error(error.response.body)
-            console.error('error3');
           }
         }
       })();

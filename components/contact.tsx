@@ -139,11 +139,11 @@ const Contacts = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-    } ).then(res => {
-        console.log(res);
-    }).catch(err => {
-        console.log(err)
-        console.log('error');
+    } ).then(() => {
+        console.log('成功！');
+    } ).catch(err => {
+      console.log(err);
+      console.log('失敗！');
     })
   }
   
