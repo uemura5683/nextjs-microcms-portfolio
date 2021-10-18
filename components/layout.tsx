@@ -87,15 +87,7 @@ export default function Layout({ children, home
           </div>
           <SnsLink/>
           <div className="footer--link__privacy">
-            {home ? (
-              <>
               <Link href="/about">About</Link>
-              </>
-            ) : (
-              <>
-                <a href="/about">About</a>
-              </>
-            ) }
           </div>
           <div className="footer__copyrights">
           (c) 2021 Uemu-Portfolio
