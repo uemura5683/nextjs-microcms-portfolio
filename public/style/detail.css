@@ -17,7 +17,7 @@ header.light  .header--menu__btn span {
 */
 .p-detail__inner {
     border: 1px solid white;
-    padding: 2rem;
+    padding: 1rem;
     margin: 1rem 0 0;
 }
 .p-detail__inner p,
@@ -54,6 +54,7 @@ header.light  .header--menu__btn span {
     .p-detail__inner {
       display: flex;
       flex-wrap: wrap;
+      padding: 2rem;
       margin: 0;
     }
     .p-detail__inner p,

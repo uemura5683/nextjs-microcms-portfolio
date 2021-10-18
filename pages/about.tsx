@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
  * export
  */
 export default function About( {info} ) {
-  console.log(info);
   return (
     <Layout>
       <Head>

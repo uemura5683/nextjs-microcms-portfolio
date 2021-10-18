@@ -132,7 +132,7 @@ const Contacts = () => {
     .catch(err => {
       console.log(err);
     });
-    await axios( {
+    axios( {
       method: "POST",
       url:'/api/send',
       data: datas,
@@ -143,6 +143,7 @@ const Contacts = () => {
         console.log(res);
     }).catch(err => {
         console.log(err)
+        console.log('error');
     })
   }
   

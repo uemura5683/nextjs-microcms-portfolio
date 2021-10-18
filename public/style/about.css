@@ -30,10 +30,12 @@ header.light  .header--menu__btn span {
     color : white;
     overflow: hidden;
     word-break: break-all;
+    font-size: 1.2rem;
+    line-height: 2.6;
 }
 .p-about .p-about__inner span {
     color: white;
-    font-size: 1.4em;
+    font-size: 1.0em;
     line-height: 2.6;
     display: block;
     margin: 0 0 1.5rem;
@@ -60,11 +62,11 @@ header.light  .header--menu__btn span {
 }
 @media (max-width: 767px) {
     .p-about {
-        margin: .5rem 0 0;
+        margin: 0;
         padding: .5rem;
     }
     .p-about .c-title-thumb span {
-        font-size: .8rem;
+        font-size: 1rem;
         margin: .5rem 0 0;
         display: block;
     }
@@ -74,5 +76,8 @@ header.light  .header--menu__btn span {
     .p-about .c-title-thumb {
         font-size: 1.0rem;
         padding: 1rem;
+    }
+    .p-about .p-about__inner p {
+        font-size: .8rem;
     }
 }
