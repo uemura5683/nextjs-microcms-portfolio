@@ -135,7 +135,6 @@ const Contacts = () => {
     axios( {
       method: "POST",
       url:'/api/send',
-      timeout: 3000, //3000ms
       data: datas,
       headers: {
         "Content-Type": "application/json",
