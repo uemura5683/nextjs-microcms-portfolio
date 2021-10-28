@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Layout from '../components/layout'
-import { useHistory } from "react-router";
-import { AnimatePresence, motion } from "framer-motion";
+import Layout from '../components/framework/layout'
+import { motion } from "framer-motion";
 
 /**
  * export
@@ -29,7 +28,7 @@ export default function About( {info} ) {
 export async function getStaticProps() {
 
   const key = {
-    headers: {'X-API-KEY': process.env.API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
   };
   const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/about', key)
     .then((res: { json: () => any }) => res.json())

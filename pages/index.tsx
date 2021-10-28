@@ -2,16 +2,16 @@
  * common
  */
 import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import Head  from 'next/head'
+import Link  from 'next/link'
 import fetch from 'node-fetch'
-import Layout, { siteTitle } from '../components/layout'
-import { motion } from "framer-motion";
-import MainVisual from '../components/extend/mainvisual'
-import Profile from '../components/extend/profile'
-import Skill from '../components/extend/skill'
-import LinkArea from '../components/extend/linkarea'
-import ContactForm from '../components/extend/contactform'
+import Layout, { siteTitle } from '../components/framework/layout'
+import { motion }  from "framer-motion";
+import MainVisual  from '../components/top/mainvisual'
+import Profile     from '../components/top/profile'
+import Skill       from '../components/top/skill'
+import LinkArea    from '../components/top/linkarea'
+import ContactForm from '../components/top/contactform'
 
 function Home( {info, work, blog} ) {
   return (
@@ -116,10 +116,10 @@ function Home( {info, work, blog} ) {
 
 export async function getStaticProps() {
   const key = {
-    headers: {'X-API-KEY': process.env.API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
   };
   const key_nu = {
-    headers: {'X-API-KEY': process.env.NU_API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.NU_API_KEY},
   }
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
     .then((res: { json: () => any }) => res.json())
@@ -139,9 +139,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      info: infoc || null,
-      work: workc || null,
-      blog: blogc || null,
+      info: infoc,
+      work: workc,
+      blog: blogc,
     },
   };
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { WebGLRenderer, Scene,  PerspectiveCamera, Object3D, Fog, DirectionalLight, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, DoubleSide, Mesh
+import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, Fog, DirectionalLight, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, DoubleSide, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -18,9 +18,6 @@ const Canvas: React.FC = () => {
     if (!canvas) {
       return
     }
-    if( canvas ) {
-
-    }
     // init scene
     const scene = new Scene()
 
@@ -29,7 +26,6 @@ const Canvas: React.FC = () => {
 
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
-    renderer.setClearColor('#000000')
     renderer.setSize(2600, 1300)
 
     // init object
@@ -81,7 +77,6 @@ const Canvas: React.FC = () => {
     const ambient = new AmbientLight( 0x222222 );
     scene.add( ambient );
 
-    // add postprocessing
     const composer = new EffectComposer(renderer)
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
@@ -117,9 +112,11 @@ const Canvas: React.FC = () => {
   }
 
   return (
-    <div className="WrapCanvas">
-      <canvas className="Canvas" ref={onCanvasLoaded} />
-    </div>
+    <>
+      <div className="WrapCanvas">
+        <canvas className="Canvas" ref={onCanvasLoaded} />
+      </div>
+    </>
   )
 }
 

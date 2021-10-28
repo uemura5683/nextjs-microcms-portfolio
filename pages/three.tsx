@@ -6,7 +6,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 
 const ThreeNoSSR = dynamic(
-  () => import('../components/three'),
+  () => import('../components/three/three'),
   { ssr: false }
 )
 

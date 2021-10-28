@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../components/logo'
-import SnsLink from '../components/snslink'
-import DrawerMenu from '../components/extend/drawermenu'
-import { existsGaId, GA_ID } from '../public/js/gtag'
+import Logo from '../../components/framework/logo'
+import SnsLink from '../../components/framework/snslink'
+import DrawerMenu from '../../components/framework/drawermenu'
+import { existsGaId, GA_ID } from '../../public/js/gtag'
 
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
 
@@ -94,15 +94,8 @@ export default function Layout({ children, home
           </div>
         </footer>
         <div id="modalArea"></div>
-        {home ? (
-            <>
-            <script src="/js/jquery.waypoints.min.js"></script>
-            <script src="/js/common.js"></script>
-            </>
-            ) : (
-            <>
-            </>
-        ) }
+        <script src="/js/jquery.waypoints.min.js"></script>
+        <script src="/js/common.js"></script>
     </div>
   )
 }

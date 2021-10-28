@@ -1,8 +1,8 @@
 /**
  * component
  */
-import Logo from '../logo'
-import Navi from '../nav'
+import Logo from '../framework/logo'
+import Navi from '../framework/nav'
 import React from "react";
 
 // SSRあるとwindowが使えない等あるため

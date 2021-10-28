@@ -1,8 +1,0 @@
-https://www.boel.co.jp/tips/vol119/
-
-ドメイン
-https://zuma-lab.com/posts/vercel-onamae-domain-settings
-
-https://vercel.com/uemura5683/nextjs-microcms-portfolio/settings/domains
-
-https://www.onamae.com/domain/navi/dns_controll/input

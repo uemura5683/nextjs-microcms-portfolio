@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import ReactDOMServer from "react-dom/server";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Complete from '../components/complete';
-import ContactError from '../components/contacterror';
+import ContactError from '../contact/contacterror';
+import Complete from '../contact/complete';
 
 const Contacts = () => {
 
@@ -117,7 +117,7 @@ const Contacts = () => {
       data: datas,
       headers: {
         "Content-Type": "application/json",
-        "X-WRITE-API-KEY": process.env.NU_POST_API_KEY
+        "X-MICROCMS-API-KEY": process.env.NU_POST_API_KEY
       }
     })
     .then(() => {
@@ -128,21 +128,20 @@ const Contacts = () => {
       contact_form[0].insertAdjacentHTML(
         'afterbegin', complete_cont
       );
+      axios( {
+        method: "POST",
+        url:'/api/send',
+        data: datas,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      } ).then(() => {
+      })
     })
     .catch(err => {
       console.log(err);
     });
-    axios( {
-      method: "POST",
-      url:'/api/send',
-      data: datas,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    } ).then(() => {
-    })
   }
-  
   return (
     <>
     <div className="c-contact-form__inner">
