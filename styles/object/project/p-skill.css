@@ -215,15 +215,15 @@
 }
 @keyframes gagehtml {
     0% { width: 0%; }  
-    100% { width: 80%; }
+    100% { width: 70%; }
 }
 @keyframes gagewp {
     0% { width: 0%; }  
-    100% { width: 60%; }
+    100% { width: 50%; }
 }
 @keyframes gagecss {
     0% { width: 0%; }  
-    100% { width: 90%; }
+    100% { width: 70%; }
 }
 @keyframes gagemt {
     0% { width: 0%; }  
@@ -231,31 +231,31 @@
 }
 @keyframes gagejs {
     0% { width: 0%; }  
-    100% { width: 70%; }
+    100% { width: 60%; }
 }
 @keyframes gagemcms {
     0% { width: 0%; }  
-    100% { width: 60%; }
+    100% { width: 50%; }
 }
 @keyframes gagejq {
     0% { width: 0%; }  
-    100% { width: 70%; }
+    100% { width: 60%; }
 }
 @keyframes gagevue {
     0% { width: 0%; }  
-    100% { width: 50%; }
+    100% { width: 40%; }
 }
 @keyframes gagephp {
     0% { width: 0%; }  
-    100% { width: 70%; }
+    100% { width: 60%; }
 }
 @keyframes gagenuxt {
     0% { width: 0%; }  
-    100% { width: 50%; }
+    100% { width: 40%; }
 }
 @keyframes gagenscss {
     0% { width: 0%; }  
-    100% { width: 60%; }
+    100% { width: 50%; }
 }
 @keyframes gagenext {
     0% { width: 0%; }  
@@ -263,7 +263,7 @@
 }
 @keyframes gagepug {
     0% { width: 0%; }  
-    100% { width: 50%; }
+    100% { width: 40%; }
 }
 @keyframes gagenode {
     0% { width: 0%; }  
@@ -279,11 +279,11 @@
 }
 @keyframes gagebase {
     0% { width: 0%; }  
-    100% { width: 70%; }
+    100% { width: 60%; }
 }
 @keyframes gagefigma {
     0% { width: 0%; }  
-    100% { width: 60%; }
+    100% { width: 40%; }
 }
 @keyframes gagereact {
     0% { width: 0%; }  

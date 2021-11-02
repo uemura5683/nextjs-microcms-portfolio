@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../components/framework/logo'
 import SnsLink from '../../components/framework/snslink'
