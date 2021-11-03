@@ -22,7 +22,6 @@ const SkillContent = (Jsondata, index) => {
             src={Jsondata.image}
             alt={Jsondata.alt}
           />
-          <div className="gage"></div>
         </button>
         <Modal
           isOpen={modalIsOpen}

@@ -5,45 +5,35 @@
         "image": "/images/skill/skill_html.png",
         "class": "skill__zoom html",
         "alt": "HTML",
-        "level": "80% エキスパート",
-        "years": "5年以上",
-        "desc": "htmlは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />HTMLは比較的自由にかける言語であり、初学者さんでもすぐに覚えられるマークアップ言語ですが、基礎やルールをしっかり覚える必要があります。<br />それに反すると保守性が悪くなったり、レイアウトが任意通りに反映されなくなることがあります。<br />また、W3Cと言ってWeb標準規格を準すること推奨されており、それを準しないと同じWebページでもブラウザによってレイアウトなどが変わってしまうという問題を抱えています。<br />なので、基礎やルールをしっかり把握し、W3Cを準するようにマークアップして行きましょう。<br /><br /><span>成果物</span><a href='https://takarabako.theshop.jp/' target='_blank'>タカラバコ ECサイト</a><br /><a href='https://takarabako.tokyo/' target='_blank'>タカラバコ CPサイト</a><br /><a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br /><a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a><br />アパレルブランドサイト 多数"
+        "desc": "htmlは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />HTMLは比較的自由にかける言語であり、初学者さんでもすぐに覚えられるマークアップ言語ですが、基礎やルールをしっかり覚える必要があります。<br />それに反すると保守性が悪くなったり、レイアウトが任意通りに反映されなくなることがあります。<br />また、W3Cと言ってWeb標準規格を準すること推奨されており、それを準しないと同じWebページでもブラウザによってレイアウトなどが変わってしまうという問題を抱えています。<br />なので、基礎やルールをしっかり把握し、W3Cを準するようにマークアップして行きましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 30案件以上<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a>"
       },
       {
         "name": "CSS",
         "image": "/images/skill/skill_css.png",
         "class": "skill__zoom css",
         "alt": "CSS",
-        "level": "90% マスター",
-        "years": "5年以上",
-        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、パソコンスクールで学んだ言語です。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張ってください。<br /><br /><span>成果物</span><a href='https://takarabako.theshop.jp/'' target='_blank'>タカラバコ ECサイト</a><br /><a href='https://takarabako.tokyo/'' target='_blank'>タカラバコ CPサイト</a><br />アパレルブランドサイト 多数<br /><a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
+        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、パソコンスクールで学んだ言語です。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張りましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 30案件以上<br />・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
       },
       {
         "name": "Javascript",
         "image": "/images/skill/skill_js.png",
         "class": "skill__zoom js",
         "alt": "Javascript",
-        "level": "70% エキスパート",
-        "years": "5年以上",
-        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなどもあり、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span><a href='https://takarabako.theshop.jp/' target='_blank'>タカラバコ ECサイト</a><br /><a href='https://takarabako.tokyo/' target='_blank'>タカラバコ CPサイト</a><br /><a href='https://nu-blogsite.net/' target='_blank'>うえむーブログ</a><br /><a href='https://codepen.io/uemuragame5683/pen/YzWGEKv' target='_blank'>Codepen Three.js</a><br />アパレルブランドサイト<br />サードパーティツール導入<br />Google Analyticsタグ実装 多数<br><a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL作成</a>"
+        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなどもあり、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト  30案件以上<br />・サードパーティツール導入<br />・Google Analyticsタグ実装<br />・MAツール導入<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL</a>"
       },
       {
         "name": "PHP",
         "image": "/images/skill/skill_php.png",
         "class": "skill__zoom php",
         "alt": "PHP",
-        "level": "70% エキスパート",
-        "years": "5年以上",
-        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>アパレルブランドサイト 多数<br />大手受託案件 モック作成"
+        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>・ブログサイト 1件(製作中)<br />・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 30案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)）など<br />・大手受託案件 モック作成"
       },
       {
         "name": "jQuery",
         "image": "/images/skill/skill_jq.png",
         "class": "skill__zoom jq",
         "alt": "jQuery",
-        "level": "70% エキスパート",
-        "years": "5年以上",
-        "desc": "jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />jQueryにはハンバーガーメニュー・アコーディオンなどのアニメーションを簡単に実装できる便利なメソッドが用意されています。<br />アニメーションを実装するにはjQueryを適用することを推奨します、<br /><br /><span>成果物</span><a href='https://takarabako.theshop.jp/' target='_blank'>タカラバコ ECサイト</a><br /><a href='https://takarabako.tokyo/' target='_blank'>タカラバコ CPサイト</a><br />アパレルブランドサイト 多数"
+        "desc": "jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />jQueryにはハンバーガーメニュー・アコーディオンなどのアニメーションを簡単に実装できる便利なメソッドが用意されています。<br />アニメーションを実装するにはjQueryを適用することを推奨します、<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 30案件以上"
       },
       {
         "name": "SCSS",
@@ -52,105 +42,83 @@
         "alt": "SCSS",
         "level": "60% ミドル",
         "years": "3年以上",
-        "desc": "SCSSはCSSを効率良くスタイル調整する為のRubyで作られたスタイルシート言語であります。PUGと同じくRuby・node.js・gulpをインストールしてコンパイルする必要があります。<br />php・jsのように配列・変数などを用いることができ、(.section-00X)のようなセレクタや(color: whiteなど)よく利用する設定値などにも変数・配列を適用して効率よくスタイルシートを記述するのに適しています。<br /><br /><span>成果物</span><a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a><br /><a href='https://nu-blogsite.net/' target='_blank'>うえむーブログ</a><br />アパレルブランドサイト 多数"
+        "desc": "SCSSはCSSを効率良くスタイル調整する為のRubyで作られたスタイルシート言語であります。PUGと同じくRuby・node.js・gulpをインストールしてコンパイルする必要があります。<br />php・jsのように配列・変数などを用いることができ、(.section-00X)のようなセレクタや(color: whiteなど)よく利用する設定値などにも変数・配列を適用して効率よくスタイルシートを記述するのに適しています。<br /><br /><span>成果物</span>・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a><br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・アパレルECサイト 5案件"
       },
       {
         "name": "Type Script",
         "image": "/images/skill/skill_ts.png",
         "class": "skill__zoom ts",
         "alt": "Type Script",
-        "level": "20% ビギナー",
-        "years": "1年未満",
-        "desc": "TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっております。<br />TypeScriptはReact.jsと相性がよく、TypeScriptとReact.jsでサイト制作する会社も増えてきています。<br /><br /><span>成果物</span><a href='https://uemu-engineer.com/' target='blank'>Nu stack</a><br>カレンダー予約サイト開発中"
-      },
-      {
-        "name": "React.js",
-        "image": "/images/skill/skill_react.png",
-        "class": "skill__zoom react",
-        "alt": "React.js",
-        "level": "40% ノービス",
-        "years": "1年以上",
-        "desc": "React は、Facebookによって開発されているユーザインタフェース構築のためのJavaScriptライブラリです。<br />React.jsまたはReactJSの名称でも知られております。<br />Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br />また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。<br /><br /><span>成果物</span><a href='https://uemu-engineer.com/' target='_blank'>Nu stack</a>"
-      },
-      {
-        "name": "pug",
-        "image": "/images/skill/skill_pug.png",
-        "class": "skill__zoom pug",
-        "alt": "pug",
-        "level": "50% ミドル",
-        "years": "1年以上",
-        "desc": "pugはHTMLを効率よくコーディングする為のテンプレートエンジンです。SCSSと似てコンパイルが必要になります。<br />共通パーツ(ヘッダー・フッター)付きの3ページ以上をコーディングをする時とか、同じコンポーネントを3桁以上コーディングしなければいけない時に適した言語です。<br /><span>成果物</span><a href=’https://codepen.io/uemuragame5683’ target=’_blank’>CODEPEN</a>"
-      },
-      {
-        "name": "BASE",
-        "image": "/images/skill/skill_base.png",
-        "class": "skill__zoom base",
-        "alt": "BASE",
-        "level": "70% エキスパート",
-        "years": "1年未満",
-        "desc": "BASE(ベイス)は会員登録するだけで誰でも簡単にネットショップが作成できるサービスです。<br />気に入ったテーマを選択して、カスタマイズするだけでネットが公開できます。<br />また、SEO設定・クーポン・メールマガジン・レビューなど機能が充実でありほとんど無償で機能を追加できます。<br />もちろん、オリジナルのサイトを作成することが可能です。<br />必要な言語はhtml/css/jqueryです。<br />オリジナルのサイトを作る場合は、言語スキルを身につけることが必須なので、未経験の方はテーマ選択・カスタマイズのみで十分でしょう。<br /><br/><span>成果物</span><a href='https://takarabako.theshop.jp/' target='_blank'>タカラバコ ECサイト</a>"
-      },
-      {
-        "name": "Word Press",
-        "image": "/images/skill/skill_wp.png",
-        "class": "skill__zoom wp",
-        "alt": "Word Press",
-        "level": "60% ミドル",
-        "years": "3年以上",
-        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /><br /><span>成果物</span><a href='https://takarabako.tokyo/' target='blank'>タカラバコ</a><br />実家の自営業(製作中)"
+        "desc": "TypeScriptはJavaScriptに対して、省略も可能な静的型付けとクラスベースオブジェクト指向を加えた厳密なスーパーセットとなっております。<br />TypeScriptはReact.jsと相性がよく、TypeScriptとReact.jsでサイト制作する会社も増えてきています。<br /><br /><span>成果物</span>・<a href='https://uemu-engineer.com/' target='blank'>Nu stack</a><br>・カレンダー予約サイト（開発中）"
       },
       {
         "name": "Vue.js",
         "image": "/images/skill/skill_vue.png",
         "class": "skill__zoom vue",
         "alt": "Vue.js",
-        "level": "50% ミドル",
-        "years": "1年以上",
-        "desc": "vueはEvan You氏が開発したJavascriptのフレームワークである。デザイナーが「親しみやすい」作りとなっており、UI/UXを高める機能(アニメーション)が容易に導入できます。<br /><br /><span>成果物</span><a href='http://nu-blogsite.net/' target='blank'>Nu-blog</a><br />アパレルブランドサイトの一部(カウントダウン機能を追加) etc..."
+        "desc": "vueはEvan You氏が開発したJavascriptのフレームワークである。デザイナーが「親しみやすい」作りとなっており、UI/UXを高める機能(アニメーション)が容易に導入できます。<br /><br /><span>成果物</span>・<a href='http://nu-blogsite.net/' target='blank'>Nu-blog</a><br />・アパレルECサイトの一部(カウントダウン機能を追加) etc..."
+      },
+      {
+        "name": "React.js",
+        "image": "/images/skill/skill_react.png",
+        "class": "skill__zoom react",
+        "alt": "React.js",
+        "desc": "React は、Facebookによって開発されているユーザインタフェース構築のためのJavaScriptライブラリです。<br />React.jsまたはReactJSの名称でも知られております。<br />Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br />また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。<br /><br /><span>成果物</span>・<a href='https://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・<a href='https://react-plactice.vercel.app/' target='_blank'>React.js Plactice</a><br>・カウントダウン機能追加<br>・カレンダー予約サイト（開発中）"
       },
       {
         "name": "Nuxt.js",
         "image": "/images/skill/skill_nuxt.png",
         "class": "skill__zoom nuxt",
         "alt": "Nuxt.js",
-        "level": "50% ミドル",
-        "years": "1年以上",
-        "desc": "Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたアーキテクチャです。<br />機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br /><br /><span>成果物</span><a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br /><br /><span>LT資料</span><a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a><br>カレンダー予約サイト開発中"
+        "desc": "Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたアーキテクチャです。<br />機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br /><br /><span>成果物</span>・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br /><br /><span>LT資料</span>・<a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>"
       },
       {
         "name": "NEXT.js",
         "image": "/images/skill/skill_next.png",
         "class": "skill__zoom next",
         "alt": "NEXT.js",
-        "level": "40% ノービス",
-        "years": "1年未満",
-        "desc": "NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br /><br /><span>成果物</span><a href='http://uemu-engineer.com/' target='_blank'>Nu stack</a>"
+        "desc": "NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br /><br /><span>成果物</span>・<a href='http://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・カレンダー予約サイト（開発中）"
+      },
+      {
+        "name": "pug",
+        "image": "/images/skill/skill_pug.png",
+        "class": "skill__zoom pug",
+        "alt": "pug",
+        "desc": "pugはHTMLを効率よくコーディングする為のテンプレートエンジンです。SCSSと似てコンパイルが必要になります。<br />共通パーツ(ヘッダー・フッター)付きの3ページ以上をコーディングをする時とか、同じコンポーネントを3桁以上コーディングしなければいけない時に適した言語です。<br /><br /><span>成果物</span>・アパレルECサイト 1案件<br />・<a href=’https://codepen.io/uemuragame5683’ target=’_blank’>CODEPEN</a>"
+      },
+      {
+        "name": "BASE",
+        "image": "/images/skill/skill_base.png",
+        "class": "skill__zoom base",
+        "alt": "BASE",
+        "desc": "BASE(ベイス)は会員登録するだけで誰でも簡単にネットショップが作成できるサービスです。<br />気に入ったテーマを選択して、カスタマイズするだけでネットが公開できます。<br />また、SEO設定・クーポン・メールマガジン・レビューなど機能が充実でありほとんど無償で機能を追加できます。<br />もちろん、オリジナルのサイトを作成することが可能です。<br />必要な言語はhtml/css/jqueryです。<br />オリジナルのサイトを作る場合は、言語スキルを身につけることが必須なので、未経験の方はテーマ選択・カスタマイズのみで十分でしょう。<br /><br/><span>成果物</span>・美容系のECサイト 1案件"
+      },
+      {
+        "name": "Word Press",
+        "image": "/images/skill/skill_wp.png",
+        "class": "skill__zoom wp",
+        "alt": "Word Press",
+        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /><br /><span>成果物</span><br />・コーポレートサイト　2件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 1件<br />・実家の自営業(製作中)"
       },
       {
         "name": "Movable Type",
         "image": "/images/skill/skill_mt.png",
         "class": "skill__zoom mt",
         "alt": "Movable Type",
-        "level": "50% ミドル",
-        "years": "3年以上",
-        "desc": "Movable Typeは日本の企業シックス・アパート社が開発・提供したCMSであります。このCMSの特徴はWordPressのようにデータベースを参照にしてphpで動的処理してコンテンツを出力しているのではなく、このCMSは記事を登録後にhtmlファイルをそのまま生成されるので、データベースを参照せずにいられるのでアクセス負荷にはとてもつよいのが特徴です。<br /><br /><span>成果物</span>Webサイト / アプリと連携する為のRSS作成<br />HTMLメルマガ作成<br />LOOKBOOKページ作成 etc..."
+        "desc": "Movable Typeは日本の企業シックス・アパート社が開発・提供したCMSであります。このCMSの特徴はWordPressのようにデータベースを参照にしてphpで動的処理してコンテンツを出力しているのではなく、このCMSは記事を登録後にhtmlファイルをそのまま生成されるので、データベースを参照せずにいられるのでアクセス負荷にはとてもつよいのが特徴です。<br /><br /><span>成果物</span>・Webサイト / アプリと連携する為のRSS作成<br />・HTMLメルマガ作成<br />・LOOKBOOKページ作成<br />・NEWS一覧・詳細CMS化 5件程"
       },
       {
         "name": "Micro CMS",
         "image": "/images/skill/skill_mcms.png",
         "class": "skill__zoom mcms",
         "alt": "Micro CMS",
-        "level": "60% ミドル",
-        "years": "1年以上",
-        "desc": "Micro CMSは2019年8月にリリースした、初の日本製のヘッドレスCMSです。ほとんどのヘッドレスCMSは英語で記載されているが、Micor CMSは日本語で記載されているため、日本語でチャットサポートが利用できるのが快適です。<br />ヘッドレスCMSなのでアカウントを登録するだけで利用でき、管理画面のサーバー管理はは一切不要なのでhtml/css/javascriptの技術があれば誰でも利用できます。<br /><br /><span>成果物</span><a href='https://nu-blogsite.net/' target='_blank'>うえむーブログ</a><br /><a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a><br />アパレルブランドサイト 多数 etc...<br /><span>LT資料</span><a href='https://speakerdeck.com/uemura/microcmsnituite-gai-yao-bian-a45850a4-448d-423a-9675-9be6be7c4ba7' target='_blank'>micro CMSについて</a><br /><a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>"
+        "desc": "Micro CMSは2019年8月にリリースした、初の日本製のヘッドレスCMSです。ほとんどのヘッドレスCMSは英語で記載されているが、Micor CMSは日本語で記載されているため、日本語でチャットサポートが利用できるのが快適です。<br />ヘッドレスCMSなのでアカウントを登録するだけで利用でき、管理画面のサーバー管理はは一切不要なのでhtml/css/javascriptの技術があれば誰でも利用できます。<br /><br /><span>成果物</span>・<a href='https://nu-blogsite.net/' target='_blank'>うえむーブログ</a><br />・<a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a><br />・アパレルECサイト 1件<br /><br /><span>LT資料</span>・<a href='https://speakerdeck.com/uemura/microcmsnituite-gai-yao-bian-a45850a4-448d-423a-9675-9be6be7c4ba7' target='_blank'>micro CMSについて</a><br />・<a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>"
       },
       {
         "name": "gulp",
         "image": "/images/skill/skill_gulp.png",
         "class": "skill__zoom gulp",
         "alt": "gulp",
-        "level": "40% ノービス",
-        "years": "3年以上",
         "desc": "gulpはSCSS・Ejs・minify・スプライト化・pug/phpなどのhtml化などのタスクを自動化してくれるJavascriptツールキットです。<br />自分はSCSS・Pugの言語で実装する時によく用いります。<br />gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。"
       },
       {
@@ -158,18 +126,14 @@
         "image": "/images/skill/skill_go.png",
         "class": "skill__zoom go",
         "alt": "go",
-        "level": "20% ビギナー",
-        "years": "1年未満",
-        "desc": "go(go lang)はGoogle社が開発したサーバーサイド言語であり、シンプルで信頼性があり、無駄のない有能なソフトウェア開発を簡単に実現できるように設計されいます。<br/>ゆえに、実用性があり、効率よく作業を行うことが可能なため、Go言語は「軽量・高速・シンプル」なプログラミング言語として広く知られています。<br/>goのマスコットキャラクターはgopherであり、日本語で訳すと「ホリネズミ」だそうです。<br/><br/><span>成果物</span><a href='https://github.com/uemura5683/golang_typinggame' target='_blank'>github タイピングゲーム</a><br /><br/><span>LT資料</span><a href='https://speakerdeck.com/uemura/golang-dezhi-xian-shi-jian-fu-kirandamubiao-shi-falsetaipingugemuwozuo-tutemita' target='_blank'>Golang で制限時間付き・ランダム表示のタイピングゲームを作ってみた。</a>"
+        "desc": "go(go lang)はGoogle社が開発したサーバーサイド言語であり、シンプルで信頼性があり、無駄のない有能なソフトウェア開発を簡単に実現できるように設計されいます。<br/>ゆえに、実用性があり、効率よく作業を行うことが可能なため、Go言語は「軽量・高速・シンプル」なプログラミング言語として広く知られています。<br/>goのマスコットキャラクターはgopherであり、日本語で訳すと「ホリネズミ」だそうです。<br/><br/><span>成果物</span>・<a href='https://github.com/uemura5683/golang_typinggame' target='_blank'>github タイピングゲーム</a><br /><br/><span>LT資料</span><a href='https://speakerdeck.com/uemura/golang-dezhi-xian-shi-jian-fu-kirandamubiao-shi-falsetaipingugemuwozuo-tutemita' target='_blank'>・Golang で制限時間付き・ランダム表示のタイピングゲームを作ってみた。</a>"
       },
       {
         "name": "Figma",
         "image": "/images/skill/skill_figma.png",
         "class": "skill__zoom figma",
         "alt": "Figma",
-        "level": "60% ミドル",
-        "years": "1年未満",
-        "desc": "figmaはアカウント登録するだけで利用できる。サーバーレスUX/ULデザインカンプ作成ツールです。<br/>仕様がXDと少しにており、XDに慣れている方はサクッと使いこなせると思います。<br/>作成したデザインカンプを仲間に招待するだけで共有することができます。<br/><br/><span>成果物</span><a href='https://takarabako.tokyo/' target='_blank'>タカラバコ</a><br/><a href='https://uemu-engineer.com/' target='_blank'>NU-stack</a><br/><br/><span>参考資料</span><a href='https://www.figma.com/' target='_blank'>figma</a><br/><a href='https://web-design.school/tutorials/figma/getting-started' target='_blank'>チュートリアル</a>"
+        "desc": "figmaはアカウント登録するだけで利用できる。サーバーレスUX/ULデザインカンプ作成ツールです。<br/>仕様がXDと少しにており、XDに慣れている方はサクッと使いこなせると思います。<br/>作成したデザインカンプを仲間に招待するだけで共有することができます。<br/><br/><span>成果物</span>・コーポレートサイト 2案件<br/>・<a href='https://uemu-engineer.com/' target='_blank'>NU-stack</a><br/><br/><span>参考資料</span>・<a href='https://www.figma.com/' target='_blank'>figma</a><br/>・<a href='https://web-design.school/tutorials/figma/getting-started' target='_blank'>チュートリアル</a>"
       }
     ]
   }

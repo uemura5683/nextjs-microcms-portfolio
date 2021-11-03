@@ -5,12 +5,14 @@
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
-    margin: 0 -2%;
+    margin: 0;
+    gap: 1rem;
 }
 .skill__list li {
-    width: 46%;
-    margin: 0 2% 25px;
+    width: calc(50% - 0.5rem);
+    margin: 0;
     cursor: pointer;
+
 }
 .skill__list li button {
     border: none;
@@ -27,8 +29,8 @@
     box-shadow: 0 0 0 0 transparent;
 }
 .skill__list li img {
-    width: 80%;
-    margin: 0 auto 20px;
+    width: 100%;
+    margin: 0 auto;
     -webkit-transition:opacity .3s ease-in-out;
             transition:opacity .3s ease-in-out;
 }
@@ -37,263 +39,6 @@
     -webkit-transition:opacity .3s ease-in-out;
             transition:opacity .3s ease-in-out;
 }
-.skill__list li .gage {
-    width: 100%;
-    margin: 0;
-    height: 15px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: #737373;
-}
-.skill__list li .gage:after {
-    content: '';
-    height: 13px;
-    width: 0%;
-    background-color: white;
-    display: block;
-    border-radius: 10px;
-}
-.slide-animation .skill__list li.html .gage:after {
-    -webkit-animation: gagehtml .5s ease-in-out 0s infinite;
-            animation: gagehtml .5s ease-in-out 0s infinite;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.wp .gage:after {
-    -webkit-animation: gagewp .5s ease-in-out 0s infinite;
-            animation: gagewp .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.css .gage:after {
-    -webkit-animation: gagecss .5s ease-in-out 0s infinite;
-            animation: gagecss .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.mt .gage:after {
-    -webkit-animation: gagemt .5s ease-in-out 0s infinite;
-            animation: gagemt .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.js .gage:after {
-    -webkit-animation: gagejs .5s ease-in-out 0s infinite;
-            animation: gagejs .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.mcms .gage:after {
-    -webkit-animation: gagemcms .5s ease-in-out 0s infinite;
-            animation: gagemcms .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.jq .gage:after {
-    -webkit-animation: gagejq .5s ease-in-out 0s infinite;
-            animation: gagejq .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.vue .gage:after {
-    -webkit-animation: gagevue .5s ease-in-out 0s infinite;
-            animation: gagevue .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.php .gage:after {
-    -webkit-animation: gagephp .5s ease-in-out 0s infinite;
-            animation: gagephp .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.nuxt .gage:after {
-    -webkit-animation: gagenuxt .5s ease-in-out 0s infinite;
-            animation: gagenuxt .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.scss .gage:after {
-    -webkit-animation: gagenscss .5s ease-in-out 0s infinite;
-            animation: gagenscss .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.next .gage:after {
-    -webkit-animation: gagenext .5s ease-in-out 0s infinite;
-            animation: gagenext .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.pug .gage:after {
-    -webkit-animation: gagepug .5s ease-in-out 0s infinite;
-            animation: gagepug .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.node .gage:after {
-    -webkit-animation: gagenode .5s ease-in-out 0s infinite;
-            animation: gagenode .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.go .gage:after {
-    -webkit-animation: gagego .5s ease-in-out 0s infinite;
-            animation: gagego .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.gulp .gage:after {
-    -webkit-animation: gagegulp .5s ease-in-out 0s infinite;
-            animation: gagegulp .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.base .gage:after {
-    -webkit-animation: gagebase .5s ease-in-out 0s infinite;
-            animation: gagebase .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.figma .gage:after {
-    -webkit-animation: gagefigma .5s ease-in-out 0s infinite;
-            animation: gagefigma .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.react .gage:after {
-    -webkit-animation: gagereact .5s ease-in-out 0s infinite;
-            animation: gagereact .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-.slide-animation .skill__list li.ts .gage:after {
-    -webkit-animation: gagets .5s ease-in-out 0s infinite;
-            animation: gagets .5s ease-in-out 0s infinite;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-}
-@keyframes gagehtml {
-    0% { width: 0%; }  
-    100% { width: 70%; }
-}
-@keyframes gagewp {
-    0% { width: 0%; }  
-    100% { width: 50%; }
-}
-@keyframes gagecss {
-    0% { width: 0%; }  
-    100% { width: 70%; }
-}
-@keyframes gagemt {
-    0% { width: 0%; }  
-    100% { width: 50%; }
-}
-@keyframes gagejs {
-    0% { width: 0%; }  
-    100% { width: 60%; }
-}
-@keyframes gagemcms {
-    0% { width: 0%; }  
-    100% { width: 50%; }
-}
-@keyframes gagejq {
-    0% { width: 0%; }  
-    100% { width: 60%; }
-}
-@keyframes gagevue {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagephp {
-    0% { width: 0%; }  
-    100% { width: 60%; }
-}
-@keyframes gagenuxt {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagenscss {
-    0% { width: 0%; }  
-    100% { width: 50%; }
-}
-@keyframes gagenext {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagepug {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagenode {
-    0% { width: 0%; }  
-    100% { width: 50%; }
-}
-@keyframes gagego {
-    0% { width: 0%; }  
-    100% { width: 20%; }
-}
-@keyframes gagegulp {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagebase {
-    0% { width: 0%; }  
-    100% { width: 60%; }
-}
-@keyframes gagefigma {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagereact {
-    0% { width: 0%; }  
-    100% { width: 40%; }
-}
-@keyframes gagets {
-    0% { width: 0%; }  
-    100% { width: 20%; }
-}
-
 @media (min-width: 991px) {
     /**
     * skill content
@@ -302,16 +47,9 @@
         margin: 0 ;
     }
     .skill__list li {
-        margin: 0 0 50px;
-        width: calc( 99.9% / 3 );
-    }
-    .skill__list li img {
-        width: 30%;
-    }
-    .skill__list li .gage {
-        width: 50%;
-        margin: 0 15% 0 5%;
-        height: 20px;
+        margin: 0;
+        width: -webkit-calc( 99.9% / 3 - 0.7rem);
+        width: calc( 99.9% / 3 - 0.7rem);
     }
     .skill__list li .gage:after {
         height: 18px;
