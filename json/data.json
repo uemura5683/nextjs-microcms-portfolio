@@ -12,14 +12,14 @@
         "image": "/images/skill/skill_css.png",
         "class": "skill__zoom css",
         "alt": "CSS",
-        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、パソコンスクールで学んだ言語です。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張りましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 30案件以上<br />・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
+        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、僕が初めて学んだ言語の一つであります。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張りましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 30案件以上<br />・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
       },
       {
         "name": "Javascript",
         "image": "/images/skill/skill_js.png",
         "class": "skill__zoom js",
         "alt": "Javascript",
-        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなどもあり、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト  30案件以上<br />・サードパーティツール導入<br />・Google Analyticsタグ実装<br />・MAツール導入<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL</a>"
+        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなど、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト  30案件以上<br />・サードパーティツール導入<br />・Google Analyticsタグ実装<br />・MAツール導入<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL</a>"
       },
       {
         "name": "PHP",
@@ -63,28 +63,28 @@
         "image": "/images/skill/skill_react.png",
         "class": "skill__zoom react",
         "alt": "React.js",
-        "desc": "React は、Facebookによって開発されているユーザインタフェース構築のためのJavaScriptライブラリです。<br />React.jsまたはReactJSの名称でも知られております。<br />Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br />また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。<br /><br /><span>成果物</span>・<a href='https://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・<a href='https://react-plactice.vercel.app/' target='_blank'>React.js Plactice</a><br>・カウントダウン機能追加<br>・カレンダー予約サイト（開発中）"
+        "desc": "React は、Facebookによって開発されているユーザインタフェース構築のためのJavaScriptフレームワークです。<br />Reactはシングルページアプリケーションやモバイルアプリケーションの開発におけるベースとして使用することができます。 <br />また、React.jsの拡張版Next.js・Gatsby.jsも存在しており、このサイトはNext.jsで作成しております。<br /><br /><span>成果物</span>・<a href='https://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・<a href='https://react-plactice.vercel.app/' target='_blank'>React.js Plactice</a><br>・カウントダウン機能追加<br>・カレンダー予約サイト（開発中）"
       },
       {
         "name": "Nuxt.js",
         "image": "/images/skill/skill_nuxt.png",
         "class": "skill__zoom nuxt",
         "alt": "Nuxt.js",
-        "desc": "Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたアーキテクチャです。<br />機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br /><br /><span>成果物</span>・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br /><br /><span>LT資料</span>・<a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>"
+        "desc": "Nuxt.jsはVueの公式ガイドラインに沿って強力なアーキテクチャを提供するように作られたフレームワークです。<br />機能はたくさんあり、サーバーサイドレンダリング・JS / CSS ミニファイ化・ プリプロセッサ・モジュール構造で拡張できるなどいろんな機能があります。<br /><br /><span>成果物</span>・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br /><br /><span>LT資料</span>・<a href='https://speakerdeck.com/uemura/microcms-plus-nuxt-dot-jstege-ren-hurokusaitowotehuroisitajian' target='_blank'>Microcms + nuxt.jsで個人ブログサイトをデプロイした件</a>"
       },
       {
         "name": "NEXT.js",
         "image": "/images/skill/skill_next.png",
         "class": "skill__zoom next",
         "alt": "NEXT.js",
-        "desc": "NEXT.jsは、ZEIT社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークあります。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br /><br /><span>成果物</span>・<a href='http://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・カレンダー予約サイト（開発中）"
+        "desc": "NEXT.jsは、Vercel社によって開発されたJavascriptのフレームワークであり、Reactベースにしたフロントエンドのフレームワークです。SSR/SSG、ファイルベースルーティング、開発サーバの部分的な高速リロードなど様々な機能を持っています。<br />最近ではバージョンが12まで上がり新しい機能や高速化されており世界中の人から注目されているフレームワークです。<br /><br /><span>成果物</span>・<a href='http://uemu-engineer.com/' target='_blank'>Nu stack</a><br>・カレンダー予約サイト（開発中）"
       },
       {
         "name": "pug",
         "image": "/images/skill/skill_pug.png",
         "class": "skill__zoom pug",
         "alt": "pug",
-        "desc": "pugはHTMLを効率よくコーディングする為のテンプレートエンジンです。SCSSと似てコンパイルが必要になります。<br />共通パーツ(ヘッダー・フッター)付きの3ページ以上をコーディングをする時とか、同じコンポーネントを3桁以上コーディングしなければいけない時に適した言語です。<br /><br /><span>成果物</span>・アパレルECサイト 1案件<br />・<a href=’https://codepen.io/uemuragame5683’ target=’_blank’>CODEPEN</a>"
+        "desc": "pugはHTMLを効率よくコーディングする為のテンプレートエンジンです。SCSSと同様にWebpack・gulpなどでコンパイルが必要になります。<br />共通パーツ(ヘッダー・フッター)付きの3ページ以上をコーディングをする時とか、同じコンポーネントを3桁以上コーディングしなければいけない時に適した言語です。<br /><br /><span>成果物</span>・アパレルECサイト 1案件<br />・<a href=’https://codepen.io/uemuragame5683’ target=’_blank’>CODEPEN</a>"
       },
       {
         "name": "BASE",
@@ -98,7 +98,7 @@
         "image": "/images/skill/skill_wp.png",
         "class": "skill__zoom wp",
         "alt": "Word Press",
-        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /><br /><span>成果物</span><br />・コーポレートサイト　2件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 1件<br />・実家の自営業(製作中)"
+        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /<br /><span>成果物</span>・コーポレートサイト　2件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 1件<br />・実家の自営業(製作中)"
       },
       {
         "name": "Movable Type",
@@ -119,7 +119,7 @@
         "image": "/images/skill/skill_gulp.png",
         "class": "skill__zoom gulp",
         "alt": "gulp",
-        "desc": "gulpはSCSS・Ejs・minify・スプライト化・pug/phpなどのhtml化などのタスクを自動化してくれるJavascriptツールキットです。<br />自分はSCSS・Pugの言語で実装する時によく用いります。<br />gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。"
+        "desc": "gulpはSCSS・Ejs・minify・スプライト化・pug/phpなどのhtml化などのタスクを自動化してくれるJavascriptツールキットです。<br />自分はSCSS・Pugの言語で実装する時に利用します。<br />gulpを利用する際はNode.js・npm・gulpの順でインストールし、gulpfile.jsを生成する必要があります。"
       },
       {
         "name": "go",
