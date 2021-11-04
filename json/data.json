@@ -26,7 +26,7 @@
         "image": "/images/skill/skill_php.png",
         "class": "skill__zoom php",
         "alt": "PHP",
-        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>・ブログサイト 1件(製作中)<br />・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 30案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)）など<br />・大手受託案件 モック作成"
+        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 30案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)）など<br />・大手受託案件 モック作成"
       },
       {
         "name": "jQuery",
