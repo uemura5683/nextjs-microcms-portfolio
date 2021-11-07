@@ -16,7 +16,7 @@ const SkillContent = (Jsondata, index) => {
   Jsondata = Jsondata.data;
   return (
     <>
-      <li className={Jsondata.class} key={index}>
+      <li className={Jsondata.class}>
         <button onClick={openModal}>
           <img
             src={Jsondata.image}

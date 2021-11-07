@@ -8,7 +8,6 @@ import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
-  m_box: THREE.Object3D
 }
 
 const Canvas: React.FC = () => {
@@ -21,11 +20,11 @@ const Canvas: React.FC = () => {
     // init scene
     const scene = new Scene()
 
-    const camera = new PerspectiveCamera( 75, canvas.clientWidth / canvas.clientHeight, 0.1, 4000);
+    const camera = new PerspectiveCamera( 75, canvas.clientWidth / canvas.clientHeight, 0.1, 1500);
     camera.position.set( 0, 0, 400 );
 
     // init renderer
-    const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
+    const renderer = new WebGLRenderer({ canvas: canvas, antialias: true, alpha: true })
     renderer.setSize(2600, 1300)
 
     // init object
@@ -37,41 +36,45 @@ const Canvas: React.FC = () => {
 
     // add object
     const e_Geometry = new SphereGeometry( 200, 64, 64 );
-    const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/earch.jpg');
+    const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/earch.jpg');
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
     const e_box = new Mesh(e_Geometry, e_materials);
     object.add(e_box);
   
-    const m_Geometry = new SphereGeometry( 15, 64, 64 );
-    const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/moon.jpg');
+    const m_Geometry = new SphereGeometry( 20, 32, 32 );
+    const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/moon.jpg');
     const m_materials = new MeshStandardMaterial( { color: 0xffffff, map:m_texture } );
     const m_box = new Mesh( m_Geometry, m_materials );
+    m_box.position.set(0, 0, 250);
     object.add(m_box);
-  
-    const c_Geometry = new SphereGeometry( 205, 64, 64 );
-    const c_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth/img/crowd.png');
-    const c_materials = new MeshStandardMaterial( { map:c_texture, transparent: true, side: DoubleSide } );
-    const c_box = new Mesh( c_Geometry, c_materials );
-    object.add(c_box);
 
+    const s_Geometry = new SphereGeometry( 20, 32, 32 );
+    const s_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/sun.jpg');
+    const s_materials = new MeshStandardMaterial( { color: 0xffffff, map:s_texture } );
+    const s_box = new Mesh( s_Geometry, s_materials );
+    s_box.position.set(0, -250, 250);
+    object.add(s_box);    
 
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
-    for (let i = 0; i < 2000; i++) {
-      const material = new MeshPhongMaterial({
-        color: 0xffffff,
-        flatShading: true
-      })
+    for (let i = 0; i < 1000; i++) {
+      let rubble = [0X3a2424, 0X3f0a0a, 0X380e0e, 0X331233, 0X180018],
+          rubbleNo = Math.floor( Math.random() * rubble.length),
+          material = new MeshPhongMaterial({
+            color: rubble[rubbleNo],
+            flatShading: true
+          })
+
       const mesh = new Mesh(geometry, material)
       mesh.position.set(size * Math.random() - 0.5, size * Math.random() - 0.5, size * Math.random() - 0.5).normalize()
-      mesh.position.multiplyScalar(Math.random() * 400)
+      mesh.position.multiplyScalar(Math.random() * 500)
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
       mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 2
       object.add(mesh)
     }
 
     const directionalLight = new DirectionalLight( 0xffffff, 1 );
-    directionalLight.position.set( 205, 1300, 80 );
+    directionalLight.position.set( 0, 100, 100 );
     scene.add( directionalLight );
   
     const ambient = new AmbientLight( 0x222222 );
@@ -81,7 +84,7 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const effectGlitch = new GlitchPass(64)
+    const effectGlitch = new GlitchPass()
     effectGlitch.renderToScreen = true
     composer.addPass(effectGlitch)
 
@@ -91,23 +94,15 @@ const Canvas: React.FC = () => {
           effectGlitch.goWild = controls.goWild;
       };
     };
-    animate({ object, composer, m_box })
+    animate({ object, composer })
   }
 
-
   // for animation
-  const animate = ({ object, composer, m_box }: ParamsAnimate) => {
-    window.requestAnimationFrame(() => animate({ object, composer, m_box }))
+  const animate = ({ object, composer }: ParamsAnimate) => {
 
-    const m_radian = ( .5 * Math.PI ) / 1000;  
-    m_box.position.x = 300 * Math.sin( m_radian );
-    m_box.position.y = 50;
-    m_box.position.z = 300 * Math.cos( m_radian );
-
-    object.rotation.x += 0.01
-    object.rotation.y += 0.01
-    object.rotation.z += 0.01
-
+    window.requestAnimationFrame(() => animate({ object, composer }))
+    object.rotation.y += 0.015
+    object.rotation.z += 0.015
     composer.render()
   }
 

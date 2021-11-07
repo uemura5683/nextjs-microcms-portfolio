@@ -204,4 +204,5 @@ template {
 canvas {
   width: 100% !important;
   height: 50% !important;
+  background-image: radial-gradient(#071bb5, #000000);
 }
