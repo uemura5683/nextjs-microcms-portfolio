@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal'
 
-const SkillContent = (Jsondata, index) => {
+const SkillContent = (Jsondata, key) => {
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {
@@ -13,6 +13,7 @@ const SkillContent = (Jsondata, index) => {
   function closeModal(){
       setIsOpen(false);
   }
+  console.log(key);
   Jsondata = Jsondata.data;
   return (
     <>
