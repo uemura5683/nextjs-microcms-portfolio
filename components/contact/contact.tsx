@@ -27,7 +27,7 @@ const Contacts = () => {
         , ContactElement: Element = document.getElementById( 'p-contact' )
         , ContactPosition: number = ContactElement.getBoundingClientRect().top
         , currentPosition: number = window.pageYOffset
-        , targetPosition: number = ContactPosition + currentPosition;
+        , targetPosition: number  = ContactPosition + currentPosition;
         
     if( name == "" || email == "" || title == "" || body == "" ) {
       const error_data = { email: email, name: name, title: title, body: body };

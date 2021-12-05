@@ -9,7 +9,7 @@ export default function Skill() {
         {Data.content ? Data.content.map((Jsondata, index) => 
             <Skilllist
               data={Jsondata}
-              index={index}>
+              key={index}>
             </Skilllist>
           ): null}
       </ul>

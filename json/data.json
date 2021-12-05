@@ -5,35 +5,56 @@
         "image": "/images/skill/skill_html.png",
         "class": "skill__zoom html",
         "alt": "HTML",
-        "desc": "htmlは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />HTMLは比較的自由にかける言語であり、初学者さんでもすぐに覚えられるマークアップ言語ですが、基礎やルールをしっかり覚える必要があります。<br />それに反すると保守性が悪くなったり、レイアウトが任意通りに反映されなくなることがあります。<br />また、W3Cと言ってWeb標準規格を準すること推奨されており、それを準しないと同じWebページでもブラウザによってレイアウトなどが変わってしまうという問題を抱えています。<br />なので、基礎やルールをしっかり把握し、W3Cを準するようにマークアップして行きましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a>"
+        "desc": "htmlは「HyperText Markup Language」の略であり、マークアップ言語の一つであり、僕が初めて学んだ言語です。<br />HTMLは比較的自由にかける言語であり、初学者さんでもすぐに覚えられるマークアップ言語ですが、基礎やルールをしっかり覚える必要があります。<br />それに反すると保守性が悪くなったり、レイアウトが任意通りに反映されなくなることがあります。<br />また、W3Cと言ってWeb標準規格を準すること推奨されており、それを準しないと同じWebページでもブラウザによってレイアウトなどが変わってしまうという問題を抱えています。<br />なので、基礎やルールをしっかり把握し、W3Cを準するようにマークアップして行きましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 3案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='http://uemu-engineer.com/' target='_blank'>Nu-stack</a>"
       },
       {
         "name": "CSS",
         "image": "/images/skill/skill_css.png",
         "class": "skill__zoom css",
         "alt": "CSS",
-        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、僕が初めて学んだ言語の一つであります。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張りましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
+        "desc": "cssは「Cascading Style Sheets」の略であり、Webページをどのように装飾するかを調整する為の言語であり、僕が初めて学んだ言語の一つであります。<br />cssを学んでいく上で難しいのはCSS設計・レスポンシブ対応です。<br />最初の頃は不慣れで時間が滞ることもありますが、トライアンドエラーを繰り替えすことで結構上達しますので、諦めずに頑張りましょう。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 3案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・<a href='https://codepen.io/uemuragame5683' target='_blank'>CODEPEN</a>"
       },
       {
         "name": "Javascript",
         "image": "/images/skill/skill_js.png",
         "class": "skill__zoom js",
         "alt": "Javascript",
-        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなど、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 2案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・サードパーティツール導入<br />・Google Analyticsタグ実装<br />・MAツール導入<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL</a>"
+        "desc": "JavascriptはWebページをコンテンツをアニメーション・拡大表示・アコーディオンさせたり、フォームに文字列を入力し送信できたりできます。<br />Javascriptは様々なバリエーションがあり、jQuery・Vue.jsなどのフレームワークやGulpなどのツールキット、3Dアニメーションを実現できるthree.jsなど、開発者が学びたい言語トップ10に入る程ものすごい人気のある言語です。<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・コーポレートサイト 3案件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 50案件以上<br />・サードパーティツール導入<br />・Google Analyticsタグ実装<br />・MAツール導入<br />・<a href='https://nu-blogsite.net/' target='_blank'>Nu-Blog</a><br />・<a href='https://threejs-plactice.vercel.app/' target='_blank'>Web GL</a>"
       },
       {
         "name": "PHP",
         "image": "/images/skill/skill_php.png",
         "class": "skill__zoom php",
         "alt": "PHP",
-        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 50案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)・カート短縮実装(チームで実装)）など<br />・大手受託案件 モック作成"
+        "desc": "phpは「Hypertext Preprocessor」を略したサーバーサイド言語であり、私が3番目に学んだ言語でありhtml/cssとは全く異なった記述なので結構苦労した覚えはあります。<br />phpの特徴はhtml/cssも同時にコーディングすることも可能です。php「symfony・lavabel」は様々なフレームワークがあり、wordpressという世界的に利用されているCMSもphpから作成されております。<br /><br/><span>成果物</span>・ブログサイト 1件(製作中)<br />・コーポレートサイト 3案件<br />・アパレルECサイト 50案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)・カート短縮実装(チームで実装)）・バリデート実装など<br />・大手受託案件 モック作成"
+      },
+      {
+        "name": "Symfony",
+        "image": "/images/skill/skill_symfony.png",
+        "class": "skill__zoom symfony",
+        "alt": "Symfony",
+        "desc": "SymfonyはPHPに活用されているオープンソースWebアプリケーションフレームワークです。開発効率が高く、セキュリティの設定も最小限に済むなどが挙げられ世界的にも注目を集めています。弊社はSymfonyのフレームワークを利用してECサイトの作成を行なっています。<br /><br/><span>成果物</span>・アパレルECサイト 50案件以上<br />・API作成<br />・機能開発（お気に入り(個人で実装)・オフ率(チームで実装)・PayPay導入(チームで実装)・カート短縮実装(チームで実装)）・バリデート実装など"
+      },
+      {
+        "name": "Laravel",
+        "image": "/images/skill/skill_laravel.png",
+        "class": "skill__zoom laravel",
+        "alt": "Laravel",
+        "desc": "LaravelはPHPのフレームワークの一つであり、Symfonyを基盤として作られております。PHPのフレームワークの中では一番人気があり、世界的に普及しています。<br /><br/><span>成果物</span>・アパレルECサイト 1案件<br />・ECパッケージ開発(50人以上のチーム)"
+      },
+      {
+        "name": "MySQL",
+        "image": "/images/skill/skill_mysql.png",
+        "class": "skill__zoom mysql",
+        "alt": "MySQL",
+        "desc": "MySQLはオープンソースのリレーショナルデータベース管理システムであり、世界で最も人気があります。主に、開発環境構築・データ更新数時に利用します。<br /><br/><span>成果物</span>・開発環境構築<br />・DB同期<br />・アカウントデータ更新"
       },
       {
         "name": "jQuery",
         "image": "/images/skill/skill_jq.png",
         "class": "skill__zoom jq",
         "alt": "jQuery",
-        "desc": "jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />jQueryにはハンバーガーメニュー・アコーディオンなどのアニメーションを簡単に実装できる便利なメソッドが用意されています。<br />アニメーションを実装するにはjQueryを適用することを推奨します、<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・ブログサイト 1件(製作中)<br />・コーポレートサイト 2案件<br />・アパレルECサイト 50案件以上"
+        "desc": "jQueryはJavascriptコードをより簡潔に記述ができるようにするために設計されたJavascriptライブラリーです。<br />jQueryにはハンバーガーメニュー・アコーディオンなどのアニメーションを簡単に実装できる便利なメソッドが用意されています。<br />アニメーションを実装するにはjQueryを適用することを推奨します、<br /><br /><span>成果物</span>・美容系のECサイト 1案件<br />・ブログサイト 1件(製作中)<br />・コーポレートサイト 3案件<br />・アパレルECサイト 50案件以上"
       },
       {
         "name": "SCSS",
@@ -98,7 +119,7 @@
         "image": "/images/skill/skill_wp.png",
         "class": "skill__zoom wp",
         "alt": "Word Press",
-        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /<br /><span>成果物</span>・コーポレートサイト　2件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 1件<br />・実家の自営業(製作中)"
+        "desc": "Word PressはCMSの一つでであり、初学者や未エンジニアでも無料でダウンロードできて適用できます。<br />また、お名前.com / Xserverなどのドメイン会社を契約すればサーバー・ドメイン・WPで一気にインストール・有効になりすぐに使えるようになり、世界で一番使用率が高いCMSです。<br />Word PressはPHPで開発されており、データベース管理(MySQL)を利用しております。<br /<br /><span>成果物</span>・コーポレートサイト　3件<br />・ブログサイト 1件(製作中)<br />・アパレルECサイト 1件<br />・実家の自営業(製作中)"
       },
       {
         "name": "Movable Type",

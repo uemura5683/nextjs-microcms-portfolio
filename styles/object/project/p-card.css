@@ -4,13 +4,12 @@
 .card ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    gap: 1rem;
+    margin: 0 -.5rem;
 }
 .card ul li{
-    width: calc(50% - .5rem);
+    width: calc(50% - 1rem);
     text-align: center;
-    margin: 0;
+    margin: 0 .5rem 1rem;
     cursor: pointer;
 }
 .card ul li figure{
@@ -46,9 +45,12 @@
     text-decoration: none;
 }
 @media (min-width: 991px) {
+    .card ul {
+        margin: 0 -.5rem;
+    }
     .card ul li{
-        margin: 0;
-        width: calc(100% / 3 - .7rem );
+        margin: 0 .5rem 1rem;
+        width: calc(100% / 3 - 1rem );
     }
     .card ul li:nth-child(n + 10) {
         display: none;

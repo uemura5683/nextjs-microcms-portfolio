@@ -2,9 +2,7 @@
 * reset.css
 *********************************/
 
-*,
-::before,
-::after {
+* {
   box-sizing: border-box;
   border-style: solid;
   border-width: 0;
@@ -70,11 +68,6 @@ a {
 
 b, strong {
   font-weight: bolder;
-}
-
-code, kbd, samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: inherit; /* 2 */
 }
 
 small {
@@ -148,11 +141,6 @@ textarea {
   overflow: auto;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
@@ -164,10 +152,6 @@ label[for] {
 
 details {
   display: block;
-}
-
-summary {
-  display: list-item;
 }
 
 [contenteditable] {
@@ -204,5 +188,7 @@ template {
 canvas {
   width: 100% !important;
   height: 50% !important;
-  background-image: radial-gradient(#071bb5, #000000);
+  background-image: url(https://uemu-engineer.com/images/three/planet.jpg);
+  background-size: cover;
+  backdrop-filter:  brightness(50%);
 }

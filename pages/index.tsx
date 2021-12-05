@@ -116,7 +116,7 @@ function Home( {info, work, blog} ) {
 
 export async function getStaticProps() {
   const key = {
-    headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.NS_API_KEY},
   };
   const key_nu = {
     headers: {'X-MICROCMS-API-KEY': process.env.NU_API_KEY},

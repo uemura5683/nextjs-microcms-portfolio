@@ -86,7 +86,7 @@ export default function BlogId( { infos, info_data, infolist } ) {
 
 export const getStaticPaths = async () => {
   const key = {
-    headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.NS_API_KEY},
   };
   const data = await fetch('https://nu-portfolio.microcms.io/api/v1/information', key)
     .then(res => res.json())
@@ -100,7 +100,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async context => {
   const id = context.params.id;
   const key = {
-    headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
+    headers: {'X-MICROCMS-API-KEY': process.env.NS_API_KEY},
   };
   const data = await fetch(
     'https://nu-portfolio.microcms.io/api/v1/information/' + id,

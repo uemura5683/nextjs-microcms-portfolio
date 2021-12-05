@@ -12,14 +12,11 @@
 .link__list li a {
     display: block;
     opacity: 1;
-    -webkit-transition: opacity .3s ease-in-out;
-            transition: opacity .3s ease-in-out;
 }
 .link__list li a:hover,
 .link__list li a:focus {
     opacity: .7;
-    -webkit-transition: opacity .3s ease-in-out;
-            transition: opacity .3s ease-in-out;
+
 }
 .link__list li img {
     vertical-align: middle;

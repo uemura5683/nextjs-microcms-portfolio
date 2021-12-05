@@ -5,14 +5,12 @@
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
-    margin: 0;
-    gap: 1rem;
+    margin: 0 -.5rem;
 }
 .skill__list li {
-    width: calc(50% - 0.5rem);
-    margin: 0;
+    width: calc(50% - 1rem);
+    margin: 0 .5rem 1rem;
     cursor: pointer;
-
 }
 .skill__list li button {
     border: none;
@@ -44,12 +42,11 @@
     * skill content
     **/
     .skill__list {
-        margin: 0 ;
+        margin: 0 -.5rem;
     }
     .skill__list li {
-        margin: 0;
-        width: -webkit-calc( 99.9% / 3 - 0.7rem);
-        width: calc( 99.9% / 3 - 0.7rem);
+        margin: 0 .5rem 1rem;
+        width: calc( 99.9% / 3 - 1rem);
     }
     .skill__list li .gage:after {
         height: 18px;

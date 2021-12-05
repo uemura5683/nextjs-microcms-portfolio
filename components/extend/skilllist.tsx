@@ -13,7 +13,6 @@ const SkillContent = (Jsondata, key) => {
   function closeModal(){
       setIsOpen(false);
   }
-  console.log(key);
   Jsondata = Jsondata.data;
   return (
     <>
