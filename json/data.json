@@ -43,6 +43,13 @@
         "desc": "LaravelはPHPのフレームワークの一つであり、Symfonyを基盤として作られております。PHPのフレームワークの中では一番人気があり、世界的に普及しています。<br /><br/><span>成果物</span>・アパレルECサイト 1案件<br />・ECパッケージ開発(50人以上のチーム)"
       },
       {
+        "name": "Firebase",
+        "image": "/images/skill/skill_firebase.png",
+        "class": "skill__zoom firebase",
+        "alt": "Firebase",
+        "desc": "Firebaseは、2011年にFirebase, Inc.が開発したモバイル・Webアプリケーション開発プラットフォームです。そのあと、2014年Googleに買収されてます。2020年3月現在、Firebaseプラットフォームには19の製品があり、9GAGを含む150万以上のアプリが利用されています。<br /><br/><span>成果物</span>・予約システム(開発中)"
+      },
+      {
         "name": "MySQL",
         "image": "/images/skill/skill_mysql.png",
         "class": "skill__zoom mysql",
