@@ -1,12 +1,12 @@
+import Data from "../../json/data.json";
 import Skilllist from "../extend/skilllist";
-import React from "react";
 
-export default function Skill({ skilllist }) {
+export default function Skill() {
   return (
     <section id="p-skill" className="u-gray has-animation" data-set-color="dark">
       <h2 className="c-title white">SKILL</h2>
       <ul className="skill__list">
-        {skilllist ? skilllist.map((Jsondata, index) => 
+          {Data.content ? Data.content.map((Jsondata, index) => 
             <Skilllist
               data={Jsondata}
               key={index}>
