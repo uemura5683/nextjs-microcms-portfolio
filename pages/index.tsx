@@ -13,7 +13,7 @@ import Skill       from '../components/top/skill'
 import LinkArea    from '../components/top/linkarea'
 import ContactForm from '../components/top/contactform'
 
-function Home( {info, work, blog, skilllist} ) {
+function Home( {info, work, blog} ) {
   return (
     <Layout home>
       <Head>
@@ -28,7 +28,7 @@ function Home( {info, work, blog, skilllist} ) {
       >
         <MainVisual></MainVisual>
         <Profile></Profile>
-        <Skill skilllist={skilllist}></Skill>
+        <Skill></Skill>
         { work ? (
           <section id="p-work" className="has-animation" data-set-color="light">
             <h2 className="c-title">WORK</h2>
@@ -121,10 +121,6 @@ export async function getStaticProps() {
   const key_nu = {
     headers: {'X-MICROCMS-API-KEY': process.env.NU_API_KEY},
   }
-  const skilllist = await fetch("https://api.sssapi.app/RwPTWzJedm3ZbPczoKVvk")
-    .then((res: { json: () => any }) => res.json())
-    .catch(() => null);
-
   const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
     .then((res: { json: () => any }) => res.json())
     .catch(() => null);
@@ -146,7 +142,6 @@ export async function getStaticProps() {
       info: infoc,
       work: workc,
       blog: blogc,
-      skilllist: skilllist,
     },
   };
 }
