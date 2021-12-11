@@ -17,7 +17,7 @@ export default function SnsLink() {
             />
           </a>
         </li>
-        <li className="c-snslnk__list nu-blog">
+        <li className="c-snslnk__list nu-blog d-none">
           <a href="https://nu-blogsite.net/" target="_blank">
             <img
                 src="/images/header/nu_icn.png"
