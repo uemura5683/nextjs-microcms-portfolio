@@ -18,8 +18,8 @@ export default function BlogId( { infos, info_data, infolist } ) {
         transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
-            { infos ? (
-              <>
+          { infos ? (
+            <>
                 <div className="p-detail__inner__main">
                   <div className="p-detail__top">
                     <div className="p-detail__ttl">

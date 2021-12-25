@@ -40,24 +40,8 @@
     position: absolute;
     opacity: .7;
 }
-#p-mainvisual .WrapCanvas .Canvas,
-#p-mainvisual .WrapCanvas .lazyload {
+#p-mainvisual .WrapCanvas .Canvas {
     width: 100% !important;
-}
-#p-mainvisual .WrapCanvas .lazyload {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-
-@keyframes blink{
-    0% {background-image: url(/images/logo.png);}
-    100% {background-image: none;}
-}
-@-webkit-keyframes blink{
-    0% {background-image: url(/images/logo.png);}
-    100% {background-image: none;}
 }
 
 /**
