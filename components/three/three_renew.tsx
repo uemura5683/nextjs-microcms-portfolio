@@ -8,6 +8,7 @@ import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
+  planesphere: THREE.Object3D
 }
 
 const Canvas: React.FC = () => {
@@ -17,11 +18,12 @@ const Canvas: React.FC = () => {
     if (!canvas) {
       return
     }
+
     // init scene
     const scene = new Scene()
 
     const camera = new PerspectiveCamera( 45, canvas.clientWidth / canvas.clientHeight);
-    camera.position.set( 10, 10, 500 );
+    camera.position.set( 10, 10, 1000 );
 
     // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true, alpha: true })
@@ -44,7 +46,7 @@ const Canvas: React.FC = () => {
       metalness: 1,
       envMap: textureCube
     } );
-    const planegeometry = new SphereGeometry( 100, 100, 100 );
+    const planegeometry = new SphereGeometry( 150, 150, 150 );
     const planesphere = new Mesh( planegeometry, planematerial );
 
     object.add( planesphere );
@@ -58,19 +60,19 @@ const Canvas: React.FC = () => {
       const p_box = new Mesh( p_Geometry, p_materials );
       switch (planet) {
         case 'sun':       
-          p_box.position.set(250, 250, 500);
+          p_box.position.set(250, 500, 500);
           break;
         case 'jupiter':       
-          p_box.position.set(250, 0, 500);
+          p_box.position.set(-500, 0, 500);
           break;
         case 'mars':       
-          p_box.position.set(250, 0, 0);
+          p_box.position.set(250, -500, 0);
           break;
         case 'mercury':       
           p_box.position.set(0, 250, 500);
           break;
         case 'neptune':       
-          p_box.position.set(0, 0, 250);
+          p_box.position.set(0, 0, 500);
           break;
         case 'pluto':       
           p_box.position.set(-500, 500, -250);
@@ -85,7 +87,7 @@ const Canvas: React.FC = () => {
           p_box.position.set(0, -250, -250);
           break;          
         case 'moon':
-          p_box.position.set(-250, -250, -250);
+          p_box.position.set(-250, -250, -500);
           break;
         case 'earch':
           p_box.position.set(0, -250, 250);
@@ -105,7 +107,7 @@ const Canvas: React.FC = () => {
 
       const mesh = new Mesh(geometry, material)
       mesh.position.set(size * Math.random() - 0.5, size * Math.random() - 0.5, size * Math.random() - 0.5).normalize()
-      mesh.position.multiplyScalar(Math.random() * 500)
+      mesh.position.multiplyScalar(Math.random() * 1000)
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
       object.add(mesh)
     }
@@ -126,15 +128,18 @@ const Canvas: React.FC = () => {
           effectGlitch.goWild = controls.goWild;
       };
     };
-    animate({ object, composer })
+    animate({ object, composer, planesphere })
   }
 
   // for animation
-  const animate = ({ object, composer }: ParamsAnimate) => {
+  const animate = ({ object, composer, planesphere }: ParamsAnimate) => {
 
-    window.requestAnimationFrame(() => animate({ object, composer }))
-    object.rotation.y += 0.02
-    object.rotation.z += 0.02
+    window.requestAnimationFrame(() => animate({ object, composer,planesphere }))
+    object.rotation.y += 0.025
+    object.rotation.z += 0.025
+    object.rotation.x += 0.025
+    let number = object.rotation.y
+    planesphere.position.y += 0 - (Math.sin(number) * .5);
     composer.render()
   }
 
