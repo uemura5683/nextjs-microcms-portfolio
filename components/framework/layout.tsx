@@ -47,7 +47,7 @@ export default function Layout({ children, home
         <header>
           {home ? (
             <>
-              <Logo home/>
+              <Logo/>
               <SnsLink/>
               <DrawerMenu home/>
             </>
@@ -74,22 +74,14 @@ export default function Layout({ children, home
           ) }
         <footer>
           <div className="foorter__logo">
-          {home ? (
-              <>
-                <Logo home/>
-              </>
-            ) : (
-              <>
-                <Logo/>
-              </>
-          ) }
+            <Logo/>
           </div>
           <SnsLink/>
           <div className="footer--link__privacy">
-              <Link href="/about">About</Link>
+            <Link href="/about">About</Link>
           </div>
           <div className="footer__copyrights">
-          (c) 2021 Uemu-Portfolio
+          (c) 2022 Uemu-Portfolio
           </div>
         </footer>
         <div id="modalArea"></div>
