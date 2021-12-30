@@ -4,6 +4,7 @@ import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, Fog, CubeTextureLoad
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
+import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterimagePass';
 
 type ParamsAnimate = {
   object: THREE.Object3D
@@ -18,6 +19,8 @@ const Canvas: React.FC = () => {
     if (!canvas) {
       return
     }
+
+    let afterimagePass;
 
     // init scene
     const scene = new Scene()
@@ -46,7 +49,7 @@ const Canvas: React.FC = () => {
       metalness: 1,
       envMap: textureCube
     } );
-    const planegeometry = new SphereGeometry( 150, 150, 150 );
+    const planegeometry = new SphereGeometry( 200, 200, 200 );
     const planesphere = new Mesh( planegeometry, planematerial );
 
     object.add( planesphere );
@@ -54,7 +57,7 @@ const Canvas: React.FC = () => {
     let planet_array = ['sun', 'jupiter', 'mars', 'mercury', 'neptune', 'pluto', 'saturn', 'uranus', 'venus', 'moon', 'earch'];
 
     planet_array.map(function ( planet ) {
-      const p_Geometry = new SphereGeometry( 20, 32, 32 );
+      const p_Geometry = new SphereGeometry( 20, 20, 20 );
       const p_texture = new TextureLoader().load('images/three/' + planet + '.jpg');      
       const p_materials = new MeshStandardMaterial( { color: 0xffffff, map:p_texture } );
       const p_box = new Mesh( p_Geometry, p_materials );
@@ -72,7 +75,7 @@ const Canvas: React.FC = () => {
           p_box.position.set(0, 250, 500);
           break;
         case 'neptune':       
-          p_box.position.set(0, 0, 500);
+          p_box.position.set(500, 0, 500);
           break;
         case 'pluto':       
           p_box.position.set(-500, 500, -250);
@@ -98,7 +101,7 @@ const Canvas: React.FC = () => {
 
     const geometry = new SphereGeometry(2, 2, 2),
           size = 1;
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i < 150; i++) {
       let rubble = [0Xde9ed8, 0Xe6fffe, 0Xf08100, 0Xe7f4f9, 0Xfbfcef],
           rubbleNo = Math.floor( Math.random() * rubble.length),
           material = new MeshPhongMaterial({
@@ -118,16 +121,11 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const effectGlitch = new GlitchPass()
-    effectGlitch.renderToScreen = true
-    composer.addPass(effectGlitch)
+    afterimagePass = new AfterimagePass();
+    composer.addPass( afterimagePass );
 
-    let controls = new function () {
-      this.goWild = false;
-      this.updateEffect = function () {
-          effectGlitch.goWild = controls.goWild;
-      };
-    };
+    afterimagePass.uniforms[ "damp" ].value = 0.6;
+
     animate({ object, composer, planesphere })
   }
 
@@ -136,8 +134,6 @@ const Canvas: React.FC = () => {
 
     window.requestAnimationFrame(() => animate({ object, composer,planesphere }))
     object.rotation.y += 0.025
-    object.rotation.z += 0.025
-    object.rotation.x += 0.025
     let number = object.rotation.y
     planesphere.position.y += 0 - (Math.sin(number) * .5);
     composer.render()

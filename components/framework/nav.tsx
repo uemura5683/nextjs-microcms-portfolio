@@ -1,4 +1,5 @@
 import { Link, animateScroll as scroll } from "react-scroll";
+import Linkto from 'next/link'
 
 export default function Navigation( { home
   }: {
@@ -96,13 +97,13 @@ export default function Navigation( { home
         </>
       ) : (
         <>
-          <li><a href="/about">ABOUT</a></li>
-          <li><a href="/#p-skill">SKILL</a></li>
-          <li><a href="/#p-work">WORK</a></li>
-          <li><a href="/#p-information">INFORMATION</a></li>
-          <li><a href="/#p-nublog">NU-blog</a></li>
-          <li><a href="/#p-link">LINK</a></li>
-          <li><a href="/#p-contact">CONTACT</a></li>
+          <li><Linkto href="/about">ABOUT</Linkto></li>
+          <li><Linkto href="/#p-skill">SKILL</Linkto></li>
+          <li><Linkto href="/#p-work">WORK</Linkto></li>
+          <li><Linkto href="/#p-information">INFORMATION</Linkto></li>
+          <li><Linkto href="/#p-nublog">NU-blog</Linkto></li>
+          <li><Linkto href="/#p-link">LINK</Linkto></li>
+          <li><Linkto href="/#p-contact">CONTACT</Linkto></li>
         </>
       )}
       </ul>
