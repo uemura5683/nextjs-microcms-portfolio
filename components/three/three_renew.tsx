@@ -1,9 +1,8 @@
 import React from 'react'
-import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, Fog, CubeTextureLoader, HemisphereLight, BoxGeometry, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, Mesh
+import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, CubeTextureLoader, HemisphereLight, SphereGeometry, TextureLoader, MeshStandardMaterial, MeshPhongMaterial, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterimagePass';
 
 type ParamsAnimate = {
@@ -101,7 +100,7 @@ const Canvas: React.FC = () => {
 
     const geometry = new SphereGeometry(2, 2, 2),
           size = 1;
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 200; i++) {
       let rubble = [0Xde9ed8, 0Xe6fffe, 0Xf08100, 0Xe7f4f9, 0Xfbfcef],
           rubbleNo = Math.floor( Math.random() * rubble.length),
           material = new MeshPhongMaterial({
@@ -132,7 +131,7 @@ const Canvas: React.FC = () => {
   // for animation
   const animate = ({ object, composer, planesphere }: ParamsAnimate) => {
 
-    window.requestAnimationFrame(() => animate({ object, composer,planesphere }))
+    window.requestAnimationFrame(() => animate({ object, composer, planesphere }))
     object.rotation.y += 0.025
     let number = object.rotation.y
     planesphere.position.y += 0 - (Math.sin(number) * .5);
