@@ -114,6 +114,14 @@
     display: block;
     margin: 0 0 20px;
 }
+@media (max-width: 979px) {
+    #p-mainvisual img[alt*='uemu-portfolio'] {
+        height: 50px;
+    }
+    #p-mainvisual nav ul li a {
+        font-size: 1.2rem;
+    }
+}
 @media (max-width: 767px) {
     #p-mainvisual figure {
         position: relative;
