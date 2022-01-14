@@ -184,11 +184,3 @@ template {
 [hidden] {
   display: none;
 }
-
-canvas {
-  width: 100% !important;
-  height: 50% !important;
-  background-image: url(https://uemu-engineer.com/images/three/planet.jpg);
-  background-size: cover;
-  backdrop-filter:  brightness(50%);
-}

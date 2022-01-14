@@ -108,9 +108,16 @@ const Canvas: React.FC = () => {
 
   return (
     <>
-      <div className="WrapCanvas">
-        <canvas className="Canvas" ref={onCanvasLoaded} />
-      </div>
+      <style jsx>{`
+        canvas {
+          width: 100% !important;
+          height: 50% !important;
+          background-image: url(https://uemu-engineer.com/images/three/planet.jpg);
+          background-size: cover;
+          backdrop-filter:  brightness(50%);
+        }
+      `}</style>
+      <canvas ref={onCanvasLoaded} />
     </>
   )
 }

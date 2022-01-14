@@ -14,7 +14,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 export default function Component() {
   return (
     <section id="p-mainvisual" data-set-color="dark">
-      <Logo></Logo>
+      <Logo home></Logo>
       <Navi home></Navi>
       <figure className="p-mainvisual__iframe">
         <iframe loading="lazy" src="https://uemu-engineer.com/three_renew" />
