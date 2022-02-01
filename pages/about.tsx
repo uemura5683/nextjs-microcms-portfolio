@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
  */
 export default function About( {info} ) {
   return (
+    <>
     <Layout>
       <Head>
         <title>Aboutページ</title>
-        <link href="/style/about.css" rel="stylesheet" />
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}
@@ -22,6 +22,7 @@ export default function About( {info} ) {
         <div className="bgimage"></div>
       </motion.div>
     </Layout>
+    </>
   )
 }
 

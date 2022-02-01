@@ -9,7 +9,6 @@ export default function BlogId( { infos, info_data, infolist } ) {
     <Layout>
       <Head>
         <title>{infos.title}</title>
-        <link href="/style/detail.css" rel="stylesheet" />
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

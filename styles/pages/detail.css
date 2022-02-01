@@ -1,0 +1,79 @@
+/*********************************
+* detail.css
+*********************************/
+.p-detail__inner {
+  border: 1px solid white;
+  padding: 1rem;
+  margin: 1rem 0 0;
+}
+.p-detail__inner p,
+.p-detail__inner div {
+  color: white;
+  font-size: 1.0rem;
+}
+.p-detail__inner .c-title {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+.p-detail__inner .p-detail__top {
+  margin: 0 0 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.p-detail__inner .p-detail__top > * {
+  width: 100%;
+}
+.p-detail__inner .p-detail__top figure {
+  margin-top: 20px;
+}
+.p-detail__inner .p-detail__bottom {
+  margin: 0 0 25px;
+}
+.p-detail__inner .p-detail__bottom a {
+  color: white;
+}
+.p-detail__inner .card li span {
+  color: white;
+  opacity: 1;
+}
+@media (min-width: 991px) {
+  .p-detail__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin: 0;
+  }
+  .p-detail__inner p,
+  .p-detail__inner div {
+    font-size: 1.2rem;
+  }
+  .p-detail__inner .p-detail__top .p-detail__ttl {
+    width: 45%;
+  }
+  .p-detail__inner .p-detail__top .p-detail__ttl .c-title:after {
+    border: none;
+  }
+  .p-detail__inner .p-detail__top figure {
+    width: 50%;
+    margin: 0 0 0 5%;
+  }
+  .p-detail__inner .p-detail__inner__main {
+    width: 70%;
+  }
+  .p-detail__inner .p-detail__inner__sub {
+    width: 27%;
+    margin: 0 0 0 3%;
+  }
+  .p-detail__inner .p-detail__inner__sub .card ul li {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  .p-detail__inner .p-detail__top {
+    margin: 0 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .p-detail__inner .p-detail__bottom {
+    margin: 0 0 50px;
+  } 
+}

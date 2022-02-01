@@ -141,7 +141,6 @@ import Complete from '../components/questionnaire/complete';
     <Layout>
       <Head>
         <title>アンケートページ</title>
-        <link href="/style/questionnaire.css" rel="stylesheet" />
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

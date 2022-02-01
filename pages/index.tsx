@@ -18,7 +18,6 @@ function Home( {info, work, blog, skill} ) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <link href="/style/main.css" rel="stylesheet" />
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

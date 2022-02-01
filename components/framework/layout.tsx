@@ -4,16 +4,27 @@ import Logo from '../../components/framework/logo'
 import SnsLink from '../../components/framework/snslink'
 import DrawerMenu from '../../components/framework/drawermenu'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
+import css from 'styled-jsx/css'
 
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
-
 export default function Layout({ children, home
   }: {
     children: React.ReactNode
     home?: boolean
   }) {
+
   return (
     <div>
+      { !home ? (
+        <style jsx>{`
+          header.light {
+              background-color: transparent !important;
+          }
+          header.light  .header--menu__btn span {
+              background-color: white !important;
+          }
+        `}</style>
+      ) : null }
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -81,7 +92,7 @@ export default function Layout({ children, home
             <Link href="/about">About</Link>
           </div>
           <div className="footer__copyrights">
-          (c) 2022 Uemu-Portfolio
+          (c) {new Date().getFullYear()} Uemu-Portfolio
           </div>
         </footer>
         <div id="modalArea"></div>
