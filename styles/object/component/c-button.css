@@ -58,12 +58,16 @@
 }
 .c-snslink .c-snslnk__list {
     margin: 0 5px;
-    width: 23px;
+    width: 30px;
     background-color: white;
     border-radius: 100%;
 }
 .c-snslink .c-snslnk__list a {
     display: block;
+}
+.c-snslink .c-snslnk__list img{
+    height: 30px;
+    width: 30px;
 }
 @media (min-width: 991px) {
     /**
@@ -90,8 +94,11 @@
     **/
     .c-snslink .c-snslnk__list {
         margin: 0 10px;
-    }
-    .c-snslink .c-snslnk__list {
         width: 45px;
     }
+    .c-snslink .c-snslnk__list img {
+        width: 45px;
+        height: 45px;
+    }
+
 }

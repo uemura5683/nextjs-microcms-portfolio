@@ -1,7 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal'
 
+
 const SkillContent = (Jsondata, key) => {
+
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {

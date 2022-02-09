@@ -6,6 +6,8 @@ export default function SnsLink() {
             <img
               src="/images/header/tw_icn.png"
               alt="Twitter Link"
+              width="45"
+              height="45"
             />
           </a>
         </li>
@@ -14,6 +16,8 @@ export default function SnsLink() {
             <img
                 src="/images/header/git_icn.png"
                 alt="Github Link"
+                width="45"
+                height="45"
             />
           </a>
         </li>
@@ -22,6 +26,8 @@ export default function SnsLink() {
             <img
                 src="/images/header/nu_icn.png"
                 alt="Nu-blog Link"
+                width="45"
+                height="45"
             />
           </a>
         </li>
