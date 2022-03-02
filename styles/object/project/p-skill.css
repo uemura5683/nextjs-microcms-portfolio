@@ -28,6 +28,7 @@
 }
 .skill__list li img {
     width: 100%;
+    height: auto;
     margin: 0 auto;
     -webkit-transition:opacity .3s ease-in-out;
             transition:opacity .3s ease-in-out;
@@ -110,6 +111,7 @@
 }
 .ReactModal__Content .skill__zoom_modal img {
     width: 100%;
+    height: auto;
     border: 1px solid lightgray;
     margin: 0 0 5%;
 }

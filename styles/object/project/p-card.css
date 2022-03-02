@@ -34,6 +34,7 @@
     margin: 10px 0 0;
     display: block;
     text-align: left;
+
 }
 .card ul li span.white {
     color: white;
@@ -42,6 +43,7 @@
     opacity: 1;
 }
 .card ul li a {
+    display: block;
     text-decoration: none;
 }
 @media (min-width: 991px) {
@@ -51,6 +53,9 @@
     .card ul li{
         margin: 0 .5rem 1rem;
         width: calc(100% / 3 - 1rem );
+    }
+    .card ul li span {
+        font-size: 1.0rem;
     }
     .card ul li:nth-child(n + 10) {
         display: none;

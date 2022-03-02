@@ -40,7 +40,8 @@
         margin: 20px 0;
     }
     .link__list li img {
-        width: 50px;
+        width: 40px;
+        height: 40px;
         padding: 5px;
     }
     .link__list li span {
