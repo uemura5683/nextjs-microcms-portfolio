@@ -2,9 +2,6 @@ import Head from 'next/head'
 import Layout from '../components/framework/layout'
 import { motion } from "framer-motion";
 
-/**
- * export
- */
 export default function About( {info} ) {
   return (
     <>

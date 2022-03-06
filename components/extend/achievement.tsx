@@ -1,12 +1,10 @@
 import React from 'react';
 
 const SkillContent = (Jsondata, key) => {
-
   Jsondata = Jsondata.data;
-
   return (
     <>
-    <li className={Jsondata.class}>
+    <li className={Jsondata.class} key={key}>
     { Jsondata.link !== null ? (
       <a href={`${Jsondata.link}`} target="_blank">
         <img

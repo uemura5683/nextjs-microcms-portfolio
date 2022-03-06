@@ -1,5 +1,5 @@
 import React from 'react'
-import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, CubeTextureLoader, HemisphereLight, SphereGeometry, TextureLoader, MeshStandardMaterial, MeshPhongMaterial, Mesh
+import { WebGLRenderer, Texture, PointsMaterial, AdditiveBlending, Scene, PerspectiveCamera, Object3D, CubeTextureLoader, HemisphereLight, SphereGeometry, TextureLoader, MeshStandardMaterial, MeshPhongMaterial, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -21,21 +21,17 @@ const Canvas: React.FC = () => {
 
     let afterimagePass;
 
-    // init scene
     const scene = new Scene()
 
     const camera = new PerspectiveCamera( 45, canvas.clientWidth / canvas.clientHeight);
     camera.position.set( 10, 10, 1000 );
 
-    // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true, alpha: true })
     renderer.setSize(2600, 1300)
 
-    // init object
     const object = new Object3D()
     scene.add(object)
 
-    // add object
     const cubeTextureLoader = new CubeTextureLoader()
     const textureCube = cubeTextureLoader.load( [
       'images/three/px.png', 'images/three/nx.png',
@@ -98,17 +94,33 @@ const Canvas: React.FC = () => {
       object.add(p_box);    
     });
 
-    const geometry = new SphereGeometry(2, 2, 2),
-          size = 1;
-    for (let i = 0; i < 200; i++) {
-      let rubble = [0Xde9ed8, 0Xe6fffe, 0Xf08100, 0Xe7f4f9, 0Xfbfcef],
-          rubbleNo = Math.floor( Math.random() * rubble.length),
-          material = new MeshPhongMaterial({
-            color: rubble[rubbleNo]
-          })
+    function generateSprite() {
+      var canvas = document.createElement('canvas');
+      canvas.width = 16;
+      canvas.height = 16;
+      var context = canvas.getContext('2d');
+      var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+      gradient.addColorStop(0, 'rgba(255,255,255,1)');
+      gradient.addColorStop(.8, 'rgba(128,255,255,1)');
+      gradient.addColorStop(1, 'rgba(0,0,64,1)');
+      gradient.addColorStop(1, 'rgba(0,0,0,1)');
+      context.fillStyle = gradient;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      var texture = new Texture(canvas);
+      texture.needsUpdate = true;
+      return texture;
+   }
 
-      const mesh = new Mesh(geometry, material)
-      mesh.position.set(size * Math.random() - 0.5, size * Math.random() - 0.5, size * Math.random() - 0.5).normalize()
+    for (let i = 0; i < 200; i++) {
+      let sprite_material = new PointsMaterial({
+            color: 0xffffff,
+            size: 3,
+            transparent: true,
+            blending: AdditiveBlending,
+            map: generateSprite()
+          });
+      const mesh = new Mesh(new SphereGeometry(2, 2, 2), sprite_material)
+      mesh.position.set(1 * Math.random() - 0.5, 1 * Math.random() - 0.5, 1 * Math.random() - 0.5).normalize()
       mesh.position.multiplyScalar(Math.random() * 1000)
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
       object.add(mesh)
@@ -128,9 +140,7 @@ const Canvas: React.FC = () => {
     animate({ object, composer, planesphere })
   }
 
-  // for animation
   const animate = ({ object, composer, planesphere }: ParamsAnimate) => {
-
     window.requestAnimationFrame(() => animate({ object, composer, planesphere }))
     object.rotation.y += 0.025
     let number = object.rotation.y
