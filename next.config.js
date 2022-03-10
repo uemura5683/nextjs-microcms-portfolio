@@ -12,6 +12,7 @@ module.exports = {
     CHAT_APP_STORAGE_BUCKET:process.env.CHAT_APP_STORAGE_BUCKET,
     CHAT_APP_MESSAGEING_SENDER_ID:process.env.CHAT_APP_MESSAGEING_SENDER_ID,
     CHAT_APP_APP_ID:process.env.CHAT_APP_APP_ID,
+    CHAT_APP_MEASUREMENT_ID:process.env.CHAT_APP_MEASUREMENT_ID,    
     SKILL:process.env.SKILL,
     PARAM:process.env.PARAM,
   },

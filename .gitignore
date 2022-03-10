@@ -3,6 +3,4 @@ node_modules/
 .cache/
 .next/
 out/
-utils
-pages/chat.tsx
 jest.config.js

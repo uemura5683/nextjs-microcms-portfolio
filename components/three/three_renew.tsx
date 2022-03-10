@@ -52,7 +52,7 @@ const Canvas: React.FC = () => {
     let planet_array = ['sun', 'jupiter', 'mars', 'mercury', 'neptune', 'pluto', 'saturn', 'uranus', 'venus', 'moon', 'earch'];
 
     planet_array.map(function ( planet ) {
-      const p_Geometry = new SphereGeometry( 20, 20, 20 );
+      const p_Geometry = new SphereGeometry( 20 * Math.random(), 20, 20 );
       const p_texture = new TextureLoader().load('images/three/' + planet + '.jpg');      
       const p_materials = new MeshStandardMaterial( { color: 0xffffff, map:p_texture } );
       const p_box = new Mesh( p_Geometry, p_materials );
@@ -94,14 +94,14 @@ const Canvas: React.FC = () => {
       object.add(p_box);    
     });
 
-    function generateSprite() {
+    function generateSprite(colors) {
       var canvas = document.createElement('canvas');
       canvas.width = 16;
       canvas.height = 16;
       var context = canvas.getContext('2d');
       var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
       gradient.addColorStop(0, 'rgba(255,255,255,1)');
-      gradient.addColorStop(.8, 'rgba(128,255,255,1)');
+      gradient.addColorStop(.8, colors);
       gradient.addColorStop(1, 'rgba(0,0,64,1)');
       gradient.addColorStop(1, 'rgba(0,0,0,1)');
       context.fillStyle = gradient;
@@ -112,14 +112,16 @@ const Canvas: React.FC = () => {
    }
 
     for (let i = 0; i < 200; i++) {
-      let sprite_material = new PointsMaterial({
+      let rubble = ['rgba(128,255,255,1)', 'rgba(255,255,255,1)', 'rgba(255,255,128,1)', 'rgba(255,128,255,1)'],
+          rubbleNo = Math.floor( Math.random() * rubble.length),
+          sprite_material = new PointsMaterial({
             color: 0xffffff,
             size: 3,
             transparent: true,
             blending: AdditiveBlending,
-            map: generateSprite()
+            map: generateSprite(rubble[rubbleNo])
           });
-      const mesh = new Mesh(new SphereGeometry(2, 2, 2), sprite_material)
+      const mesh = new Mesh(new SphereGeometry(1, 10, 10), sprite_material)
       mesh.position.set(1 * Math.random() - 0.5, 1 * Math.random() - 0.5, 1 * Math.random() - 0.5).normalize()
       mesh.position.multiplyScalar(Math.random() * 1000)
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
