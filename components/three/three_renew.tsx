@@ -144,9 +144,8 @@ const Canvas: React.FC = () => {
 
   const animate = ({ object, composer, planesphere }: ParamsAnimate) => {
     window.requestAnimationFrame(() => animate({ object, composer, planesphere }))
-    object.rotation.y += 0.025
-    let number = object.rotation.y
-    planesphere.position.y += 0 - (Math.sin(number) * .5);
+    object.rotation.y += 0.025;
+    object.rotation.x += 0.025;
     composer.render()
   }
 
