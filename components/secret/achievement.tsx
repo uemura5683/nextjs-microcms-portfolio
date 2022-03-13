@@ -6,7 +6,7 @@ export default function Skill({ skill }) {
     <>
     <section id="p-acivement">
       <h2 className="c-title white">ACHIEVEMENT</h2>
-      <ul className="skill__list">
+      <ul className="acivement__list">
         {skill ? skill.map((Jsondata, index) => 
             <Achievent
               data={Jsondata}

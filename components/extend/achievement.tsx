@@ -13,14 +13,18 @@ const SkillContent = (Jsondata, key) => {
           width="515px"
           height="346px"
         />
+        <span className="name">{Jsondata.name}</span>
       </a>
     ) : (
-      <img
-        src={Jsondata.image}
-        alt={Jsondata.alt}
-        width="515px"
-        height="346px"
-      />
+      <span>
+        <img
+          src={Jsondata.image}
+          alt={Jsondata.alt}
+          width="515px"
+          height="346px"
+        />
+        <span className="name">{Jsondata.name}</span>
+      </span>
     ) }
     </li>
     </>
