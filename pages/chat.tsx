@@ -22,5 +22,4 @@ const Chat: React.FC = () => {
     </Layout>
   );
 };
-
- export default Chat;
+export default Chat;

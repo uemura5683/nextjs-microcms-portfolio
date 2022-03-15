@@ -18,37 +18,35 @@ export default function BlogId( { infos, info_data, infolist } ) {
       >
         <div className="p-detail__inner">
           { infos ? (
-            <>
-                <div className="p-detail__inner__main">
-                  <div className="p-detail__top">
-                    <div className="p-detail__ttl">
-                      <div className="c-title white">{infos.title}</div>
-                      <p>{info_data}</p>
-                    </div>
-                    <figure>
-                      <img
-                        src={infos.image.url}
-                        alt={infos.title}
-                        width={605}
-                      />
-                    </figure>
-                  </div>
-                  <div
-                    className="p-detail__bottom"
-                    dangerouslySetInnerHTML={{
-                      __html: `${infos.body}`,
-                    }}
+            <div className="p-detail__inner__main">
+              <div className="p-detail__top">
+                <div className="p-detail__ttl">
+                  <div className="c-title white">{infos.title}</div>
+                  <p>{info_data}</p>
+                </div>
+                <figure>
+                  <img
+                    src={infos.image.url}
+                    alt={infos.title}
+                    width={605}
                   />
+                </figure>
               </div>
-            </>
+              <div
+                className="p-detail__bottom"
+                dangerouslySetInnerHTML={{
+                  __html: `${infos.body}`,
+                }}
+              />
+            </div>
           ) : (
-              <div className="p-detail__inner__main">
-                  <div className="p-detail__top">
-                    <div className="p-detail__ttl">
-                      <div className="c-title white">記事の読み込み失敗しました</div>
-                    </div>
-                  </div>
+            <div className="p-detail__inner__main">
+              <div className="p-detail__top">
+                <div className="p-detail__ttl">
+                  <div className="c-title white">記事の読み込み失敗しました</div>
+                </div>
               </div>
+            </div>
           ) }
           <div className="p-detail__inner__sub"  id="p-information">
             <h3 className="c-title white">information</h3>
@@ -70,7 +68,7 @@ export default function BlogId( { infos, info_data, infolist } ) {
                       </Link>
                     </li>
                   )) : (
-                      <li>記事の読み込み失敗しました</li>
+                    <li>記事の読み込み失敗しました</li>
                   )
                 }
               </ul>

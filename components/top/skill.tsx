@@ -1,6 +1,4 @@
 import Skilllist from "../extend/skilllist";
-import React from "react";
-
 export default function Skill({ skill }) {
   return (
     <section id="p-skill" className="u-gray has-animation" data-set-color="dark">

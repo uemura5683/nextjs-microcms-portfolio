@@ -1,5 +1,5 @@
 import React from 'react'
-import { WebGLRenderer, Texture, PointsMaterial, AdditiveBlending, Scene, PerspectiveCamera, Object3D, CubeTextureLoader, HemisphereLight, SphereGeometry, TextureLoader, MeshStandardMaterial, MeshPhongMaterial, Mesh
+import { WebGLRenderer, Texture, PointsMaterial, AdditiveBlending, Scene, PerspectiveCamera, Object3D, CubeTextureLoader, HemisphereLight, SphereGeometry, TextureLoader, MeshStandardMaterial, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -12,7 +12,6 @@ type ParamsAnimate = {
 }
 
 const Canvas: React.FC = () => {
-
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
 
     if (!canvas) {
@@ -109,7 +108,7 @@ const Canvas: React.FC = () => {
       var texture = new Texture(canvas);
       texture.needsUpdate = true;
       return texture;
-   }
+    }
 
     for (let i = 0; i < 200; i++) {
       let rubble = ['rgba(128,255,255,1)', 'rgba(255,255,255,1)', 'rgba(255,255,128,1)', 'rgba(255,128,255,1)'],
@@ -148,7 +147,6 @@ const Canvas: React.FC = () => {
     object.rotation.x += 0.025;
     composer.render()
   }
-
   return (
     <>
       <style jsx>{`
@@ -164,5 +162,4 @@ const Canvas: React.FC = () => {
     </>
   )
 }
-
 export default Canvas

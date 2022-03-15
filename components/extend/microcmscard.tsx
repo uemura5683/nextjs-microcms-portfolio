@@ -1,5 +1,4 @@
 import React from 'react';
-
 class MicroCMSCard extends React.Component {
   constructor(props) {
     super(props);
@@ -10,5 +9,4 @@ class MicroCMSCard extends React.Component {
     )
   }
 };
-
 export default MicroCMSCard;

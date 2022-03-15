@@ -17,30 +17,28 @@ export default function BlogId( { works, works_data, worklist } ) {
         transition={{ duration: 0.5 }}
       >
         <div className="p-detail__inner">
-        { works ? (
-            <>
-              <div className="p-detail__inner__main">
-                <div className="p-detail__top">
-                  <div className="p-detail__ttl">
-                    <div className="c-title white">{works.title}</div>
-                    <p>{works_data}</p>
-                  </div>
-                  <figure>
-                    <img 
-                      alt={works.title}
-                      src={works.image.url}
-                      width={605}
-                    />
-                  </figure>
+          { works ? (
+            <div className="p-detail__inner__main">
+              <div className="p-detail__top">
+                <div className="p-detail__ttl">
+                  <div className="c-title white">{works.title}</div>
+                  <p>{works_data}</p>
                 </div>
-                <div
-                  className="p-detail__bottom"
-                  dangerouslySetInnerHTML={{
-                    __html: `${works.body}`,
-                  }}
-                />
+                <figure>
+                  <img 
+                    alt={works.title}
+                    src={works.image.url}
+                    width={605}
+                  />
+                </figure>
               </div>
-            </>
+              <div
+                className="p-detail__bottom"
+                dangerouslySetInnerHTML={{
+                  __html: `${works.body}`,
+                }}
+              />
+            </div>
           ) : (
             <div className="p-detail__inner__main">
                 <div className="p-detail__top">

@@ -11,7 +11,6 @@ export default function Layout({ children, home
     children: React.ReactNode
     home?: boolean
   }) {
-
   return (
     <div>
       { !home ? (
@@ -91,7 +90,7 @@ export default function Layout({ children, home
             <Link href="/about">About</Link>
           </div>
           <div className="footer__copyrights">
-          (c) {new Date().getFullYear()} Uemu-Portfolio
+          (c) {new Date().getFullYear()} Uemu-Engineer
           </div>
         </footer>
         <div id="modalArea"></div>
