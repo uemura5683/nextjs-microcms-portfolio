@@ -1,16 +1,8 @@
-/**
- * component
- */
 import Logo from '../framework/logo'
 import Navi from '../framework/nav'
 import React from "react";
-
-// SSRあるとwindowが使えない等あるため
 import { Link, animateScroll as scroll } from "react-scroll";
 
-/**
- * export
- */
 export default function Component() {
   return (
     <section id="p-mainvisual" data-set-color="dark">

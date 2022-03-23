@@ -49,7 +49,7 @@ function Home( {info, work, blog, skill} ) {
               </ul>
             </div>
           </section>
-         ) : null
+          ) : null
         }
         { info ? (
           <section id="p-information" className="u-gray has-animation" data-set-color="dark">
@@ -75,7 +75,7 @@ function Home( {info, work, blog, skill} ) {
               </ul>
             </div>
           </section>
-         ) : null
+          ) : null
         }
         { blog ? (
           <section id="p-nublog" className="has-animation" data-set-color="light">
@@ -101,7 +101,7 @@ function Home( {info, work, blog, skill} ) {
               </ul>
             </div>
           </section>
-         ) : null
+          ) : null
         }
         <LinkArea></LinkArea>
         <ContactForm></ContactForm>
@@ -147,5 +147,4 @@ export async function getStaticProps() {
     },
   };
 }
-
-export default Home
+export default Home;

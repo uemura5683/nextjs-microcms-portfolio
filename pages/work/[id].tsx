@@ -112,7 +112,7 @@ export const getStaticProps = async context => {
   .then(res => res.json())
   .catch(() => null);
 
-  let workc = works ? works.contents : null;
+  const workc = works ? works.contents : null;
 
   return {
     props: {

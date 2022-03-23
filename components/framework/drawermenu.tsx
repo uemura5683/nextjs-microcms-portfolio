@@ -7,7 +7,6 @@ export default function DrawerMenu( { home
     home?: boolean
   }) {
   const [close, setOpen] = React.useState(true)
-  // open という名前の state 変数を宣言、初期値 true をセット
   const toggle = () => setOpen(!close)
   return (
     <>  

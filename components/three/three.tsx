@@ -17,24 +17,18 @@ const Canvas: React.FC = () => {
     if (!canvas) {
       return
     }
-    // init scene
     const scene = new Scene()
-
     const camera = new PerspectiveCamera( 75, canvas.clientWidth / canvas.clientHeight, 0.1, 1500);
     camera.position.set( 0, 0, 400 );
 
-    // init renderer
     const renderer = new WebGLRenderer({ canvas: canvas, antialias: true, alpha: true })
     renderer.setSize(2600, 1300)
 
-    // init object
     const object = new Object3D()
     scene.add(object)
 
-    // add fog
     scene.fog = new Fog(0xffffff, 1, 1000)
 
-    // add object
     const e_Geometry = new SphereGeometry( 200, 64, 64 );
     const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/earch.jpg');
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
@@ -57,8 +51,9 @@ const Canvas: React.FC = () => {
 
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
+
     for (let i = 0; i < 1000; i++) {
-      let rubble = [0X3a2424, 0X3f0a0a, 0X380e0e, 0X331233, 0X180018],
+      const rubble = [0X3a2424, 0X3f0a0a, 0X380e0e, 0X331233, 0X180018],
           rubbleNo = Math.floor( Math.random() * rubble.length),
           material = new MeshPhongMaterial({
             color: rubble[rubbleNo],
@@ -88,7 +83,7 @@ const Canvas: React.FC = () => {
     effectGlitch.renderToScreen = true
     composer.addPass(effectGlitch)
 
-    let controls = new function () {
+    const controls = new function () {
       this.goWild = false;
       this.updateEffect = function () {
           effectGlitch.goWild = controls.goWild;

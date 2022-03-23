@@ -24,16 +24,13 @@ export default function About( {info} ) {
 }
 
 export async function getStaticProps() {
-
   const key = {
     headers: {'X-MICROCMS-API-KEY': process.env.NS_API_KEY},
   };
   const infos = await fetch('https://nu-portfolio.microcms.io/api/v1/about', key)
     .then((res: { json: () => any }) => res.json())
     .catch(() => null);
-
-  let infoc = infos ? infos.body : null;
-
+  const infoc = infos ? infos.body : null;
   return {
     props: {
       info: infoc || null,

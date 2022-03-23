@@ -48,7 +48,7 @@ const Canvas: React.FC = () => {
 
     object.add( planesphere );
 
-    let planet_array = ['sun', 'jupiter', 'mars', 'mercury', 'neptune', 'pluto', 'saturn', 'uranus', 'venus', 'moon', 'earch'];
+    const planet_array = ['sun', 'jupiter', 'mars', 'mercury', 'neptune', 'pluto', 'saturn', 'uranus', 'venus', 'moon', 'earch'];
 
     planet_array.map(function ( planet ) {
       const p_Geometry = new SphereGeometry( 20 * Math.random(), 20, 20 );
@@ -94,24 +94,24 @@ const Canvas: React.FC = () => {
     });
 
     function generateSprite(colors) {
-      var canvas = document.createElement('canvas');
+      let canvas = document.createElement('canvas');
       canvas.width = 16;
       canvas.height = 16;
-      var context = canvas.getContext('2d');
-      var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+      let context = canvas.getContext('2d');
+      let gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
       gradient.addColorStop(0, 'rgba(255,255,255,1)');
       gradient.addColorStop(.8, colors);
       gradient.addColorStop(1, 'rgba(0,0,64,1)');
       gradient.addColorStop(1, 'rgba(0,0,0,1)');
       context.fillStyle = gradient;
       context.fillRect(0, 0, canvas.width, canvas.height);
-      var texture = new Texture(canvas);
+      let texture = new Texture(canvas);
       texture.needsUpdate = true;
       return texture;
     }
 
     for (let i = 0; i < 200; i++) {
-      let rubble = ['rgba(128,255,255,1)', 'rgba(255,255,255,1)', 'rgba(255,255,128,1)', 'rgba(255,128,255,1)'],
+      const rubble = ['rgba(128,255,255,1)', 'rgba(255,255,255,1)', 'rgba(255,255,128,1)', 'rgba(255,128,255,1)'],
           rubbleNo = Math.floor( Math.random() * rubble.length),
           sprite_material = new PointsMaterial({
             color: 0xffffff,

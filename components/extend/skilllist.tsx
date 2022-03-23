@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal'
 
-
 const SkillContent = (Jsondata, key) => {
 
   var subtitle;
@@ -48,8 +47,8 @@ const SkillContent = (Jsondata, key) => {
             </div>
           </div>          
         </Modal>
-    </li>
-  </>
-);
+      </li>
+    </>
+  );
 }
 export default SkillContent;
