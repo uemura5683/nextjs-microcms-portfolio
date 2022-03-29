@@ -3,7 +3,8 @@ import { WebGLRenderer, Texture, PointsMaterial, AdditiveBlending, Scene, Perspe
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterimagePass';
+import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterimagePass'
+import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 
 type ParamsAnimate = {
   object: THREE.Object3D
@@ -132,6 +133,17 @@ const Canvas: React.FC = () => {
     const composer = new EffectComposer(renderer)
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
+
+    const effectGlitch = new GlitchPass()
+    effectGlitch.renderToScreen = true
+    composer.addPass(effectGlitch)
+
+    const controls = new function () {
+      this.goWild = false;
+      this.updateEffect = function () {
+          effectGlitch.goWild = controls.goWild;
+      };
+    };
 
     afterimagePass = new AfterimagePass();
     composer.addPass( afterimagePass );
