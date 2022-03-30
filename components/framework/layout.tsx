@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Logo from '../../components/framework/logo'
 import SnsLink from '../../components/framework/snslink'
 import DrawerMenu from '../../components/framework/drawermenu'
+import Scrolltop from '../../components/extend/scrolltop'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
 
 export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
@@ -12,7 +13,7 @@ export default function Layout({ children, home
     home?: boolean
   }) {
   return (
-    <div>
+    <div id="wrapper">
       { !home ? (
         <style jsx>{`
           header.light {
@@ -94,6 +95,7 @@ export default function Layout({ children, home
           </div>
         </footer>
         <div id="modalArea"></div>
+        <Scrolltop/>
         <script src="/js/jquery.waypoints.min.js"></script>
         <script src="/js/common.js"></script>
     </div>
