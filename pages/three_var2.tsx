@@ -2,7 +2,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 
 const ThreeNoSSR = dynamic(
-  () => import('../components/three/three_renew'),
+  () => import('../components/three/three_var2'),
   { ssr: false }
 )
 export default function Threejs() {
