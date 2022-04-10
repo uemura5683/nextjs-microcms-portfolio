@@ -167,8 +167,9 @@ const Canvas: React.FC = () => {
 
   const animate = ({ object, composer, spherebox }: ParamsAnimate) => {
     window.requestAnimationFrame(() => animate({ object, composer, spherebox }))
-    object.rotation.y += 0.05;
-    object.rotation.x += 0.05;
+    object.rotation.z += 0.01;
+    object.rotation.y += 0.01;
+    object.rotation.x += 0.01;
     composer.render()
   }
   return (
