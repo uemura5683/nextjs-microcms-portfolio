@@ -8,12 +8,14 @@ type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
   spherebox: THREE.Object3D
+  data: number
 }
 
 let xcode = null
   , ycode = null
   , zcode = null
-  , circle_size = 1000;
+  , circle_size = 1000
+  , data = 0;
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
@@ -40,7 +42,7 @@ const Canvas: React.FC = () => {
     const spheregeometry = new BoxGeometry( circle_size, circle_size, circle_size );
     const spherematerial = new MeshPhongMaterial( {
       transparent: true,
-      opacity: .3,
+      opacity: .4,
       color: 0x4af7fa
     } );
 
@@ -162,14 +164,15 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    animate({ object, composer, spherebox })
+    animate({ object, composer, spherebox, data })
   }
 
-  const animate = ({ object, composer, spherebox }: ParamsAnimate) => {
-    window.requestAnimationFrame(() => animate({ object, composer, spherebox }))
-    object.rotation.z += 0.01;
-    object.rotation.y += 0.01;
-    object.rotation.x += 0.01;
+  const animate = ({ object, composer, spherebox, data }: ParamsAnimate) => {
+    window.requestAnimationFrame(() => animate({ object, composer, spherebox, data }))
+    data += 0.001;
+    object.rotation.z += 0.001 - (Math.cos(data) * 0.01);
+    object.rotation.y += 0.001 - (Math.cos(data) * 0.01);
+    object.rotation.x += 0.001 - (Math.cos(data) * 0.01);
     composer.render()
   }
   return (
@@ -179,7 +182,7 @@ const Canvas: React.FC = () => {
           width: 100% !important;
           height: 50% !important;
           background: black;
-          opacity: .4;
+          opacity: 1;
         }
       `}</style>
       <canvas ref={onCanvasLoaded} />
