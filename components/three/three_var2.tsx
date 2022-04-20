@@ -4,13 +4,15 @@ import { WebGLRenderer, Texture, PointsMaterial, AdditiveBlending, Scene, Perspe
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterimagePass'
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 
 type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
   planesphere: THREE.Object3D
+  cubedata:any
 }
+
+let cubedata = 0;
 
 const Canvas: React.FC = () => {
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
@@ -134,29 +136,19 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const effectGlitch = new GlitchPass()
-    effectGlitch.renderToScreen = true
-    composer.addPass(effectGlitch)
-
-    const controls = new function () {
-      this.goWild = false;
-      this.updateEffect = function () {
-          effectGlitch.goWild = controls.goWild;
-      };
-    };
-
     afterimagePass = new AfterimagePass();
     composer.addPass( afterimagePass );
 
     afterimagePass.uniforms[ "damp" ].value = 0.6;
 
-    animate({ object, composer, planesphere })
+    animate({ object, composer, planesphere, cubedata })
   }
 
-  const animate = ({ object, composer, planesphere }: ParamsAnimate) => {
-    window.requestAnimationFrame(() => animate({ object, composer, planesphere }))
+  const animate = ({ object, composer, planesphere, cubedata }: ParamsAnimate) => {
+    window.requestAnimationFrame(() => animate({ object, composer, planesphere, cubedata }))
     object.rotation.y += 0.025;
-    object.rotation.x += 0.025;
+    cubedata += 0.05;
+    planesphere.position.y += 0 - (Math.cos(cubedata) * 2);
     composer.render()
   }
   return (

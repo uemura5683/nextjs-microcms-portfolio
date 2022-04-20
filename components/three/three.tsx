@@ -8,7 +8,11 @@ import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
 type ParamsAnimate = {
   object: THREE.Object3D
   composer: EffectComposer
+  m_box: THREE.Object3D
+  m_move: any
 }
+
+let m_move = 0;
 
 const Canvas: React.FC = () => {
 
@@ -41,13 +45,6 @@ const Canvas: React.FC = () => {
     const m_box = new Mesh( m_Geometry, m_materials );
     m_box.position.set(0, 0, 250);
     object.add(m_box);
-
-    const s_Geometry = new SphereGeometry( 20, 32, 32 );
-    const s_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/sun.jpg');
-    const s_materials = new MeshStandardMaterial( { color: 0xffffff, map:s_texture } );
-    const s_box = new Mesh( s_Geometry, s_materials );
-    s_box.position.set(0, -250, 250);
-    object.add(s_box);    
 
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
@@ -89,15 +86,21 @@ const Canvas: React.FC = () => {
           effectGlitch.goWild = controls.goWild;
       };
     };
-    animate({ object, composer })
+    animate({ object, composer, m_box, m_move })
   }
 
   // for animation
-  const animate = ({ object, composer }: ParamsAnimate) => {
+  const animate = ({ object, composer, m_box, m_move }: ParamsAnimate) => {
+    window.requestAnimationFrame(() => animate({ object, composer, m_box, m_move }))
+    
+    object.rotation.y += 0.005;
 
-    window.requestAnimationFrame(() => animate({ object, composer }))
-    object.rotation.y += 0.015
-    object.rotation.z += 0.015
+    m_move -= .5;
+    const m_radian = ( m_move * Math.PI ) / 100;
+    m_box.position.x = 300 * Math.sin( m_radian );
+    m_box.position.y = 0;
+    m_box.position.z = 300 * Math.cos( m_radian );
+
     composer.render()
   }
 
