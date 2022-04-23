@@ -6,7 +6,7 @@ import DrawerMenu from '../../components/framework/drawermenu'
 import Scrolltop from '../../components/extend/scrolltop'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
 
-export const siteTitle = 'NStack | フロントエンドエンジニアポートフォリオサイト';
+export const siteTitle = 'UStack | フロントエンドエンジニアポートフォリオサイト';
 export default function Layout({ children, home
   }: {
     children: React.ReactNode
@@ -26,16 +26,14 @@ export default function Layout({ children, home
       ) : null }
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。"
-        />
-        <meta
-          property="og:image"
-          content={`https://uemu-engineer.com/images/ogimage.png`}
-        />
+        <meta name="description" content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。" />
+        <meta property="og:image" content="https://uemu-engineer.com/images/ogimage.png" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@uemuragame5683" />
+        <meta name="twitter:title" content={siteTitle} />
+        <meta name="twitter:description" content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。" />
+        <meta name="twitter:image" content="https://uemu-engineer.com/images/ogimage.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         {existsGaId && (
             <>
@@ -55,16 +53,14 @@ export default function Layout({ children, home
           )}
       </Head>
         <header>
+          <Logo/>
+          <SnsLink/>
           {home ? (
             <>
-              <Logo/>
-              <SnsLink/>
               <DrawerMenu home/>
             </>
           ) : (
             <>
-              <Logo/>
-              <SnsLink/>
               <DrawerMenu/>
             </>
           ) }
