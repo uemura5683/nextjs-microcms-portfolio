@@ -6,7 +6,7 @@ import DrawerMenu from '../../components/framework/drawermenu'
 import Scrolltop from '../../components/extend/scrolltop'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
 
-export const siteTitle = 'Nu-Stack | フロントエンドエンジニアポートフォリオサイト';
+export const siteTitle = 'NStack | フロントエンドエンジニアポートフォリオサイト';
 export default function Layout({ children, home
   }: {
     children: React.ReactNode
@@ -32,7 +32,7 @@ export default function Layout({ children, home
         />
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/Nu%20Stack.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg&images=https%3A%2F%2Fuemu-engineer.com%2Fimages%2Flogo.png&widths=undefined&widths=350&heights=undefined&heights=100`}
+          content={`https://uemu-engineer.com/images/ogimage.png`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />

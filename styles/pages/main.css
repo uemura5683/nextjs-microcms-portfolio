@@ -114,7 +114,7 @@
     top: 50%;
     right: 50%;
     -webkit-transform: translateY( -50% ) translateX( 50% );
-           transform: translateY( -50% ) translateX( 50% );
+            transform: translateY( -50% ) translateX( 50% );
   }
   #p-mainvisual figure {
     position: relative;
@@ -202,7 +202,7 @@
 
 @media (min-width: 1200px) {
   #p-mainvisual img[alt*='uemu-portfolio'] {
-    height: 75px;
+    height: 100px;
   }
   #p-mainvisual nav ul li {
     margin: 0 0 20px;
