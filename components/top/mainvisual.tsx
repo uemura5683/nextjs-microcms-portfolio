@@ -9,7 +9,7 @@ export default function Component() {
       <Logo home></Logo>
       <Navi home></Navi>
       <figure className="p-mainvisual__iframe">
-        <iframe loading="lazy" src="/three_var3" />
+        <iframe loading="lazy" src="/three_var4" />
       </figure>
       <div className="p-mainvisual__click">
         <Link
