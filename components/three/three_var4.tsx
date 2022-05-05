@@ -46,7 +46,7 @@ const Canvas: React.FC = () => {
     /**
     * earch
     **/
-    const e_Geometry = new SphereGeometry( 200, 200, 200 );
+    const e_Geometry = new SphereGeometry( 100, 100, 100 );
     const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/earch.jpg');
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
     const e_box = new Mesh(e_Geometry, e_materials );
@@ -132,7 +132,7 @@ const Canvas: React.FC = () => {
     
     let points;
     const r = 50;
-    const starsNum = 10000;
+    const starsNum = 500;
     const stargeometry = new BufferGeometry();
     const positions = new Float32Array(starsNum * 3);
     const colors = new Float32Array(starsNum * 3);
@@ -173,7 +173,7 @@ const Canvas: React.FC = () => {
     /**
      * plane
      */
-    const plane_back = new PlaneGeometry(3000, 3000, 64, 64);
+    const plane_back = new PlaneGeometry(2400, 2400, 64, 64);
     const material = new MeshStandardMaterial( {color: 0x000000, side: DoubleSide} );
     const plane_back_box =  new Mesh( plane_back, material);
     plane_back_box.position.z = -22;
