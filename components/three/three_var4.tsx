@@ -186,7 +186,7 @@ const Canvas: React.FC = () => {
     let planeSegments = 60;
     let plane = new Mesh(
       new PlaneGeometry(horizon, horizon, planeSegments, planeSegments),
-      new MeshBasicMaterial({ color:0xffffff, wireframe:true, transparent:true })
+      new MeshBasicMaterial({ color:0x666666, wireframe:true, transparent:true })
     );
     plane.position.z = -20;
     planes[0] = plane;
