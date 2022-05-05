@@ -11,6 +11,7 @@ type ParamsAnimate = {
   horizon: number
   speed: number
   e_box: THREE.Object3D
+  s_box: THREE.Object3D
   points: THREE.Object3D
   planes: any
   paused: boolean
@@ -18,7 +19,7 @@ type ParamsAnimate = {
 
 let paused = false
   , horizon = 3000
-  , speed = 10
+  , speed = 5
   , data = 0;
 
 const Canvas: React.FC = () => {
@@ -50,12 +51,22 @@ const Canvas: React.FC = () => {
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
     const e_box = new Mesh(e_Geometry, e_materials );
     scene.add(e_box);
-    scene.add( new HemisphereLight( 0x443333, 0x222233, 4 ) );
+
+    /**
+    * sun
+    **/
+    const s_Geometry = new SphereGeometry( 200, 200, 200 );
+    const s_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/sun.jpg');
+    const s_materials = new MeshStandardMaterial( { color: 0xffffff, map:s_texture } );
+    const s_box = new Mesh(s_Geometry, s_materials );
+    scene.add(s_box);
+
+    scene.add( new HemisphereLight( 0x443333, 0x222233, 3 ) );
 
     /**
      * mountains
      */
-    const mountains_material = new MeshBasicMaterial( { color:0xffffff, wireframe:true, transparent:false } );
+    const mountains_material = new MeshBasicMaterial( { color:0x666666, wireframe:true, transparent:false } );
     const mountains_shape = new Shape();
     mountains_shape.moveTo(  -800, 0 );
     mountains_shape.lineTo(  -650, 100 );
@@ -192,11 +203,11 @@ const Canvas: React.FC = () => {
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    animate({ object, composer, data, e_box, planes, paused, horizon,speed, points })
+    animate({ object, composer, data, e_box, s_box, planes, paused, horizon,speed, points })
   }
 
-  const animate = ({ object, composer, data, e_box, planes, paused, horizon, points }: ParamsAnimate) => {
-    window.requestAnimationFrame(() => animate({ object, composer, data, e_box, planes, paused, horizon, speed, points }))
+  const animate = ({ object, composer, data, e_box, s_box, planes, paused, horizon, points }: ParamsAnimate) => {
+    window.requestAnimationFrame(() => animate({ object, composer, data, e_box, s_box, planes, paused, horizon, speed, points }))
     data += .1;
 
     /**
@@ -206,19 +217,24 @@ const Canvas: React.FC = () => {
       if(planes[0].position.y < - horizon ){
         planes[0].position.y = planes[2].position.y + horizon;
       }
-
       if(planes[1].position.y < - horizon ){
         planes[1].position.y = planes[0].position.y + horizon;
       }
-
       if(planes[2].position.y < - horizon ){
         planes[2].position.y = planes[1].position.y + horizon;
       }
-
       planes[0].position.y +=- speed ;
       planes[1].position.y +=- speed ;
       planes[2].position.y +=- speed ;
     }
+
+    /**
+    * sun
+    **/
+    const s_radian = ( data * Math.PI ) / 50;
+    s_box.position.x = 0;
+    s_box.position.y = -1500 * Math.cos( s_radian );
+    s_box.position.z = -1000 * Math.sin( s_radian );
 
     /**
     * earch
