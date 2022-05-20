@@ -11,11 +11,12 @@ export default function Layout({ children, home
   }: {
     children: React.ReactNode
     home?: boolean
+    jsx?: any
   }) {
   return (
     <div id="wrapper">
       { !home ? (
-        <style jsx>{`
+        <style>{`
           header.light {
               background-color: transparent !important;
           }

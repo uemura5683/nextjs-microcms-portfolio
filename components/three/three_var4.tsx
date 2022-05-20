@@ -1,5 +1,5 @@
 import React from 'react'
-import { Vector3, Points, Shape, ShapeGeometry, SphereGeometry, BufferGeometry, RawShaderMaterial, BufferAttribute, TextureLoader, MeshStandardMaterial, HemisphereLight, Mesh, MeshBasicMaterial, PlaneGeometry, Object3D, DoubleSide, PerspectiveCamera, Scene, WebGLRenderer
+import { Vector3, Points, Shape, ShapeGeometry, AdditiveBlending, SphereGeometry, BufferGeometry, PointsMaterial, BufferAttribute, TextureLoader, MeshStandardMaterial, HemisphereLight, Mesh, MeshBasicMaterial, PlaneGeometry, Object3D, DoubleSide, PerspectiveCamera, Scene, WebGLRenderer
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -68,10 +68,10 @@ const Canvas: React.FC = () => {
      */
     const mountains_material = new MeshBasicMaterial( { color:0x666666, wireframe:true, transparent:false } );
     const mountains_shape = new Shape();
-    mountains_shape.moveTo(  -800, 0 );
-    mountains_shape.lineTo(  -650, 100 );
-    mountains_shape.lineTo(  -650, 0 );
-    mountains_shape.lineTo(  -650, 100 );
+    mountains_shape.moveTo( -800, 0 );
+    mountains_shape.lineTo( -650, 100 );
+    mountains_shape.lineTo( -650, 0 );
+    mountains_shape.lineTo( -650, 100 );
     mountains_shape.lineTo( -500, 25 );
     mountains_shape.lineTo( -400, 100 );
     mountains_shape.lineTo( -400, 0 );
@@ -105,34 +105,9 @@ const Canvas: React.FC = () => {
     /**
      * stars
      */
-    const vertexShader =`
-      precision mediump float;
-      uniform mat4 modelViewMatrix;
-      uniform mat4 projectionMatrix;
-      attribute vec3 position;
-      attribute vec3 customColor;
-      attribute float size;
-      varying vec3 vColor;
-      void main(){
-        vec4 mvPosition = modelViewMatrix * vec4(position,1.0);
-        gl_PointSize = size * (1.0 / length(mvPosition.xyz));
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-        vColor = customColor;
-      }
-    `;
-    const fragmentShader =`
-      precision mediump float;
-      uniform sampler2D texture;
-      varying vec3 vColor;    
-      void main(){
-        vec4 texcel = texture2D(texture,gl_PointCoord);    
-        gl_FragColor = vec4(vColor,1.0) * texcel;
-      }
-    `;
-    
     let points;
-    const r = 50;
-    const starsNum = 500;
+    const r = 700;
+    const starsNum = 1000;
     const stargeometry = new BufferGeometry();
     const positions = new Float32Array(starsNum * 3);
     const colors = new Float32Array(starsNum * 3);
@@ -141,33 +116,25 @@ const Canvas: React.FC = () => {
     for(let i = 0; i < starsNum; i++){
       const theta = Math.PI * Math.random();
       const phi = Math.PI * Math.random() * 2;
-  
       positions[i * 3] = r * Math.sin(theta) * Math.cos(phi);
       positions[i * 3 + 1] = r * Math.sin(theta) * Math.sin(phi);
       positions[i * 3 + 2] = r * Math.cos(theta);
-  
       colors[i * 3] = 1.0;
       colors[i * 3 + 1] = 1.0;
       colors[i * 3 + 2] = 1.0;
-  
       sizes[i] = 200;
     }
   
     stargeometry.setAttribute('position',new BufferAttribute(positions,3));
     stargeometry.setAttribute('customColor',new BufferAttribute(colors,3));
     stargeometry.setAttribute('size',new BufferAttribute(sizes,1));
-    const uniforms = {
-      texture:{type:'t',value:new TextureLoader().load('https://uemu-engineer.com/images/three/var4/star.png')}
-    };
-    const starmaterial = new RawShaderMaterial({
-      uniforms:uniforms,
-      vertexShader:vertexShader,
-      fragmentShader:fragmentShader,
-      transparent:false,
-      depthTest:false
-    });
+    const starmaterial = new PointsMaterial( {
+      size: 2,
+      blending: AdditiveBlending,
+      color: 0xffffff
+    } );
     points = new Points(stargeometry,starmaterial);
-    points.position.y = -500;
+    points.position.y = 0;
     scene.add(points);
 
     /**

@@ -57,15 +57,14 @@ const Contacts = () => {
   useEffect(() => {
     ReactDOM.render(
       <React.StrictMode>
-          <ModalConfirm
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-          />
+        <ModalConfirm
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+        />
       </React.StrictMode>,
       document.getElementById("modalArea")
     );
   });
-
   function ModalConfirm(props) {
     const data = {
       email: email,
@@ -144,66 +143,71 @@ const Contacts = () => {
   }
   return (
     <>
-    <div className="c-contact-form__inner">
-      <p className="c-contact-form__txt">
-        どんな些細でもいいですので気軽にお問い合わせください。<br/>
-        <a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。
-      </p>
-      <div className="alert alert-warning"></div>
-      <form className="c-contact-form__form">
-        <div className="c-contact-form__content">
-          <label>あなたの名前</label>
-          <input
-            type="text"
-            placeholder="名前を入力してください"
-            id="name"
-            name="name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="c-contact-form__content">
-          <label>メールアドレス</label>
-          <input
-            type="email"
-            placeholder="メールアドレスを入力してください"
-            id="email"
-            name="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="c-contact-form__content">
-          <label>お問い合わせ内容</label>
-          <input
-            type="text"
-            placeholder="タイトルを入力してください"
-            id="title"
-            name="title"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div className="c-contact-form__content">
-          <label>お問い合わせ詳細</label>
-          <textarea
-            placeholder="本文を入力してください"
-            name="body"
-            value={body}
-            onChange={e => setBody(e.target.value)}
-            required
-          />
-        </div>
-        <div className="c-btn-area">
-          <button className="btn-black" type="submit" onClick={handleSubmit}>送信内容を確認する</button>
-        </div>
-      </form>
-    </div>
+      <div className="c-contact-form__inner">
+        <p className="c-contact-form__txt">
+          どんな些細でもいいですので気軽にお問い合わせください。<br/>
+          <a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。
+        </p>
+        <div className="alert alert-warning"></div>
+        <form className="c-contact-form__form">
+          <div className="c-contact-form__content">
+            <label>あなたの名前</label>
+            <input
+              type="text"
+              placeholder="名前を入力してください"
+              id="name"
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="c-contact-form__content">
+            <label>メールアドレス</label>
+            <input
+              type="email"
+              placeholder="メールアドレスを入力してください"
+              id="email"
+              name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="c-contact-form__content">
+            <label>お問い合わせ内容</label>
+            <input
+              type="text"
+              placeholder="タイトルを入力してください"
+              id="title"
+              name="title"
+              value={title}
+              onChange={e => setTitle(e.target.value)}
+              required
+            />
+          </div>
+          <div className="c-contact-form__content">
+            <label>お問い合わせ詳細</label>
+            <textarea
+              placeholder="本文を入力してください"
+              name="body"
+              value={body}
+              onChange={e => setBody(e.target.value)}
+              required
+            />
+          </div>
+          <div className="c-btn-area">
+            <button
+              className="btn-black"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              送信内容を確認する
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   )
 };
-
 export default Contacts;
