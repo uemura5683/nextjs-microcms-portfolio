@@ -4,7 +4,7 @@ export default function LinkArea() {
       <h2 className="c-title white">LINK</h2>    
       <ul className="link__list">
         <li>
-          <a href="https://nu-blogsite.net/" target="_blank">
+          <a href="https://nu-blogsite.net/" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/nu-blog.png" 
               alt="Nu-Blogサイト"
@@ -13,7 +13,7 @@ export default function LinkArea() {
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/uemuragame5683" target="_blank">
+          <a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/twitter.png"
               alt="うえむー twitter"
@@ -22,7 +22,7 @@ export default function LinkArea() {
           </a>
         </li>
         <li>
-          <a href="https://speakerdeck.com/uemura" target="_blank">
+          <a href="https://speakerdeck.com/uemura" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/speaker-deck.png"
               alt="うえむー Speaker Deck"
@@ -31,7 +31,7 @@ export default function LinkArea() {
           </a>
         </li>
         <li>
-          <a href="https://codepen.io/uemuragame5683" target="_blank">
+          <a href="https://codepen.io/uemuragame5683" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/codepen.png"
               alt="うえむー Codepen"
@@ -40,7 +40,7 @@ export default function LinkArea() {
           </a>
         </li>
         <li>
-          <a href="https://github.com/uemura5683" target="_blank">
+          <a href="https://github.com/uemura5683" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/github.png" 
               alt="うえむー Github"
@@ -49,7 +49,7 @@ export default function LinkArea() {
           </a>
         </li>
         <li>
-          <a href="https://zenn.dev/uemuragame5683" target="_blank">
+          <a href="https://zenn.dev/uemuragame5683" target="_blank" rel="noopener noreferrer">
             <img
               src="/images/link/zenn.png"
               alt="うえむー Zenn"

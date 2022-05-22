@@ -84,7 +84,7 @@ function Home( {info, work, blog, skill} ) {
               <ul>
               {blog.map((nublog) => (
                 <li className={nublog.id} key={nublog.id}>
-                <a href={`${nublog.link}`} target="_blank">
+                <a href={`${nublog.link}`} target="_blank" rel="noopener noreferrer">
                 <figure>
                   <img
                     src={nublog.image.url}
@@ -93,7 +93,7 @@ function Home( {info, work, blog, skill} ) {
                   />
                 </figure>
                 </a>
-                <a href={`${nublog.link}`} target="_blank">
+                <a href={`${nublog.link}`} target="_blank" rel="noopener noreferrer">
                     <span>{nublog.title}</span>
                 </a>
               </li>

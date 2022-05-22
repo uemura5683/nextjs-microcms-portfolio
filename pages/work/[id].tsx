@@ -68,7 +68,7 @@ export default function BlogId( { works, works_data, worklist } ) {
                     </Link>
                   </li>
                 )) : (
-                    <li>記事の読み込み失敗しました</li>
+                  <li>記事の読み込み失敗しました</li>
                 )}
               </ul>
             </div>
@@ -101,8 +101,8 @@ export const getStaticProps = async context => {
     'https://nu-portfolio.microcms.io/api/v1/work/' + id,
     key,
   )
-    .then(res => res.json())
-    .catch(() => null);
+  .then(res => res.json())
+  .catch(() => null);
   
   const publishatformat = dayjs(data.UpdateAt).format()
       , jstDate         = dayjs(publishatformat)

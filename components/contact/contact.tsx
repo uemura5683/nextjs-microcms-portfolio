@@ -15,7 +15,8 @@ const Contacts = () => {
       , [title, setTitle] = useState("")
       , [body, setBody]   = useState("")
       , [modalIsOpen,setIsOpen] = React.useState(false);
-      function closeModal(){ setIsOpen(false); }
+  
+  function closeModal(){ setIsOpen(false); }
 
   // お問い合わせ入力の処理
   // 入力漏れの場合はエラー文言を出力し
@@ -146,7 +147,7 @@ const Contacts = () => {
       <div className="c-contact-form__inner">
         <p className="c-contact-form__txt">
           どんな些細でもいいですので気軽にお問い合わせください。<br/>
-          <a href="https://twitter.com/uemuragame5683" target="_blank">Twitter</a>でも受け付けております。
+          <a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">Twitter</a>でも受け付けております。
         </p>
         <div className="alert alert-warning"></div>
         <form className="c-contact-form__form">

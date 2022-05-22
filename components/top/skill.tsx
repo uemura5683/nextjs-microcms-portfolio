@@ -6,11 +6,11 @@ export default function Skill({ skill }) {
       <h2 className="c-title white">SKILL</h2>
       <ul className="skill__list">
         {skill ? skill.map((Jsondata, index) => 
-            <Skilllist
-              data={Jsondata}
-              key={index}>
-            </Skilllist>
-          ): null}
+          <Skilllist
+            data={Jsondata}
+            key={index}>
+          </Skilllist>
+        ): null}
       </ul>
     </section>
   )
