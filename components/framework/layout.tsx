@@ -6,7 +6,7 @@ import DrawerMenu from '../../components/framework/drawermenu'
 import Scrolltop from '../../components/extend/scrolltop'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
 
-export const siteTitle = 'UStack | フロントエンドエンジニアポートフォリオサイト';
+export const siteTitle = 'Ustack | うえむーポートフォリオサイト';
 export default function Layout({ children, home
   }: {
     children: React.ReactNode
@@ -18,10 +18,10 @@ export default function Layout({ children, home
       { !home ? (
         <style>{`
           header.light {
-              background-color: transparent !important;
+            background-color: transparent !important;
           }
           header.light  .header--menu__btn span {
-              background-color: white !important;
+            background-color: white !important;
           }
         `}</style>
       ) : null }

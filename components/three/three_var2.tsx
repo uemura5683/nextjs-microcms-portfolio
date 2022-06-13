@@ -34,6 +34,9 @@ const Canvas: React.FC = () => {
     const object = new Object3D()
     scene.add(object)
 
+    /**
+     * planet
+     */
     const cubeTextureLoader = new CubeTextureLoader()
     const textureCube = cubeTextureLoader.load( [
       'images/three/px.png', 'images/three/nx.png',
@@ -51,6 +54,9 @@ const Canvas: React.FC = () => {
 
     object.add( planesphere );
 
+    /**
+     * star
+     */
     const planet_array = ['sun', 'jupiter', 'mars', 'mercury', 'neptune', 'pluto', 'saturn', 'uranus', 'venus', 'moon', 'earch'];
 
     planet_array.map(function ( planet ) {
@@ -96,6 +102,9 @@ const Canvas: React.FC = () => {
       object.add(p_box);    
     });
 
+    /**
+     * sprite
+     */
     function generateSprite(colors) {
       let canvas = document.createElement('canvas');
       canvas.width = 16;
@@ -115,14 +124,14 @@ const Canvas: React.FC = () => {
 
     for (let i = 0; i < 200; i++) {
       const rubble = ['rgba(128,255,255,1)', 'rgba(255,255,255,1)', 'rgba(255,255,128,1)', 'rgba(255,128,255,1)'],
-          rubbleNo = Math.floor( Math.random() * rubble.length),
-          sprite_material = new PointsMaterial({
-            color: 0xffffff,
-            size: 3,
-            transparent: true,
-            blending: AdditiveBlending,
-            map: generateSprite(rubble[rubbleNo])
-          });
+      rubbleNo = Math.floor( Math.random() * rubble.length),
+      sprite_material = new PointsMaterial({
+        color: 0xffffff,
+        size: 3,
+        transparent: true,
+        blending: AdditiveBlending,
+        map: generateSprite(rubble[rubbleNo])
+      });
       const mesh = new Mesh(new SphereGeometry(1, 10, 10), sprite_material)
       mesh.position.set(1 * Math.random() - 0.5, 1 * Math.random() - 0.5, 1 * Math.random() - 0.5).normalize()
       mesh.position.multiplyScalar(Math.random() * 1000)

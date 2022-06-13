@@ -33,12 +33,18 @@ const Canvas: React.FC = () => {
 
     scene.fog = new Fog(0xffffff, 1, 1000)
 
+    /**
+     * earth
+     */
     const e_Geometry = new SphereGeometry( 200, 64, 64 );
     const e_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/earch.jpg');
     const e_materials = new MeshStandardMaterial( { color: 0xffffff, map:e_texture } );
     const e_box = new Mesh(e_Geometry, e_materials);
     object.add(e_box);
   
+    /**
+     * moon
+     */
     const m_Geometry = new SphereGeometry( 20, 32, 32 );
     const m_texture = new TextureLoader().load('https://raw.githubusercontent.com/uemura5683/threejs_plactice/master/earth_vol2/img/moon.jpg');
     const m_materials = new MeshStandardMaterial( { color: 0xffffff, map:m_texture } );
@@ -49,13 +55,16 @@ const Canvas: React.FC = () => {
     const geometry = new SphereBufferGeometry(2, 3, 4),
           size = 1;
 
+    /**
+     * sprite
+     */
     for (let i = 0; i < 1000; i++) {
       const rubble = [0X3a2424, 0X3f0a0a, 0X380e0e, 0X331233, 0X180018],
-          rubbleNo = Math.floor( Math.random() * rubble.length),
-          material = new MeshPhongMaterial({
-            color: rubble[rubbleNo],
-            flatShading: true
-          })
+            rubbleNo = Math.floor( Math.random() * rubble.length),
+            material = new MeshPhongMaterial({
+              color: rubble[rubbleNo],
+              flatShading: true
+            })
 
       const mesh = new Mesh(geometry, material)
       mesh.position.set(size * Math.random() - 0.5, size * Math.random() - 0.5, size * Math.random() - 0.5).normalize()

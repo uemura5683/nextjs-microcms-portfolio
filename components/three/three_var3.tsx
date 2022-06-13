@@ -64,6 +64,9 @@ const Canvas: React.FC = () => {
         side: DoubleSide
       } );
 
+      /**
+       * language
+       */
       for (let i = 0; i < 120; i++) {
         let message = ['HTML', 'CSS', 'JavaScript', 'PHP', 'jQuery', 'Vue.js', 'React.js', 'Node.js', 'gulp.js', 'SCSS', 'WordPress', 'Movable Type', 'microCMS', 'TypeScript', 'golang', 'Nuxt.js', 'Next.js', 'Newt', 'Strapi', 'Firebase'],
             christalNo = Math.floor( Math.random() * message.length),
@@ -155,8 +158,6 @@ const Canvas: React.FC = () => {
             object.add( lineText );
         }
     } );
-
-
 
     scene.add( new HemisphereLight( 0x443333, 0x222233, 4 ) );
   
