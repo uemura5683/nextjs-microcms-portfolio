@@ -67,7 +67,7 @@ const Canvas: React.FC = () => {
       /**
        * language
        */
-      for (let i = 0; i < 120; i++) {
+      for (let i = 0; i < 50; i++) {
         let message = ['HTML', 'CSS', 'JavaScript', 'PHP', 'jQuery', 'Vue.js', 'React.js', 'Node.js', 'gulp.js', 'SCSS', 'WordPress', 'Movable Type', 'microCMS', 'TypeScript', 'golang', 'Nuxt.js', 'Next.js', 'Newt', 'Strapi', 'Firebase'],
             christalNo = Math.floor( Math.random() * message.length),
             shapes = font.generateShapes( message[christalNo], 30 ),

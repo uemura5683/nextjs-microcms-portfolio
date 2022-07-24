@@ -41,7 +41,7 @@ export default function Layout({ children, home
           <meta name="twitter:description" content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。" />
           <meta name="twitter:image" content="https://uemu-engineer.com/images/ogimage.png" />
           <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&amp;display=swap" rel="stylesheet" />
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async defer />
           {existsGaId && (
               <>
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
@@ -94,13 +94,13 @@ export default function Layout({ children, home
               <Link href="/about">About</Link>
             </div>
             <div className="footer__copyrights">
-            (c) {new Date().getFullYear()} Uemu-Engineer
+              (c) {new Date().getFullYear()} Uemu-Engineer
             </div>
           </footer>
           <div id="modalArea"></div>
           <Scrolltop/>
-          <script src="/js/jquery.waypoints.min.js"></script>
-          <script src="/js/common.js"></script>
+          <script src="/js/jquery.waypoints.min.js" async defer />
+          <script src="/js/common.js" async defer />
       </div>
     </>
   )
