@@ -1,7 +1,8 @@
 import Logo from '../framework/logo'
 import Navi from '../framework/nav'
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+const iframehref = 'https://uemu-engineer.com/three_var3';
 
 export default function Component() {
   return (
@@ -9,7 +10,7 @@ export default function Component() {
       <Logo home></Logo>
       <Navi home></Navi>
       <figure className="p-mainvisual__iframe">
-        <iframe loading="lazy" src="https://uemu-engineer.com/three_var3" />
+        <iframe loading="lazy" src={iframehref} />
       </figure>
       <div className="p-mainvisual__click">
         <Link

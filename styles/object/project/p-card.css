@@ -36,7 +36,7 @@
     text-align: left;
 
 }
-.card ul li span.white {
+.c-title.white ~ .card ul li span {
     color: white;
 }
 .card ul li span.open {

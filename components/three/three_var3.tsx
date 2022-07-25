@@ -71,8 +71,7 @@ const Canvas: React.FC = () => {
         let message = ['HTML', 'CSS', 'JavaScript', 'PHP', 'jQuery', 'Vue.js', 'React.js', 'Node.js', 'gulp.js', 'SCSS', 'WordPress', 'Movable Type', 'microCMS', 'TypeScript', 'golang', 'Nuxt.js', 'Next.js', 'Newt', 'Strapi', 'Firebase'],
             christalNo = Math.floor( Math.random() * message.length),
             shapes = font.generateShapes( message[christalNo], 30 ),
-            text_geometry = new ShapeGeometry( shapes ),
-            size = 1000;
+            text_geometry = new ShapeGeometry( shapes );
         
         text_geometry.computeBoundingBox();
 

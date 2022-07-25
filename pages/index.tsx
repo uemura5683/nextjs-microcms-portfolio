@@ -9,6 +9,7 @@ import Profile     from '../components/top/profile'
 import Skill       from '../components/top/skill'
 import LinkArea    from '../components/top/linkarea'
 import ContactForm from '../components/top/contactform'
+import CardExtend from "../components/common/card-extend-detail";
 
 function Home( {info, work, blog, skill} ) {
   return (
@@ -22,30 +23,16 @@ function Home( {info, work, blog, skill} ) {
         exit={{ x: 0, opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <MainVisual></MainVisual>
-        <Profile></Profile>
-        <Skill skill={skill}></Skill>
+        <MainVisual />
+        <Profile />
+        <Skill skill={skill} />
+
         { work ? (
           <section id="p-work" className="has-animation" data-set-color="light">
             <h2 className="c-title">WORK</h2>
             <div className="card">
               <ul>
-              {work ? work.map(work => (
-                  <li className={work.id} key={work.id}>
-                    <Link href={`work/${work.id}`}>
-                    <figure>
-                      <img
-                        src={work.image.url}
-                        alt={work.title}
-                        width={605}
-                      />
-                    </figure>
-                    </Link>
-                    <Link href={`work/${work.id}`}>
-                      <span>{work.title}</span>
-                    </Link>
-                  </li>
-              )) : null}
+                <CardExtend data={{data:work, link:'work'}} />
               </ul>
             </div>
           </section>
@@ -56,22 +43,7 @@ function Home( {info, work, blog, skill} ) {
             <h2 className="c-title white">INFORMATION</h2>
             <div className="card">
               <ul>
-              {info.map((info) => (
-                <li className={info.id} key={info.id}>
-                <Link href={`information/${info.id}`}>
-                <figure>
-                  <img
-                    src={info.image.url}
-                    alt={info.title}
-                    width={605}
-                  />
-                </figure>
-                </Link>
-                <Link href={`information/${info.id}`}>
-                  <span className="white">{info.title}</span>
-                </Link>
-              </li>
-              )) }
+                <CardExtend data={{data:info, link:'information'}} />
               </ul>
             </div>
           </section>
@@ -82,22 +54,7 @@ function Home( {info, work, blog, skill} ) {
             <h2 className="c-title">NU-blog</h2>
             <div className="card">
               <ul>
-              {blog.map((nublog) => (
-                <li className={nublog.id} key={nublog.id}>
-                <a href={`${nublog.link}`} target="_blank" rel="noopener noreferrer">
-                <figure>
-                  <img
-                    src={nublog.image.url}
-                    alt={nublog.title}
-                    width={605}
-                  />
-                </figure>
-                </a>
-                <a href={`${nublog.link}`} target="_blank" rel="noopener noreferrer">
-                    <span>{nublog.title}</span>
-                </a>
-              </li>
-              ))}
+              <CardExtend data={{data:blog, link:'nublog'}} />
               </ul>
             </div>
           </section>
