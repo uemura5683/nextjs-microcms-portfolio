@@ -13,7 +13,7 @@ export const StyleWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    animation: bodyfadeout 1s linear 6.5s infinite;
+    animation: bodyfadeout 1s linear 7.0s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     background-color: black;
@@ -35,7 +35,7 @@ export const StyleWrapper = styled.div`
     position: absolute;
     width: 95.5px;
     height: 95px;
-    animation: logoleftfade .5s ease-in-out 5.7s infinite;
+    animation: logoleftfade .5s ease-in-out 6.2s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
@@ -55,7 +55,7 @@ export const StyleWrapper = styled.div`
     opacity: 0;
     background-size: calc(23px / 2) calc(191px / 2);
     background-repeat: no-repeat;
-    animation: logoleftone .3s ease-in-out 2.1s infinite;
+    animation: logoleftone .3s ease-in-out 2.6s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
@@ -72,7 +72,7 @@ export const StyleWrapper = styled.div`
     opacity: 0;
     background-size: calc(22px / 2) calc(191px / 2);
     background-repeat: no-repeat;
-    animation: logolefttwo .3s ease-in-out 2.7s infinite;
+    animation: logolefttwo .3s ease-in-out 3.2s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;  
   }
@@ -89,7 +89,7 @@ export const StyleWrapper = styled.div`
     opacity: 0;
     background-size: calc(190px / 2) calc(22px / 2);
     background-repeat: no-repeat;
-    animation: logoleftthree .3s ease-in-out 2.4s infinite;
+    animation: logoleftthree .3s ease-in-out 2.9s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;   
   }
@@ -107,7 +107,7 @@ export const StyleWrapper = styled.div`
     background-size: calc(121px / 2) calc(133px / 2);
     transform: translate(-50%, 0px);
     background-repeat: no-repeat;
-    animation: logoleftfour .3s ease-in-out 3.3s infinite;
+    animation: logoleftfour .3s ease-in-out 3.8s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1; 
   }
@@ -124,7 +124,7 @@ export const StyleWrapper = styled.div`
     opacity: 0;
     background-size: 62px 68px;
     transform: translate(-50%, 0px);
-    animation: logoleftfive .3s ease-in-out 3.0s infinite;
+    animation: logoleftfive .3s ease-in-out 3.5s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1; 
   }
@@ -146,8 +146,8 @@ export const StyleWrapper = styled.div`
   }
   .c-logo-right .c-logo-right-one {
     opacity: 0;
-    animation: logorightone .3s ease-in-out 1.0s infinite
-            , logorightonefade .5s ease-in-out 5.2s infinite;
+    animation: logorightone .3s ease-in-out 1.5s infinite
+            , logorightonefade .5s ease-in-out 5.7s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     position: absolute;
@@ -163,8 +163,8 @@ export const StyleWrapper = styled.div`
   }
   .c-logo-right .c-logo-right-two {
     opacity: 0;
-    animation: logorighttwo .3s ease-in-out 1.2s infinite
-            , logorighttwofade .5s ease-in-out 4.9s infinite;
+    animation: logorighttwo .3s ease-in-out 1.7s infinite
+            , logorighttwofade .5s ease-in-out 5.4s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     position: absolute;
@@ -180,8 +180,8 @@ export const StyleWrapper = styled.div`
   }
   .c-logo-right .c-logo-right-three {
     opacity: 0;
-    animation: logorightthree .3s ease-in-out 1.4s infinite
-            , logorightthreefade .5s ease-in-out 4.6s infinite;
+    animation: logorightthree .3s ease-in-out 1.9s infinite
+            , logorightthreefade .5s ease-in-out 5.1s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     position: absolute;
@@ -197,8 +197,8 @@ export const StyleWrapper = styled.div`
   }
   .c-logo-right .c-logo-right-four {
     opacity: 0;
-    animation: logorightfour .3s ease-in-out 1.6s infinite
-            , logorightfourfade .5s ease-in-out 4.3s infinite;
+    animation: logorightfour .3s ease-in-out 2.1s infinite
+            , logorightfourfade .5s ease-in-out 4.8s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     position: absolute;
@@ -214,8 +214,8 @@ export const StyleWrapper = styled.div`
   }
   .c-logo-right .c-logo-right-five {
     opacity: 0;
-    animation: logorightfive .3s ease-in-out 1.8s infinite
-            , logorightfivefade .5s ease-in-out 4.0s infinite;
+    animation: logorightfive .3s ease-in-out 2.3s infinite
+            , logorightfivefade .5s ease-in-out 4.5s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     position: absolute;
