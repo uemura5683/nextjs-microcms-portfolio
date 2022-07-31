@@ -1,17 +1,36 @@
 import Logo from '../framework/logo'
 import Navi from '../framework/nav'
-import React from "react";
+import ReactDOM from "react-dom";
 import { Link } from "react-scroll";
-const iframehref = 'https://uemu-engineer.com/three_var3';
+import React, { useState, useEffect } from "react";
+
 
 export default function Component() {
+  const [iniframe, setiframe] = useState("");
+
+  useEffect(() => {
+    let timeoutId = setTimeout(() => {
+      setiframe('https://uemu-engineer.com/three_var3');
+    }, 5000)
+    return() => {
+      clearTimeout(timeoutId);      
+    }
+  }, [])
+
+  if(iniframe != '') {
+    ReactDOM.render(
+      <React.StrictMode>
+        <iframe loading="lazy" src={iniframe} />
+      </React.StrictMode>,
+      document.getElementById("mainbisual")
+    );
+  }
+  
   return (
     <section id="p-mainvisual" data-set-color="dark">
       <Logo home></Logo>
       <Navi home></Navi>
-      <figure className="p-mainvisual__iframe">
-        <iframe loading="lazy" src={iframehref} />
-      </figure>
+      <figure id="mainbisual" className="p-mainvisual__iframe"></figure>
       <div className="p-mainvisual__click">
         <Link
           activeClass="active"
