@@ -13,7 +13,7 @@ export const StyleWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    animation: bodyfadeout 1s linear 7.0s infinite;
+    animation: bodyfadeout 1s linear 7.2s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     background-color: black;

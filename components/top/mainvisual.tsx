@@ -11,7 +11,7 @@ export default function Component() {
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       setiframe('https://uemu-engineer.com/three_var3');
-    }, 5000)
+    }, 6700)
     return() => {
       clearTimeout(timeoutId);      
     }
@@ -25,7 +25,7 @@ export default function Component() {
       document.getElementById("mainbisual")
     );
   }
-  
+
   return (
     <section id="p-mainvisual" data-set-color="dark">
       <Logo home></Logo>
