@@ -2,152 +2,152 @@
 * skill content
 **/
 .skill__list {
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    margin: 0 -.5rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  margin: 0 -.5rem;
 }
 .skill__list li {
-    width: calc(50% - 1rem);
-    margin: 0 .5rem 1rem;
-    cursor: pointer;
+  width: calc(50% - 1rem);
+  margin: 0 .5rem 1rem;
+  cursor: pointer;
 }
 .skill__list li button {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -webkit-align-items: center;
-    align-items: center;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
 }
 .skill__list li button:hover,
 .skill__list li button:focus {
-    box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .skill__list li img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    -webkit-transition:opacity .3s ease-in-out;
-            transition:opacity .3s ease-in-out;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  -webkit-transition:opacity .3s ease-in-out;
+          transition:opacity .3s ease-in-out;
 }
 .skill__list li:hover img {
-    opacity: .7;
-    -webkit-transition:opacity .3s ease-in-out;
-            transition:opacity .3s ease-in-out;
+  opacity: .7;
+  -webkit-transition:opacity .3s ease-in-out;
+          transition:opacity .3s ease-in-out;
 }
 @media (min-width: 991px) {
-    /**
-    * skill content
-    **/
-    .skill__list {
-        margin: 0 -.5rem;
-    }
-    .skill__list li {
-        margin: 0 .5rem 1rem;
-        width: calc( 99.9% / 3 - 1rem);
-    }
-    .skill__list li .gage:after {
-        height: 18px;
-    }
+  /**
+  * skill content
+  **/
+  .skill__list {
+    margin: 0 -.5rem;
+  }
+  .skill__list li {
+    margin: 0 .5rem 1rem;
+    width: calc( 99.9% / 3 - 1rem);
+  }
+  .skill__list li .gage:after {
+    height: 18px;
+  }
 }
 
 /**
 * modal
 **/
 .ReactModal__Overlay {
-    z-index: 20;
+  z-index: 20;
 }
 .ReactModal__Content {
-    padding: 20px !important;
-    width: 90%;
-    height: 90%;
-    top: 50% !important;
-    left: 50% !important;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-    background-color: white !important;
-    border: .5rem solid #EEEEEE !important;
+  padding: 20px !important;
+  width: 90%;
+  height: 90%;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: white !important;
+  border: .5rem solid #EEEEEE !important;
 }
 .ReactModal__Content h2 {
-    font-size: 1.2rem;
-    box-shadow: 0 1px 0 0 lightgrey, 0 2px 0 0 white;
-    padding: 0 0 5px;
-    margin: 0 0 20px;
-    font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 1px 0 0 lightgrey, 0 2px 0 0 white;
+  padding: 0 0 5px;
+  margin: 0 0 20px;
+  font-weight: bold;
 }
 .ReactModal__Content button {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: auto;
-    height: 30px;
-    font-size: 0;
-    background-color:transparent;
-    border: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: auto;
+  height: 30px;
+  font-size: 0;
+  background-color:transparent;
+  border: none;
 }
 .ReactModal__Content button:before,
 .ReactModal__Content button:after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    background-color: #737373;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #737373;
 }
 .ReactModal__Content button:before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .ReactModal__Content button:after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .ReactModal__Content .skill__zoom_modal {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .ReactModal__Content .skill__zoom_modal img {
-    width: 100%;
-    height: auto;
-    border: 1px solid lightgray;
-    margin: 0 0 5%;
+  width: 100%;
+  height: auto;
+  border: 1px solid lightgray;
+  margin: 0 0 5%;
 }
 .ReactModal__Content .skill__zoom_modal_description {
-    width: 100%;
+  width: 100%;
 }
 .ReactModal__Content .skill__zoom_modal_description p {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 .ReactModal__Content .skill__zoom_modal_description span {
-    border-bottom: 1px solid lightgray;
-    display: block;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 0 0 10px;
+  border-bottom: 1px solid lightgray;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 10px;
 }
 @media (min-width: 991px) {
-    .ReactModal__Content {
-        width: 40%;
-        height: 80%;
-    }
-    .ReactModal__Content h2 {
-        font-size: 1.2rem;
-        padding: 0 0 20px;
-    }
-    .ReactModal__Content button {
-        top: 15px;
-    }
-    .ReactModal__Content .skill__zoom_modal img {
-        width: 45%;
-        margin: 10px 5% 0 0;
-        position: sticky;
-        top: 0;
-        left: 0;
-    }
-    .ReactModal__Content .skill__zoom_modal_description {
-        width: 50%;
-    }
+  .ReactModal__Content {
+    width: 40%;
+    height: 80%;
+  }
+  .ReactModal__Content h2 {
+    font-size: 1.2rem;
+    padding: 0 0 20px;
+  }
+  .ReactModal__Content button {
+    top: 15px;
+  }
+  .ReactModal__Content .skill__zoom_modal img {
+    width: 45%;
+    margin: 10px 5% 0 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  .ReactModal__Content .skill__zoom_modal_description {
+    width: 50%;
+  }
 }

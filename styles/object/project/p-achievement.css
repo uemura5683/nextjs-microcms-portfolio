@@ -2,71 +2,71 @@
 * acivement content
 **/
 .acivement__list {
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    margin: 0 -.5rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  margin: 0 -.5rem;
 }
 .acivement__list li {
-    width: calc(50% - 1rem);
-    margin: 0 .5rem 1rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  width: calc(50% - 1rem);
+  margin: 0 .5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .acivement__list li img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    -webkit-transition:all .3s ease-in-out;
-            transition:all .3s ease-in-out;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  -webkit-transition:all .3s ease-in-out;
+          transition:all .3s ease-in-out;
 }
 .acivement__list li:hover img {
-    opacity: .7;
-    transform: scale(1.2);
-    -webkit-transition:all .3s ease-in-out;
-            transition:all .3s ease-in-out;
+  opacity: .7;
+  transform: scale(1.2);
+  -webkit-transition:all .3s ease-in-out;
+          transition:all .3s ease-in-out;
 }
 .acivement__list li > span {
-    display: block;
+  display: block;
 }
 .acivement__list li span.name {
-    display: block;
-    color: white;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    width: 100%;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    text-align: center;
-    padding: 29% 0px;
+  display: block;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+  text-align: center;
+  padding: 29% 0px;
 }
 .acivement__list li:hover span.name {
-    opacity: .7;
-    background: black;
-    -webkit-transition:all .3s ease-in-out;
-            transition:all .3s ease-in-out;
+  opacity: .7;
+  background: black;
+  -webkit-transition:all .3s ease-in-out;
+          transition:all .3s ease-in-out;
 
 }
 @media (max-width: 787px) {
-    #p-acivement {
-        padding: 25px 0%;
-    }
+  #p-acivement {
+    padding: 25px 0%;
+  }
 }
 @media (min-width: 991px) {
-    /**
-    * acivement content
-    **/
-    .acivement__list {
-        margin: 0 -.5rem;
-    }
-    .acivement__list li {
-        margin: 0 .5rem 1rem;
-        width: calc( 99.9% / 3 - 1rem);
-    }
+  /**
+  * acivement content
+  **/
+  .acivement__list {
+    margin: 0 -.5rem;
+  }
+  .acivement__list li {
+    margin: 0 .5rem 1rem;
+    width: calc( 99.9% / 3 - 1rem);
+  }
 }
