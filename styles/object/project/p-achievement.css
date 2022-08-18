@@ -29,6 +29,7 @@
 }
 .acivement__list li > span {
   display: block;
+  cursor: auto;
 }
 .acivement__list li span.name {
   display: block;
