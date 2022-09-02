@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Navi from '../framework/nav'
+import Navi from '../common/nav'
 
 export default function DrawerMenu( { home
   }: {

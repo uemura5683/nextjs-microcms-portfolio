@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout  from '../../components/framework/layout'
+import Layout  from '../../components/common/layout'
 import { motion } from "framer-motion";
 
 export default function BlogId( { infos, info_data, infolist } ) {

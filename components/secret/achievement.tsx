@@ -1,10 +1,10 @@
-import Achievent from "../extend/achievement";
+import Achievent from "../extend/cardachievement";
 import React from "react";
 
 export default function Skill({ skill }) {
   return (
     <>
-      <section id="p-acivement">
+      <section className="has-animation slide-animation" id="p-acivement">
         <h2 className="c-title white">ACHIEVEMENT</h2>
         <ul className="acivement__list">
           {skill ? skill.map((Jsondata, index) => 

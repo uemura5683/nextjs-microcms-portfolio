@@ -44,6 +44,6 @@
   }
   .link__list li span {
     width: calc(100% - 5% - 50px);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }

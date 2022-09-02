@@ -2,14 +2,14 @@ import React from 'react'
 import Head  from 'next/head'
 import Link  from 'next/link'
 import fetch from 'node-fetch'
-import Layout, { siteTitle } from '../components/framework/layout'
+import Layout, { siteTitle } from '../components/common/layout'
 import { motion }  from "framer-motion";
 import MainVisual  from '../components/top/mainvisual'
 import Profile     from '../components/top/profile'
 import Skill       from '../components/top/skill'
 import LinkArea    from '../components/top/linkarea'
 import ContactForm from '../components/top/contactform'
-import CardExtend from "../components/common/card-extend-detail";
+import CardExtend from "../components/extend/cardextenddetail";
 
 function Home( {info, work, blog, skill} ) {
   return (

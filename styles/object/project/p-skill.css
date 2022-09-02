@@ -70,6 +70,7 @@
           transform: translateX(-50%) translateY(-50%);
   background-color: white !important;
   border: .5rem solid #EEEEEE !important;
+  max-width: 800px;
 }
 .ReactModal__Content h2 {
   font-size: 1.2rem;
@@ -130,7 +131,6 @@
 }
 @media (min-width: 991px) {
   .ReactModal__Content {
-    width: 40%;
     height: 80%;
   }
   .ReactModal__Content h2 {

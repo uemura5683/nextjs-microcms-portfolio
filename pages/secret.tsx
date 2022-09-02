@@ -3,7 +3,7 @@ import Head  from 'next/head'
 import fetch from 'node-fetch'
 import { motion }  from "framer-motion";
 import Achievement from '../components/secret/achievement'
-import Layout, { siteTitle } from '../components/framework/layout'
+import Layout, { siteTitle } from '../components/common/layout'
 import { GetServerSideProps } from 'next'
 
 function Secret( { achievement } ) {

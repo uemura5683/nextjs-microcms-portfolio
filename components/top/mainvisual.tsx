@@ -1,5 +1,5 @@
-import Logo from '../framework/logo'
-import Navi from '../framework/nav'
+import Logo from '../common/logo'
+import Navi from '../common/nav'
 import ReactDOM from "react-dom";
 import { Link } from "react-scroll";
 import React, { useState, useEffect } from "react";
