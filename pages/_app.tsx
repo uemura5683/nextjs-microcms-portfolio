@@ -1,5 +1,5 @@
-import '../styles/foundation/reset.css'
-import '../styles/foundation/base.css'
+import '../styles/foundation/f-reset.css'
+import '../styles/foundation/f-base.css'
 import '../styles/layout/l-header.css'
 import '../styles/layout/l-footer.css'
 import '../styles/object/component/c-button.css'
@@ -12,10 +12,10 @@ import '../styles/object/project/p-skill.css'
 import '../styles/object/project/p-achievement.css'
 import '../styles/object/project/p-contact.css'
 import '../styles/object/utility/u-utility.css'
-import '../styles/pages/main.css'
-import '../styles/pages/about.css'
-import '../styles/pages/detail.css'
-import '../styles/pages/questionnaire.css'
+import '../styles/pages/p-main.css'
+import '../styles/pages/p-about.css'
+import '../styles/pages/p-detail.css'
+import '../styles/pages/p-questionnaire.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
