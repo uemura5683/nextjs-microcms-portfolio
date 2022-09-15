@@ -7,7 +7,7 @@ export default function Custom404() {
     <>
     <Layout>
       <Head>
-        <title>Notfoundページ</title>
+        <title>ページが見つかりませんでした。</title>
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

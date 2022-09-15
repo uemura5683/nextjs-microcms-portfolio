@@ -10,7 +10,7 @@ export default function Component() {
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
-      setiframe('https://uemu-engineer.com/three_var3');
+      setiframe('https://uemu-engineer.com/three');
     }, 6700)
     return() => {
       clearTimeout(timeoutId);      
@@ -22,7 +22,7 @@ export default function Component() {
       <React.StrictMode>
         <iframe loading="lazy" src={iniframe} />
       </React.StrictMode>,
-      document.getElementById("mainbisual")
+      document.getElementById("mainvisual")
     );
   }
 
@@ -30,7 +30,7 @@ export default function Component() {
     <section id="p-mainvisual" data-set-color="dark">
       <Logo home></Logo>
       <Navi home></Navi>
-      <figure id="mainbisual" className="p-mainvisual__iframe"></figure>
+      <figure id="mainvisual" className="p-mainvisual__iframe"></figure>
       <div className="p-mainvisual__click">
         <Link
           activeClass="active"

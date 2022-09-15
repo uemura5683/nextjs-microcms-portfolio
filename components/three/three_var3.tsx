@@ -165,6 +165,7 @@ const Canvas: React.FC = () => {
     composer.addPass(renderPass)
 
     animate({ object, composer, spherebox, data })
+
   }
 
   const animate = ({ object, composer, spherebox, data }: ParamsAnimate) => {
@@ -185,7 +186,7 @@ const Canvas: React.FC = () => {
           opacity: 1;
         }
       `}</style>
-      <canvas ref={onCanvasLoaded} />
+      <canvas id="canvas" ref={onCanvasLoaded} />
     </>
   )
 }

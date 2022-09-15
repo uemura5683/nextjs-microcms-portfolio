@@ -8,6 +8,7 @@
   padding-top: 51%;
   overflow: hidden;
 }
+
 /**
 * banner
 **/
@@ -35,6 +36,22 @@
   position: absolute;
   z-index: 0;
   opacity: 0;
+}
+/**
+* select
+**/
+.p-select-box {
+  position: absolute;
+  top: 20px;
+  right: calc(8% + 205px);
+}
+.p-select-box select {
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.918 6.538L3.938 6.552L0.647999 1.092L1.474 0.559998L4.428 5.446L7.34 0.559998L8.18 1.078L4.918 6.538Z' fill='black'/%3E%3C/svg%3E%0A") !important;
+  background-repeat: no-repeat !important;
+  background-size: 8px 14px;
+  background-position: right 12px top 50% !important;
+  padding: 5px 30px 5px 10px;
+  appearance: none;
 }
 /**
 * nav
@@ -105,7 +122,34 @@
   display: block;
   margin: 0 0 20px;
 }
+#p-mainvisual .p-mainvisual__iframe.is_loading:before {
+  content: '';
+  background-color: black;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/images/logo.png);
+  background-size: 123px 45px;
+  animation: fadeouts 1s linear infinite;
+}
+@keyframes fadeouts {
+  0% { background-image: url(/images/logo.png); }
+  50% { background-image: none; }
+  100% { background-image: url(/images/logo.png); }
+}
 @media (max-width: 767px) {
+  /**
+  * select
+  **/
+  .p-select-box {
+    display: none;
+  }
   #p-mainvisual {
     padding-top: 0;
   }
@@ -137,6 +181,20 @@
   }
 }
 @media (max-width: 990px) {
+  /**
+  * select
+  **/
+  .p-select-box {
+    top: 10px;
+    right: calc(8% + 135px);
+  }
+  .p-select-box select {
+    padding: 3px 30px 3px 10px;
+    font-size: 0.8rem;
+  }
+  /**
+  * mainvisual
+  **/
   #p-mainvisual img[alt*='uemu-portfolio'] {
     height: 50px;
   }
