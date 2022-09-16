@@ -42,16 +42,30 @@
 **/
 .p-select-box {
   position: absolute;
-  top: 20px;
-  right: calc(8% + 205px);
+  bottom: 50px;
+  right: 50%;
+  display: flex;
+  width: 25%;
+  overflow: hidden;
+  transform: translate(50%, 0);
 }
-.p-select-box select {
-  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.918 6.538L3.938 6.552L0.647999 1.092L1.474 0.559998L4.428 5.446L7.34 0.559998L8.18 1.078L4.918 6.538Z' fill='black'/%3E%3C/svg%3E%0A") !important;
-  background-repeat: no-repeat !important;
-  background-size: 8px 14px;
-  background-position: right 12px top 50% !important;
-  padding: 5px 30px 5px 10px;
-  appearance: none;
+.p-select-box label {
+  min-width: calc(100% / 4);
+  animation: ticker-kf 15s linear infinite;
+}
+.p-select-box label input {
+  display: none;
+}
+.p-select-box label img {
+  width: 100%;
+}
+@keyframes ticker-kf {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
 }
 /**
 * nav
@@ -143,6 +157,11 @@
   50% { background-image: none; }
   100% { background-image: url(/images/logo.png); }
 }
+@media (min-width: 768px) {
+  .p-mainvisual__click {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   /**
   * select
@@ -181,17 +200,6 @@
   }
 }
 @media (max-width: 990px) {
-  /**
-  * select
-  **/
-  .p-select-box {
-    top: 10px;
-    right: calc(8% + 135px);
-  }
-  .p-select-box select {
-    padding: 3px 30px 3px 10px;
-    font-size: 0.8rem;
-  }
   /**
   * mainvisual
   **/

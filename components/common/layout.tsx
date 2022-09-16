@@ -6,8 +6,7 @@ import DrawerMenu from '../../components/common/drawermenu'
 import Scrolltop from '../../components/extend/scrolltop'
 import { existsGaId, GA_ID } from '../../public/js/gtag'
 import Animation from '../../components/top/animation'
-import ReactDOM from "react-dom";
-import React, { useState } from "react";
+import React from "react";
 
 export const siteTitle = 'Ustack | うえむーポートフォリオサイト';
 export default function Layout({ children, home
@@ -16,21 +15,7 @@ export default function Layout({ children, home
     home?: boolean
     jsx?: any
   }) {
-  const [onchange, onchanges] = useState("");
 
-  if(onchange != '') {
-    let mainvisual = document.getElementById("mainvisual");
-    mainvisual.classList.add('is_loading');
-    ReactDOM.render(
-      <React.StrictMode>
-        <iframe loading="lazy" src={onchange} />
-      </React.StrictMode>,
-      mainvisual
-    );
-    let timeoutId = setTimeout(() => {
-      mainvisual.classList.remove('is_loading');
-    }, 5000);
-  }
 
   return (
     <>
@@ -80,18 +65,6 @@ export default function Layout({ children, home
 
         <header>
           <Logo/>
-          {home ? (
-            <>
-              <div className="p-select-box">
-                <select onChange={(e) => onchanges(e.currentTarget.value)}>
-                  <option value="https://uemu-engineer.com/three">Mainvisual1</option>
-                  <option value="https://uemu-engineer.com/three_var2">Mainvisual2</option>
-                  <option value="https://uemu-engineer.com/three_var3">Mainvisual3</option>
-                  <option value="https://uemu-engineer.com/three_var4">Mainvisual4</option>
-                </select>
-              </div>
-            </>
-          ) : null }
           <SnsLink/>
           {home ? (
             <>
