@@ -42,57 +42,61 @@ export default function Component() {
   }
 
   return (
-    <section id="p-mainvisual" data-set-color="dark">
-      <Logo home></Logo>
-      <Navi home></Navi>
-      <figure id="mainvisual" className="p-mainvisual__iframe"></figure>
-      <div className="p-select-box">
-        <label key="mainvisual">
+    <>
+      <section id="p-mainvisual" data-set-color="dark">
+        <div className="p-mainvisual-inner">
+          <Logo home></Logo>
+          <Navi home></Navi>
+          <figure id="mainvisual" className="p-mainvisual__iframe"></figure>
+          <div className="p-mainvisual__click">
+            <Link
+              activeClass="active"
+              to="p-about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration= {500}
+            > 
+            <span></span>
+            click here
+          </Link> 
+          </div>
+        </div>
+        <div className="p-select-box">
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var2" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three2.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var3" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three3.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var4" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three4.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var2" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three2.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var3" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three3.png" />
-        </label>
-        <label key="mainvisual">
+          </label>
+          <label key="mainvisual">
             <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var4" onChange={(e) => onchanges(e.currentTarget.value)} />
             <img src="/images/visual/three4.png" />
-        </label>
-      </div>
-      <div className="p-mainvisual__click">
-        <Link
-          activeClass="active"
-          to="p-about"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration= {500}
-        > 
-        <span></span>
-        click here
-      </Link> 
-      </div>
-    </section>
+          </label>
+        </div>
+      </section>
+    </>
   )
 }
