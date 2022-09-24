@@ -4,6 +4,10 @@ import ReactDOM from "react-dom";
 import { Link } from "react-scroll";
 import React, { useState, useEffect } from "react";
 
+type Meinvisuallist = {
+  value: string;
+  img: string;
+};
 
 export default function Component() {
   const [iniframe, setiframe] = useState("");
@@ -41,6 +45,13 @@ export default function Component() {
     }, 5000);
   }
 
+  const mainvisual: Meinvisuallist[] = [
+    { value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
+    { value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
+    { value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
+    { value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" }
+  ];
+
   return (
     <>
       <section id="p-mainvisual" data-set-color="dark">
@@ -48,6 +59,11 @@ export default function Component() {
           <Logo home></Logo>
           <Navi home></Navi>
           <figure id="mainvisual" className="p-mainvisual__iframe"></figure>
+          <div className="p-loading">
+            <div className="circle-border">
+              <div className="circle-core"></div>
+            </div> 
+          </div>
           <div className="p-mainvisual__click">
             <Link
               activeClass="active"
@@ -63,38 +79,22 @@ export default function Component() {
           </div>
         </div>
         <div className="p-select-box">
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var2" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three2.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var3" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three3.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var4" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three4.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var2" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three2.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var3" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three3.png" />
-          </label>
-          <label key="mainvisual">
-            <input type="radio" name="mainvisual" value="https://uemu-engineer.com/three_var4" onChange={(e) => onchanges(e.currentTarget.value)} />
-            <img src="/images/visual/three4.png" />
-          </label>
+          {mainvisual.map ( (data: Meinvisuallist ) => {
+            return (
+              <label key="mainvisual">
+                <input type="radio" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />
+                <img src={data.img} />
+              </label>
+            )
+          } ) }
+          {mainvisual.map ( (data: Meinvisuallist ) => {
+            return (
+              <label key="mainvisual">
+                <input type="radio" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />
+                <img src={data.img} />
+              </label>
+            )
+          } ) }
         </div>
       </section>
     </>
