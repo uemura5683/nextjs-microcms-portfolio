@@ -42,32 +42,32 @@
 * select
 **/
 .p-select-box {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
   background-color: black;
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
 }
-.p-select-box label {
+.p-select-box .p-select-box-label {
   min-width: calc(100% / 4);
   animation: pc-slide 15s linear infinite;
   overflow: hidden;
 }
-.p-select-box label input {
+.p-select-box .p-select-box-label .p-select-box-input {
   display: none;
 }
-.p-select-box label img {
+.p-select-box .p-select-box-label .p-select-box-img {
   width: 100%;
   transition: all ease .5s;
 }
-.p-select-box label input:checked img,
-.p-select-box label img:hover {
+.p-select-box .p-select-box-label .p-select-box-input:checked .p-select-box-img,
+.p-select-box .p-select-box-label .p-select-box-img:hover {
   opacity: .7;
   transition: all ease .5s;
 }
-.p-select-box label img:hover {
+.p-select-box .p-select-box-label .p-select-box-img:hover {
   transform: scale(1.2);
 }
 @keyframes pc-slide {
@@ -246,7 +246,7 @@
   #p-mainvisual .p-mainvisual__click a {
     font-size: .5rem;
   }
-  .p-select-box label {
+  .p-select-box .p-select-box-label {
     min-width: -webkit-calc(100% / 3);
     min-width: calc(100% / 3);
     -webkit-animation: smp-slide 15s linear infinite;

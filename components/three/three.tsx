@@ -1,5 +1,5 @@
 import React from 'react'
-import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, Fog, DirectionalLight, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, DoubleSide, Mesh
+import { WebGLRenderer, Scene, PerspectiveCamera, Object3D, Fog, DirectionalLight, AmbientLight, SphereGeometry, TextureLoader, MeshStandardMaterial, SphereBufferGeometry, MeshPhongMaterial, Mesh
 } from 'three'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
@@ -119,8 +119,7 @@ const Canvas: React.FC = () => {
         canvas {
           width: 100% !important;
           height: 50% !important;
-          background-image: url(https://uemu-engineer.com/images/three/planet.jpg);
-          background-size: cover;
+          background: radial-gradient(#1c1946,#000000);
           backdrop-filter:  brightness(50%);
         }
       `}</style>
