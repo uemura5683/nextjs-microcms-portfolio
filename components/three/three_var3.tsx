@@ -182,7 +182,7 @@ const Canvas: React.FC = () => {
         canvas {
           width: 100% !important;
           height: 50% !important;
-          background: black;
+          background: #000000;
           opacity: 1;
         }
       `}</style>

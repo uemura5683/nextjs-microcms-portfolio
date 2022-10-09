@@ -6,13 +6,13 @@ export default function Skill({ skill }) {
     <>
       <section className="has-animation slide-animation" id="p-acivement">
         <h2 className="c-title white">ACHIEVEMENT</h2>
-        <ul className="acivement__list">
+        <ul className="c-acivement__list">
           {skill ? skill.map((Jsondata, index) => 
-              <Achievent
-                data={Jsondata}
-                key={index}>
-              </Achievent>
-            ): null}
+            <Achievent
+              data={Jsondata}
+              key={index}>
+            </Achievent>
+          ): null}
         </ul>
       </section>
     </>

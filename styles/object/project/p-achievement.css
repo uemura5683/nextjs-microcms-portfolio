@@ -1,39 +1,39 @@
 /**
 * acivement content
 **/
-.acivement__list {
+.c-acivement__list {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
   margin: 0 -.5rem;
 }
-.acivement__list li {
+.c-acivement__list li {
   width: calc(50% - 1rem);
   margin: 0 .5rem 1rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
-.acivement__list li img {
+.c-acivement__list li img {
   width: 100%;
   height: auto;
   margin: 0 auto;
   -webkit-transition:all .3s ease-in-out;
           transition:all .3s ease-in-out;
 }
-.acivement__list li:hover img {
+.c-acivement__list li:hover img {
   opacity: .7;
   transform: scale(1.2);
   -webkit-transition:all .3s ease-in-out;
           transition:all .3s ease-in-out;
 }
-.acivement__list li > span {
+.c-acivement__list li > span {
   display: block;
   cursor: auto;
 }
-.acivement__list li span.name {
+.c-acivement__list li span.name {
   display: block;
-  color: white;
+  color: #ffffff;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -47,9 +47,9 @@
   text-align: center;
   padding: 29% 0px;
 }
-.acivement__list li:hover span.name {
+.c-acivement__list li:hover span.name {
   opacity: .7;
-  background: black;
+  background: #000000;
   -webkit-transition:all .3s ease-in-out;
           transition:all .3s ease-in-out;
 
@@ -63,10 +63,10 @@
   /**
   * acivement content
   **/
-  .acivement__list {
+  .c-acivement__list {
     margin: 0 -.5rem;
   }
-  .acivement__list li {
+  .c-acivement__list li {
     margin: 0 .5rem 1rem;
     width: calc( 99.9% / 3 - 1rem);
   }

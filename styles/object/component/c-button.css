@@ -7,7 +7,7 @@
 /**
 * btn 
 **/
-.btn-white {
+.c-btn-white {
   font-size: 1.2em;
   padding: 10px 0;
   margin: 0 auto;
@@ -15,37 +15,37 @@
   text-align: center;
   font-size: 1.6em;
   display: block;
-  background-color: white;
+  background-color: #ffffff;
   transition: .3s all ease;
 }
-.btn-white:hover,
-.btn-white:focus {
-  border: 1px solid black;
-  background-color: black;
-  color: white;
+.c-btn-white:hover,
+.c-btn-white:focus {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
   transition: .3s all ease;
   box-shadow: 0 0 0 0 transparent;
 }
 /**
 * btn black
 **/
-.btn-black {
+.c-btn-black {
   font-size: 1.2em;
+  text-align: center;
+  font-size: 1.6em;
   padding: 10px 0;
   margin: 0 auto;
   border-radius: 5px;
-  text-align: center;
-  font-size: 1.6em;
   display: block;
-  background-color: black;
+  background-color: #000000;
   transition: .3s all ease;
-  color: white;
+  color: #ffffff;
 }
-.btn-black:hover,
-.btn-black:focus {
-  border: 1px solid black;
-  background-color: white;
-  color: black;
+.c-btn-black:hover,
+.c-btn-black:focus {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
   transition: .3s all ease;
   box-shadow: 0 0 0 0 transparent;
 }
@@ -59,20 +59,20 @@
 .c-snslink .c-snslnk__list {
   margin: 0 5px;
   width: 30px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 100%;
 }
-.c-snslink .c-snslnk__list a {
+.c-snslink .c-snslnk__link {
   display: block;
 }
-.c-snslink .c-snslnk__list img{
+.c-snslink .c-snslnk__image{
   height: 30px;
   width: 30px;
 }
 /**
 * scrolltop
 **/
-#scrolltop {
+.c-scrolltop-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -80,13 +80,13 @@
   width: 40px;
   height: 40px;
   border: 1px solid #737373;
-  box-shadow: 0 0 10px 5px #ffffff;
+  box-shadow: 0 0 10px 5px #ffffffaa;
   border-radius: 50%;
   background: #737373;
 }
-#scrolltop:before {
+.c-scrolltop-btn:before {
   content: '';
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   display: block;
   width: 10px;
   height: 10px;
@@ -97,7 +97,7 @@
   top: calc(50% + 5px);
   right: calc(50% - 5px);
 }
-#scrolltop a {
+.c-scrolltop-link {
   position: absolute;
   top: 0;
   right: 0;
@@ -116,12 +116,12 @@
   /**
   * btn 
   **/
-  .btn-white,
-  .btn-white:hover,
-  .btn-white:focus,
-  .btn-black,
-  .btn-black:hover,
-  .btn-black:focus {
+  .c-btn-white,
+  .c-btn-white:hover,
+  .c-btn-white:focus,
+  .c-btn-black,
+  .c-btn-black:hover,
+  .c-btn-black:focus {
     width: 380px;
     font-size: 1.6em;
     padding: 23px 0;
@@ -133,7 +133,7 @@
     margin: 0 10px;
     width: 45px;
   }
-  .c-snslink .c-snslnk__list img {
+  .c-snslink .c-snslnk__image {
     width: 45px;
     height: 45px;
   }

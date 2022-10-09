@@ -8,7 +8,7 @@
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', sans-serif;
 }
 .p-about {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   padding: 2rem;
   margin: 0;
 }
@@ -16,29 +16,29 @@
   padding: 0 0 2.0rem;
 }
 .p-about .p-about__inner p{
-  color : white;
+  color : #ffffff;
   overflow: hidden;
   word-break: break-all;
   font-size: 1.2rem;
   line-height: 2.6;
 }
 .p-about .p-about__inner span {
-  color: white;
+  color: #ffffff;
   font-size: 1.0em;
   line-height: 2.6;
   display: block;
   margin: 0 0 1.5rem;
 }
 .p-about .c-title-thumb {
-  color: white;
+  color: #ffffff;
   padding: 2.5rem 2rem 2.5rem;
   font-size: 1.6rem;
   position: relative;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
 }
 .p-about .c-title-thumb:first-child {
-  border-top: 1px solid white;
+  border-top: 1px solid #ffffff;
 }
 .p-about .c-title-thumb span {
   font-size: .6em;
@@ -46,8 +46,8 @@
 }
 .p-about .p-about-history .p-about__inner {
   padding-top: 2.0rem;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 @media (max-width: 767px) {
   .p-about {

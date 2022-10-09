@@ -224,7 +224,7 @@ const Canvas: React.FC = () => {
         canvas {
           width: 100% !important;
           height: 50% !important;
-          background-color: black;
+          background-color: #000000;
           background-size: cover;
           opacity: 1;
         }

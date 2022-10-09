@@ -79,7 +79,7 @@ export default function Component() {
           </div>
         </div>
         <div className="p-select-box">
-          {mainvisual.map ( (data: Meinvisuallist ) => {
+          {mainvisual.map ( (data: Meinvisuallist, idx ) => {
             return (
               <label key="mainvisual" className="p-select-box-label">
                 <input type="radio" className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />
@@ -87,7 +87,7 @@ export default function Component() {
               </label>
             )
           } ) }
-          {mainvisual.map ( (data: Meinvisuallist ) => {
+          {mainvisual.map ( (data: Meinvisuallist, idx ) => {
             return (
               <label key="mainvisual" className="p-select-box-label">
                 <input type="radio" className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />

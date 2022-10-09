@@ -89,7 +89,7 @@ const Contacts = () => {
               </table>
               <div className="c-btn-area">
                 <button
-                  className="btn-white form-submit"
+                  className="c-btn-white form-submit"
                   type="submit"
                   onClick={FormSubmit}
                 >
@@ -199,7 +199,7 @@ const Contacts = () => {
           </div>
           <div className="c-btn-area">
             <button
-              className="btn-black"
+              className="c-btn-black"
               type="submit"
               onClick={handleSubmit}
             >

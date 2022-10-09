@@ -16,8 +16,8 @@ export const StyleWrapper = styled.div`
     animation: bodyfadeout 1s linear 7.2s infinite;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
   }
   
   /**

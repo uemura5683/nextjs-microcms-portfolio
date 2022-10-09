@@ -8,13 +8,13 @@ footer {
 * footer logo
 **/
 .foorter__logo {
-  background-color: white;
+  background-color: #ffffff;
   text-align: center;
   border-bottom: 1px solid lightgray;
   margin: 20px 0;
   padding: 0 0 20px;
 }
-.foorter__logo img {
+.foorter__logo .c-logo-image {
   -webkit-mix-blend-mode: exclusion;
           mix-blend-mode: exclusion;
   height: 27px;
@@ -33,7 +33,7 @@ footer .c-snslink {
   font-size: 1rem;
 }
 .footer--link__privacy a {
-  color: black;
+  color: #000000;
   font-weight: bold;
 }
 /**
@@ -51,7 +51,7 @@ footer .c-snslink {
     margin: 50px 0;
     padding: 0 0 50px;
   }
-  .foorter__logo img {
+  .foorter__logo .c-logo-image {
     height: 45px;
   }
   /**

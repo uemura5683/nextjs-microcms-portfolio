@@ -9,16 +9,16 @@
   width: 100%;
 }
 .c-title.white {
-  color: white;
+  color: #ffffff;
 }
 .c-title:after {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
   content: '';
   display: block;
   margin: 10px 0 0;
 }
 .c-title.white:after {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ffffff;
 }
 .has-animation.slide-animation .c-title:after {
   -webkit-animation: border-animation .5s ease forwards;

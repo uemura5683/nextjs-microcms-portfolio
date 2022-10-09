@@ -2,13 +2,13 @@
 * detail.css
 *********************************/
 .p-detail__inner {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   padding: 1rem;
   margin: 1rem 0 0;
 }
 .p-detail__inner p,
 .p-detail__inner div {
-  color: white;
+  color: #ffffff;
   font-size: 1.0rem;
 }
 .p-detail__inner .c-title {
@@ -30,10 +30,10 @@
   margin: 0 0 25px;
 }
 .p-detail__inner .p-detail__bottom a {
-  color: white;
+  color: #ffffff;
 }
 .p-detail__inner .card li span {
-  color: white;
+  color: #ffffff;
   opacity: 1;
 }
 @media (min-width: 991px) {

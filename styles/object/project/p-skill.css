@@ -74,7 +74,7 @@
 }
 .ReactModal__Content h2 {
   font-size: 1.2rem;
-  box-shadow: 0 1px 0 0 lightgrey, 0 2px 0 0 white;
+  box-shadow: 0 1px 0 0 lightgrey, 0 2px 0 0 #ffffff;
   padding: 0 0 5px;
   margin: 0 0 20px;
   font-weight: bold;

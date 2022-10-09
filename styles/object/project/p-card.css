@@ -37,7 +37,7 @@
 
 }
 .c-title.white ~ .card ul li span {
-  color: white;
+  color: #ffffff;
 }
 .card ul li span.open {
   opacity: 1;
