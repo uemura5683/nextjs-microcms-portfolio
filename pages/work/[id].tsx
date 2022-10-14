@@ -24,8 +24,9 @@ export default function BlogId( { works, works_data, worklist } ) {
                   <div className="c-title white">{works.title}</div>
                   <p>{works_data}</p>
                 </div>
-                <figure>
+                <figure className="c-card-figure">
                   <img 
+                    className="c-card-img"
                     alt={works.title}
                     src={works.image.url}
                     width={605}
@@ -50,13 +51,14 @@ export default function BlogId( { works, works_data, worklist } ) {
           ) }
           <div className="p-detail__inner__sub" id="p-work">
             <h3 className="c-title white">work</h3>
-            <div className="card">
-              <ul>
+            <div className="c-card-wrap">
+              <ul className="c-card-list">
                 {worklist ? worklist.map(worklist => (
-                  <li key={worklist.id}>
+                  <li className="c-card-li" key={worklist.id}>
                     <Link href={`/work/${worklist.id}`}>
-                      <figure>
+                      <figure className="c-card-figure">
                         <img
+                          className="c-card-img"
                           src={worklist.image.url}
                           alt={worklist.title}
                           width={476}
@@ -64,7 +66,7 @@ export default function BlogId( { works, works_data, worklist } ) {
                       </figure>
                     </Link>
                     <Link href={`/work/${worklist.id}`}>
-                      <span>{worklist.title}</span>
+                      <span className="c-card-txt">{worklist.title}</span>
                     </Link>
                   </li>
                 )) : (

@@ -1,14 +1,18 @@
+:root {
+  --white: #ffffff;
+}
+
 /*********************************
 * detail.css
 *********************************/
 .p-detail__inner {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white);
   padding: 1rem;
   margin: 1rem 0 0;
 }
 .p-detail__inner p,
 .p-detail__inner div {
-  color: #ffffff;
+  color:  var(--white);
   font-size: 1.0rem;
 }
 .p-detail__inner .c-title {
@@ -23,17 +27,17 @@
 .p-detail__inner .p-detail__top > * {
   width: 100%;
 }
-.p-detail__inner .p-detail__top figure {
+.p-detail__inner .p-detail__top .c-card-figure {
   margin-top: 20px;
 }
 .p-detail__inner .p-detail__bottom {
   margin: 0 0 25px;
 }
 .p-detail__inner .p-detail__bottom a {
-  color: #ffffff;
+  color: var(--white);
 }
-.p-detail__inner .card li span {
-  color: #ffffff;
+.p-detail__inner .c-card-wrap .c-card-li .c-card-txt {
+  color: var(--white);
   opacity: 1;
 }
 @media (min-width: 991px) {
@@ -53,7 +57,7 @@
   .p-detail__inner .p-detail__top .p-detail__ttl .c-title:after {
     border: none;
   }
-  .p-detail__inner .p-detail__top figure {
+  .p-detail__inner .p-detail__top .c-card-figure {
     width: 50%;
     margin: 0 0 0 5%;
   }
@@ -64,7 +68,7 @@
     width: 27%;
     margin: 0 0 0 3%;
   }
-  .p-detail__inner .p-detail__inner__sub .card ul li {
+  .p-detail__inner .p-detail__inner__sub .c-card-wrap .c-card-list .c-card-li {
     width: 100%;
     margin: 0 0 30px;
   }

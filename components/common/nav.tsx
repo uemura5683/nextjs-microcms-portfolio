@@ -6,11 +6,11 @@ export default function Navigation( { home
     home?: boolean
   } ) {
   return (
-    <nav>
-      <ul>
+    <nav className="c-navgation">
+      <ul className="c-navgation_list">
       {home ? (
         <>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-about"
@@ -22,7 +22,7 @@ export default function Navigation( { home
             ABOUT
           </Link>
         </li>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-skill"
@@ -34,7 +34,7 @@ export default function Navigation( { home
             SKILL
           </Link>
         </li>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-work"
@@ -46,7 +46,7 @@ export default function Navigation( { home
             WORK
           </Link>
         </li>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-information"
@@ -58,7 +58,7 @@ export default function Navigation( { home
             INFORMATION
           </Link>
         </li>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-nublog"
@@ -70,7 +70,7 @@ export default function Navigation( { home
             NU-blog
           </Link>
         </li>
-        <li>
+        <li className="c-navgation_li">
           <Link
               activeClass="active"
               to="p-link"
@@ -82,8 +82,8 @@ export default function Navigation( { home
             LINK
           </Link>
         </li>
-        <li>
-        <Link
+        <li className="c-navgation_li">
+          <Link
             activeClass="active"
             to="p-contact"
             spy={true}
@@ -97,13 +97,13 @@ export default function Navigation( { home
         </>
       ) : (
         <>
-          <li><Linkto href="/about">ABOUT</Linkto></li>
-          <li><Linkto href="/#p-skill">SKILL</Linkto></li>
-          <li><Linkto href="/#p-work">WORK</Linkto></li>
-          <li><Linkto href="/#p-information">INFORMATION</Linkto></li>
-          <li><Linkto href="/#p-nublog">NU-blog</Linkto></li>
-          <li><Linkto href="/#p-link">LINK</Linkto></li>
-          <li><Linkto href="/#p-contact">CONTACT</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/about">ABOUT</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-skill">SKILL</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-work">WORK</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-information">INFORMATION</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-nublog">NU-blog</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-link">LINK</Linkto></li>
+          <li className="c-navgation_li"><Linkto href="/#p-contact">CONTACT</Linkto></li>
         </>
       )}
       </ul>

@@ -24,8 +24,9 @@ export default function BlogId( { infos, info_data, infolist } ) {
                   <div className="c-title white">{infos.title}</div>
                   <p>{info_data}</p>
                 </div>
-                <figure>
+                <figure className="c-card-figure">
                   <img
+                    className="c-card-img"
                     src={infos.image.url}
                     alt={infos.title}
                     width={605}
@@ -50,21 +51,22 @@ export default function BlogId( { infos, info_data, infolist } ) {
           ) }
           <div className="p-detail__inner__sub"  id="p-information">
             <h3 className="c-title white">information</h3>
-            <div className="card">
-              <ul>
+            <div className="c-card-wrap">
+              <ul className="c-card-list">
                 {infolist ? infolist.map(infolist => (
-                    <li key={infolist.id}>
+                    <li className="c-card-li" key={infolist.id}>
                       <Link href={`/information/${infolist.id}`}>
-                      <figure>
-                        <img 
-                          src={infolist.image.url}
-                          alt={infolist.title}
-                          width={476}
-                        />
-                      </figure>
+                        <figure className="c-card-figure">
+                          <img 
+                            className="c-card-img"
+                            src={infolist.image.url}
+                            alt={infolist.title}
+                            width={476}
+                          />
+                        </figure>
                       </Link>
                       <Link href={`/information/${infolist.id}`}>
-                        <span>{infolist.title}</span>
+                        <span className="c-card-txt">{infolist.title}</span>
                       </Link>
                     </li>
                   )) : (

@@ -30,8 +30,8 @@ function Home( {info, work, blog, skill} ) {
         { work ? (
           <section id="p-work" className="has-animation" data-set-color="light">
             <h2 className="c-title">WORK</h2>
-            <div className="card">
-              <ul>
+            <div className="c-card-wrap">
+              <ul className="c-card-list">
                 <CardExtend data={{data:work, link:'work'}} />
               </ul>
             </div>
@@ -41,8 +41,8 @@ function Home( {info, work, blog, skill} ) {
         { info ? (
           <section id="p-information" className="u-gray has-animation" data-set-color="dark">
             <h2 className="c-title white">INFORMATION</h2>
-            <div className="card">
-              <ul>
+            <div className="c-card-wrap">
+              <ul className="c-card-list">
                 <CardExtend data={{data:info, link:'information'}} />
               </ul>
             </div>
@@ -52,9 +52,9 @@ function Home( {info, work, blog, skill} ) {
         { blog ? (
           <section id="p-nublog" className="has-animation" data-set-color="light">
             <h2 className="c-title">NU-blog</h2>
-            <div className="card">
-              <ul>
-              <CardExtend data={{data:blog, link:'nublog'}} />
+            <div className="c-card-wrap">
+              <ul className="c-card-list">
+                <CardExtend data={{data:blog, link:'nublog'}} />
               </ul>
             </div>
           </section>

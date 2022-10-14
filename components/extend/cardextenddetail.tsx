@@ -7,33 +7,35 @@ const List = (object:any) => {
   return (
     <>
       {url != 'nublog' ? jsondata.map(data => (
-        <li className={data.id} key={data.id}>
+        <li className="c-card-li" key={data.id}>
           <Link href={`${url}/${data.id}`}>
-          <figure>
-            <img
-              src={data.image.url}
-              alt={data.title}
-              width={605}
-            />
-          </figure>
+            <figure className="c-card-figure">
+              <img
+                className="c-card-img"
+                src={data.image.url}
+                alt={data.title}
+                width={605}
+              />
+            </figure>
           </Link>
           <Link href={`${url}/${data.id}`}>
-            <span>{data.title}</span>
+            <span className="c-card-txt">{data.title}</span>
           </Link>
         </li>
       ) ) : jsondata.map((data) => (
-        <li className={data.id} key={data.id}>
+        <li className="c-card-li" key={data.id}>
           <a href={`${data.link}`} target="_blank" rel="noopener noreferrer">
-          <figure>
-            <img
-              src={data.image.url}
-              alt={data.title}
-              width={605}
-            />
-          </figure>
+            <figure className="c-card-figure">
+              <img
+                className="c-card-img"
+                src={data.image.url}
+                alt={data.title}
+                width={605}
+              />
+            </figure>
           </a>
           <a href={`${data.link}`} target="_blank" rel="noopener noreferrer">
-              <span>{data.title}</span>
+            <span className="c-card-txt">{data.title}</span>
           </a>
         </li>
       ) ) }
