@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /*********************************
 * base.css
 *********************************/
@@ -42,14 +52,14 @@ html, body {
  * element
  */
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
-  color: #333333;
+  color: var(--gray);
   margin: 0;
 }
 /**
  * a tag
  */
 a, a:hover, a:focus {
-  color: #555555;
+  color: var(--gray2);
   outline: 0;
 }
 a {
@@ -70,16 +80,16 @@ button, button:focus, button:active, button:visited, button:hover {
   background: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white);
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--white);
   transition: .3s all ease;
 }
 
 input, input:focus, input:active, input:visited, input:hover,
 textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
   height: 43px;
-  border: 1px solid #999999;
+  border: 1px solid var(--gray3);
   border-radius: 5px;
 }
 
@@ -88,9 +98,9 @@ select:focus, select:active, select:visited, select:hover,
 textarea:focus, textarea:active, textarea:visited, textarea:hover,
 button:focus, button:active, button:visited, button:hover,
 .btn:focus, .btn:active, .btn:visited, .btn:hover {
-  -webkit-box-shadow: 0 0 2px 2px #ffffff;
-          box-shadow: 0 0 2px 2px #ffffff;
-  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0 0 2px 2px var(--white);
+          box-shadow: 0 0 2px 2px var(--white);
+  border: 1px solid var(--white);
   transition: .3s all ease;
   
 }
@@ -149,7 +159,7 @@ body:after {
   content: '';
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--white);
   z-index: 10000000;
   position: fixed;
   top: 0;
@@ -161,70 +171,6 @@ body:after {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
-.has-animation {
-  opacity: 0;
-  -webkit-transition: opacity .5s ease;
-          transition: opacity .5s ease;
-}
-.has-animation.slide-animation {
-  opacity: .9;
-  -webkit-transition: opacity .5s ease;
-          transition: opacity .5s ease;
-}
-@media (min-width: 991px) {
-  .has-animation.slide-animation ul > li:nth-child( 3n + 1 ) {
-      -webkit-animation: card-animation .7s ease forwards;
-              animation: card-animation .7s ease forwards;
-  }
-  .has-animation.slide-animation ul > li:nth-child( 3n + 2 ) {
-      -webkit-animation: card-animation .9s ease forwards;
-              animation: card-animation .9s ease forwards;
-  }
-  .has-animation.slide-animation ul > li:nth-child( 3n + 3 ) {
-      -webkit-animation: card-animation 1.1s ease forwards;
-              animation: card-animation 1.1s ease forwards;
-  }
-}
-@media (max-width: 990px) {
-  .has-animation.slide-animation ul > li:nth-child( 2n + 1 ) {
-    -webkit-animation: card-animation .7s ease forwards;
-            animation: card-animation .7s ease forwards;
-  }
-  .has-animation.slide-animation ul > li:nth-child( 2n + 2 ) {
-    -webkit-animation: card-animation .9s ease forwards;
-            animation: card-animation .9s ease forwards;
-  }
-}
-.has-animation.slide-animation.animation-second ul > li {
-  -webkit-animation: none !important;
-          animation: none !important;
-}
-
-@-webkit-keyframes card-animation {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY( 200px );
-            transform: translateY( 200px );
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY( 0 );
-            transform: translateY( 0 );
-  }
-}
-
-@keyframes card-animation {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY( 200px );
-            transform: translateY( 200px );
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY( 0 );
-            transform: translateY( 0 );
-  }
-}
 @-webkit-keyframes fadeout {
   0% { opacity: 1; } 60% { opacity: 1; } 100% { opacity: 0; z-index: -1; }
 }
@@ -233,11 +179,11 @@ body:after {
 }
 
 .alert-warning {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 10px;
   border-radius: 5px;
   margin: 0 0 20px;
-  border: 1px solid #000000;
+  border: 1px solid var(--black);
 }
 .alert-warning:empty {
   display: none;

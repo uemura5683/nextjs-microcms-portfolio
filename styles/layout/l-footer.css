@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * footer commom
 **/
@@ -8,9 +18,9 @@ footer {
 * footer logo
 **/
 .foorter__logo {
-  background-color: #ffffff;
+  background-color: var(--white);
   text-align: center;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--gray4);
   margin: 20px 0;
   padding: 0 0 20px;
 }
@@ -33,7 +43,7 @@ footer .c-snslink {
   font-size: 1rem;
 }
 .footer--link__privacy a {
-  color: #000000;
+  color: var(--black);
   font-weight: bold;
 }
 /**

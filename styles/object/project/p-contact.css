@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * contact
 **/
@@ -39,13 +49,13 @@
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: #ffffff;
+  background: var(--white);
   padding: 20px;
   width: 90%;
   height: auto;
   overflow-y: scroll;
   z-index: 1000;
-  border: .5rem solid #EEEEEE !important;
+  border: .5rem solid var(--gray4) !important;
 }
 .c-contact__conform button {
   position: absolute;
@@ -57,7 +67,7 @@
 .c-contact__conform button:before,
 .c-contact__conform button:after {
   content: '';
-  border: 1px solid lightgray;
+  border: 1px solid var(--gray4);
   width: 30px;
   display: block;
   position: absolute;
@@ -78,7 +88,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: var(--white);
   z-index: 100;
   opacity: .7;
 }
@@ -90,20 +100,24 @@
 }
 .c-contact__conform table {
   width: 100%;
-  border-top: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  border-top: 1px solid var(--gray4);
+  border-right: 1px solid var(--gray4);
   margin: 20px 0 0;
 }
 .c-contact__conform table tr th {
-  background-color: #efefef; 
+  background-color: var(--gray4); 
 }
 .c-contact__conform table tr th,
 .c-contact__conform table tr td {
-  border-left: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+  border-left: 1px solid var(--gray4);
+  border-bottom: 1px solid var(--gray4);
   padding: 10px;
   font-size: .8rem;
   font-weight: normal;
+}
+.c-contact__conform table tr th {
+  border-left: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
 }
 .c-contact__conform table tr th {
   width: 30%;
@@ -121,9 +135,9 @@
   width: 100%;
   font-size: .8rem;
   padding: 10px 0;
-  border: 1px solid #000000;
-  background-color: #000000;
-  color: #ffffff;
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
   box-shadow: 0 0 0 0 transparent;

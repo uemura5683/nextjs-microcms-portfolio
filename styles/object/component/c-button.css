@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * btn area
 **/
@@ -15,14 +25,14 @@
   text-align: center;
   font-size: 1.6em;
   display: block;
-  background-color: #ffffff;
+  background-color: var(--white);
   transition: .3s all ease;
 }
 .c-btn-white:hover,
 .c-btn-white:focus {
-  border: 1px solid #000000;
-  background-color: #000000;
-  color: #ffffff;
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
   transition: .3s all ease;
   box-shadow: 0 0 0 0 transparent;
 }
@@ -37,15 +47,16 @@
   margin: 0 auto;
   border-radius: 5px;
   display: block;
-  background-color: #000000;
-  transition: .3s all ease;
-  color: #ffffff;
+  background-color: var(--black);
+  -webkit-transition: .3s all ease;
+          transition: .3s all ease;
+  color: var(--white);
 }
 .c-btn-black:hover,
 .c-btn-black:focus {
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  color: #000000;
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  color: var(--black);
   transition: .3s all ease;
   box-shadow: 0 0 0 0 transparent;
 }
@@ -59,7 +70,7 @@
 .c-snslink .c-snslnk__list {
   margin: 0 5px;
   width: 30px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 100%;
 }
 .c-snslink .c-snslnk__link {
@@ -79,14 +90,14 @@
   text-indent : -10000px;
   width: 40px;
   height: 40px;
-  border: 1px solid #737373;
-  box-shadow: 0 0 10px 5px #ffffffaa;
+  border: 1px solid var(--gray5);
+  box-shadow: 0 0 10px 5px var(--white);
   border-radius: 50%;
-  background: #737373;
+  background: var(--gray5);
 }
 .c-scrolltop-btn:before {
   content: '';
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white);
   display: block;
   width: 10px;
   height: 10px;

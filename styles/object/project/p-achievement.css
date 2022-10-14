@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * acivement content
 **/
@@ -33,7 +43,7 @@
 }
 .c-acivement__list li span.name {
   display: block;
-  color: #ffffff;
+  color: var(--white);
   margin: 0;
   position: absolute;
   top: 50%;
@@ -49,7 +59,7 @@
 }
 .c-acivement__list li:hover span.name {
   opacity: .7;
-  background: #000000;
+  background: var(--black);
   -webkit-transition:all .3s ease-in-out;
           transition:all .3s ease-in-out;
 

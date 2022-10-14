@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * form base
 **/
@@ -9,7 +19,7 @@ input,textarea,select {
 input:focus, textarea:focus,
 input:hover, textarea:hover,
 input:visited, textarea:visited {
-  border: 1px solid #999999;  
+  border: 1px solid var(--gray3);  
 }
 textarea, textarea:focus, textarea:active, textarea:visited, textarea:hover {
   height: 200px;
