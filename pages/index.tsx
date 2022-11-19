@@ -26,10 +26,12 @@ function Home( {info, work, blog, skill} ) {
         <MainVisual />
         <Profile />
         <Skill skill={skill} />
-
         { work ? (
           <section id="p-work" className="has-animation" data-set-color="light">
             <h2 className="c-title">WORK</h2>
+            <div className="c-card-dect">
+              公開できるサイトのみ紹介します。<br />もっと実績を見たい場合はお問い合わせください。
+            </div>
             <div className="c-card-wrap">
               <ul className="c-card-list">
                 <CardExtend data={{data:work, link:'work'}} />
@@ -78,7 +80,7 @@ export async function getStaticProps() {
     .then((res: { json: () => any }) => res.json())
     .catch(() => null);
 
-  const works = await fetch('https://nu-portfolio.microcms.io/api/v1/work', key)
+  const works = await fetch(process.env.ACHIEVEMENT)
     .then((res: { json: () => any }) => res.json())
     .catch(() => null);
 
@@ -91,7 +93,7 @@ export async function getStaticProps() {
     .catch(() => null);
 
   let infoc = infos ? infos.contents : null,
-      workc = works ? works.contents : null,
+      workc = works ? works : null,
       blogc = blogs ? blogs.contents : null,
       skils = skilllist ? skilllist : null;
 
