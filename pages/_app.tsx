@@ -16,7 +16,6 @@ import '../styles/object/utility/u-utility.css'
 import '../styles/pages/p-main.css'
 import '../styles/pages/p-about.css'
 import '../styles/pages/p-detail.css'
-import '../styles/pages/p-questionnaire.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

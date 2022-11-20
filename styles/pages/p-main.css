@@ -1,3 +1,14 @@
+:root {
+  --white: #ffffff;
+  --white2: #eeeeee;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 /**
 * content
 **/
@@ -24,7 +35,7 @@
   width: 100%;
   height: 100%;
   opacity: 1;
-  background-color: #000000;
+  background-color: var(--black);
   position: absolute;
   top: -11%;
 }
@@ -42,7 +53,7 @@
 * select
 **/
 .p-select-box {
-  background-color: #000000;
+  background-color: var(--black);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -98,7 +109,7 @@
 }
 #p-mainvisual nav ul li a {
   font-size: 0.8rem;
-  color: #ffffff;
+  color: var(--white);
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -129,15 +140,15 @@
   cursor: pointer;
 }
 #p-mainvisual .p-mainvisual__click a {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
   display: block;
 }
 #p-mainvisual .p-mainvisual__click span {
   position: relative;
   content: '';
-  border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
+  border-top: 1px solid var(--white);
+  border-left: 1px solid var(--white);
   width: 20px;
   height: 20px;
   -webkit-transform: rotate( -135deg );
@@ -149,7 +160,7 @@
 }
 #p-mainvisual .p-mainvisual__iframe.is_loading ~ .p-loading {
   content: '';
-  background-color: #000000;
+  background-color: var(--black);
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -170,8 +181,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(0,0,0,0.1) 33%, rgba(255,255,255,1) 100%);
+  background: var(--white);
+  background: linear-gradient(0deg, var(--black) 33%, var(--white) 100%);
   animation: spin .8s linear 0s infinite;
   top: calc(50% - 40px);
   left: calc(50% - 40px);
@@ -180,7 +191,7 @@
 .p-loading .circle-core {
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: var(--black);
   border-radius: 50%;
 }
 @keyframes spin {

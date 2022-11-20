@@ -1,5 +1,16 @@
+:root {
+  --white: #ffffff;
+  --white2: #eeeeee;
+  --black: #000000;
+  --gray: #333333;
+  --gray2: #555555;
+  --gray3: #999999;
+  --gray4: #dddddd;
+  --gray5: #737373;
+}
+
 .u-gray {
-  background-color: #737373;
+  background-color: var(--gray5);
 }
 .u-txtleft{
   text-align: left;
@@ -22,7 +33,7 @@
 }
 .bgimage:after {
   content: '';
-  background-color: #000000;
+  background-color: var(--black);
   top: 0;
   left: 0;
   width: 100%;
