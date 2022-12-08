@@ -15,7 +15,7 @@ export default function Component() {
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
-      setiframe('https://uemu-engineer.com/three');
+      setiframe('https://threejs-plactice.vercel.app/xmas/index.html');
     }, 6700)
     return() => {
       clearTimeout(timeoutId);      
@@ -46,6 +46,7 @@ export default function Component() {
   }
 
   const mainvisual: Meinvisuallist[] = [
+    { value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
     { value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
     { value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
     { value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
