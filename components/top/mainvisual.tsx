@@ -11,7 +11,7 @@ type Meinvisuallist = {
 
 export default function Component() {
   const [iniframe, setiframe] = useState("");
-  const [onchange, onchanges] = useState("");
+  const [mainvisual, setmainvisual] = useState("");
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
@@ -31,26 +31,27 @@ export default function Component() {
     );
   }
 
-  if(onchange != '') {
-    let mainvisual = document.getElementById("mainvisual");
-    mainvisual.classList.add('is_loading');
+  if(mainvisual != '') {
+    let mainvisual_dom = document.getElementById("mainvisual");
+    mainvisual_dom.classList.add('is_loading');
     ReactDOM.render(
       <React.StrictMode>
-        <iframe loading="lazy" src={onchange} />
+        <iframe className={mainvisual.class} loading="lazy" src={mainvisual.value} />
       </React.StrictMode>,
-      mainvisual
+      mainvisual_dom
     );
     let timeoutId = setTimeout(() => {
-      mainvisual.classList.remove('is_loading');
+      mainvisual_dom.classList.remove('is_loading');
     }, 5000);
   }
 
-  const mainvisual: Meinvisuallist[] = [
-    { value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
-    { value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" }
+  const mainvisuallist: Meinvisuallist[] = [
+    { class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
+    { class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
+    { class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
+    { class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
+    { class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac/index.html", img: "/images/visual/three6.png" }
   ];
 
   return (
@@ -80,18 +81,18 @@ export default function Component() {
           </div>
         </div>
         <div className="p-select-box">
-          {mainvisual.map ( (data: Meinvisuallist, idx ) => {
+          {mainvisuallist.map ( (data: Meinvisuallist, idx ) => {
             return (
               <label key="mainvisual" className="p-select-box-label">
-                <input type="radio" className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />
+                <input type="radio" className="p-select-box-input" name="mainvisual" value={data} onChange={(e) => setmainvisual(data)} />
                 <img className="p-select-box-img" src={data.img} />
               </label>
             )
           } ) }
-          {mainvisual.map ( (data: Meinvisuallist, idx ) => {
+          {mainvisuallist.map ( (data: Meinvisuallist, idx ) => {
             return (
               <label key="mainvisual" className="p-select-box-label">
-                <input type="radio" className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => onchanges(e.currentTarget.value)} />
+                <input type="radio" className="p-select-box-input" name="mainvisual" value={data} onChange={(e) => setmainvisual(data)} />
                 <img className="p-select-box-img" src={data.img} />
               </label>
             )

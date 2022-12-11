@@ -86,7 +86,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-600%);
   }
 }
 /**
@@ -254,6 +254,9 @@
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  #p-mainvisual figure iframe.t-visusal-other {
+    width: 100%;
+  }
   #p-mainvisual .p-mainvisual__click a {
     font-size: .5rem;
   }
@@ -269,7 +272,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-600%);
     }
   }
 }
