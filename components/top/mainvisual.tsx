@@ -11,11 +11,11 @@ type Meinvisuallist = {
 };
 export default function Component() {
   const [iniframe, setiframe] = useState("");
-  const [mainvisual, setmainvisual] = useState("");
+  const [mainvisual, setmainvisual] = useState<any>({});
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
-      setiframe('https://threejs-plactice.vercel.app/xmas/index.html');
+      setiframe('https://threejs-plactice.vercel.app/mac2/index.html');
     }, 6700)
     return() => {
       clearTimeout(timeoutId);      
@@ -24,18 +24,25 @@ export default function Component() {
   if(iniframe != '') {
     ReactDOM.render(
       <React.StrictMode>
-        <iframe loading="lazy" src={iniframe} />
+        <iframe className="t-visusal-other" loading="lazy" src={iniframe} />
       </React.StrictMode>,
       document.getElementById("mainvisual")
     );
   }
-  if(mainvisual != '') {
+
+  function isEmpty(obj){
+    for(let i in obj){
+      return false;
+    }
+    return true;
+  }
+
+  if(isEmpty(mainvisual) !== true) {
     let mainvisual_dom = document.getElementById("mainvisual");
     mainvisual_dom.classList.add('is_loading');
-
     ReactDOM.render(
       <React.StrictMode>
-        <iframe loading="lazy" src={mainvisual} />
+        <iframe loading="lazy" className={mainvisual.class} src={mainvisual.value} />
       </React.StrictMode>,
       mainvisual_dom
     );
@@ -50,13 +57,13 @@ export default function Component() {
     { key: "num3", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
     { key: "num4", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
     { key: "num5", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
-    { key: "num6", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac/index.html", img: "/images/visual/three6.png" },
-    { key: "num1", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
-    { key: "num2", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { key: "num3", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { key: "num4", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { key: "num5", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
-    { key: "num6", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac/index.html", img: "/images/visual/three6.png" }
+    { key: "num6", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" },
+    { key: "num7", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
+    { key: "num8", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
+    { key: "num9", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
+    { key: "num10", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
+    { key: "num11", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { key: "num12", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" }
   ];
   return (
     <>
@@ -85,10 +92,10 @@ export default function Component() {
           </div>
         </div>
         <div className="p-select-box">
-          {mainvisuallist.map ( (data: Meinvisuallist, idx ) => {
+          {mainvisuallist.map ( (data: Meinvisuallist ) => {
             return (
-              <label htmlFor={data.key} className="p-select-box-label" key={idx}>
-                <input type="radio" id={data.key} className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => setmainvisual(e.currentTarget.value)} />
+              <label htmlFor={data.key} className="p-select-box-label" key={data.key}>
+                <input type="radio" id={data.key} className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => setmainvisual(data)} />
                 <img className="p-select-box-img" src={data.img} />
               </label>
             )
