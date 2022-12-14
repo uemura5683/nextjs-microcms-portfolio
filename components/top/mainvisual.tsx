@@ -13,6 +13,7 @@ export default function Component() {
   const [iniframe, setiframe] = useState("");
   const [mainvisual, setmainvisual] = useState<any>({});
 
+  // 初期表示
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       setiframe('https://threejs-plactice.vercel.app/mac2/index.html');
@@ -21,33 +22,39 @@ export default function Component() {
       clearTimeout(timeoutId);      
     }
   }, [])
+
   if(iniframe != '') {
-    ReactDOM.render(
-      <React.StrictMode>
+    const Visual = () => {
+      return (
         <iframe className="t-visusal-other" loading="lazy" src={iniframe} />
-      </React.StrictMode>,
+      )
+    }
+    ReactDOM.render(
+      <Visual />,
       document.getElementById("mainvisual")
     );
   }
 
+  // WebGLを切り替えるときの処理
   function isEmpty(obj){
     for(let i in obj){
       return false;
     }
     return true;
   }
-
   if(isEmpty(mainvisual) !== true) {
-    let mainvisual_dom = document.getElementById("mainvisual");
-    mainvisual_dom.classList.add('is_loading');
-    ReactDOM.render(
-      <React.StrictMode>
+    document.getElementById("mainvisual").classList.add('is_loading');
+    const Visualtap = () => {
+      return (
         <iframe loading="lazy" className={mainvisual.class} src={mainvisual.value} />
-      </React.StrictMode>,
-      mainvisual_dom
+      )
+    }
+    ReactDOM.render(
+      <Visualtap />,
+      document.getElementById("mainvisual")
     );
     let timeoutId = setTimeout(() => {
-      mainvisual_dom.classList.remove('is_loading');
+      document.getElementById("mainvisual").classList.remove('is_loading');
     }, 5000);
   }
 
@@ -84,7 +91,7 @@ export default function Component() {
               spy={true}
               smooth={true}
               offset={0}
-              duration= {500}
+              duration={500}
             > 
             <span></span>
             click here
