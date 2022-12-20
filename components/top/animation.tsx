@@ -8,7 +8,7 @@ export const StyleWrapper = styled.div`
   }
   .c-animation {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 10000000;
     position: fixed;
     top: 0;

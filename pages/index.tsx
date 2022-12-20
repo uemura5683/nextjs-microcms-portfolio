@@ -1,6 +1,5 @@
 import React from 'react'
 import Head  from 'next/head'
-import Link  from 'next/link'
 import fetch from 'node-fetch'
 import Layout, { siteTitle } from '../components/common/layout'
 import { motion }  from "framer-motion";
@@ -15,7 +14,7 @@ function Home( {info, work, blog, skill} ) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Ustack | {siteTitle}</title>
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}
@@ -30,7 +29,7 @@ function Home( {info, work, blog, skill} ) {
           <section id="p-work" className="has-animation" data-set-color="light">
             <h2 className="c-title">WORK</h2>
             <div className="c-card-dect">
-              公開できるサイトのみ紹介します。<br />もっと実績を見たい場合はお問い合わせください。
+              公開できるサイトのみ紹介します！<br />制作実績をもっと見たい方がいらっしゃいましたらお気軽にお問い合わせください！
             </div>
             <div className="c-card-wrap">
               <ul className="c-card-list">

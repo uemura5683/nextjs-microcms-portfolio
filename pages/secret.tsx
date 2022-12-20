@@ -11,7 +11,7 @@ function Secret( { achievement } ) {
     <Layout>
       <Head>
         <meta name="robots" content="noindex" />
-        <title>{siteTitle}</title>
+        <title>実績一覧 | {siteTitle}</title>
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

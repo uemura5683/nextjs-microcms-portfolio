@@ -1,14 +1,14 @@
 import dayjs from 'dayjs';
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout  from '../../components/common/layout'
+import Layout, { siteTitle } from '../../components/common/layout'
 import { motion } from "framer-motion";
 
 export default function BlogId( { infos, info_data, infolist } ) {
   return (
     <Layout>
       <Head>
-        <title>{infos.title}</title>
+        <title>{infos.title} | {siteTitle}</title>
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

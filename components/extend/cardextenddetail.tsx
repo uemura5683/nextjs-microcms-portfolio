@@ -3,7 +3,7 @@ import Link  from 'next/link'
 
 const List = (object:any) => {
   const jsondata = object.data.data
-     ,  url = object.data.link;
+    ,   url = object.data.link;
 
   return (
     <>
@@ -25,7 +25,7 @@ const List = (object:any) => {
             </a>
           </li>
         )
-      } ) : url == 'work' ? jsondata.map((data) => { 
+      } ) : url == 'work' ? jsondata.map((data, i) => { 
         if(data.public == true) {
           return (
             <li className="c-card-li" key={data.id}>

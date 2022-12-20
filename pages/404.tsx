@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../components/common/layout'
+import Layout, { siteTitle } from '../components/common/layout'
 import { motion } from "framer-motion";
 
 export default function Custom404() {
@@ -7,7 +7,8 @@ export default function Custom404() {
     <>
     <Layout>
       <Head>
-        <title>ページが見つかりませんでした。</title>
+        <meta name="robots" content="noindex" />
+        <title>404エラー | {siteTitle}</title>
       </Head>
       <motion.div
         animate={{ x: 0, opacity: 1 }}

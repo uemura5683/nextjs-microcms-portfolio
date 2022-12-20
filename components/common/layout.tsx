@@ -8,7 +8,7 @@ import { existsGaId, GA_ID } from '../../public/js/gtag'
 import Animation from '../../components/top/animation'
 import React from "react";
 
-export const siteTitle = 'Ustack | うえむーポートフォリオサイト';
+export const siteTitle = 'うえむーポートフォリオサイト';
 export default function Layout({ children, home
   }: {
     children: React.ReactNode
