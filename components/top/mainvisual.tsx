@@ -16,7 +16,7 @@ export default function Component() {
   // 初期表示
   useEffect(() => {
     let timeoutId = setTimeout(() => {
-      setiframe('https://threejs-plactice.vercel.app/mac2/index.html');
+      setiframe('https://uemu-engineer.com/three');
     }, 6700)
     return() => {
       clearTimeout(timeoutId);      
@@ -26,7 +26,7 @@ export default function Component() {
   if(iniframe != '') {
     const Visual = () => {
       return (
-        <iframe className="t-visusal-other" loading="lazy" src={iniframe} />
+        <iframe className="t-visusal-origin" loading="lazy" src={iniframe} />
       )
     }
     ReactDOM.render(
