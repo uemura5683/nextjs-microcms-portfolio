@@ -59,18 +59,16 @@ export default function Component() {
   }
 
   const mainvisuallist: Meinvisuallist[] = [
-    { key: "num1", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
-    { key: "num2", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { key: "num3", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { key: "num4", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { key: "num5", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
-    { key: "num6", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" },
-    { key: "num7", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/xmas/index.html", img: "/images/visual/three5.png" },
-    { key: "num8", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { key: "num9", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { key: "num10", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { key: "num11", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
-    { key: "num12", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" }
+    { key: "num1", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
+    { key: "num2", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
+    { key: "num3", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
+    { key: "num4", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { key: "num5", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" },
+    { key: "num6", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
+    { key: "num7", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
+    { key: "num8", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
+    { key: "num9", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { key: "num10", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" }
   ];
   return (
     <>
