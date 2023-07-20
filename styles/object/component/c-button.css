@@ -77,6 +77,15 @@
 .c-snslink .c-snslnk__link {
   display: block;
 }
+.c-snslink .c-snslnk__link img {
+  box-shadow: 0 0 0px 0 var(--white);
+  border-radius: 50%;
+  transition: all ease .3s;
+}
+.c-snslink .c-snslnk__link img:hover {
+  box-shadow: 0 0 10px 5px var(--white);
+  transition: all ease .3s;
+}
 .c-snslink .c-snslnk__image{
   height: 30px;
   width: 30px;

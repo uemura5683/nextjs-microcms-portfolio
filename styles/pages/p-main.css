@@ -113,6 +113,21 @@
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+}
+#p-mainvisual nav ul li a:after {
+  content: '';
+  border-bottom: 1px solid var(--white);
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all ease .3s;
+}
+#p-mainvisual nav ul li:hover a:after {
+  content: '';
+  width: 100%;
+  transition: all ease .3s;
 }
 /**
 * logo

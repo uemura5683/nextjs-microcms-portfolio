@@ -77,11 +77,21 @@
   height: 90%;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-30%);
+          transform: translateX(-50%) translateY(-30%);
   background-color: var(--white) !important;
   border: .5rem solid var(--white2) !important;
   max-width: 800px;
+  -webkit-animation: modalfadeout .5s ease 0s infinite;
+          animation: modalfadeout .5s ease 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;  
+}
+@keyframes modalfadeout {
+  0% { opacity: 0; z-index: -1; transform: translateX(-50%) translateY(-30%);}
+  100% { opacity: 1; transform: translateX(-50%) translateY(-50%); }
 }
 .ReactModal__Content h2 {
   font-size: 1.2rem;

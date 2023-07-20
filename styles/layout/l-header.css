@@ -92,6 +92,7 @@ header .header--menu__content nav {
 header .header--menu__content nav ul li {
   margin: 0 0 10px;
   text-align: center;  
+  position: relative;
 }
 header .header--menu__content nav ul li a {
   font-size: 1.2rem;
@@ -99,6 +100,20 @@ header .header--menu__content nav ul li a {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+}
+header .header--menu__content nav ul li a:after {
+  content: '';
+  border-bottom: 1px solid var(--white);
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all ease .3s;
+}
+header .header--menu__content nav ul li:hover a:after {
+  content: '';
+  width: 100%;
+  transition: all ease .3s;
 }
 header .header--menu__content.isOpen {
   pointer-events: auto;

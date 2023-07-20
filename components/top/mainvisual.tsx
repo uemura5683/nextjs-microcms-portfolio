@@ -97,9 +97,9 @@ export default function Component() {
           </div>
         </div>
         <div className="p-select-box">
-          {mainvisuallist.map ( (data: Meinvisuallist ) => {
+          {mainvisuallist.map ( (data: Meinvisuallist, val ) => {
             return (
-              <label htmlFor={data.key} className="p-select-box-label" key={data.key}>
+              <label htmlFor={data.key} className="p-select-box-label" key={val}>
                 <input type="radio" id={data.key} className="p-select-box-input" name="mainvisual" value={data.value} onChange={(e) => setmainvisual(data)} />
                 <img className="p-select-box-img" src={data.img} />
               </label>

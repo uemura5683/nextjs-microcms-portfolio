@@ -7,9 +7,9 @@ const List = (object:any) => {
 
   return (
     <>
-      {url == 'nublog' ? jsondata.map(data => {
+      {url == 'nublog' ? jsondata.map((data, val) => {
         return (
-          <li className="c-card-li" key={data.id}>
+          <li className="c-card-li" key={val}>
             <a href={`${data.link}`} target="_blank" rel="noopener noreferrer">
               <figure className="c-card-figure">
                 <img
@@ -25,10 +25,10 @@ const List = (object:any) => {
             </a>
           </li>
         )
-      } ) : url == 'work' ? jsondata.map((data, i) => { 
+      } ) : url == 'work' ? jsondata.map((data, val) => { 
         if(data.public == true) {
           return (
-            <li className="c-card-li" key={data.id}>
+            <li className="c-card-li" key={val}>
             <a href={`${data.link}`} target="_blank" rel="noopener noreferrer">
               <figure className="c-card-figure">
                 <img
@@ -45,9 +45,9 @@ const List = (object:any) => {
           </li>
           )
         }
-      } ) : jsondata.map((data) => {
+      } ) : jsondata.map((data, val) => {
         return (
-          <li className="c-card-li" key={data.id}>
+          <li className="c-card-li" key={val}>
             <Link href={`${url}/${data.id}`}>
               <figure className="c-card-figure">
                 <img
