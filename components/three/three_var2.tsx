@@ -166,7 +166,7 @@ const Canvas: React.FC = () => {
         canvas {
           width: 100% !important;
           height: 50% !important;
-          background-image: url(https://uemu-engineer.com/images/three/planet.jpg);
+          background-image: url(https://nextjs-microcms-portfolio.vercel.app/images/three/planet.jpg);
           background-size: cover;
           backdrop-filter:  brightness(50%);
         }
