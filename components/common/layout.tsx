@@ -22,13 +22,13 @@ export default function Layout({ children, home
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。" />
-        <meta property="og:image" content="https://uemu-engineer.com/images/ogimage.png" />
+        <meta property="og:image" content="https://nextjs-microcms-portfolio.vercel.app/images/ogimage.png" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@uemuragame5683" />
         <meta name="twitter:title" content={siteTitle} />
         <meta name="twitter:description" content="フロントエンドエンジニアのうえむーのポートフォリオサイトサイトです。実績情報・スキル情報・成果物などを展開して行きます。" />
-        <meta name="twitter:image" content="https://uemu-engineer.com/images/ogimage.png" />
+        <meta name="twitter:image" content="https://nextjs-microcms-portfolio.vercel.app/images/ogimage.png" />
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&amp;display=swap" rel="stylesheet" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async defer />
         {existsGaId && (

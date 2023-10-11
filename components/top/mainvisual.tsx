@@ -16,7 +16,7 @@ export default function Component() {
   // 初期表示
   useEffect(() => {
     let timeoutId = setTimeout(() => {
-      setiframe('https://uemu-engineer.com/three');
+      setiframe('https://nextjs-microcms-portfolio.vercel.app/three');
     }, 6700)
     return() => {
       clearTimeout(timeoutId);      
@@ -59,15 +59,15 @@ export default function Component() {
   }
 
   const mainvisuallist: Meinvisuallist[] = [
-    { key: "num1", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { key: "num2", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { key: "num3", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { key: "num4", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { key: "num1", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three", img: "/images/visual/three.png" },
+    { key: "num2", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var2", img: "/images/visual/three2.png" },
+    { key: "num3", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var3", img: "/images/visual/three3.png" },
+    { key: "num4", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var4", img: "/images/visual/three4.png" },
     { key: "num5", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" },
-    { key: "num6", class: "t-visusal-origin", value: "https://uemu-engineer.com/three", img: "/images/visual/three.png" },
-    { key: "num7", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var2", img: "/images/visual/three2.png" },
-    { key: "num8", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var3", img: "/images/visual/three3.png" },
-    { key: "num9", class: "t-visusal-origin", value: "https://uemu-engineer.com/three_var4", img: "/images/visual/three4.png" },
+    { key: "num6", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three", img: "/images/visual/three.png" },
+    { key: "num7", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var2", img: "/images/visual/three2.png" },
+    { key: "num8", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var3", img: "/images/visual/three3.png" },
+    { key: "num9", class: "t-visusal-origin", value: "https://nextjs-microcms-portfolio.vercel.app/three_var4", img: "/images/visual/three4.png" },
     { key: "num10", class: "t-visusal-other", value: "https://threejs-plactice.vercel.app/mac2/index.html", img: "/images/visual/three6.png" }
   ];
   return (
