@@ -11,7 +11,7 @@ export default function SnsLink() {
           <img
             className="c-snslnk__image"
             src="/images/header/tw_icn.png"
-            alt="Twitter Link"
+            alt="X(旧Twitter) Link"
             width="45"
             height="45"
           />

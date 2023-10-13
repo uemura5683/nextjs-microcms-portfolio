@@ -9,7 +9,7 @@ export default function Profile() {
           <li><span>職業</span>フロントエンドエンジニア</li>
           <li><span>出身・在住</span>埼玉生まれ、東京在住</li>
           <li><span>趣味</span>麻雀・ボードゲーム・ゴルフ・学習</li>
-          <li><span>リンク</span><a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">Twitter</a> / <a href="https://github.com/uemura5683" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://nu-blogsite.net/" target="_blank" rel="noopener noreferrer">Nu-Blog</a></li>
+          <li><span>リンク</span><a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">X(旧Twitter)</a> / <a href="https://github.com/uemura5683" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://nu-blogsite.net/" target="_blank" rel="noopener noreferrer">Nu-Blog</a></li>
         </ul>
         <p className="p-about__profile--description">
           こんにちは、うえむーです。<br />

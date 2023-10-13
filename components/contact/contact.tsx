@@ -147,7 +147,7 @@ const Contacts = () => {
       <div className="c-contact-form__inner">
         <p className="c-contact-form__txt">
           どんな些細でもいいですので気軽にお問い合わせください。<br/>
-          <a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">Twitter</a>でも受け付けております。
+          <a href="https://twitter.com/uemuragame5683" target="_blank" rel="noopener noreferrer">X(旧Twitter)</a>でも受け付けております。
         </p>
         <div className="alert alert-warning"></div>
         <form className="c-contact-form__form">

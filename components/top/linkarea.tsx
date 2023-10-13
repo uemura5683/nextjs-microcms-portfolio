@@ -28,9 +28,9 @@ export default function LinkArea() {
             <img
               className="c-link__list_img"
               src="/images/link/twitter.png"
-              alt="うえむー twitter"
+              alt="うえむー X(旧Twitter)"
             />
-            <span className="c-link__list_txt">Twitter</span>
+            <span className="c-link__list_txt">X(旧Twitter)</span>
           </a>
         </li>
         <li className="c-link__list_li">
